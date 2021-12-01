@@ -4,5 +4,5 @@
  "type": "PUSH_BUTTON",
  "mode": "DIGITAL",
  "direction": "INPUT",
- "period": 30
+ "defaultPeriod": 30
 }

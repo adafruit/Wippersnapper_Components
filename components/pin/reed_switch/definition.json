@@ -4,5 +4,5 @@
   "type": "REED_SWITCH",
   "mode": "DIGITAL",
   "direction": "INPUT",
-  "period": 60
+  "defaultPeriod": 60
 }

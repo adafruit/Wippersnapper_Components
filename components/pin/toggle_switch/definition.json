@@ -4,5 +4,5 @@
   "type": "TOGGLE_SWITCH",
   "mode": "DIGITAL",
   "direction": "INPUT",
-  "period": 30
+  "defaultPeriod": 30
 }

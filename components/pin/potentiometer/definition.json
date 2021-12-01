@@ -4,6 +4,6 @@
   "type": "POTENTIOMETER",
   "mode": "ANALOG",
   "direction": "INPUT",
-  "period": 60,
+  "defaultPeriod": 60,
   "analogReadMode": "PIN_VALUE"
 }

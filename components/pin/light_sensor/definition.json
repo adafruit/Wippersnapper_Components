@@ -5,5 +5,5 @@
   "mode": "ANALOG",
   "direction": "INPUT",
   "analogReadMode": "PIN_VALUE",
-  "period": 60
+  "defaultPeriod": 60
 }
