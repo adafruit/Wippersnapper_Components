@@ -1,0 +1,8 @@
+{
+  "displayName": "PIR Sensor",
+  "autoSelectString": "pir",
+  "type": "PIR_SENSOR",
+  "mode": "DIGITAL",
+  "direction": "INPUT",
+  "period": 60
+}

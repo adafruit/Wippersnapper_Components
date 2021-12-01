@@ -1,0 +1,8 @@
+{
+  "displayName": "Beam Sensor",
+  "autoSelectString": "beam",
+  "type": "BEAM_BREAK_SENSOR",
+  "mode": "DIGITAL",
+  "direction": "INPUT",
+  "pull": "UP"
+}

@@ -1,0 +1,8 @@
+{
+  "displayName": "Relay",
+  "autoSelectString": "relay",
+  "titleName": "Non-Latching Relay",
+  "type": "NON_LATCHING_RELAY",
+  "mode": "DIGITAL",
+  "direction": "OUTPUT"
+}

@@ -1,0 +1,7 @@
+{
+  "displayName": "LED",
+  "autoSelectString": "led",
+  "type": "LED",
+  "mode": "DIGITAL",
+  "direction": "OUTPUT"
+}
