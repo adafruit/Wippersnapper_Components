@@ -1,7 +1,32 @@
-# Wippersnapper Components
-Component Description Models for Adafruit IO Wippersnapper Beta.
+# Wippersnapper Component Definitions
 
-# Legend
+Welcome! This repository contains JSON definition files and images that allow components and sensors to be used with WipperSnapper, Adafruit IO's no-code IoT service.
+
+## How Does It Work?
+
+By writing a small amount of descriptive JSON and adding an image, a component can:
+
+### Appear in this list
+
+<img width="611" alt="Screen Shot 2021-12-02 at 4 28 11 PM" src="https://user-images.githubusercontent.com/17697/144505905-1d1a34e0-df2b-4ee2-9dd2-309e389d14d5.png">
+
+### Generate a custom web form, like this
+
+<img width="611" alt="Screen Shot 2021-12-02 at 4 28 40 PM" src="https://user-images.githubusercontent.com/17697/144505968-e5a1385a-f73e-4948-8380-fee40945a38f.png">
+
+### Have its current status tracked or controlled, like this
+
+<img width="743" alt="Screen Shot 2021-12-02 at 4 29 31 PM" src="https://user-images.githubusercontent.com/17697/144506091-971ef397-63d2-4477-9ea8-b645896af07f.png">
+
+### And work seamlessly with the rest of IO, including Dashboards and Triggers!
+
+## Pin Component Format
+todo
+
+## I2C Component Format
+todo
+
+## Legend
 
 ## I2C Sensor Types
 
