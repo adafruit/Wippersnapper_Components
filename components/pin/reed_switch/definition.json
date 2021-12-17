@@ -4,5 +4,6 @@
   "type": "REED_SWITCH",
   "mode": "DIGITAL",
   "direction": "INPUT",
-  "defaultPeriod": 60
+  "defaultPeriod": 60,
+  "selectPullUp": true
 }

@@ -1,8 +1,9 @@
 {
- "displayName": "Push Button",
- "autoSelectString": "button",
- "type": "PUSH_BUTTON",
- "mode": "DIGITAL",
- "direction": "INPUT",
- "defaultPeriod": 30
+  "displayName": "Push Button",
+  "autoSelectString": "button",
+  "type": "PUSH_BUTTON",
+  "mode": "DIGITAL",
+  "direction": "INPUT",
+  "defaultPeriod": 30,
+  "selectPullUp": true
 }
