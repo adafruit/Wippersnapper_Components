@@ -23,7 +23,7 @@
     "autoSelectString": {
       "description": "A hint for automatically looking up pin names that may be appropriate for this kind of component.",
       "type": "string"
-    },
+    }
   },
   "required": [ "displayName", "type", "mode" ]
 }
