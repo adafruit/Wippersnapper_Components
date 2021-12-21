@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Pin Component Definition",
   "description": "A pin-based WipperSnapper component for use in Adafruit IO",
   "type": "object",
@@ -7,22 +6,30 @@
     "displayName": {
       "description": "The human-friendly name of this component.",
       "type": "string"
+      "minLength": 3,
+      "maxLength": 24
     },
     "type": {
       "description": "A unique string used to look up this component's definition.",
-      "type": "string"
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
     },
     "mode": {
       "description": "This component's mode, either DIGITAL or ANALOG.",
-      "type": "string"
+      "type": "string",
+      "pattern": "^(DIGITAL|ANALOG)$"
     },
     "direction": {
       "description": "This component's direction, either INPUT or OUTPUT.",
-      "type": "string"
+      "type": "string",
+      "pattern": "^(INPUT|OUTPUT)$"
     },
     "autoSelectString": {
       "description": "A hint for automatically looking up pin names that may be appropriate for this kind of component.",
       "type": "string"
+      "minLength": 3,
+      "maxLength": 24
     }
   },
   "required": [ "displayName", "type", "mode" ]
