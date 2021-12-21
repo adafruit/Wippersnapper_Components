@@ -1,0 +1,26 @@
+name: Validate JSONs
+
+on: [pull_request]
+
+jobs:
+  validate-pin-components:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Validate Pin Components
+        uses: nhalstead/validate-json-action@0.1.3
+        with:
+          schema: /components/pin/schema.json
+          jsons: components/pin/*/definition.json
+
+  validate-i2c-components:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Validate I2C Components
+        uses: nhalstead/validate-json-action@0.1.3
+        with:
+          schema: /components/i2c/schema.json
+          jsons: components/i2c/*/definition.json
