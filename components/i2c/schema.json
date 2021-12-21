@@ -2,6 +2,37 @@
   "title": "Pin Component Definition",
   "description": "A pin-based WipperSnapper component for use in Adafruit IO",
   "type": "object",
+  "$defs": {
+    "subcomponent": {
+      "type": "object",
+      "required": [ "displayName", "type", "sensorType" ],
+      "properties": {
+        "displayName": {
+          "description": "The human-friendly name of this sensor.",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "type": {
+          "description": "A unique string used to look up this sensor's definition, and its parent component's definition.",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "sensorType": {
+          "description": "One of the supported I2C sensor type strings (found in README).",
+          "type": "string",
+          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2)$"
+        },
+        "defaultPeriod": {
+          "description": "What period to the form should default to for this sensor.",
+          "type": "number",
+          "minimum": 30,
+          "maximum": 86400
+        }
+      }
+    }
+  },
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",
@@ -25,9 +56,7 @@
     "subcomponents": {
       "description": "List of sensors on this I2C component.",
       "type": "array",
-      "items": {
-        "type": "object"
-      }
+      "items": { "$ref": "#/$defs/subcomponent" }
     }
   },
   "required": [ "displayName", "type", "i2cAddresses", "subcomponents" ]
