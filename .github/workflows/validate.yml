@@ -1,0 +1,24 @@
+name: Validate JSONs
+
+on: [pull_request]
+
+jobs:
+  validate-pin-component-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: /components/pin/schema.json
+          INPUT_JSONS: /components/pin/**/definition.json
+
+  validate-i2c-component-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: /components/i2c/schema.json
+          INPUT_JSONS: /components/i2c/**/definition.json
