@@ -38,6 +38,6 @@
       "type": "PM25_PM100_ENV",
       "sensorType": "pm100-env",
       "defaultPeriod": 900
-    },
+    }
   ]
 }
