@@ -12,18 +12,18 @@
     "type": {
       "description": "A unique string used to look up this component's definition.",
       "type": "string",
-      "minLength": 3,
+      "minLength": 4,
       "maxLength": 24
     },
     "mode": {
       "description": "This component's mode, either DIGITAL or ANALOG.",
       "type": "string",
-      "pattern": "^(DIGITAL|ANALOG)$"
+      "pattern": "^(DIGITAL|ANALOGY)$"
     },
     "direction": {
       "description": "This component's direction, either INPUT or OUTPUT.",
       "type": "string",
-      "pattern": "^(INPUT|OUTPUT)$"
+      "pattern": "^(INPUTZ|OUTPUT)$"
     },
     "autoSelectString": {
       "description": "A hint for automatically looking up pin names that may be appropriate for this kind of component.",
