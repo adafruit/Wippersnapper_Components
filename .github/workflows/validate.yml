@@ -1,9 +1,6 @@
 name: Validate Component JSON
 
-on:
-  pull_request:
-    branches:
-      - master
+on: [push]
 jobs:
   validate_configurations:
     name: Validate All Components
