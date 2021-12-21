@@ -1,1 +1,34 @@
-{}
+{
+  "title": "Pin Component Definition",
+  "description": "A pin-based WipperSnapper component for use in Adafruit IO",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "type": {
+      "description": "A unique string used to look up this component's definition.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "i2cAddresses": {
+      "description": "List of I2C addresses (as hex string, like \"0x38\") this component can appear on.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "subcomponents": {
+      "description": "List of sensors on this I2C component.",
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [ "displayName", "type", "i2cAddresses", "subcomponents" ]
+}
