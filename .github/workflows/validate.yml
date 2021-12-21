@@ -1,24 +1,18 @@
-name: Validate JSONs
+name: Validate Component JSON
 
-on: [pull_request]
-
+on:
+  pull_request:
+    branches:
+      - master
 jobs:
-  validate-pin-component-json:
+  validate_configurations:
+    name: Validate All Components
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: /components/pin/schema.json
-          INPUT_JSONS: /components/pin/**/definition.json
-
-  validate-i2c-component-json:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: /components/i2c/schema.json
-          INPUT_JSONS: /components/i2c/**/definition.json
+      - uses: actions/checkout@v2
+        name: Validate Pin Components
+        uses: snapcart/json-schema-validator@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          json_schema: components/pin/schema.json
+          json_path_pattern: components/pin/.*/definition.json$
