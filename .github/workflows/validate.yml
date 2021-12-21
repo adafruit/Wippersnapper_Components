@@ -12,7 +12,7 @@ jobs:
         uses: nhalstead/validate-json-action@0.1.3
         with:
           schema: /components/pin/schema.json
-          jsons: /components/pin/*/definition.json,/components/pin/led/definition.json
+          jsons: components/pin/*/definition.json
 
       - name: Validate I2C Components
         uses: nhalstead/validate-json-action@0.1.3
