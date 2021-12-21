@@ -3,5 +3,5 @@
   "autoSelectString": "water",
   "type": "WATER_SENSOR",
   "mode": "DIGITAL",
-  "direction": "INPUT",
+  "direction": "INPUT"
 }
