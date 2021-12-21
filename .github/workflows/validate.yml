@@ -7,13 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
       - name: Validate Pin Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
           schema: /components/pin/schema.json
-          jsons: /components/pin/**/definition.json
+          jsons: /components/pin/*/definition.json,/components/pin/led/definition.json
+
       - name: Validate I2C Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
           schema: /components/i2c/schema.json
-          jsons: /components/i2c/**/definition.json
+          jsons: /components/i2c/*/definition.json
