@@ -2,9 +2,11 @@
 
 Welcome! This repository contains JSON definition files and images that allow components and sensors to be used with WipperSnapper, Adafruit IO's no-code IoT service.
 
-## How Does It Work?
+**Note: We aren't ready for user submissions yet as we're still finalizing the format and tools.**
 
-By writing a small amount of descriptive JSON and adding an image, a component can:
+## How Will It Work?
+
+Anyone can add a new component to Wippersnapper by writing a small amount of descriptive JSON and adding an image! If accepted, a supported component will:
 
 ### Appear in this list
 
