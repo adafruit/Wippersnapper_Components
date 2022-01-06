@@ -1,6 +1,5 @@
 {
   "displayName": "Power Switch",
-  "type": "POWER_SWITCH_TAIL",
   "mode": "DIGITAL",
   "direction": "OUTPUT",
   "selectPullUp": true

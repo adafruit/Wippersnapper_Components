@@ -1,7 +1,6 @@
 {
   "displayName": "Potentiometer",
   "autoSelectString": "potentiometer",
-  "type": "POTENTIOMETER",
   "mode": "ANALOG",
   "direction": "INPUT",
   "defaultPeriod": 60,

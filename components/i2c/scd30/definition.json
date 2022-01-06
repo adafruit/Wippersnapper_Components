@@ -1,23 +1,19 @@
 {
   "displayName": "SCD30",
-  "type": "SCD30",
   "i2cAddresses": [ "0x61" ],
   "subcomponents": [
     {
       "displayName": "Temperature Sensor",
-      "type": "SCD30_TEMPERATURE",
       "sensorType": "ambient-temp",
       "defaultPeriod": 900
     },
     {
       "displayName": "Humidity Sensor",
-      "type": "SCD30_HUMIDITY",
       "sensorType": "humidity",
       "defaultPeriod": 900
     },
     {
       "displayName": "CO2 Sensor",
-      "type": "SCD30_CO2",
       "sensorType": "co2",
       "defaultPeriod": 900
     }

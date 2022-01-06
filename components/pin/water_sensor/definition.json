@@ -1,7 +1,6 @@
 {
   "displayName": "Water Sensor",
   "autoSelectString": "water",
-  "type": "WATER_SENSOR",
   "mode": "DIGITAL",
   "direction": "INPUT"
 }

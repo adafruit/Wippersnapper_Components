@@ -1,7 +1,6 @@
 {
   "displayName": "Reed Switch",
   "autoSelectString": "reed",
-  "type": "REED_SWITCH",
   "mode": "DIGITAL",
   "direction": "INPUT",
   "defaultPeriod": 60,

@@ -1,17 +1,14 @@
 {
   "displayName": "DPS310",
-  "type": "DPS310",
   "i2cAddresses": [ "0x76", "0x77" ],
   "subcomponents": [
     {
       "displayName": "Temperature Sensor",
-      "type": "DPS310_TEMPERATURE",
       "sensorType": "ambient-temp",
       "defaultPeriod": 900
     },
     {
       "displayName": "Pressure Sensor",
-      "type": "DPS310_PRESSURE",
       "sensorType": "pressure",
       "defaultPeriod": 900
     }

@@ -1,7 +1,6 @@
 {
   "displayName": "Toggle Switch",
   "autoSelectString": "toggle",
-  "type": "TOGGLE_SWITCH",
   "mode": "DIGITAL",
   "direction": "INPUT",
   "defaultPeriod": 30

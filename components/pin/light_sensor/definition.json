@@ -1,7 +1,6 @@
 {
   "displayName": "Light Sensor",
   "autoSelectString": "light",
-  "type": "LIGHT_SENSOR",
   "mode": "ANALOG",
   "direction": "INPUT",
   "analogReadMode": "PIN_VALUE",

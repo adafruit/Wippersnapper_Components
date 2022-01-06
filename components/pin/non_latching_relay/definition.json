@@ -1,7 +1,6 @@
 {
   "displayName": "Relay",
   "autoSelectString": "relay",
-  "type": "NON_LATCHING_RELAY",
   "mode": "DIGITAL",
   "direction": "OUTPUT"
 }

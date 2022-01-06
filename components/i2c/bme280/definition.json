@@ -1,23 +1,19 @@
 {
   "displayName": "BME280",
-  "type": "BME280",
   "i2cAddresses": [ "0x76", "0x77" ],
   "subcomponents": [
     {
       "displayName": "Temperature Sensor",
-      "type": "BME280_TEMPERATURE",
       "sensorType": "ambient-temp",
       "defaultPeriod": 900
     },
     {
       "displayName": "Humidity Sensor",
-      "type": "BME280_HUMIDITY",
       "sensorType": "humidity",
       "defaultPeriod": 900
     },
     {
       "displayName": "Pressure Sensor",
-      "type": "BME280_PRESSURE",
       "sensorType": "pressure",
       "defaultPeriod": 900
     }

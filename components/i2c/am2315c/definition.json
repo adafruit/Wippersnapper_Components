@@ -1,17 +1,14 @@
 {
   "displayName": "AM2315C",
-  "type": "AM2315C",
   "i2cAddresses": [ "0x38" ],
   "subcomponents": [
     {
       "displayName": "Temperature Sensor",
-      "type": "AM2315C_TEMPERATURE",
       "sensorType": "ambient-temp",
       "defaultPeriod": 900
     },
     {
       "displayName": "Humidity Sensor",
-      "type": "AM2315C_HUMIDITY",
       "sensorType": "humidity",
       "defaultPeriod": 900
     }
