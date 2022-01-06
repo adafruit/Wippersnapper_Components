@@ -4,17 +4,17 @@
   "subcomponents": [
     {
       "displayName": "Temperature Sensor",
-      "sensorType": "ambient-temp",
+      "sensor": "ambient-temp",
       "defaultPeriod": 900
     },
     {
       "displayName": "Humidity Sensor",
-      "sensorType": "humidity",
+      "sensor": "humidity",
       "defaultPeriod": 900
     },
     {
       "displayName": "Pressure Sensor",
-      "sensorType": "pressure",
+      "sensor": "pressure",
       "defaultPeriod": 900
     }
   ]

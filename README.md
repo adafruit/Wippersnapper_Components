@@ -32,7 +32,7 @@ todo
 
 ## I2C Sensor Types
 
-Possible values for an I2C component's subcomponents' `sensorType` field:
+Possible values for an I2C component's subcomponents' `sensor` field:
 
 - "unspecified"
 - "accelerometer"

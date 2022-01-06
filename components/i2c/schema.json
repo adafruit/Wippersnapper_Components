@@ -5,7 +5,7 @@
   "$defs": {
     "subcomponent": {
       "type": "object",
-      "required": [ "displayName", "sensorType" ],
+      "required": [ "displayName", "sensor" ],
       "properties": {
         "displayName": {
           "description": "The human-friendly name of this sensor.",
@@ -19,7 +19,7 @@
           "minLength": 3,
           "maxLength": 24
         },
-        "sensorType": {
+        "sensor": {
           "description": "One of the supported I2C sensor type strings (found in README).",
           "type": "string",
           "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2)$"
