@@ -5,7 +5,7 @@
   "$defs": {
     "subcomponent": {
       "type": "object",
-      "required": [ "displayName", "type", "sensorType" ],
+      "required": [ "displayName", "sensorType" ],
       "properties": {
         "displayName": {
           "description": "The human-friendly name of this sensor.",
@@ -33,15 +33,10 @@
       }
     }
   },
+  "required": [ "displayName", "i2cAddresses", "subcomponents" ],
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",
-      "type": "string",
-      "minLength": 3,
-      "maxLength": 24
-    },
-    "type": {
-      "description": "A unique string used to look up this component's definition.",
       "type": "string",
       "minLength": 3,
       "maxLength": 24
@@ -58,6 +53,5 @@
       "type": "array",
       "items": { "$ref": "#/$defs/subcomponent" }
     }
-  },
-  "required": [ "displayName", "type", "i2cAddresses", "subcomponents" ]
+  }
 }
