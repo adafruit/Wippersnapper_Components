@@ -59,3 +59,5 @@ Possible values for an I2C component's subcomponents' `sensorType` field:
 - "pm25-env"
 - "pm100-env"
 - "co2"
+- "gas-resistance"
+- "altitude"
