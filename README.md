@@ -4,6 +4,8 @@ Welcome! This repository contains JSON definition files and images that allow co
 
 **Note: We aren't ready for user submissions yet as we're still finalizing the format and tools.**
 
+[Click here to submit suggestions or requests for new Adafruit.io WipperSnapper components >>>](https://github.com/adafruit/WipperSnapper_Components/issues/new/choose)
+
 ## How Will It Work?
 
 Anyone can add a new component to Wippersnapper by writing a small amount of descriptive JSON and adding an image! If accepted, a supported component will:
