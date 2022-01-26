@@ -20,7 +20,7 @@
           "defaultPeriod":900
        },
        {
-          "displayName":"Altitude Sensor",
+          "displayName":"Altitude Sensor (Relative)",
           "sensorType":"altitude",
           "defaultPeriod":900
        }
