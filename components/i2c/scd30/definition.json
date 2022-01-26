@@ -13,7 +13,7 @@
       "defaultPeriod": 900
     },
     {
-        "displayName": "eCO2 Sensor",
+        "displayName": "CO2 Sensor",
         "sensorType": "co2",
         "defaultPeriod": 900
       }
