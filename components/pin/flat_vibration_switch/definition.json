@@ -1,0 +1,6 @@
+{
+  "displayName":"Flat Vibration Switch",
+  "mode":"DIGITAL",
+  "direction":"INPUT",
+  "defaultPeriod":30
+}
