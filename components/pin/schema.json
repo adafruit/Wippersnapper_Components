@@ -2,7 +2,7 @@
   "title": "Pin Component Definition",
   "description": "A pin-based WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "mode" ],
+  "required": [ "displayName", "mode" , "direction"],
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",
