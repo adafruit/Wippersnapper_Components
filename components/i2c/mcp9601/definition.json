@@ -8,9 +8,9 @@
       "defaultPeriod": 900
     },
     {
-        "displayName": "Ambient Temperature",
-        "sensorType": "ambient-temp",
-        "defaultPeriod": 900
+      "displayName": "Ambient Temperature",
+      "sensorType": "ambient-temp",
+      "defaultPeriod": 900
     }
   ]
 }
