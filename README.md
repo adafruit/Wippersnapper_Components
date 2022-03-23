@@ -2,9 +2,8 @@
 
 Welcome! This repository contains JSON definition files and images that allow components and sensors to be used with WipperSnapper, Adafruit IO's no-code IoT service.
 
-**Note: We aren't ready for user submissions yet as we're still finalizing the format and tools.**
-
 [Click here to submit suggestions or requests for new Adafruit.io WipperSnapper components >>>](https://github.com/adafruit/WipperSnapper_Components/issues/new/choose)
+
 
 ## How Will It Work?
 
@@ -23,6 +22,10 @@ Anyone can add a new component to Wippersnapper by writing a small amount of des
 <img width="743" alt="Screen Shot 2021-12-02 at 4 29 31 PM" src="https://user-images.githubusercontent.com/17697/144506091-971ef397-63d2-4477-9ea8-b645896af07f.png">
 
 ### And work seamlessly with the rest of IO, including Dashboards and Triggers!
+
+## Contributing
+
+[We have a guide on adding components to this repository on the Adafruit Learning System](https://learn.adafruit.com/how-to-add-a-new-component-to-adafruit-io-wippersnapper)
 
 ## Pin Component Format
 todo
