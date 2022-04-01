@@ -7,5 +7,10 @@
       "sensorType": "co2",
       "defaultPeriod": 900
     }
+    {
+      "displayName": "TVOC",
+      "sensorType": "unspecified",
+      "defaultPeriod": 900
+    }
   ]
 }
