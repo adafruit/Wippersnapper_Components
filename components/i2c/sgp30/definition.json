@@ -6,7 +6,7 @@
       "displayName": "eCO2",
       "sensorType": "co2",
       "defaultPeriod": 900
-    }
+    },
     {
       "displayName": "TVOC",
       "sensorType": "unspecified",
