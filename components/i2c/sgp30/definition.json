@@ -1,0 +1,11 @@
+{
+  "displayName": "SGP30",
+  "i2cAddresses": [ "0x58" ],
+  "subcomponents": [
+    {
+      "displayName": "eCO2",
+      "sensorType": "co2",
+      "defaultPeriod": 900
+    }
+  ]
+}
