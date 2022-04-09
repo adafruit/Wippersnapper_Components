@@ -9,7 +9,7 @@
     },
     {
       "displayName": "TVOC",
-      "sensorType": "unspecified",
+      "sensorType": "tvoc",
       "defaultPeriod": 900
     }
   ]
