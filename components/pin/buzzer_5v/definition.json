@@ -1,0 +1,6 @@
+{
+  "displayName": "Buzzer 5V",
+  "autoSelectString": "buzzer",
+  "mode": "DIGITAL",
+  "direction": "OUTPUT"
+}
