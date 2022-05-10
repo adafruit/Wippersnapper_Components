@@ -16,7 +16,7 @@
         "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|altitude|gas-resistance|tvoc)$"
     },
     "sensorResolution": {
-        "description": "The DS18X20 device's desired sensor resolution, in bits (defaults to 12-bits).",
+        "description": "The DS18X20's desired sensor read resolution, in bits.",
         "type": "number",
         "minimum": 9,
         "maximum": 12

@@ -1,9 +1,7 @@
 {
-  "displayName": "Light Sensor",
-  "autoSelectString": "light",
-  "mode": "ANALOG",
-  "direction": "INPUT",
-  "analogReadMode": "PIN_VALUE",
+  "displayName": "Waterproof 1-Wire DS18B20 Temperature Sensor",
+  "sensorType": "object-temp",
+  "sensorResolution": 12,
   "defaultPeriod": 60,
   "forceOnPeriod": true
 }
