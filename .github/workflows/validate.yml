@@ -24,3 +24,14 @@ jobs:
         with:
           schema: /components/i2c/schema.json
           jsons: components/i2c/*/definition.json
+
+  validate-ds18x20-components:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Validate DS18X20 Components
+        uses: nhalstead/validate-json-action@0.1.3
+        with:
+          schema: /components/ds18x20/schema.json
+          jsons: components/ds18x20/*/definition.json
