@@ -1,5 +1,5 @@
 {
-  "displayName": "Waterproof 1-Wire DS18B20 Temperature Sensor",
+  "displayName": "Waterproof DS18B20",
   "sensorType": "object-temp",
   "sensorResolution": 12,
   "defaultPeriod": 60,
