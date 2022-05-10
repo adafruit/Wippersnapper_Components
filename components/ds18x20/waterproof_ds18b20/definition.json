@@ -1,0 +1,9 @@
+{
+  "displayName": "Light Sensor",
+  "autoSelectString": "light",
+  "mode": "ANALOG",
+  "direction": "INPUT",
+  "analogReadMode": "PIN_VALUE",
+  "defaultPeriod": 60,
+  "forceOnPeriod": true
+}
