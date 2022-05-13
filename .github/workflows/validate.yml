@@ -33,5 +33,5 @@ jobs:
       - name: Validate Pixel Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
-          schema: /components/pixels/schema.json
-          jsons: components/pixels/*/definition.json
+          schema: /components/pixel/schema.json
+          jsons: components/pixel/*/definition.json
