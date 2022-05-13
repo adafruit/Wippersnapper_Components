@@ -11,10 +11,9 @@
       "maxLength": 24
     },
     "pixelType": {
-        "description": "The type of addressable pixel. 0 is unspecified, 1 is WS2812 (NeoPixel), 2 is APA201 (DotStar).",
-        "type": "number",
-        "minLength": 0,
-        "maxLength": 2
+        "description": "The type of addressable pixel: WS2812 (neopixel) or APA201 (dotstar).",
+        "type": "string",
+        "pattern": "^(neopixel|dotstar|)$"
     },
     "defaultNumPixels": {
         "description": "If present, the component form will allow the user to set the number of pixels in the strand, with this value as the default.",
