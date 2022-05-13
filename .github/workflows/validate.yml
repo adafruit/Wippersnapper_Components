@@ -1,3 +1,4 @@
+# Reference for adding or expanding schemas: https://ajv.js.org/json-schema.html#json-data-type
 name: Validate JSONs
 
 on: [pull_request]
