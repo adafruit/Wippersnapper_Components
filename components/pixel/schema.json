@@ -13,7 +13,7 @@
     "pixelType": {
         "description": "The type of addressable pixel: WS2812 (neopixel) or APA201 (dotstar).",
         "type": "string",
-        "pattern": "^(neopixel|dotstar|)$"
+        "pattern": "^(neopixel|dotstar)$"
     },
     "defaultNumPixels": {
         "description": "If present, the component form will allow the user to set the number of pixels in the strand, with this value as the default.",
