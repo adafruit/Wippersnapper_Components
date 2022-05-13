@@ -18,14 +18,14 @@
     "defaultNumPixels": {
         "description": "If present, the component form will allow the user to set the number of pixels in the strand, with this value as the default.",
         "type": "number",
-        "minLength": 0,
-        "maxLength": 156
+        "minimum": 0,
+        "maximum": 156
     },
     "defaultPixelBrightness": {
         "description": "If present, the component form will allow the user to set the pixel strand's brightness, with this value as the default.",
         "type": "number",
-        "minLength": 0,
-        "maxLength": 255
+        "minimum": 0,
+        "maximum": 255
     },
     "autoSelectString": {
       "description": "A hint for automatically looking up pin names that may be appropriate for this kind of component.",
