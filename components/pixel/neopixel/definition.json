@@ -1,0 +1,7 @@
+{
+  "displayName": "NeoPixel",
+  "autoSelectString": "NeoPixel",
+  "pixelType": 1,
+  "defaultNumPixels": 1,
+  "defaultPixelBrightness": 255
+}
