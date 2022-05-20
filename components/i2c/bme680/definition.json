@@ -24,7 +24,7 @@
     },
     {
       "displayName":"Total VOC",
-      "sensorType":"tvoc",
+      "sensorType":"gas-resistance",
       "defaultPeriod":900
     }
   ]
