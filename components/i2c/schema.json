@@ -22,7 +22,7 @@
         "sensorType": {
           "description": "One of the supported I2C sensor type strings (found in README).",
           "type": "string",
-          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|altitude|gas-resistance|tvoc)$"
+          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude)$"
         },
         "defaultPeriod": {
           "description": "What period to the form should default to for this sensor.",
