@@ -4,10 +4,10 @@ name: Validate JSONs
 on: [pull_request]
 
 jobs:
-  validate-pin-components:
+  validate-component-definitions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
 
       - name: Validate Pin Components
         uses: nhalstead/validate-json-action@0.1.3
@@ -15,13 +15,39 @@ jobs:
           schema: /components/pin/schema.json
           jsons: components/pin/*/definition.json
 
-  validate-i2c-components:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-
       - name: Validate I2C Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
           schema: /components/i2c/schema.json
           jsons: components/i2c/*/definition.json
+
+      - name: List Changed Component Files
+        id: changed-files
+        uses: tj-actions/changed-files@v21
+        with:
+          files: components/**/*
+
+      - name: Validate Filenames
+        run: |
+          component_definition_regex="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          exit_value=0
+
+          for file in ${{ steps.changed-files.outputs.added_files }}; do
+            if [[ $file =~ $component_definition_regex ]]; then
+              echo "✅ $file"
+            else
+              echo "❌ $file"
+              exit_value=1
+            fi
+          done
+
+          for file in ${{ steps.changed-files.outputs.renamed_files }}; do
+            if [[ $file =~ $component_definition_regex ]]; then
+              echo "✅ $file"
+            else
+              echo "❌ $file"
+              exit_value=1
+            fi
+          done
+
+          exit $exit_value
