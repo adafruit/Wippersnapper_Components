@@ -29,7 +29,7 @@ jobs:
 
       - name: Validate Filenames
         run: |
-          component_definition_regex="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          component_definition_regex="^components\/(pin|i2c|servo)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
           exit_value=0
 
           for file in ${{ steps.changed-files.outputs.added_files }}; do
