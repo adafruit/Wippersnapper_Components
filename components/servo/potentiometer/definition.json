@@ -1,0 +1,9 @@
+{
+  "displayName": "Potentiometer",
+  "autoSelectString": "potentiometer",
+  "mode": "ANALOG",
+  "direction": "INPUT",
+  "defaultPeriod": 60,
+  "analogReadMode": "PIN_VALUE",
+  "selectReadMode": true
+}
