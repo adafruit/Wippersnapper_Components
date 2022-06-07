@@ -1,0 +1,6 @@
+{
+  "displayName": "Generic Servo",
+  "frequency": 50,
+  "minPulseWidth": 500,
+  "maxPulseWidth": 2500
+}
