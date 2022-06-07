@@ -11,17 +11,17 @@
       "maxLength": 24
     },
     "frequency": {
-      "description": "The desired frequency of the PWM signal.",
+      "description": "The desired frequency of the PWM signal in Hz.",
       "type": "number",
       "default": 50
     },
     "minPulseWidth": {
-      "description": "The minimum pulse width of the servo.",
+      "description": "The minimum pulse width of the servo in uS.",
       "type": "number",
       "default": 500
     },
     "maxPulseWidth": {
-      "description": "The maximum pulse width of the servo.",
+      "description": "The maximum pulse width of the servo in uS.",
       "type": "number",
       "default": 2500
     }
