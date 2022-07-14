@@ -5,6 +5,7 @@ on: [pull_request]
 
 jobs:
   validate-definition-files:
+    name: Validate Definition Files
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -141,8 +142,8 @@ jobs:
         run: |
           EXIT_VALUE=0
 
-          MAX_WIDTH=800
-          MAX_HEIGHT=2000
+          MAX_WIDTH=600
+          MAX_HEIGHT=600
 
           for FILE in $FILES; do
             if [[ $FILE == */definition.json ]]; then
@@ -200,8 +201,8 @@ jobs:
         run: |
           EXIT_VALUE=0
 
-          MAX_FILESIZE=$((400*1024)) # 400kb
-          MAX_ANIGIF_FILESIZE=$((1000*1024)) # 1MB
+          MAX_FILESIZE=$((100*1024)) # 100kb
+          MAX_ANIGIF_FILESIZE=$((700*1024)) # 700kb
 
           for FILE in $FILES; do
             if [[ $FILE == */definition.json ]]; then
@@ -210,7 +211,7 @@ jobs:
 
             FILESIZE=$(stat -c%s "$FILE")
 
-            if [[ $FILE == *loader.gif ]]; then
+            if [[ $FILE == *animation.gif ]]; then
               MAX=$MAX_ANIGIF_FILESIZE
             else
               MAX=$MAX_FILESIZE
@@ -226,15 +227,14 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these issues ☝️ by compressing each ❌ file to be smaller than 400KB (1MB for boot-loader.gif animations). You can try:"
-            echo "- shrinking the image's dimensions (do this first if dimension validation also failed for a given file)"
+            echo "Fix these issues ☝️ by compressing each ❌ file to be smaller than 100KB (700KB for animation.gif animations). You can try:"
             echo "- using an image compressor"
             echo "- exporting at lower quality settings (png or jpg)"
             echo "- exporting a different image format:"
             echo "  - photos are best saved as jpg"
             echo "  - screenshots and digital images are best saved as png"
             echo "  - svg might be efficient for images with few colors and simple shapes"
-            echo "  - gif should only be used when animation is needed (i.e. the boot-loader image)"
+            echo "  - gif should only be used for animations"
           fi
 
           exit $EXIT_VALUE
