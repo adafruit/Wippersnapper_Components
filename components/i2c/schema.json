@@ -34,6 +34,7 @@
     }
   },
   "required": [ "displayName", "i2cAddresses", "subcomponents" ],
+  "additionalProperties": false,
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",
