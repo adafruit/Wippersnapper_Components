@@ -3,5 +3,12 @@
   "autoSelectString": "pir",
   "mode": "DIGITAL",
   "direction": "INPUT",
-  "defaultPeriod": 60
+  "defaultPeriod": 60,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Still",
+    "offIcon": "person-walking",
+    "onLabel": "Motion",
+    "onIcon": "person-walking"
+  }
 }
