@@ -57,16 +57,7 @@ jobs:
           component_definition_regex="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
           EXIT_VALUE=0
 
-          for file in ${{ steps.changed-files.outputs.added_files }}; do
-            if [[ $file =~ $component_definition_regex ]]; then
-              echo "✅ $file"
-            else
-              echo "❌ $file"
-              EXIT_VALUE=1
-            fi
-          done
-
-          for file in ${{ steps.changed-files.outputs.renamed_files }}; do
+          for file in $FILES; do
             if [[ $file =~ $component_definition_regex ]]; then
               echo "✅ $file"
             else
