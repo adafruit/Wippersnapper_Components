@@ -58,14 +58,30 @@
     "visualization": {
       "description": "Specifies which visual component to use in the WipperSnapper interface and how to configure it",
       "type": "object",
+      "discriminator": { "propertyName": "type" },
       "required": ["type"],
-      "properties": {
-        "type": {
-          "description": "What component visualization to use to display the values from this sensor.",
-          "type": "string",
-          "pattern": "^(switch|button|slider)$"
-        }
-      }
+      "oneOf": [{
+        "properties": {
+          "type": { "const": "switch" },
+          "offLabel": { "type": "string" },
+          "offIcon": { "type": "string" },
+          "onLabel": { "type": "string" },
+          "onIcon": { "type": "string" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "button" },
+          "pressedLabel": { "type": "string" },
+          "unpressedLabel": { "type": "string" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "slider" }
+        },
+        "additionalProperties": false
+      }]
     }
   }
 }
