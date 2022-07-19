@@ -44,11 +44,11 @@ jobs:
           files: components/**/*
 
   check-user-permissions:
-    name: Determine Permissions
+    name: Check Write Permission
     runs-on: ubuntu-latest
     outputs:
       # Extract the permission for later jobs to use
-      has-permission: ${{ steps.check.outputs.has-permission }}
+      has-write-permission: ${{ steps.check.outputs.has-permission }}
     steps:
     - name: Check user permission
       id: check
@@ -66,7 +66,7 @@ jobs:
     - check-user-permissions
     env:
       FILES: ${{ needs.changed-files.outputs.files }}
-      HAS_WRITE: ${{ needs.check-user-permissions.outputs.has-permission }}
+      CAN_WRITE_TO_REPO: ${{ needs.check-user-permissions.outputs.has-write-permission }}
 
     steps:
       - uses: actions/checkout@v3
@@ -81,7 +81,7 @@ jobs:
           INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
 
           # apply the appropriate regex based on permissions of the user
-          if [[ $HAS_WRITE ]]; then
+          if [[ $CAN_WRITE_TO_REPO ]]; then
             component_definition_regex=$INTERNAL_REGEX
           else
             component_definition_regex=$EXTERNAL_REGEX
