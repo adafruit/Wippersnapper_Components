@@ -4,7 +4,7 @@
   "direction": "OUTPUT",
   "selectPullUp": true,
   "visualization": {
-    "type": "slider",
+    "type": "switch",
     "offLabel": "Off",
     "offIcon": "plug-circle-xmark",
     "onLabel": "On",
