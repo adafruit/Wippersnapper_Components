@@ -43,7 +43,7 @@ jobs:
         with:
           files: components/**/*
 
-  check-user-permission:
+  check-user-permissions:
     runs-on: ubuntu-latest
     name: Determine Permissions
     steps:
