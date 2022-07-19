@@ -54,6 +54,18 @@
     "forceOnPeriod": {
       "description": "If true, the user must specify a period (won't be optional in the form).",
       "type": "boolean"
+    },
+    "visualization": {
+      "description": "Specifies which visual component to use in the WipperSnapper interface and how to configure it",
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "description": "What component visualization to use to display the values from this sensor.",
+          "type": "string",
+          "pattern": "^(switch|button|slider)$"
+        }
+      }
     }
   }
 }
