@@ -44,8 +44,11 @@ jobs:
           files: components/**/*
 
   check-user-permissions:
-    runs-on: ubuntu-latest
     name: Determine Permissions
+    runs-on: ubuntu-latest
+    outputs:
+      # Extract that permission
+      has-permission: ${{ steps.check.outputs.has-permission }}
     steps:
     - name: Check user permission
       id: check
