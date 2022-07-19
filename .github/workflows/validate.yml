@@ -47,7 +47,7 @@ jobs:
     name: Determine Permissions
     runs-on: ubuntu-latest
     outputs:
-      # Extract that permission
+      # Extract the permission for later jobs to use
       has-permission: ${{ steps.check.outputs.has-permission }}
     steps:
     - name: Check user permission
@@ -73,14 +73,18 @@ jobs:
       - name: Validate Only Expected Filenames
         run: |
           EXIT_VALUE=0
-          # repo owners can modify more files
-          echo $HAS_WRITE
+
+          # external contributors can modify some files
+          EXTERNAL_REGEX="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+
+          # folks with write access to the repo (Adafruit team) can change more sensitive files
+          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+
+          # apply the appropriate regex based on permissions of the user
           if [[ $HAS_WRITE ]]; then
-            echo "writeable"
-            component_definition_regex="^components\/(sensors.json|(pin|i2c)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+            component_definition_regex=$INTERNAL_REGEX
           else
-            echo "unwriteable"
-            component_definition_regex="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+            component_definition_regex=$EXTERNAL_REGEX
           fi
 
           for file in $FILES; do
