@@ -43,19 +43,42 @@ jobs:
         with:
           files: components/**/*
 
+  check-user-permission:
+    runs-on: ubuntu-latest
+    name: Determine Permissions
+    steps:
+    - name: Check user permission
+      id: check
+      uses: scherermichael-oss/action-has-permission@master
+      with:
+        required-permission: write
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   validate-expected-filenames:
     name: Validate Filenames
     runs-on: ubuntu-latest
-    needs: changed-files
+    needs:
+    - changed-files
+    - check-user-permissions
     env:
       FILES: ${{ needs.changed-files.outputs.files }}
+      HAS_WRITE: ${{ needs.check-user-permissions.outputs.has-permission }}
 
     steps:
       - uses: actions/checkout@v3
       - name: Validate Only Expected Filenames
         run: |
-          component_definition_regex="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
           EXIT_VALUE=0
+          # repo owners can modify more files
+          echo $HAS_WRITE
+          if [[ $HAS_WRITE ]]; then
+            echo "writeable"
+            component_definition_regex="^components\/(sensors.json|(pin|i2c)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+          else
+            echo "unwriteable"
+            component_definition_regex="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          fi
 
           for file in $FILES; do
             if [[ $file =~ $component_definition_regex ]]; then
