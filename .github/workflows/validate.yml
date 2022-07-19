@@ -92,7 +92,7 @@ jobs:
           EXIT_VALUE=0
 
           for FILE in $FILES; do
-            if [[ $FILE == */definition.json ]]; then
+            if [[ $FILE == */*.json ]]; then
               continue # non-image file
             fi
 
