@@ -1,6 +1,6 @@
 {
-  "title": "Pin Component Definition",
-  "description": "A pin-based WipperSnapper component for use in Adafruit IO",
+  "title": "I2C Component Definition",
+  "description": "An I2C-based WipperSnapper component for use in Adafruit IO",
   "type": "object",
   "$defs": {
     "subcomponent": {
