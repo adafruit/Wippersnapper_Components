@@ -7,8 +7,8 @@
   "visualization": {
     "type": "switch",
     "offLabel": "Still",
-    "offIcon": "person-walking",
+    "offIcon": "fa6:regular:person-walking",
     "onLabel": "Motion",
-    "onIcon": "person-walking"
+    "onIcon": "fa6:solid:person-walking"
   }
 }

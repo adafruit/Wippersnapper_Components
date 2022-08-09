@@ -2,5 +2,12 @@
   "displayName":"Flat Vibration Switch",
   "mode":"DIGITAL",
   "direction":"INPUT",
-  "defaultPeriod":30
+  "defaultPeriod":30,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Still",
+    "offIcon": "fa6:regular:bell-slash",
+    "onLabel": "Bzzz",
+    "onIcon": "fa6:solid:bell-on"
+  }
 }

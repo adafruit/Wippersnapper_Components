@@ -8,8 +8,8 @@
   "visualization": {
     "type": "switch",
     "offLabel": "Closed",
-    "offIcon": "door-closed",
+    "offIcon": "fa6:regular:door-closed",
     "onLabel": "Open",
-    "onIcon": "door-open"
+    "onIcon": "fa6:solid:door-open"
   }
 }

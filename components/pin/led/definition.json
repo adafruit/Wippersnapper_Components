@@ -6,8 +6,8 @@
   "visualization": {
     "type": "switch",
     "offLabel": "Off",
-    "offIcon": "lightbulb",
+    "offIcon": "fa6:regular:lightbulb",
     "onLabel": "On",
-    "onIcon": "lightbulb-on"
+    "onIcon": "fa6:solid:lightbulb-on"
   }
 }

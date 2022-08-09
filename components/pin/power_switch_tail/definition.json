@@ -6,8 +6,8 @@
   "visualization": {
     "type": "switch",
     "offLabel": "Off",
-    "offIcon": "plug-circle-xmark",
+    "offIcon": "fa6:regular:plug-circle-xmark",
     "onLabel": "On",
-    "onIcon": "plug-circle-bolt"
+    "onIcon": "fa6:solid:plug-circle-bolt"
   }
 }

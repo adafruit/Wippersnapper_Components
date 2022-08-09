@@ -7,8 +7,8 @@
   "visualization": {
     "type": "switch",
     "offLabel": "Solid",
-    "offIcon": "bolt",
+    "offIcon": "fa6:regular:bolt",
     "onLabel": "Broken",
-    "onIcon": "bolt-slash"
+    "onIcon": "fa6:solid:bolt-slash"
   }
 }

@@ -6,8 +6,8 @@
   "visualization": {
     "type": "switch",
     "offLabel": "Dry",
-    "offIcon": "droplet",
+    "offIcon": "fa6:regular:droplet",
     "onLabel": "Wet",
-    "onIcon": "droplet"
+    "onIcon": "fa6:solid:droplet"
   }
 }
