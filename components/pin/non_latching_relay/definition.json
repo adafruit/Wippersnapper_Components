@@ -2,5 +2,13 @@
   "displayName": "Relay",
   "autoSelectString": "relay",
   "mode": "DIGITAL",
-  "direction": "OUTPUT"
+  "direction": "OUTPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:plug-circle-xmark",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:plug-circle-bolt"
+  }
+
 }
