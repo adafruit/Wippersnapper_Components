@@ -7,7 +7,7 @@
     "type": "switch",
     "offLabel": "Still",
     "offIcon": "fa6:regular:bell-slash",
-    "onLabel": "Bzzz",
+    "onLabel": "Moved!",
     "onIcon": "fa6:solid:bell-on"
   }
 }
