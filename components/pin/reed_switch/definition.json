@@ -4,5 +4,12 @@
   "mode": "DIGITAL",
   "direction": "INPUT",
   "defaultPeriod": 60,
-  "selectPullUp": true
+  "selectPullUp": true,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Closed",
+    "offIcon": "fa6:regular:door-closed",
+    "onLabel": "Open",
+    "onIcon": "fa6:solid:door-open"
+  }
 }

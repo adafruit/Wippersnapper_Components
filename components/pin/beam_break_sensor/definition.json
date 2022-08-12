@@ -3,5 +3,12 @@
   "autoSelectString": "beam",
   "mode": "DIGITAL",
   "direction": "INPUT",
-  "pull": "UP"
+  "pull": "UP",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Solid",
+    "offIcon": "fa6:regular:bolt",
+    "onLabel": "Broken",
+    "onIcon": "fa6:solid:bolt-slash"
+  }
 }
