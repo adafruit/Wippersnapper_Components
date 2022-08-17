@@ -76,7 +76,7 @@
     "defaultPeriod": 900
   },
   "pm100-std": {
-    "displayName": "PM10 Standard",
+    "displayName": "PM100 Standard",
     "defaultPeriod": 900
   },
   "pm10-env": {
