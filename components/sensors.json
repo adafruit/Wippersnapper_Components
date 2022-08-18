@@ -110,5 +110,9 @@
   "eco2": {
     "displayName": "Estimated C02",
     "defaultPeriod": 900
+  },
+  "unitless-percent": {
+    "displayName": "Unitless Percentage",
+    "defaultPeriod": 900
   }
 }
