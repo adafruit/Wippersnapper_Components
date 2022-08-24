@@ -6,7 +6,7 @@
     "selectPullUp": true,
     "visualization": {
       "type": "switch",
-      "offLabel": "Magnet Sensed!",
+      "offLabel": "Sensed!",
       "offIcon": "fa6:solid:magnet",
       "onLabel": "No Magnet",
       "onIcon": "fa6:thin:magnet"
