@@ -1,0 +1,8 @@
+{
+  "displayName": "Piezo Buzzer",
+  "visualization": {
+    "type": "slider",
+    "onIcon": "fa6:solid:volume",
+    "offIcon": "fa6:regular:volume-slash"
+  }
+}

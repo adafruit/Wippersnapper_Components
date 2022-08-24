@@ -1,0 +1,6 @@
+{
+    "displayName": "RGB LED",
+    "visualization": {
+      "type": "color-picker"
+    }
+}
