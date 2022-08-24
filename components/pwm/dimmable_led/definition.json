@@ -1,8 +1,6 @@
 {
   "displayName": "Dimmable LED",
   "visualization": {
-    "type": "slider",
-    "offIcon": "fa6:regular:lightbulb-slash",
-    "onIcon": "fa6:solid:lightbulb-on"
+    "type": "slider"
   }
 }
