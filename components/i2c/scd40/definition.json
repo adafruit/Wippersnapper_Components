@@ -1,5 +1,5 @@
 {
-	"displayName": "SCD30",
-	"i2cAddresses": ["0x61"],
+	"displayName": "SCD40/SCD41",
+	"i2cAddresses": ["0x62"],
 	"subcomponents": [ "ambient-temp", "humidity", "co2" ]
 }

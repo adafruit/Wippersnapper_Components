@@ -1,16 +1,5 @@
 {
   "displayName": "AHT20",
   "i2cAddresses": [ "0x38" ],
-  "subcomponents": [
-    {
-      "displayName": "Temperature Sensor",
-      "sensorType": "ambient-temp",
-      "defaultPeriod": 900
-    },
-    {
-      "displayName": "Humidity Sensor",
-      "sensorType": "humidity",
-      "defaultPeriod": 900
-    }
-  ]
+  "subcomponents": [ "ambient-temp", "humidity" ]
 }

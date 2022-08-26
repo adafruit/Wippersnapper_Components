@@ -1,11 +1,5 @@
 {
   "displayName": "TSL2591",
   "i2cAddresses": [ "0x29", "0x39", "0x49" ],
-  "subcomponents": [
-    {
-      "displayName": "Light Sensor",
-      "sensorType": "light",
-      "defaultPeriod": 900
-    }
-  ]
+  "subcomponents": [ "light" ]
 }

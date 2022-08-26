@@ -2,5 +2,12 @@
   "displayName": "Water Sensor",
   "autoSelectString": "water",
   "mode": "DIGITAL",
-  "direction": "INPUT"
+  "direction": "INPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Dry",
+    "offIcon": "fa6:regular:droplet",
+    "onLabel": "Wet",
+    "onIcon": "fa6:solid:droplet"
+  }
 }
