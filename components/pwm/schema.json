@@ -2,7 +2,7 @@
   "title": "PWM Component Definition",
   "description": "A PWM WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName"],
+  "required": [ "displayName", "pwmSetting"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -11,6 +11,12 @@
       "minLength": 3,
       "maxLength": 24
     },
+    "pwmSetting": {
+        "description": "The component's pulse-width modulation setting. Either fixedFrequency (variable duty cycle) or variableFrequency (fixed duty cycle)",
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 24
+      },
     "visualization": {
       "description": "Specifies which visual component to use in the WipperSnapper interface and how to configure it",
       "type": "object",
