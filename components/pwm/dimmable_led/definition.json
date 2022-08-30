@@ -1,6 +1,6 @@
 {
   "displayName": "Dimmable LED",
-  "pwmSetting": "fixedFrequency",
+  "frequency": "fixed",
   "visualization": {
     "type": "slider"
   }
