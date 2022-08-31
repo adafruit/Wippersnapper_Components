@@ -1,0 +1,5 @@
+{
+	"displayName": "SCD40_VPD",
+	"i2cAddresses": ["0x62"],
+	"subcomponents": [ "ambient-temp", "humidity", "co2", "vpd" ]
+}
