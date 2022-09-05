@@ -28,6 +28,18 @@ jobs:
           schema: /components/i2c/schema.json
           jsons: components/i2c/*/definition.json
 
+  validate-servo-component-definitions:
+    name: Validate Servo Component Definition Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Validate Servo Components
+        uses: nhalstead/validate-json-action@0.1.3
+        with:
+          schema: /components/servo/schema.json
+          jsons: components/servo/*/definition.json
+
   changed-files:
     name: List Changed Files
     runs-on: ubuntu-latest
