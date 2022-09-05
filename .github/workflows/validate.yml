@@ -4,41 +4,21 @@ name: Validate JSONs
 on: [pull_request]
 
 jobs:
-  validate-pin-component-definitions:
-    name: Validate Pin Component Definition Files
+  validate-each-component-type-definition:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        componentType: [pin, i2c, servo]
+
+    name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
       - uses: actions/checkout@v3
 
-      - name: Validate Pin Components
+      - name: Validate ${{ matrix.componentType }} Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
-          schema: /components/pin/schema.json
-          jsons: components/pin/*/definition.json
-
-  validate-i2c-component-definitions:
-    name: Validate I2C Component Definition Files
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Validate I2C Components
-        uses: nhalstead/validate-json-action@0.1.3
-        with:
-          schema: /components/i2c/schema.json
-          jsons: components/i2c/*/definition.json
-
-  validate-servo-component-definitions:
-    name: Validate Servo Component Definition Files
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Validate Servo Components
-        uses: nhalstead/validate-json-action@0.1.3
-        with:
-          schema: /components/servo/schema.json
-          jsons: components/servo/*/definition.json
+          schema: /components/${{ matrix.componentType }}/schema.json
+          jsons: components/${{ matrix.componentType }}/*/definition.json
 
   changed-files:
     name: List Changed Files
