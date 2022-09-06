@@ -4,29 +4,21 @@ name: Validate JSONs
 on: [pull_request]
 
 jobs:
-  validate-pin-component-definitions:
-    name: Validate Pin Component Definition Files
+  validate-each-component-type-definition:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        componentType: [pin, i2c, servo]
+
+    name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
       - uses: actions/checkout@v3
 
-      - name: Validate Pin Components
+      - name: Validate ${{ matrix.componentType }} Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
-          schema: /components/pin/schema.json
-          jsons: components/pin/*/definition.json
-
-  validate-i2c-component-definitions:
-    name: Validate I2C Component Definition Files
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Validate I2C Components
-        uses: nhalstead/validate-json-action@0.1.3
-        with:
-          schema: /components/i2c/schema.json
-          jsons: components/i2c/*/definition.json
+          schema: /components/${{ matrix.componentType }}/schema.json
+          jsons: components/${{ matrix.componentType }}/*/definition.json
 
   changed-files:
     name: List Changed Files
@@ -75,10 +67,10 @@ jobs:
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(pin|i2c)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          EXTERNAL_REGEX="^components\/(pin|i2c|servo)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
