@@ -3,6 +3,7 @@
   "description": "A DS18X20 WipperSnapper component for use in Adafruit IO",
   "type": "object",
   "required": [ "displayName", "sensorType", "sensorResolution"],
+  "additionalProperties": false,
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",
@@ -11,15 +12,15 @@
       "maxLength": 24
     },
     "sensorType": {
-        "description": "One of the supported sensor type strings (found in README).",
-        "type": "string",
-        "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|altitude|gas-resistance|tvoc)$"
+      "description": "One of the supported sensor type strings (found in README).",
+      "type": "string",
+      "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent)$"
     },
     "sensorResolution": {
-        "description": "The DS18X20's desired sensor read resolution, in bits.",
-        "type": "number",
-        "minimum": 9,
-        "maximum": 12
+      "description": "The DS18X20's desired sensor read resolution, in bits.",
+      "type": "number",
+      "minimum": 9,
+      "maximum": 12
     },
     "defaultPeriod": {
       "description": "If present, the component form will allow the user to set its period, with this value as the default (in seconds)",

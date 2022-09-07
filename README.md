@@ -66,3 +66,6 @@ Possible values for an I2C component's subcomponents' `sensorType` field:
 - "co2"
 - "gas-resistance"
 - "altitude"
+- "lux"
+- "eco2"
+- "unitless-percent"
