@@ -3,5 +3,12 @@
   "autoSelectString": "toggle",
   "mode": "DIGITAL",
   "direction": "INPUT",
-  "defaultPeriod": 30
+  "defaultPeriod": 30,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:light-switch-off",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:light-switch-on"
+  }
 }

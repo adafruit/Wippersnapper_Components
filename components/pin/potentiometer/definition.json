@@ -5,5 +5,8 @@
   "direction": "INPUT",
   "defaultPeriod": 60,
   "analogReadMode": "PIN_VALUE",
-  "selectReadMode": true
+  "selectReadMode": true,
+  "visualization": {
+    "type": "slider"
+  }
 }

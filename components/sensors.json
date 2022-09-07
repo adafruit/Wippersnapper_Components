@@ -1,0 +1,118 @@
+{
+  "accelerometer": {
+    "displayName": "Accelerometer",
+    "defaultPeriod": 900
+  },
+  "magnetic-field": {
+    "displayName": "Magnetic Field Sensor",
+    "defaultPeriod": 900
+  },
+  "orientation": {
+    "displayName": "Orientation Sensor",
+    "defaultPeriod": 900
+  },
+  "gyroscope": {
+    "displayName": "Gyroscope",
+    "defaultPeriod": 900
+  },
+  "light": {
+    "displayName": "Light Sensor",
+    "defaultPeriod": 900
+  },
+  "pressure": {
+    "displayName": "Pressure Sensor",
+    "defaultPeriod": 900
+  },
+  "proximity": {
+    "displayName": "Proximity Sensor",
+    "defaultPeriod": 900
+  },
+  "gravity": {
+    "displayName": "Gravity Sensor",
+    "defaultPeriod": 900
+  },
+  "acceleration": {
+    "displayName": "Acceleration Sensor",
+    "defaultPeriod": 900
+  },
+  "rotation": {
+    "displayName": "Rotation Sensor",
+    "defaultPeriod": 900
+  },
+  "humidity": {
+    "displayName": "Humidity Sensor",
+    "defaultPeriod": 900
+  },
+  "ambient-temp": {
+    "displayName": "Temperature Sensor",
+    "defaultPeriod": 900
+  },
+  "object-temp": {
+    "displayName": "Thermocouple Temperature",
+    "defaultPeriod": 900
+  },
+  "voltage": {
+    "displayName": "Voltage Sensor",
+    "defaultPeriod": 900
+  },
+  "current": {
+    "displayName": "Current",
+    "defaultPeriod": 900
+  },
+  "color": {
+    "displayName": "Color",
+    "defaultPeriod": 900
+  },
+  "raw": {
+    "displayName": "Raw Data",
+    "defaultPeriod": 900
+  },
+  "pm10-std": {
+    "displayName": "PM10 Standard",
+    "defaultPeriod": 900
+  },
+  "pm25-std": {
+    "displayName": "PM25 Standard",
+    "defaultPeriod": 900
+  },
+  "pm100-std": {
+    "displayName": "PM100 Standard",
+    "defaultPeriod": 900
+  },
+  "pm10-env": {
+    "displayName": "PM10  Environmental",
+    "defaultPeriod": 900
+  },
+  "pm25-env": {
+    "displayName": "PM25 Environmental",
+    "defaultPeriod": 900
+  },
+  "pm100-env": {
+    "displayName": "PM100 Environmental",
+    "defaultPeriod": 900
+  },
+  "co2": {
+    "displayName": "CO2",
+    "defaultPeriod": 900
+  },
+  "gas-resistance": {
+    "displayName": "Total VOC",
+    "defaultPeriod" :900
+  },
+  "altitude": {
+    "displayName": "Altitude (Relative)",
+    "defaultPeriod": 900
+  },
+  "lux": {
+    "displayName": "Light Sensor (Lux)",
+    "defaultPeriod": 900
+  },
+  "eco2": {
+    "displayName": "Estimated C02",
+    "defaultPeriod": 900
+  },
+  "unitless-percent": {
+    "displayName": "Unitless Percentage",
+    "defaultPeriod": 900
+  }
+}

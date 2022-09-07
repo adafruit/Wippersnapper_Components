@@ -4,5 +4,10 @@
   "mode": "DIGITAL",
   "direction": "INPUT",
   "defaultPeriod": 30,
-  "selectPullUp": true
+  "selectPullUp": true,
+  "visualization": {
+    "type": "button",
+    "pressedLabel": "Pressed",
+    "unpressedLabel": "Unpressed"
+  }
 }

@@ -2,5 +2,12 @@
   "displayName": "Power Switch",
   "mode": "DIGITAL",
   "direction": "OUTPUT",
-  "selectPullUp": true
+  "selectPullUp": true,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:plug-circle-xmark",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:plug-circle-bolt"
+  }
 }
