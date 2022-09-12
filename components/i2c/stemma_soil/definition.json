@@ -7,6 +7,10 @@
       "sensorType": "ambient-temp"
     },
     {
+        "displayName": "Ambient Temperature (Fahrenheit)",
+        "sensorType": "ambient-temp-fahrenheit"
+      },
+    {
       "displayName": "Capacitive Sensor",
       "sensorType": "raw"
     }
