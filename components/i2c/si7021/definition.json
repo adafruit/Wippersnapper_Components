@@ -1,0 +1,5 @@
+{
+	"displayName": "Si7021",
+	"i2cAddresses": ["0x40"],
+	"subcomponents": [ "ambient-temp", "humidity" ]
+}
