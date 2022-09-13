@@ -44,19 +44,19 @@
     "defaultPeriod": 900
   },
   "ambient-temp": {
-    "displayName": "Temperature Sensor",
+    "displayName": "Temperature Sensor (°C)",
     "defaultPeriod": 900
   },
   "object-temp": {
-    "displayName": "Thermocouple Temperature",
+    "displayName": "Thermocouple Temperature (°C)",
     "defaultPeriod": 900
   },
   "ambient-temp-fahrenheit": {
-    "displayName": "Temperature Sensor (degrees Fahrenheit)",
+    "displayName": "Temperature Sensor (°F)",
     "defaultPeriod": 900
   },
   "object-temp-fahrenheit": {
-    "displayName": "Thermocouple Temperature (degrees Fahrenheit)",
+    "displayName": "Thermocouple Temperature (°F)",
     "defaultPeriod": 900
   },
   "voltage": {
