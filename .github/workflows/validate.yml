@@ -83,6 +83,7 @@ jobs:
             if [[ $file =~ $component_definition_regex ]]; then
               if [[ $file =~ [:upper] ]]; then
                 echo "❌ $file (no uppercase characters allowed)"
+                EXIT_VALUE=1
               else
                 echo "✅ $file"
               fi
