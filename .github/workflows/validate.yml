@@ -81,7 +81,11 @@ jobs:
 
           for file in $FILES; do
             if [[ $file =~ $component_definition_regex ]]; then
-              echo "✅ $file"
+              if [[ $file =~ [:upper] ]]; then
+                echo "❌ $file (no uppercase characters allowed)"
+              else
+                echo "✅ $file"
+              fi
             else
               echo "❌ $file"
               EXIT_VALUE=1
@@ -105,7 +109,7 @@ jobs:
           EXIT_VALUE=0
 
           for FILE in $FILES; do
-            if [[ $FILE == */*.json ]]; then
+            if [[ $FILE == *.json ]]; then
               continue # non-image file
             fi
 
