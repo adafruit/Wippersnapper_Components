@@ -1,5 +1,5 @@
 {
   "displayName": "SHT3X",
   "i2cAddresses": [ "0x44", "0x45" ],
-  "subcomponents": [ "ambient-temp", "humidity" ]
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
 }
