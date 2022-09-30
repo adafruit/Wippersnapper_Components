@@ -1,7 +1,0 @@
-{
-  "displayName": "Waterproof DS18B20",
-  "sensorType": "object-temp",
-  "sensorResolution": 12,
-  "defaultPeriod": 60,
-  "forceOnPeriod": true
-}

@@ -2,7 +2,7 @@
   "title": "DS18X20 Component Definition",
   "description": "A DS18X20 WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "sensorType", "sensorResolution"],
+  "required": [ "displayName", "sensorTypes", "sensorResolution"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -11,10 +11,10 @@
       "minLength": 3,
       "maxLength": 24
     },
-    "sensorType": {
-      "description": "One of the supported sensor type strings (found in README).",
-      "type": "string",
-      "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent)$"
+    "sensorTypes": {
+      "description": "List of sensors attached to on the component",
+      "type": "array",
+      "items": { "$ref": "#/$defs/subcomponent" }
     },
     "sensorResolution": {
       "description": "The DS18X20's desired sensor read resolution, in bits.",

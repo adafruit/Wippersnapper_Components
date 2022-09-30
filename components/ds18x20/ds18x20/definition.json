@@ -1,0 +1,7 @@
+{
+  "displayName": "Generic DS18B20",
+  "sensorTypes": ["object-temp", "object-temp-fahrenheit"],
+  "sensorResolution": 12,
+  "defaultPeriod": 60,
+  "forceOnPeriod": true
+}
