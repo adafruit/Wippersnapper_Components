@@ -16,7 +16,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^object-temp?(-fahrenheit)$"
+        "pattern": "^object-temp(-fahrenheit)?$"
       }
     },
     "sensorResolution": {
