@@ -1,6 +1,6 @@
 {
   "displayName": "Generic DS18x20",
-  "subcomponents": ["object-temp", "object-temp-fahrenheit"],
+  "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit"],
   "sensorResolution": 12,
   "defaultPeriod": 60,
   "forceOnPeriod": true

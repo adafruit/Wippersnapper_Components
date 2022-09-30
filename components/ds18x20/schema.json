@@ -12,11 +12,11 @@
       "maxLength": 24
     },
     "subcomponents": {
-      "description": "The object temperature sensor (and its fahrenheit counterpart) standard on DS18X20 Components",
+      "description": "The ambient temperature sensor (and its fahrenheit counterpart) standard on DS18X20 Components",
       "type": "array",
       "items": {
         "type": "string",
-        "pattern": "^object-temp(-fahrenheit)?$"
+        "pattern": "^ambient-temp(-fahrenheit)?$"
       }
     },
     "sensorResolution": {
