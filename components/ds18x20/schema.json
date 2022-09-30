@@ -2,7 +2,7 @@
   "title": "DS18X20 Component Definition",
   "description": "A DS18X20 WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "sensorTypes", "sensorResolution"],
+  "required": [ "displayName", "subcomponents", "sensorResolution"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
