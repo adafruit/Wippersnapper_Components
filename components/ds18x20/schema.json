@@ -12,9 +12,12 @@
       "maxLength": 24
     },
     "sensorTypes": {
-      "description": "List of sensors attached to on the component",
+      "description": "The object temperature sensor (and its fahrenheit counterpart) standard on DS18X20 Components",
       "type": "array",
-      "items": { "$ref": "#/$defs/subcomponent" }
+      "items": {
+        "type": "string",
+        "pattern": "^object-temp?(-fahrenheit)$"
+      }
     },
     "sensorResolution": {
       "description": "The DS18X20's desired sensor read resolution, in bits.",
