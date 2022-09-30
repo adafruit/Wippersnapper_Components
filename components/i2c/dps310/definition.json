@@ -1,5 +1,5 @@
 {
   "displayName": "DPS310",
   "i2cAddresses": [ "0x76", "0x77" ],
-  "subcomponents": [ "ambient-temp", "pressure" ]
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
 }
