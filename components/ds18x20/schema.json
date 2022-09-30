@@ -9,7 +9,7 @@
       "description": "The human-friendly name of this component.",
       "type": "string",
       "minLength": 3,
-      "maxLength": 24
+      "maxLength": 30
     },
     "subcomponents": {
       "description": "The ambient temperature sensor (and its fahrenheit counterpart) standard on DS18X20 Components",

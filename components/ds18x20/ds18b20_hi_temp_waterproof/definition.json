@@ -1,5 +1,5 @@
 {
-  "displayName": "Generic DS18x20",
+  "displayName": "High Temp + Waterproof DS18B20",
   "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit"],
   "sensorResolution": 12,
   "defaultPeriod": 60,
