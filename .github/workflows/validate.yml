@@ -1,29 +1,39 @@
+# Reference for adding or expanding schemas: https://ajv.js.org/json-schema.html#json-data-type
 name: Validate JSONs
 
 on: [pull_request]
 
 jobs:
-  validate-pin-components:
+  validate-each-component-type-definition:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
+    strategy:
+      matrix:
+        componentType: [pin, i2c, servo]
 
-      - name: Validate Pin Components
+    name: Validate ${{ matrix.componentType }} Component Definition Files
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Validate ${{ matrix.componentType }} Components
         uses: nhalstead/validate-json-action@0.1.3
         with:
-          schema: /components/pin/schema.json
-          jsons: components/pin/*/definition.json
+          schema: /components/${{ matrix.componentType }}/schema.json
+          jsons: components/${{ matrix.componentType }}/*/definition.json
 
-  validate-i2c-components:
+  changed-files:
+    name: List Changed Files
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
+    outputs:
+      # All files that were Added, Copied, Modified, or Renamed
+      files: ${{ steps.list-changed-files.outputs.all_changed_files }}
 
-      - name: Validate I2C Components
-        uses: nhalstead/validate-json-action@0.1.3
+    steps:
+      - uses: actions/checkout@v3
+      - name: List Changed Board Files
+        id: list-changed-files
+        uses: tj-actions/changed-files@v21
         with:
-          schema: /components/i2c/schema.json
-          jsons: components/i2c/*/definition.json
+          files: components/**/*
 
   validate-pixel-components:
     runs-on: ubuntu-latest
@@ -35,3 +45,231 @@ jobs:
         with:
           schema: /components/pixel/schema.json
           jsons: components/pixel/*/definition.json
+
+  check-user-permissions:
+    name: Check Write Permission
+    runs-on: ubuntu-latest
+    outputs:
+      # Extract the permission for later jobs to use
+      has-write-permission: ${{ steps.check.outputs.has-permission }}
+    steps:
+    - name: Check user permission
+      id: check
+      uses: scherermichael-oss/action-has-permission@master
+      with:
+        required-permission: write
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  validate-expected-filenames:
+    name: Validate Filenames
+    runs-on: ubuntu-latest
+    needs:
+    - changed-files
+    - check-user-permissions
+    env:
+      FILES: ${{ needs.changed-files.outputs.files }}
+      CAN_WRITE_TO_REPO: ${{ needs.check-user-permissions.outputs.has-write-permission }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate Only Expected Filenames
+        run: |
+          EXIT_VALUE=0
+
+          # external contributors can modify some files
+          EXTERNAL_REGEX="^components\/(pin|i2c|servo)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+
+          # folks with write access to the repo (Adafruit team) can change more sensitive files
+          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+
+          # apply the appropriate regex based on permissions of the user
+          if [[ $CAN_WRITE_TO_REPO ]]; then
+            component_definition_regex=$INTERNAL_REGEX
+          else
+            component_definition_regex=$EXTERNAL_REGEX
+          fi
+
+          for file in $FILES; do
+            if [[ $file =~ $component_definition_regex ]]; then
+              if [[ $file =~ [A-Z] ]]; then
+                echo "❌ $file (no uppercase characters allowed)"
+                EXIT_VALUE=1
+              else
+                echo "✅ $file"
+              fi
+            else
+              echo "❌ $file"
+              EXIT_VALUE=1
+            fi
+          done
+
+          exit $EXIT_VALUE
+
+  validate-image-extension-mimetype-agreement:
+    name: Validate Extensions Match Mimetypes
+    runs-on: ubuntu-latest
+    needs:
+      - changed-files
+      - validate-expected-filenames
+    env:
+      FILES: ${{ needs.changed-files.outputs.files }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate Image File Extension<->Mimetype Agreement
+        run: |
+          EXIT_VALUE=0
+
+          for FILE in $FILES; do
+            if [[ $FILE == *.json ]]; then
+              continue # non-image file
+            fi
+
+            # extract each file's mimetype and extension
+            MIME=`file -b --mime-type $FILE`
+            EXT="${FILE##*.}"
+
+            # ad-hoc check that extension matches mimetype
+            if [[ "image/$EXT" == $MIME || ($EXT == "jpg" && $MIME == "image/jpeg") || ($EXT == "svg" && ($MIME == "image/svg+xml" || $MIME == "text/xml")) ]]; then
+              # Match!
+              echo "✅ $FILE"
+
+            else
+              # Doesn't match? Give helpful report
+
+              # split the mimetype on '/'
+              IFS='/'
+              read -a SPLIT_MIME <<< "$MIME"
+              IFS=' '
+              # take the last item
+              MIME_EXT=${SPLIT_MIME[-1]}
+
+              if [[ "$MIME_EXT" == "xml" ]]; then
+                MIME_EXT="svg"
+              elif [[ "$MIME_EXT" == "jpeg" ]]; then
+                MIME_EXT="jpg"
+              fi
+
+              echo "❌ $FILE: expected .$MIME_EXT"
+
+              EXIT_VALUE=1
+            fi
+          done
+
+          if [[ $EXIT_VALUE = 1 ]]; then
+            echo "Fix these ☝️ issues by renaming each ❌ file to the indicated extension."
+          fi
+
+          exit $EXIT_VALUE
+
+  validate-image-dimensions:
+    name: Validate Image Dimensions
+    runs-on: ubuntu-latest
+    needs:
+      - changed-files
+      - validate-image-extension-mimetype-agreement
+    env:
+      FILES: ${{ needs.changed-files.outputs.files }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: mfinelli/setup-imagemagick@v1
+      - name: Validate Image Dimensions
+        run: |
+          EXIT_VALUE=0
+
+          MAX_WIDTH=600
+          MAX_HEIGHT=600
+
+          for FILE in $FILES; do
+            if [[ $FILE == *.json ]]; then
+              continue # non-image file
+            fi
+
+            # use imagemagick for the width
+            WIDTH=`identify -ping -format "%w" ${FILE}[0]`
+            BAD_WIDTH=false
+            if [[ "$WIDTH" -gt "$MAX_WIDTH" ]]; then
+              EXIT_VALUE=1
+              BAD_WIDTH=true
+            fi
+
+            # use imagemagick for the height
+            HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
+            BAD_HEIGHT=false
+            if [[ "$HEIGHT" -gt "$MAX_HEIGHT" ]]; then
+              EXIT_VALUE=1
+              BAD_HEIGHT=true
+            fi
+
+            if [[ $BAD_WIDTH = true || $BAD_HEIGHT = true ]]; then
+              echo "❌ $FILE  (${WIDTH}x${HEIGHT})"
+              if [[ $BAD_WIDTH = true ]]; then
+                echo "  ↔️ width must be 800 pixels or less"
+              fi
+
+              if [[ $BAD_HEIGHT = true ]]; then
+                echo "  ↕️ height must be 2000 pixels or less"
+              fi
+
+            else
+              echo "✅ $FILE  (${WIDTH}x${HEIGHT})"
+            fi
+          done
+
+          if [[ $EXIT_VALUE = 1 ]]; then
+            echo "Fix these ☝️ issues by resizing each ❌ image to fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
+          fi
+
+          exit $EXIT_VALUE
+
+  validate-image-file-sizes:
+    name: Validate Image File Sizes
+    runs-on: ubuntu-latest
+    needs:
+      - changed-files
+      - validate-image-dimensions
+    env:
+      FILES: ${{ needs.changed-files.outputs.files }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate Image File Sizes
+        run: |
+          EXIT_VALUE=0
+
+          MAX_FILESIZE=$((100*1024)) # 100kb
+          MAX_ANIGIF_FILESIZE=$((700*1024)) # 700kb
+
+          for FILE in $FILES; do
+            if [[ $FILE == *.json ]]; then
+              continue # non-image file
+            fi
+
+            FILESIZE=$(stat -c%s "$FILE")
+
+            if [[ $FILE == *animation.gif ]]; then
+              MAX=$MAX_ANIGIF_FILESIZE
+            else
+              MAX=$MAX_FILESIZE
+            fi
+
+            if [[ "$FILESIZE" -gt "$MAX"  ]]; then
+              EXIT_VALUE=1
+              echo "❌ $FILE ($FILESIZE)"
+
+            else
+              echo "✅ $FILE ($FILESIZE)"
+            fi
+          done
+
+          if [[ $EXIT_VALUE = 1 ]]; then
+            echo "Fix these issues ☝️ by compressing each ❌ file to be smaller than 100KB (700KB for animation.gif animations). You can try:"
+            echo "- using an image compressor"
+            echo "- exporting at lower quality settings (png or jpg)"
+            echo "- exporting a different image format:"
+            echo "  - photos are best saved as jpg"
+            echo "  - screenshots and digital images are best saved as png"
+            echo "  - svg might be efficient for images with few colors and simple shapes"
+            echo "  - gif should only be used for animations"
+          fi
+
+          exit $EXIT_VALUE

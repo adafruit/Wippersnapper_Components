@@ -1,10 +1,11 @@
 {
-  "title": "Pin Component Definition",
-  "description": "A pin-based WipperSnapper component for use in Adafruit IO",
+  "title": "I2C Component Definition",
+  "description": "An I2C-based WipperSnapper component for use in Adafruit IO",
   "type": "object",
   "$defs": {
     "subcomponent": {
-      "type": "object",
+      "type": ["string", "object"],
+      "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit)$",
       "required": [ "displayName", "sensorType" ],
       "properties": {
         "displayName": {
@@ -22,7 +23,7 @@
         "sensorType": {
           "description": "One of the supported I2C sensor type strings (found in README).",
           "type": "string",
-          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|altitude|gas-resistance|tvoc)$"
+          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit)$"
         },
         "defaultPeriod": {
           "description": "What period to the form should default to for this sensor.",
@@ -34,6 +35,7 @@
     }
   },
   "required": [ "displayName", "i2cAddresses", "subcomponents" ],
+  "additionalProperties": false,
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",

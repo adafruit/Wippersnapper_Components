@@ -1,11 +1,5 @@
 {
   "displayName": "MCP9808",
   "i2cAddresses": [ "0x18", "0x19", "0x1A", "0x1C" ],
-  "subcomponents": [
-    {
-      "displayName": "Temperature Sensor",
-      "sensorType": "ambient-temp",
-      "defaultPeriod": 900
-    }
-  ]
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit" ]
 }

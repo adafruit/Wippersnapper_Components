@@ -1,16 +1,5 @@
 {
   "displayName": "MCP9601",
   "i2cAddresses": [ "0x60", "0x61", "0x62", "0x63", "0x64", "0x65", "0x66", "0x67" ],
-  "subcomponents": [
-    {
-      "displayName": "Thermocouple Temperature",
-      "sensorType": "object-temp",
-      "defaultPeriod": 900
-    },
-    {
-      "displayName": "Ambient Temperature",
-      "sensorType": "ambient-temp",
-      "defaultPeriod": 900
-    }
-  ]
+  "subcomponents": [ "object-temp", "object-temp-fahrenheit", "ambient-temp", "ambient-temp-fahrenheit" ]
 }

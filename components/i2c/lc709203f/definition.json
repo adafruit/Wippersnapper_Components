@@ -1,0 +1,14 @@
+{
+  "displayName": "LC709203F",
+  "i2cAddresses": [ "0x0B"],
+  "subcomponents": [
+    {
+      "displayName": "Battery Cell Voltage",
+      "sensorType": "voltage"
+    },
+    {
+      "displayName": "Battery Cell Percent",
+      "sensorType": "unitless-percent"
+    }
+  ]
+}

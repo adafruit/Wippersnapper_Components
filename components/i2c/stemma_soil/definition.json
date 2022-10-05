@@ -1,0 +1,12 @@
+{
+  "displayName": "STEMMA Soil Sensor",
+  "i2cAddresses": [ "0x36"],
+  "subcomponents": [
+    "ambient-temp",
+    "ambient-temp-fahrenheit",
+    {
+      "displayName": "Capacitive Sensor",
+      "sensorType": "raw"
+    }
+  ]
+}

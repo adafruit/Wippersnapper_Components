@@ -2,5 +2,12 @@
   "displayName": "LED",
   "autoSelectString": "led",
   "mode": "DIGITAL",
-  "direction": "OUTPUT"
+  "direction": "OUTPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:lightbulb",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:lightbulb-on"
+  }
 }
