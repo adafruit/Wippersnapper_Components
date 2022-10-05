@@ -1,7 +1,6 @@
 {
   "displayName": "NeoPixel",
   "autoSelectString": "NeoPixel",
-  "pixelType": "neopixel",
-  "defaultNumPixels": 1,
-  "defaultPixelBrightness": 255
+  "pixelsType": "NEOPIXEL",
+  "defaultPixelsOrder": "GRB"
 }

@@ -2,7 +2,7 @@
   "title": "Pixel Component Definition",
   "description": "Addressable Pixel WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "pixelType"],
+  "required": [ "displayName", "pixelsType", "defaultPixelsOrder"],
   "properties": {
     "displayName": {
       "description": "The human-friendly name of this component.",
@@ -10,10 +10,15 @@
       "minLength": 3,
       "maxLength": 24
     },
-    "pixelType": {
-        "description": "The type of addressable pixel: WS2812 (neopixel) or APA201 (dotstar).",
+    "pixelsType": {
+        "description": "The type of addressable pixel: NEOPIXEL or DOTSTAR. Corresponds to `PixelsType` in pixels.proto",
         "type": "string",
-        "pattern": "^(neopixel|dotstar)$"
+        "pattern": "^(NEOPIXEL|DOTSTAR)$"
+    },
+    "defaultPixelsOrder": {
+        "description": "The pixel strand's color ordering. Corresponds to `defaultPixelsOrder` in pixels.proto.",
+        "type": "string",
+        "pattern": "^(GRB|GRBW|RGB|RGBW|BRG)$"
     },
     "defaultNumPixels": {
         "description": "If present, the component form will allow the user to set the number of pixels in the strand, with this value as the default.",
