@@ -2,6 +2,5 @@
   "displayName": "High Temp + Waterproof DS18B20",
   "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit"],
   "sensorResolution": 12,
-  "defaultPeriod": 60,
-  "forceOnPeriod": true
+  "defaultPeriod": 60
 }

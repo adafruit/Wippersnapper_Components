@@ -30,10 +30,6 @@
       "type": "number",
       "minimum": 30,
       "maximum": 86400
-    },
-    "forceOnPeriod": {
-      "description": "If true, the user must specify a period (won't be optional in the form).",
-      "type": "boolean"
     }
   }
 }
