@@ -24,12 +24,6 @@
       "type": "number",
       "minimum": 9,
       "maximum": 12
-    },
-    "defaultPeriod": {
-      "description": "If present, the component form will allow the user to set its period, with this value as the default (in seconds)",
-      "type": "number",
-      "minimum": 30,
-      "maximum": 86400
     }
   }
 }

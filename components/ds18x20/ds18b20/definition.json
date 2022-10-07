@@ -1,6 +1,5 @@
 {
   "displayName": "DS18B20",
   "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit"],
-  "sensorResolution": 12,
-  "defaultPeriod": 60
+  "sensorResolution": 12
 }
