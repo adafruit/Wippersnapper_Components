@@ -1,0 +1,5 @@
+{
+  "displayName": "VEML7700",
+  "i2cAddresses": [ "0x10" ],
+  "subcomponents": [ "light" ]
+}
