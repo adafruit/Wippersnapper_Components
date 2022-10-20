@@ -45,7 +45,7 @@ jobs:
       - name: List All Component Files
         if:  ${{ inputs.all_files }}
         id: list-all-files
-        run: echo "all_files='`find components -type f`'" >> $GITHUB_OUTPUT
+        run: echo "all_files=`find components -type f | paste -sd " "`" >> $GITHUB_OUTPUT
 
   check-user-permissions:
     name: Check Write Permission
