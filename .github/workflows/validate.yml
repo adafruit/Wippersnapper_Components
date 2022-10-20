@@ -41,6 +41,7 @@ jobs:
         id: list-changed-files
         uses: tj-actions/changed-files@v21
         with:
+          files: components/**/*
       - name: List All Component Files
         if:  ${{ inputs.all_files }}
         id: list-all-files
