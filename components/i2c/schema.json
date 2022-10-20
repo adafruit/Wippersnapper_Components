@@ -31,6 +31,12 @@
           "type": "number",
           "minimum": 30,
           "maximum": 86400
+        },
+        "precision": {
+          "description": "Number of integers to show to the right of the decimal. Match this to the actual device's precision.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 17
         }
       }
     }
