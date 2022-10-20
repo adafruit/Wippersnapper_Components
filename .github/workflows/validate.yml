@@ -2,8 +2,13 @@
 name: Validate JSONs
 
 on:
-- pull_request
-- workflow_dispatch
+  pull_request
+  workflow_dispatch:
+    inputs:
+      all_files:
+        description: True to validate all files instead of only changed files.
+        type: boolean
+        default: true
 
 jobs:
   validate-each-component-type-definition:
@@ -22,20 +27,24 @@ jobs:
           schema: /components/${{ matrix.componentType }}/schema.json
           jsons: components/${{ matrix.componentType }}/*/definition.json
 
-  changed-files:
+  gather-relevant-files:
     name: List Changed Files
     runs-on: ubuntu-latest
     outputs:
       # All files that were Added, Copied, Modified, or Renamed
-      files: ${{ steps.list-changed-files.outputs.all_changed_files }}
+      files: ${{ steps.list-changed-files.outputs.all_changed_files }} ${{ steps.list-all-files.outputs.all_files }}
 
     steps:
       - uses: actions/checkout@v3
-      - name: List Changed Board Files
+      - name: List Changed Component Files
+        if:  ${{ !inputs.all_files }}
         id: list-changed-files
         uses: tj-actions/changed-files@v21
         with:
-          files: components/**/*
+      - name: List All Component Files
+        if:  ${{ inputs.all_files }}
+        id: list-all-files
+        run: echo "all_files=`ls components/**/*`" >> $GITHUB_OUTPUT
 
   check-user-permissions:
     name: Check Write Permission
@@ -56,10 +65,10 @@ jobs:
     name: Validate Filenames
     runs-on: ubuntu-latest
     needs:
-    - changed-files
+    - gather-relevant-files
     - check-user-permissions
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
       CAN_WRITE_TO_REPO: ${{ needs.check-user-permissions.outputs.has-write-permission }}
 
     steps:
@@ -101,10 +110,10 @@ jobs:
     name: Validate Extensions Match Mimetypes
     runs-on: ubuntu-latest
     needs:
-      - changed-files
+      - gather-relevant-files
       - validate-expected-filenames
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
       - name: Validate Image File Extension<->Mimetype Agreement
@@ -157,10 +166,10 @@ jobs:
     name: Validate Image Dimensions
     runs-on: ubuntu-latest
     needs:
-      - changed-files
+      - gather-relevant-files
       - validate-image-extension-mimetype-agreement
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
       - uses: mfinelli/setup-imagemagick@v1
@@ -227,10 +236,10 @@ jobs:
     name: Validate Image File Sizes
     runs-on: ubuntu-latest
     needs:
-      - changed-files
+      - gather-relevant-files
       - validate-image-dimensions
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
       - name: Validate Image File Sizes
