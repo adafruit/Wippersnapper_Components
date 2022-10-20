@@ -196,13 +196,13 @@ jobs:
             fi
 
             BAD_WIDTH=false
-            if [[ "$WIDTH" -gt "$MAX_WIDTH" ]]; then
+            if [[ "$WIDTH" -gt "$MAX_DIMENSION" ]]; then
               EXIT_VALUE=1
               BAD_WIDTH=true
             fi
 
             BAD_HEIGHT=false
-            if [[ "$HEIGHT" -gt "$MAX_HEIGHT" ]]; then
+            if [[ "$HEIGHT" -gt "$MAX_DIMENSION" ]]; then
               EXIT_VALUE=1
               BAD_HEIGHT=true
             fi
@@ -215,11 +215,11 @@ jobs:
               fi
 
               if [[ $BAD_WIDTH = true ]]; then
-                echo "  ↔️ width must be ${MAX_WIDTH} pixels or less"
+                echo "  ↔️ width must be ${MAX_DIMENSION} pixels or less"
               fi
 
               if [[ $BAD_HEIGHT = true ]]; then
-                echo "  ↕️ height must be ${MAX_HEIGHT} pixels or less"
+                echo "  ↕️ height must be ${MAX_DIMENSION} pixels or less"
               fi
 
             else
@@ -228,7 +228,7 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these ☝️ issues by resizing each ❌ image to be square and fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
+            echo "Fix these ☝️ issues by resizing each ❌ image to be square and fit within ${MAX_DIMENSION}x${MAX_DIMENSION}."
           fi
 
           exit $EXIT_VALUE
