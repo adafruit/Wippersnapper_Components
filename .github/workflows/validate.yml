@@ -1,5 +1,5 @@
 # Reference for adding or expanding schemas: https://ajv.js.org/json-schema.html#json-data-type
-name: Validate JSONs
+name: Validate Component Data
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ jobs:
       matrix:
         componentType: [pin, i2c, servo, ds18x20]
 
-    name: Validate ${{ matrix.componentType }} Component Definition Files
+    name: Validate ${{ matrix.componentType }} Definition Files
     steps:
       - uses: actions/checkout@v3
 
