@@ -5,6 +5,10 @@
   "required": [ "displayName", "subcomponents", "sensorResolution"],
   "additionalProperties": false,
   "properties": {
+    "published": {
+      "description": "When true, the component appears for all users in the Component Picker. If false or absent, the component is hidden behind a Developer Mode switch in the Component Picker.",
+      "type": "boolean"
+    },
     "displayName": {
       "description": "The human-friendly name of this component.",
       "type": "string",
