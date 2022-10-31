@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        componentType: [pin, i2c, servo, ds18x20]
+        componentType: [pin, i2c, servo, ds18x20, pwm]
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
