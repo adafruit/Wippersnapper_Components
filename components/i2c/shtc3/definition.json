@@ -1,5 +1,5 @@
 {
-  "displayName": "AHT20",
-  "i2cAddresses": [ "0x38" ],
+  "displayName": "SHTC3",
+  "i2cAddresses": [ "0x70" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
 }
