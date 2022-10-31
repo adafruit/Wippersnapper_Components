@@ -79,10 +79,10 @@ jobs:
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo|ds18x20)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
