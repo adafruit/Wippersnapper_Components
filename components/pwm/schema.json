@@ -43,6 +43,11 @@
           "type": { "const": "slider" }
         },
         "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "color-picker" }
+        },
+        "additionalProperties": false
       }]
     }
   }
