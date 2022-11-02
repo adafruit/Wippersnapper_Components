@@ -11,10 +11,10 @@
       "minLength": 3,
       "maxLength": 24
     },
-    "frequency": {
+    "pwmSetting": {
       "description": "The component's pulse-width modulation setting. Either fixed (variable duty cycle) or variable (fixed duty cycle)",
       "type": "string",
-      "pattern": "^(fixed|variable)$"
+      "pattern": "^(fixed|variable)Frequency$"
     },
     "visualization": {
       "description": "Specifies which visual component to use in the WipperSnapper interface and how to configure it",

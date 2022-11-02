@@ -1,6 +1,6 @@
 {
   "displayName": "Piezo Buzzer",
-  "frequency": "variable",
+  "pwmSetting": "variableFrequency",
   "visualization": {
     "type": "slider"
   }

@@ -1,6 +1,6 @@
 {
     "displayName": "RGB LED",
-    "frequency": "fixed",
+    "pwmSetting": "fixedFrequency",
     "visualization": {
       "type": "color-picker"
     }
