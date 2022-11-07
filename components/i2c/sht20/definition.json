@@ -1,1 +1,5 @@
-
+{
+  "displayName": "sht20",
+  "i2cAddresses": [ "0x40" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-celcius", "humidity" ]
+}
