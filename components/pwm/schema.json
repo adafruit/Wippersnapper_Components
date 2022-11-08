@@ -39,7 +39,7 @@
         "additionalProperties": false
       }, {
         "properties": {
-          "type": { "const": "slider" }
+          "type": { "const": "slider-pwm" }
         },
         "additionalProperties": false
       }, {
