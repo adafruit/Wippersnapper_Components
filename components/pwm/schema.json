@@ -23,7 +23,7 @@
       "required": ["type"],
       "oneOf": [{
         "properties": {
-          "type": { "const": "switch" },
+          "type": { "const": "switch-pwm" },
           "offLabel": { "type": "string" },
           "offIcon": { "type": "string" },
           "onLabel": { "type": "string" },
