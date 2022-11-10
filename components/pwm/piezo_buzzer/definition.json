@@ -2,6 +2,10 @@
   "displayName": "Piezo Buzzer",
   "pwmSetting": "variableFrequency",
   "visualization": {
-    "type": "switch"
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:bell-slash",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:bell-on"
   }
 }
