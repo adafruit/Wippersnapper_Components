@@ -1,7 +1,7 @@
 {
-    "displayName":"Hall Effect Sensor",
-    "mode":"DIGITAL",
-    "direction":"INPUT",
+    "displayName": "Hall Effect Sensor",
+    "mode": "DIGITAL",
+    "direction": "INPUT",
     "defaultPeriod":60,
     "selectPullUp": true,
     "visualization": {
