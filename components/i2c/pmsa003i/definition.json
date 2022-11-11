@@ -1,5 +1,5 @@
 {
-	"displayName": "PMSA003I",
-	"i2cAddresses": ["0x12"],
-	"subcomponents": [ "pm10-std", "pm25-std", "pm100-std"]
+  "displayName": "PMSA003I",
+  "i2cAddresses": ["0x12"],
+  "subcomponents": [ "pm10-std", "pm25-std", "pm100-std"]
 }
