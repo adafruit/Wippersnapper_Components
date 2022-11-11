@@ -1,5 +1,6 @@
 {
   "displayName": "Toggle Switch",
+  "published": true,
   "autoSelectString": "toggle",
   "mode": "DIGITAL",
   "direction": "INPUT",

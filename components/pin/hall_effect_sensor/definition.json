@@ -1,5 +1,6 @@
 {
   "displayName": "Hall Effect Sensor",
+  "published": true,
   "mode": "DIGITAL",
   "direction": "INPUT",
   "defaultPeriod":60,

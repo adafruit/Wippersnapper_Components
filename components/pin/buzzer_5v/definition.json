@@ -1,5 +1,6 @@
 {
   "displayName": "Buzzer 5V",
+  "published": true,
   "autoSelectString": "buzzer",
   "mode": "DIGITAL",
   "direction": "OUTPUT",
