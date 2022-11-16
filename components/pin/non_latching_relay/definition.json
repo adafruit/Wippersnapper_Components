@@ -1,5 +1,6 @@
 {
   "displayName": "Relay",
+  "published": true,
   "autoSelectString": "relay",
   "mode": "DIGITAL",
   "direction": "OUTPUT",

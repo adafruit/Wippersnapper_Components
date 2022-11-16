@@ -1,0 +1,57 @@
+{
+  "title": "PWM Component Definition",
+  "description": "A PWM WipperSnapper component for use in Adafruit IO",
+  "type": "object",
+  "required": [ "displayName", "pwmSetting"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "pwmSetting": {
+      "description": "The component's pulse-width modulation setting. Either fixed frequency (variable duty cycle) or variable frequency (fixed duty cycle)",
+      "type": "string",
+      "pattern": "^(fixed|variable)Frequency$"
+    },
+    "visualization": {
+      "description": "Specifies which visual component to use in the WipperSnapper interface and how to configure it",
+      "type": "object",
+      "discriminator": { "propertyName": "type" },
+      "required": ["type"],
+      "oneOf": [{
+        "properties": {
+          "type": { "const": "switch-pwm" },
+          "offLabel": { "type": "string" },
+          "offIcon": { "type": "string" },
+          "onLabel": { "type": "string" },
+          "onIcon": { "type": "string" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "button" },
+          "pressedLabel": { "type": "string" },
+          "unpressedLabel": { "type": "string" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "slider-pwm" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "color-picker" }
+        },
+        "additionalProperties": false
+      }]
+    }
+  }
+}

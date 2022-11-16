@@ -1,5 +1,6 @@
 {
   "displayName": "LED",
+  "published": true,
   "autoSelectString": "led",
   "mode": "DIGITAL",
   "direction": "OUTPUT",

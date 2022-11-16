@@ -1,5 +1,6 @@
 {
   "displayName": "STEMMA Soil Sensor",
+  "published": true,
   "i2cAddresses": [ "0x36"],
   "subcomponents": [
     "ambient-temp",

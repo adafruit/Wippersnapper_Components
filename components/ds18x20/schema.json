@@ -11,6 +11,10 @@
       "minLength": 3,
       "maxLength": 30
     },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
     "subcomponents": {
       "description": "The ambient temperature sensor (and its fahrenheit counterpart) standard on DS18X20 Components",
       "type": "array",
