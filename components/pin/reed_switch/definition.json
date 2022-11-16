@@ -1,5 +1,6 @@
 {
   "displayName": "Reed Switch",
+  "published": true,
   "autoSelectString": "reed",
   "mode": "DIGITAL",
   "direction": "INPUT",

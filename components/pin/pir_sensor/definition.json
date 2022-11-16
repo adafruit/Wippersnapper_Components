@@ -1,5 +1,6 @@
 {
   "displayName": "PIR Sensor",
+  "published": true,
   "autoSelectString": "pir",
   "mode": "DIGITAL",
   "direction": "INPUT",

@@ -1,5 +1,6 @@
 {
   "displayName": "Beam Sensor",
+  "published": true,
   "autoSelectString": "beam",
   "mode": "DIGITAL",
   "direction": "INPUT",

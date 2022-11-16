@@ -11,6 +11,10 @@
       "minLength": 3,
       "maxLength": 24
     },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
     "mode": {
       "description": "This component's mode, either DIGITAL or ANALOG.",
       "type": "string",

@@ -1,5 +1,6 @@
 {
   "displayName": "Push Button",
+  "published": true,
   "autoSelectString": "button",
   "mode": "DIGITAL",
   "direction": "INPUT",

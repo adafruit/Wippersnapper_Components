@@ -1,5 +1,6 @@
 {
-	"displayName": "Si7021",
-	"i2cAddresses": ["0x40"],
-	"subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
+  "displayName": "Si7021",
+  "published": true,
+  "i2cAddresses": ["0x40"],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
 }
