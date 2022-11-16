@@ -1,0 +1,12 @@
+{
+  "displayName": "HC-SR04",
+  "autoSelectString": "distance",
+  "mode": "ANALOG",
+  "direction": "INPUT",
+  "defaultPeriod": 30,
+  "analogReadMode": "PIN_VALUE",
+  "selectReadMode": true,
+  "visualization": {
+    "type": "slider"
+  }
+}
