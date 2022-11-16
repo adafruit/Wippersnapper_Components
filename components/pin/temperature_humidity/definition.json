@@ -3,7 +3,7 @@
   "autoSelectString": "DHT22",
   "mode": "ANALOG",
   "direction": "INPUT",
-  "defaultPeriod": 20,
+  "defaultPeriod": 30,
   "analogReadMode": "PIN_VALUE",
   "selectReadMode": true,
   "visualization": {
