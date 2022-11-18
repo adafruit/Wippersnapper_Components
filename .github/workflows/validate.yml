@@ -100,10 +100,14 @@ jobs:
                 echo "✅ $file"
               fi
             else
-              echo "❌ $file"
+              echo "❌ $file (only Adafruit staff may modify this file)"
               EXIT_VALUE=1
             fi
           done
+
+          if [[ $EXIT_VALUE = 1 ]]; then
+            echo "Are there files listed that this PR didn't modify? Consider merging `main` into this PR, it may have subsequently diverged."
+          fi
 
           exit $EXIT_VALUE
 
