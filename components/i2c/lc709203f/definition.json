@@ -1,5 +1,6 @@
 {
   "displayName": "LC709203F",
+  "published": true,
   "i2cAddresses": [ "0x0B"],
   "subcomponents": [
     {
