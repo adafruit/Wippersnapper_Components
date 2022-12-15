@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        componentType: [pin, i2c, servo, ds18x20, pwm]
+        componentType: [pin, i2c, servo, ds18x20, pwm, pixel]
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
@@ -46,17 +46,6 @@ jobs:
         if:  ${{ inputs.all_files }}
         id: list-all-files
         run: echo "all_files=`find components -type f | paste -sd " "`" >> $GITHUB_OUTPUT
-
-  validate-pixel-components:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-
-      - name: Validate Pixel Components
-        uses: nhalstead/validate-json-action@0.1.3
-        with:
-          schema: /components/pixel/schema.json
-          jsons: components/pixel/*/definition.json
 
   check-user-permissions:
     name: Check Write Permission
