@@ -1,6 +1,6 @@
 {
   "displayName": "DotStar",
-  "autoSelectString": "DotStar",
+  "autoSelectString": "dotstar",
   "pixelsType": "DOTSTAR",
   "defaultPixelsOrder": "BRG"
 }
