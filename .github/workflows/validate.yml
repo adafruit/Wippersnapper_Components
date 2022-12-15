@@ -1,14 +1,21 @@
 # Reference for adding or expanding schemas: https://ajv.js.org/json-schema.html#json-data-type
 name: Validate JSONs
 
-on: [pull_request]
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      all_files:
+        description: True to validate all files instead of only changed files.
+        type: boolean
+        default: true
 
 jobs:
   validate-each-component-type-definition:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        componentType: [pin, i2c, servo]
+        componentType: [pin, i2c, servo, ds18x20, pwm]
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
@@ -20,20 +27,25 @@ jobs:
           schema: /components/${{ matrix.componentType }}/schema.json
           jsons: components/${{ matrix.componentType }}/*/definition.json
 
-  changed-files:
-    name: List Changed Files
+  gather-relevant-files:
+    name: Gather Relevant Files
     runs-on: ubuntu-latest
     outputs:
       # All files that were Added, Copied, Modified, or Renamed
-      files: ${{ steps.list-changed-files.outputs.all_changed_files }}
+      files: ${{ steps.list-changed-files.outputs.all_changed_files }} ${{ steps.list-all-files.outputs.all_files }}
 
     steps:
       - uses: actions/checkout@v3
-      - name: List Changed Board Files
+      - name: List Changed Component Files
+        if:  ${{ !inputs.all_files }}
         id: list-changed-files
         uses: tj-actions/changed-files@v21
         with:
           files: components/**/*
+      - name: List All Component Files
+        if:  ${{ inputs.all_files }}
+        id: list-all-files
+        run: echo "all_files=`find components -type f | paste -sd " "`" >> $GITHUB_OUTPUT
 
   validate-pixel-components:
     runs-on: ubuntu-latest
@@ -65,10 +77,10 @@ jobs:
     name: Validate Filenames
     runs-on: ubuntu-latest
     needs:
-    - changed-files
+    - gather-relevant-files
     - check-user-permissions
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
       CAN_WRITE_TO_REPO: ${{ needs.check-user-permissions.outputs.has-write-permission }}
 
     steps:
@@ -78,10 +90,10 @@ jobs:
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(pin|i2c|servo)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
@@ -99,10 +111,14 @@ jobs:
                 echo "✅ $file"
               fi
             else
-              echo "❌ $file"
+              echo "❌ $file (only Adafruit staff may modify this file)"
               EXIT_VALUE=1
             fi
           done
+
+          if [[ $EXIT_VALUE = 1 ]]; then
+            echo "Are there files listed that this PR didn't modify? Consider merging `main` into this PR, it may have subsequently diverged."
+          fi
 
           exit $EXIT_VALUE
 
@@ -110,10 +126,10 @@ jobs:
     name: Validate Extensions Match Mimetypes
     runs-on: ubuntu-latest
     needs:
-      - changed-files
+      - gather-relevant-files
       - validate-expected-filenames
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
       - name: Validate Image File Extension<->Mimetype Agreement
@@ -166,10 +182,10 @@ jobs:
     name: Validate Image Dimensions
     runs-on: ubuntu-latest
     needs:
-      - changed-files
+      - gather-relevant-files
       - validate-image-extension-mimetype-agreement
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
       - uses: mfinelli/setup-imagemagick@v1
@@ -177,38 +193,48 @@ jobs:
         run: |
           EXIT_VALUE=0
 
-          MAX_WIDTH=600
-          MAX_HEIGHT=600
+          MAX_DIMENSION=600
 
           for FILE in $FILES; do
             if [[ $FILE == *.json ]]; then
               continue # non-image file
             fi
 
-            # use imagemagick for the width
+            # use imagemagick to pull the dimensions
             WIDTH=`identify -ping -format "%w" ${FILE}[0]`
+            HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
+
+            NOT_SQUARE=false
+            if [[ "$WIDTH" -ne "$HEIGHT" ]]; then
+              EXIT_VALUE=1
+              NOT_SQUARE=true
+            fi
+
             BAD_WIDTH=false
-            if [[ "$WIDTH" -gt "$MAX_WIDTH" ]]; then
+            if [[ "$WIDTH" -gt "$MAX_DIMENSION" ]]; then
               EXIT_VALUE=1
               BAD_WIDTH=true
             fi
 
-            # use imagemagick for the height
-            HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
             BAD_HEIGHT=false
-            if [[ "$HEIGHT" -gt "$MAX_HEIGHT" ]]; then
+            if [[ "$HEIGHT" -gt "$MAX_DIMENSION" ]]; then
               EXIT_VALUE=1
               BAD_HEIGHT=true
             fi
 
-            if [[ $BAD_WIDTH = true || $BAD_HEIGHT = true ]]; then
+            if [[ $NOT_SQUARE = true || $BAD_WIDTH = true || $BAD_HEIGHT = true ]]; then
               echo "❌ $FILE  (${WIDTH}x${HEIGHT})"
+
+              if [[ $NOT_SQUARE = true ]]; then
+                echo "  🟥 width and height must be equal"
+              fi
+
               if [[ $BAD_WIDTH = true ]]; then
-                echo "  ↔️ width must be 800 pixels or less"
+                echo "  ↔️ width must be ${MAX_DIMENSION} pixels or less"
               fi
 
               if [[ $BAD_HEIGHT = true ]]; then
-                echo "  ↕️ height must be 2000 pixels or less"
+                echo "  ↕️ height must be ${MAX_DIMENSION} pixels or less"
               fi
 
             else
@@ -217,7 +243,7 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these ☝️ issues by resizing each ❌ image to fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
+            echo "Fix these ☝️ issues by resizing each ❌ image to be square and fit within ${MAX_DIMENSION}x${MAX_DIMENSION}."
           fi
 
           exit $EXIT_VALUE
@@ -226,10 +252,10 @@ jobs:
     name: Validate Image File Sizes
     runs-on: ubuntu-latest
     needs:
-      - changed-files
+      - gather-relevant-files
       - validate-image-dimensions
     env:
-      FILES: ${{ needs.changed-files.outputs.files }}
+      FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
       - name: Validate Image File Sizes

@@ -1,14 +1,15 @@
 {
-    "displayName":"Hall Effect Sensor",
-    "mode":"DIGITAL",
-    "direction":"INPUT",
-    "defaultPeriod":60,
-    "selectPullUp": true,
-    "visualization": {
-      "type": "switch",
-      "offLabel": "Sensed!",
-      "offIcon": "fa6:solid:magnet",
-      "onLabel": "No Magnet",
-      "onIcon": "fa6:thin:magnet"
-    }
+  "displayName": "Hall Effect Sensor",
+  "published": true,
+  "mode": "DIGITAL",
+  "direction": "INPUT",
+  "defaultPeriod":60,
+  "selectPullUp": true,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Sensed!",
+    "offIcon": "fa6:solid:magnet",
+    "onLabel": "No Magnet",
+    "onIcon": "fa6:thin:magnet"
   }
+}

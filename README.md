@@ -28,7 +28,94 @@ Anyone can add a new component to Wippersnapper by writing a small amount of des
 [We have a guide on adding components to this repository on the Adafruit Learning System](https://learn.adafruit.com/how-to-add-a-new-component-to-adafruit-io-wippersnapper)
 
 ## Pin Component Format
-todo
+
+|                                      |                                                                                                                                                           |
+|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *title*                              | Pin Component Definition                                                                                                                                  |
+| *description*                        | A pin-based WipperSnapper component for use in Adafruit IO                                                                                                |
+| *type*                               | object                                                                                                                                                    |
+| *required*                           |                                                                                                                                                           |
+| displayName                          |                                                                                                                                                           |
+| mode                                 |                                                                                                                                                           |
+| direction                            |                                                                                                                                                           |
+| *additionalProperties*               | false                                                                                                                                                     |
+| *properties*                         |                                                                                                                                                           |
+| `displayName`                        |                                                                                                                                                           |
+| *description*                        | The human-friendly name of this component.                                                                                                                |
+| *type*                               | string                                                                                                                                                    |
+| *minLength*                          | 3                                                                                                                                                         |
+| *maxLength*                          | 24                                                                                                                                                        |
+| `mode`                               |                                                                                                                                                           |
+| *description*                        | This component's mode, either DIGITAL or ANALOG.                                                                                                          |
+| *type*                               | string                                                                                                                                                    |
+| *pattern*                            | `^(DIGITAL\|ANALOG)$`                                                                                                                                     |
+| `direction`                          |                                                                                                                                                           |
+| *description*                        | This component's direction, either INPUT or OUTPUT.                                                                                                       |
+| *type*                               | string                                                                                                                                                    |
+| *pattern*                            | `^(INPUT\|OUTPUT)$`                                                                                                                                       |
+| `autoSelectString`                   |                                                                                                                                                           |
+| *description*                        | A hint for automatically looking up pin names that may be appropriate for this kind of component.                                                         |
+| *type*                               | string                                                                                                                                                    |
+| *minLength*                          | 3                                                                                                                                                         |
+| *maxLength*                          | 24                                                                                                                                                        |
+| `selectPullUp`                       |                                                                                                                                                           |
+| *description*                        | If true, the user will be able to select pull up or down options.                                                                                         |
+| *type*                               | boolean                                                                                                                                                   |
+| `pull`                               |                                                                                                                                                           |
+| *description*                        | This component's pull setting, either UP or DOWN.                                                                                                         |
+| *type*                               | string                                                                                                                                                    |
+| *pattern*                            | `^(UP\|DOWN)$`                                                                                                                                            |
+| `selectReadMode`                     |                                                                                                                                                           |
+| *description*                        | If true, the user will be able to select the read mode between pin and voltage options.                                                                   |
+| *type*                               | boolean                                                                                                                                                   |
+| `analogReadMode`                     |                                                                                                                                                           |
+| *description*                        | For ANALOG mode components, specifies whether to read values (PIN_VALUE) or voltages (PIN_VOLTAGE). Will be a default if `selectReadMode` option is true. |
+| *type*                               | string                                                                                                                                                    |
+| *pattern*                            | `^(PIN_VALUE\|PIN_VOLTAGE)$`                                                                                                                              |
+| `defaultPeriod`                      |                                                                                                                                                           |
+| *description*                        | If present, the component form will allow the user to set its period, with this value as the default (in seconds)                                         |
+| *type*                               | number                                                                                                                                                    |
+| *minimum*                            | 30                                                                                                                                                        |
+| *maximum*                            | 86400                                                                                                                                                     |
+| `forceOnPeriod`                      |                                                                                                                                                           |
+| *description*                        | If true, the user must specify a period (won't be optional in the form).                                                                                  |
+| *type*                               | boolean                                                                                                                                                   |
+| `visualization`                      |                                                                                                                                                           |
+| *description*                        | Specifies which visual component to use in the WipperSnapper interface and how to configure it                                                            |
+| *type*                               | object                                                                                                                                                    |
+| `discriminator`                      |                                                                                                                                                           |
+| *propertyName*                       | type                                                                                                                                                      |
+| *required*                           |                                                                                                                                                           |
+| type                                 |                                                                                                                                                           |
+| *oneOf*                              |                                                                                                                                                           |
+
+| *properties*     |                   | *additionalProperties*                                                                                                                                    |
+|------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type             |                   |                                                                                                                                                           |
+| const            | switch            | false                                                                                                                                                     |
+| `offLabel`       |                   | false                                                                                                                                                     |
+| type             | string            | false                                                                                                                                                     |
+| `offIcon`        |                   | false                                                                                                                                                     |
+| type             | string            | false                                                                                                                                                     |
+| `onLabel`        |                   | false                                                                                                                                                     |
+| type             | string            | false                                                                                                                                                     |
+| `onIcon`         |                   | false                                                                                                                                                     |
+| type             | string            | false                                                                                                                                                     |
+| type             |                   | false                                                                                                                                                     |
+
+| *properties*     |                   | *additionalProperties*                                                                                                                                    |
+|------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type             |                   | false                                                                                                                                                     |
+| const            | button            | false                                                                                                                                                     |
+| `pressedLabel`   |                   | false                                                                                                                                                     |
+| type             | string            | false                                                                                                                                                     |
+| `unpressedLabel` |                   | false                                                                                                                                                     |
+| type             | string            | false                                                                                                                                                     |
+
+| *properties*     |                   | *additionalProperties*                                                                                                                                    |
+|------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| type             |                   | false                                                                                                                                                     |
+| const            | slider            | false                                                                                                                                                     |
 
 ## I2C Component Format
 todo
@@ -68,3 +155,6 @@ Possible values for an I2C component's subcomponents' `sensorType` field:
 - "co2"
 - "gas-resistance"
 - "altitude"
+- "lux"
+- "eco2"
+- "unitless-percent"

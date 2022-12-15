@@ -7,6 +7,7 @@
       "type": ["string", "object"],
       "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit)$",
       "required": [ "displayName", "sensorType" ],
+      "additionalProperties": false,
       "properties": {
         "displayName": {
           "description": "The human-friendly name of this sensor.",
@@ -42,6 +43,10 @@
       "type": "string",
       "minLength": 3,
       "maxLength": 24
+    },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
     },
     "i2cAddresses": {
       "description": "List of I2C addresses (as hex string, like \"0x38\") this component can appear on.",

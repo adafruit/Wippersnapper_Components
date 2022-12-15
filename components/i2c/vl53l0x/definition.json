@@ -1,5 +1,6 @@
 {
   "displayName": "VL53L0X",
+  "published": true,
   "i2cAddresses": [ "0x29", "0x30", "0x31" ],
   "subcomponents": [
     {

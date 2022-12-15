@@ -1,5 +1,6 @@
 {
   "displayName": "Power Switch",
+  "published": true,
   "mode": "DIGITAL",
   "direction": "OUTPUT",
   "selectPullUp": true,
