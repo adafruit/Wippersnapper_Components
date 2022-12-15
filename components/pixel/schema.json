@@ -20,14 +20,14 @@
         "type": "string",
         "pattern": "^(GRB|GRBW|RGB|RGBW|BRG)$"
     },
-    "defaultNumPixels": {
-        "description": "If present, the component form will allow the user to set the number of pixels in the strand, with this value as the default.",
+    "pixelsNum": {
+        "description": "The number of pixels on a strand.",
         "type": "number",
         "minimum": 0,
         "maximum": 156
     },
-    "defaultPixelBrightness": {
-        "description": "If present, the component form will allow the user to set the pixel strand's brightness, with this value as the default.",
+    "pixelsBrightness": {
+        "description": "The pixel strand's brightness.",
         "type": "number",
         "minimum": 0,
         "maximum": 255
