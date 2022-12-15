@@ -20,18 +20,6 @@
         "type": "string",
         "pattern": "^(GRB|GRBW|RGB|RGBW|BRG)$"
     },
-    "pixelsNum": {
-        "description": "The number of pixels on a strand.",
-        "type": "number",
-        "minimum": 0,
-        "maximum": 156
-    },
-    "pixelsBrightness": {
-        "description": "The pixel strand's brightness.",
-        "type": "number",
-        "minimum": 0,
-        "maximum": 255
-    },
     "autoSelectString": {
       "description": "A hint for automatically looking up pin names that may be appropriate for this kind of component.",
       "type": "string",
