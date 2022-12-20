@@ -122,5 +122,13 @@
   "unitless-percent": {
     "displayName": "Unitless Percentage",
     "defaultPeriod": 900
+  },
+  "voc-index": {
+    "displayName": "Volatile Organic Compounds Index",
+    "defaultPeriod": 900
+  },
+  "nox-index": {
+    "displayName": "Nitrogen Oxides Index",
+    "defaultPeriod": 900
   }
 }
