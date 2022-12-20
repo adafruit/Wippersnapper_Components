@@ -16,7 +16,7 @@
         "pattern": "^(NEOPIXEL|DOTSTAR)$"
     },
     "defaultPixelsOrder": {
-        "description": "The pixel strand's color ordering. Corresponds to `defaultPixelsOrder` in pixels.proto.",
+        "description": "The pixel strand's color ordering. Corresponds to `PixelsOrder` in pixels.proto.",
         "type": "string",
         "pattern": "^(GRB|GRBW|RGB|RGBW|BRG)$"
     },
