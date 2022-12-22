@@ -1,0 +1,12 @@
+{
+  "displayName": "eTape Liquid Level Sensor",
+  "published": true,
+  "mode": "ANALOG",
+  "direction": "INPUT",
+  "defaultPeriod": 60,
+  "analogReadMode": "PIN_VALUE",
+  "selectReadMode": true,
+  "visualization": {
+    "type": "slider"
+  }
+}
