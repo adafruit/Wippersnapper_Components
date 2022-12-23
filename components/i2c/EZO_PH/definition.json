@@ -1,9 +1,11 @@
 {
   "displayName": "EZO_PH",
+  "mode": "ANALOG",
+  "direction": "INPUT",
   "published": true,
   "i2cAddresses": [ "0x63"],
   "subcomponents": [
-    "PH",
+    "raw",
     {
       "displayName": "PH",
       "sensorType": "raw"
