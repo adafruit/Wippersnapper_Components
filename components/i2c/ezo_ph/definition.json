@@ -6,7 +6,7 @@
   "subcomponents": [
     "raw",
     {
-      "displayName": "PH",
+      "displayName": "PH_Value",
       "sensorType": "raw"
     }
   ]
