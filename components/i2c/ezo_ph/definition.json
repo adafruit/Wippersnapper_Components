@@ -1,6 +1,5 @@
 {
   "displayName": "ezo_ph",
-  "mode": "ANALOG",
   "published": true,
   "i2cAddresses": [ "0x63"],
   "subcomponents": [
