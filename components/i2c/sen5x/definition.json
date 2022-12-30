@@ -1,0 +1,6 @@
+{
+  "displayName": "SEN55",
+  "published": false,
+  "i2cAddresses": ["0x69"],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity", "pm10-std", "pm25-std", "pm100-std", "voc-index", "nox-index"]
+}
