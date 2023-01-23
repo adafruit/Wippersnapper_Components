@@ -2,5 +2,6 @@
   "displayName": "DotStar",
   "autoSelectString": "dotstar",
   "pixelsType": "DOTSTAR",
-  "defaultPixelsOrder": "BRG"
+  "defaultPixelsOrder": "BRG",
+  "published": true
 }
