@@ -1,5 +1,5 @@
 {
-  "displayName": "MAX17048",
+  "displayName": "MAX17048/MAX17049",
   "published": false,
   "i2cAddresses": [ "0x36"],
   "subcomponents": [
