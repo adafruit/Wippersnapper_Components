@@ -1,0 +1,15 @@
+{
+  "displayName": "MAX17048",
+  "published": false,
+  "i2cAddresses": [ "0x36"],
+  "subcomponents": [
+    {
+      "displayName": "Battery Cell Voltage",
+      "sensorType": "voltage"
+    },
+    {
+      "displayName": "Battery Cell Percent",
+      "sensorType": "unitless-percent"
+    }
+  ]
+}
