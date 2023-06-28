@@ -1,0 +1,14 @@
+{
+  "displayName": "MOSFET Driver",
+  "published": true,
+  "autoSelectString": "mosfet",
+  "mode": "DIGITAL",
+  "direction": "OUTPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:plug-circle-xmark",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:plug-circle-bolt"
+  }
+}
