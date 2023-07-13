@@ -130,5 +130,9 @@
   "nox-index": {
     "displayName": "Nitrogen Oxides Index",
     "defaultPeriod": 900
+  },
+  "tvoc": {
+    "displayName": "Total Volatile Organic Compounds",
+    "defaultPeriod": 900
   }
 }

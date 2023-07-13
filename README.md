@@ -158,3 +158,4 @@ Possible values for an I2C component's subcomponents' `sensorType` field:
 - "lux"
 - "eco2"
 - "unitless-percent"
+- "tvoc"
