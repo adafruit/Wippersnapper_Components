@@ -105,7 +105,7 @@
   },
   "gas-resistance": {
     "displayName": "Total VOC",
-    "defaultPeriod" :900
+    "defaultPeriod": 900
   },
   "altitude": {
     "displayName": "Altitude (Relative)",
@@ -129,6 +129,10 @@
   },
   "nox-index": {
     "displayName": "Nitrogen Oxides Index",
+    "defaultPeriod": 900
+  },
+  "tvoc": {
+    "displayName": "Total Volatile Organic Compounds",
     "defaultPeriod": 900
   }
 }
