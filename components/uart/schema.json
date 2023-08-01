@@ -2,6 +2,39 @@
   "title": "UART Component Definition",
   "description": "A UART WipperSnapper component for use in Adafruit IO",
   "type": "object",
+  "$defs": {
+    "subcomponent": {
+      "type": ["string", "object"],
+      "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$",
+      "required": [ "displayName", "sensorType" ],
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "description": "The human-friendly name of this sensor.",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "type": {
+          "description": "A unique string used to look up this sensor's definition, and its parent component's definition.",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "sensorType": {
+          "description": "One of the supported I2C sensor type strings (found in README).",
+          "type": "string",
+          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$"
+        },
+        "defaultPeriod": {
+          "description": "What period to the form should default to for this sensor.",
+          "type": "number",
+          "minimum": 30,
+          "maximum": 86400
+        }
+      }
+    }
+  },
   "required": [ "displayName", "subcomponents", "baudRate"],
   "additionalProperties": false,
   "properties": {
