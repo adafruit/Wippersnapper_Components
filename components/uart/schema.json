@@ -1,0 +1,30 @@
+{
+  "title": "UART Component Definition",
+  "description": "A UART WipperSnapper component for use in Adafruit IO",
+  "type": "object",
+  "required": [ "displayName", "subcomponents", "baudRate"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 30
+    },
+    "published": {
+      "description": "If True, this component is supported by the current firmware version and will be displayed to all users. Otherwise, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "subcomponents": {
+        "description": "List of sensor subcomponents comprising the primary UART component.",
+        "type": "array",
+        "items": { "$ref": "#/$defs/subcomponent" }
+    }
+    "baudRate": {
+      "description": "The desired UART bus baud rate, in bps.",
+      "type": "number",
+      "minimum": 1200,
+      "maximum": 256000
+    }
+  }
+}
