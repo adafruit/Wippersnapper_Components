@@ -19,7 +19,7 @@
         "description": "List of sensor subcomponents comprising the primary UART component.",
         "type": "array",
         "items": { "$ref": "#/$defs/subcomponent" }
-    }
+    },
     "baudRate": {
       "description": "The desired UART bus baud rate, in bps.",
       "type": "number",
