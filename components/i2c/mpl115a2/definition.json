@@ -1,0 +1,6 @@
+{
+  "displayName": "MPL115A2",
+  "published": false,
+  "i2cAddresses": [ "0x60" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
+}
