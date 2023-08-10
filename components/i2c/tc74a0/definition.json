@@ -1,0 +1,6 @@
+{
+  "displayName": "TC74A0",
+  "published": false,
+  "i2cAddresses": [ "0x48" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit" ]
+}
