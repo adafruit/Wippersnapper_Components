@@ -1,0 +1,6 @@
+{
+  "displayName": "LPS33HW",
+  "published": false,
+  "i2cAddresses": [ "0x5C", "0x5D" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
+}
