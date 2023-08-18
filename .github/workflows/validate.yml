@@ -125,7 +125,7 @@ jobs:
           EXIT_VALUE=0
 
           for FILE in $FILES; do
-            if [[ $FILE == *.json ]]; then
+            if ! [[ $FILE =~ "\.(svg|jpe?g|png)$" ]]; then
               continue # non-image file
             fi
 
@@ -184,7 +184,7 @@ jobs:
           MAX_DIMENSION=600
 
           for FILE in $FILES; do
-            if [[ $FILE == *.json ]]; then
+            if ! [[ $FILE =~ "\.(svg|jpe?g|png)$" ]]; then
               continue # non-image file
             fi
 
@@ -254,7 +254,7 @@ jobs:
           MAX_ANIGIF_FILESIZE=$((700*1024)) # 700kb
 
           for FILE in $FILES; do
-            if [[ $FILE == *.json ]]; then
+            if ! [[ $FILE =~ "\.(svg|jpe?g|png)$" ]]; then
               continue # non-image file
             fi
 
