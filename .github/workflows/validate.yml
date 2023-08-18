@@ -35,12 +35,10 @@ jobs:
       files: ${{ steps.list-changed-files.outputs.all_changed_files }} ${{ steps.list-all-files.outputs.all_files }}
     steps:
       - uses: actions/checkout@v3
-      - name: List Changed Component Files
+      - name: List All Changed Files
         if:  ${{ !inputs.all_files }}
         id: list-changed-files
         uses: tj-actions/changed-files@v37
-        with:
-          files: components/**/*
       - name: List All Component Files
         if:  ${{ inputs.all_files }}
         id: list-all-files
@@ -61,7 +59,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: set-permission
         if: fromJson(steps.fetch-permissions.outputs.data).permission == 'admin' || fromJson(steps.fetch-permissions.outputs.data).permission == 'write'
-        run: echo "has-permission=true" >> "$GITHUB_OUTPUT"
+        run: echo "has-permission=true" # >> "$GITHUB_OUTPUT"
 
   validate-expected-filenames:
     name: Validate Filenames
@@ -83,7 +81,7 @@ jobs:
           EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm|pixel)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)))$"
+          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif))))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
