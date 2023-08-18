@@ -59,7 +59,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: set-permission
         if: fromJson(steps.fetch-permissions.outputs.data).permission == 'admin' || fromJson(steps.fetch-permissions.outputs.data).permission == 'write'
-        run: echo "has-permission=true" # >> "$GITHUB_OUTPUT"
+        run: echo "has-permission=true" >> "$GITHUB_OUTPUT"
 
   validate-expected-filenames:
     name: Validate Filenames
@@ -105,7 +105,7 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Are there files listed that this PR didn't modify? Consider merging `main` into this PR, it may have subsequently diverged."
+            echo "Are there files listed that this PR didn't modify? Consider merging the "main" branch into this PR, it may have subsequently diverged."
           fi
 
           exit $EXIT_VALUE
