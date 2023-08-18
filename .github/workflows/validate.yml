@@ -59,7 +59,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: set-permission
         if: fromJson(steps.fetch-permissions.outputs.data).permission == 'admin' || fromJson(steps.fetch-permissions.outputs.data).permission == 'write'
-        run: echo "has-permission=true" # >> "$GITHUB_OUTPUT"
+        run: echo "has-permission=true" >> "$GITHUB_OUTPUT"
 
   validate-expected-filenames:
     name: Validate Filenames
