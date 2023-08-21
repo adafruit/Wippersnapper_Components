@@ -1,0 +1,33 @@
+name: Automatically import JSON
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  alert-not-merged:
+    name: Alert No Merge
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged != true
+    steps:
+      - run: echo "PR closed but not merged, do nothing."
+
+  call-import-webhook:
+    name: Call Webhook
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: wget and wait for response
+        env:
+          SIGNING_TOKEN: ${{ secrets.AUTO_IMPORT_TOKEN }}
+        run: |
+          SIGNATURE=$(echo -n "$GITHUB_SHA" | openssl sha256 -hmac "$SIGNING_TOKEN")
+          HTTP_STATUS=$(wget -S --header="X-HUB-SIGNATURE-256: $SIGNATURE" --method=POST --body-data="$GITHUB_SHA"  https://io.adafruit.com/api/github/components/refresh 2>&1 | awk '/^  HTTP/{print $2}')
+
+          if [[ $HTTP_STATUS != 204 ]]; then
+            echo "❌ Component Definition Import Failed: Retry the import manually to see the error messages"
+            exit 1
+          fi
+
+          echo "✅ Component Definition Import Successful"
