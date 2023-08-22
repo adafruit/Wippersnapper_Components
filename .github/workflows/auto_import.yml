@@ -26,7 +26,7 @@ jobs:
           HTTP_STATUS=$(wget -S --header="X-HUB-SIGNATURE-256: $SIGNATURE" --method=POST --body-data="$GITHUB_SHA"  https://io.adafruit.com/api/github/components/refresh 2>&1 | awk '/^  HTTP/{print $2}')
 
           if [[ $HTTP_STATUS != 204 ]]; then
-            echo "❌ Component Definition Import Failed: Retry the import manually to see the error messages"
+            echo "❌ Component Definition Import Failed: Got status $HTTP_STATUS. Retry the import manually to see the error messages"
             exit 1
           fi
 
