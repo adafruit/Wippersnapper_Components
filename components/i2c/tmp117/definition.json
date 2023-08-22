@@ -1,6 +1,6 @@
 {
   "displayName": "TMP117",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x48", "0x49", "0x4A", "0x4B" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit" ]
 }
