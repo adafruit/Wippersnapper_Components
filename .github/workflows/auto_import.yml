@@ -22,8 +22,12 @@ jobs:
         env:
           SIGNING_TOKEN: ${{ secrets.AUTO_IMPORT_TOKEN }}
         run: |
-          SIGNATURE=$(echo -n "$GITHUB_SHA" | openssl sha256 -hmac "$SIGNING_TOKEN")
-          HTTP_STATUS=$(wget -S --header="X-HUB-SIGNATURE-256: $SIGNATURE" --method=POST --body-data="$GITHUB_SHA"  https://io.adafruit.com/api/github/components/refresh 2>&1 | awk '/^  HTTP/{print $2}')
+          # build the post body
+          JSON_POST_BODY='{"commit_sha":"'"$GITHUB_SHA"'"}'
+          # sign it
+          SIGNATURE=$(echo -n "$JSON_POST_BODY" | openssl sha256 -hmac "$SIGNING_TOKEN")
+          # post the json body to the webhook with headers for signature and json content type, save the http status
+          HTTP_STATUS=$(wget -S --header="X-HUB-SIGNATURE-256: $SIGNATURE" --header="Content-Type: application/json" --method=POST --body-data="$JSON_POST_BODY" https://io.adafruit.com/api/github/components/refresh 2>&1 | awk '/^  HTTP/{print $2}')
 
           if [[ $HTTP_STATUS != 204 ]]; then
             echo "❌ Component Definition Import Failed: Got status $HTTP_STATUS. Retry the import manually to see the error messages"
