@@ -10,13 +10,13 @@ jobs:
   alert-not-merged:
     name: Alert No Merge
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged != true
+    if: github.event.pull_request.merged != true && github.event_name != 'workflow_dispatch'
     steps:
       - run: echo "PR closed but not merged, do nothing."
 
   call-import-webhook:
     name: Call Webhook
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: wget and wait for response
