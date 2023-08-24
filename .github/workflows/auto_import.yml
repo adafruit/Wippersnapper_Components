@@ -1,6 +1,7 @@
 name: Automatically import JSON
 
 on:
+  workflow_dispatch:
   pull_request:
     types:
       - closed
@@ -22,6 +23,12 @@ jobs:
         env:
           SIGNING_TOKEN: ${{ secrets.AUTO_IMPORT_TOKEN }}
         run: |
+          # early out if we can't access the signing token
+          if [[ -z $SIGNING_TOKEN ]]; then
+            echo "❌ Component Definition cannot auto-import for this merge. Ask a repo admin to trigger it manually."
+            exit 1
+          fi
+
           # build the post body
           JSON_POST_BODY='{"commit_sha":"'"$GITHUB_SHA"'"}'
           # sign it
