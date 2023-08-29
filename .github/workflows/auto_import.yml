@@ -1,0 +1,44 @@
+name: Automatically import JSON
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  alert-not-merged:
+    name: Alert No Merge
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged != true && github.event_name != 'workflow_dispatch'
+    steps:
+      - run: echo "PR closed but not merged, do nothing."
+
+  call-import-webhook:
+    name: Call Webhook
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: wget and wait for response
+        env:
+          SIGNING_TOKEN: ${{ secrets.AUTO_IMPORT_TOKEN }}
+        run: |
+          # early out if we can't access the signing token
+          if [[ -z $SIGNING_TOKEN ]]; then
+            echo "❌ Component Definition cannot auto-import for this merge. Ask a repo admin to trigger it manually."
+            exit 1
+          fi
+
+          # build the post body
+          JSON_POST_BODY='{"commit_sha":"'"$GITHUB_SHA"'"}'
+          # sign it
+          SIGNATURE=$(echo -n "$JSON_POST_BODY" | openssl sha256 -hmac "$SIGNING_TOKEN")
+          # post the json body to the webhook with headers for signature and json content type, save the http status
+          HTTP_STATUS=$(wget -S --header="X-HUB-SIGNATURE-256: $SIGNATURE" --header="Content-Type: application/json" --method=POST --body-data="$JSON_POST_BODY" https://io.adafruit.com/api/github/components/refresh 2>&1 | awk '/^  HTTP/{print $2}')
+
+          if [[ $HTTP_STATUS != 204 ]]; then
+            echo "❌ Component Definition Import Failed: Got status $HTTP_STATUS. Retry the import manually to see the error messages"
+            exit 1
+          fi
+
+          echo "✅ Component Definition Import Successful"

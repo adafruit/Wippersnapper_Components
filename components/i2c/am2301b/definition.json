@@ -1,0 +1,6 @@
+{
+  "displayName": "AM2301B",
+  "published": true,
+  "i2cAddresses": [ "0x38" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
+}
