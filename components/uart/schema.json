@@ -58,6 +58,10 @@
       "type": "number",
       "minimum": 1200,
       "maximum": 256000
+    },
+    "inverted": {
+      "description": "When True, this component will invert TX/RX signals on the UART bus.",
+      "type": "boolean"
     }
   }
 }
