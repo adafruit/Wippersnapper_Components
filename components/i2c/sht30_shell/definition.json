@@ -1,5 +1,5 @@
 {
-  "displayName": "SHT30 + Shell",
+  "displayName": "Enclosed SHT30",
   "published": false,
   "i2cAddresses": [ "0x44" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
