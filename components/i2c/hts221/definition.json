@@ -1,6 +1,6 @@
 {
     "displayName": "HTS221",
-    "published": false,
+    "published": true,
     "i2cAddresses": [ "0x5F" ],
     "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
   }

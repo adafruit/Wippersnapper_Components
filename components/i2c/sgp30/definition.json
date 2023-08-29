@@ -1,6 +1,6 @@
 {
   "displayName": "SGP30",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x58" ],
   "subcomponents": [ "eco2", "tvoc" ]
 }
