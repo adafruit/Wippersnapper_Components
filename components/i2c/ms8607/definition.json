@@ -1,0 +1,6 @@
+{
+  "displayName": "MS8607",
+  "published": false,
+  "i2cAddresses": [ "0x40", "0x76" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity", "pressure" ]
+}
