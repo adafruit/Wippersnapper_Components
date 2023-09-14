@@ -1,6 +1,6 @@
 {
   "displayName": "MPRLS",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x18" ],
   "subcomponents": [ "pressure" ]
 }
