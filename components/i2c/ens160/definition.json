@@ -1,0 +1,13 @@
+{
+  "displayName": "ENS160",
+  "published": false,
+  "i2cAddresses": [ "0x52", "0x53" ],
+  "subcomponents": [ 
+    "tvoc",
+    "eco2",
+    {
+      "displayName": "AQI",
+      "sensorType": "raw"
+    }
+  ]
+}
