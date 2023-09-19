@@ -1,6 +1,6 @@
 {
   "displayName": "Weatherproof SHT30",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x44" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
 }
