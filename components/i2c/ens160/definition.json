@@ -1,6 +1,6 @@
 {
   "displayName": "ENS160",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x52", "0x53" ],
   "subcomponents": [ 
     "tvoc",
