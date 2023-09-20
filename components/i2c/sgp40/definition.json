@@ -1,6 +1,6 @@
 {
   "displayName": "SGP40",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x59" ],
   "subcomponents": [ 
     "voc-index",
