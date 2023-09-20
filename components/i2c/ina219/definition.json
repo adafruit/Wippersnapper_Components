@@ -1,6 +1,6 @@
 {
   "displayName": "INA219",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
   "subcomponents": [ "voltage", "current" ]
 }
