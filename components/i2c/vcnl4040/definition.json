@@ -1,0 +1,12 @@
+{
+  "displayName": "VCNL4040",
+  "published": false,
+  "i2cAddresses": [ "0x60" ],
+  "subcomponents": [
+    "light",
+    {
+      "displayName": "Raw Proximity",
+      "sensorType": "raw"
+    }
+  ]
+}
