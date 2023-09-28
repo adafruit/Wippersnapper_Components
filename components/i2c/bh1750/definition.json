@@ -2,5 +2,5 @@
   "displayName": "BH1750",
   "published": true,
   "i2cAddresses": [ "0x23", "0x5C" ],
-  "subcomponents": [ "light" ]
+  "subcomponents": [ "lux" ]
 }

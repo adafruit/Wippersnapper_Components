@@ -3,7 +3,7 @@
   "published": false,
   "i2cAddresses": [ "0x60" ],
   "subcomponents": [
-    "light",
+    "lux",
     {
       "displayName": "Raw Proximity",
       "sensorType": "raw"
