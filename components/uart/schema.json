@@ -1,0 +1,67 @@
+{
+  "title": "UART Component Definition",
+  "description": "A UART WipperSnapper component for use in Adafruit IO",
+  "type": "object",
+  "$defs": {
+    "subcomponent": {
+      "type": ["string", "object"],
+      "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$",
+      "required": [ "displayName", "sensorType" ],
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "description": "The human-friendly name of this sensor.",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "type": {
+          "description": "A unique string used to look up this sensor's definition, and its parent component's definition.",
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 24
+        },
+        "sensorType": {
+          "description": "One of the supported I2C sensor type strings (found in README).",
+          "type": "string",
+          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$"
+        },
+        "defaultPeriod": {
+          "description": "What period to the form should default to for this sensor.",
+          "type": "number",
+          "minimum": 30,
+          "maximum": 86400
+        }
+      }
+    }
+  },
+  "required": [ "displayName", "subcomponents", "baudRate"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 30
+    },
+    "published": {
+      "description": "If True, this component is supported by the current firmware version and will be displayed to all users. Otherwise, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "subcomponents": {
+        "description": "List of sensor subcomponents comprising the primary UART component.",
+        "type": "array",
+        "items": { "$ref": "#/$defs/subcomponent" }
+    },
+    "baudRate": {
+      "description": "The desired UART bus baud rate, in bps.",
+      "type": "number",
+      "minimum": 1200,
+      "maximum": 256000
+    },
+    "inverted": {
+      "description": "When True, this component will invert TX/RX signals on the UART bus.",
+      "type": "boolean"
+    }
+  }
+}
