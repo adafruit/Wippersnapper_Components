@@ -1,6 +1,6 @@
 {
   "displayName": "pms5003",
-  "published": false,
+  "published": true,
   "subcomponents": ["pm10-std", "pm25-std", "pm100-std", "pm10-env", "pm25-env", "pm100-env"],
   "baudRate": 9600,
   "inverted": false
