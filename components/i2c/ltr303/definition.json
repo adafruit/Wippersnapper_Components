@@ -1,0 +1,16 @@
+{
+  "displayName": "LTR-303",
+  "published": false,
+  "i2cAddresses": [ "0x29" ],
+  "subcomponents": [
+    {
+      "displayName": "Ambient Light",
+      "sensorType": "light"
+    },
+    {
+      "displayName": "Infrared",
+      "sensorType": "raw"
+    }
+  ]
+}
+
