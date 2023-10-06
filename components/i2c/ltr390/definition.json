@@ -1,0 +1,16 @@
+{
+  "displayName": "LTR-390",
+  "published": false,
+  "i2cAddresses": [ "0x53" ],
+  "subcomponents": [
+    {
+      "displayName": "Ambient Light",
+      "sensorType": "light"
+    },
+    {
+      "displayName": "UV Count",
+      "sensorType": "raw"
+    }
+  ]
+}
+
