@@ -59,7 +59,7 @@
       "additionalProperties": false,
       "properties": {
         "type": {
-          "const": "servo-switch"
+          "const": "slider-servo"
         }
       }
     }
