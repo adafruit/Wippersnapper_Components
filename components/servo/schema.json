@@ -51,6 +51,17 @@
     "maxPulseWidth": {
       "description": "The maximum pulse width of the servo, in uS.",
       "type": "number"
+    },
+    "visualization": {
+      "description": "Specifies the servo's specific visualization.",
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "servo-switch"
+        }
+      }
     }
   }
 }
