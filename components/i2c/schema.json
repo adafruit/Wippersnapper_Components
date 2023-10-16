@@ -54,7 +54,7 @@
       "minLength": 3,
       "maxLength": 255
     },
-    "productPageURL": {
+    "productURL": {
       "description": "Link to this component's homepage.",
       "type": "string",
       "format": "uri"
