@@ -15,6 +15,28 @@
       "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
       "type": "boolean"
     },
+    "description": {
+      "description": "A brief description describing this component's capabilities.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
+    "productPageURL": {
+      "description": "Link to this component's homepage.",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationURL": {
+      "description": "Link to this component's documentation.",
+      "type": "string",
+      "format": "uri"
+    },
+    "vendor": {
+      "description": "Name of the company that makes this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
     "subcomponents": {
       "description": "The ambient temperature sensor (and its fahrenheit counterpart) standard on DS18X20 Components",
       "type": "array",
