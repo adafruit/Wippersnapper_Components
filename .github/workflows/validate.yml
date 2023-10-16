@@ -78,10 +78,10 @@ jobs:
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm|pixel|uart)\/.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif)$"
+          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm|pixel|uart)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel|uart)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)|animation\.gif))))$"
+          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel|uart)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
@@ -251,7 +251,6 @@ jobs:
           EXIT_VALUE=0
 
           MAX_FILESIZE=$((100*1024)) # 100kb
-          MAX_ANIGIF_FILESIZE=$((700*1024)) # 700kb
 
           for FILE in $FILES; do
             if ! [[ $FILE =~ "\.(svg|jpe?g|png)$" ]]; then
@@ -259,12 +258,7 @@ jobs:
             fi
 
             FILESIZE=$(stat -c%s "$FILE")
-
-            if [[ $FILE == *animation.gif ]]; then
-              MAX=$MAX_ANIGIF_FILESIZE
-            else
-              MAX=$MAX_FILESIZE
-            fi
+            MAX=$MAX_FILESIZE
 
             if [[ "$FILESIZE" -gt "$MAX"  ]]; then
               EXIT_VALUE=1
@@ -276,14 +270,14 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these issues ☝️ by compressing each ❌ file to be smaller than 100KB (700KB for animation.gif animations). You can try:"
+            echo "Fix these issues ☝️ by compressing each ❌ file to be smaller than 100KB. You can try:"
             echo "- using an image compressor"
             echo "- exporting at lower quality settings (png or jpg)"
             echo "- exporting a different image format:"
             echo "  - photos are best saved as jpg"
             echo "  - screenshots and digital images are best saved as png"
             echo "  - svg might be efficient for images with few colors and simple shapes"
-            echo "  - gif should only be used for animations"
+            echo "  - gif should not be used"
           fi
 
           exit $EXIT_VALUE
