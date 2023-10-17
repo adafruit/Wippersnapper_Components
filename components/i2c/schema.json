@@ -35,7 +35,7 @@
       }
     }
   },
-  "required": [ "displayName", "i2cAddresses", "subcomponents" ],
+  "required": [ "displayName", "vendor", "i2cAddresses", "subcomponents" ],
   "additionalProperties": false,
   "properties": {
     "displayName": {

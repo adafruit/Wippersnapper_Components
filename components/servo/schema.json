@@ -2,7 +2,7 @@
   "title": "Servo Component Definition",
   "description": "A servo motor WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "frequency", "minPulseWidth", "maxPulseWidth"],
+  "required": [ "displayName", "vendor", "frequency", "minPulseWidth", "maxPulseWidth"],
   "additionalProperties": false,
   "properties": {
     "displayName": {

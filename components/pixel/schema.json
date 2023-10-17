@@ -2,7 +2,7 @@
   "title": "Pixel Component Definition",
   "description": "Addressable Pixel WipperSnapper component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "pixelsType", "defaultPixelsOrder"],
+  "required": [ "displayName", "vendor", "pixelsType", "defaultPixelsOrder"],
   "additionalProperties": false,
   "properties": {
     "displayName": {

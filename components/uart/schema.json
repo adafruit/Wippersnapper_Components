@@ -35,7 +35,7 @@
       }
     }
   },
-  "required": [ "displayName", "subcomponents", "baudRate"],
+  "required": [ "displayName", "vendor", "subcomponents", "baudRate"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
