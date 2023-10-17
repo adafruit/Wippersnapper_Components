@@ -189,7 +189,8 @@ jobs:
         run: |
           EXIT_VALUE=0
 
-          MAX_DIMENSION=600
+          MAX_WIDTH=400
+          MAX_HEIGHT=300
 
           for FILE in $FILES; do
             if ! [[ $FILE =~ "\.(svg|jpe?g|png)$" ]]; then
@@ -200,37 +201,37 @@ jobs:
             WIDTH=`identify -ping -format "%w" ${FILE}[0]`
             HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
 
-            NOT_SQUARE=false
-            if [[ "$WIDTH" -ne "$HEIGHT" ]]; then
+            NOT_4_3_RATIO=false
+            if [[ $(("$WIDTH"*4/3)) -ne "$HEIGHT" ]]; then
               EXIT_VALUE=1
-              NOT_SQUARE=true
+              NOT_4_3_RATIO=true
             fi
 
             BAD_WIDTH=false
-            if [[ "$WIDTH" -gt "$MAX_DIMENSION" ]]; then
+            if [[ "$WIDTH" -gt "$MAX_WIDTH" ]]; then
               EXIT_VALUE=1
               BAD_WIDTH=true
             fi
 
             BAD_HEIGHT=false
-            if [[ "$HEIGHT" -gt "$MAX_DIMENSION" ]]; then
+            if [[ "$HEIGHT" -gt "$MAX_HEIGHT" ]]; then
               EXIT_VALUE=1
               BAD_HEIGHT=true
             fi
 
-            if [[ $NOT_SQUARE = true || $BAD_WIDTH = true || $BAD_HEIGHT = true ]]; then
+            if [[ $EXIT_VALUE = 1 ]]; then
               echo "❌ $FILE  (${WIDTH}x${HEIGHT})"
 
-              if [[ $NOT_SQUARE = true ]]; then
-                echo "  🟥 width and height must be equal"
+              if [[ $NOT_4_3_RATIO = true ]]; then
+                echo "  🟥 width x height must have a 4:3 ratio"
               fi
 
               if [[ $BAD_WIDTH = true ]]; then
-                echo "  ↔️ width must be ${MAX_DIMENSION} pixels or less"
+                echo "  ↔️ width must be ${MAX_WIDTH} pixels or less"
               fi
 
               if [[ $BAD_HEIGHT = true ]]; then
-                echo "  ↕️ height must be ${MAX_DIMENSION} pixels or less"
+                echo "  ↕️ height must be ${MAX_HEIGHT} pixels or less"
               fi
 
             else
@@ -239,7 +240,7 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these ☝️ issues by resizing each ❌ image to be square and fit within ${MAX_DIMENSION}x${MAX_DIMENSION}."
+            echo "Fix these ☝️ issues by resizing each ❌ image to be square and fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
           fi
 
           exit $EXIT_VALUE
