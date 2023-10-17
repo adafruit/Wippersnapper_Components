@@ -192,8 +192,11 @@ jobs:
           MAX_WIDTH=400
           MAX_HEIGHT=300
 
+          echo "Evaluating Files $FILES"
+
           for FILE in $FILES; do
             if ! [[ $FILE =~ "\.(svg|jpe?g|png)$" ]]; then
+              echo "$FILE: not an image"
               continue # non-image file
             fi
 
