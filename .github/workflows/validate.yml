@@ -203,7 +203,7 @@ jobs:
             # use imagemagick to pull the dimensions
             WIDTH=`identify -ping -format "%w" ${FILE}[0]`
             HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
-            EXPECTED_HEIGHT=$(("$WIDTH"*4/3))
+            EXPECTED_HEIGHT=$(("$WIDTH"*3/4))
 
             NOT_4_3_RATIO=false
             if [[ $EXPECTED_HEIGHT -ne "$HEIGHT" ]]; then
