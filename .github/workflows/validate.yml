@@ -203,9 +203,10 @@ jobs:
             # use imagemagick to pull the dimensions
             WIDTH=`identify -ping -format "%w" ${FILE}[0]`
             HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
+            EXPECTED_HEIGHT=$(("$WIDTH"*4/3))
 
             NOT_4_3_RATIO=false
-            if [[ $(("$WIDTH"*4/3)) -ne "$HEIGHT" ]]; then
+            if [[ $EXPECTED_HEIGHT -ne "$HEIGHT" ]]; then
               EXIT_VALUE=1
               NOT_4_3_RATIO=true
             fi
@@ -226,7 +227,7 @@ jobs:
               echo "❌ $FILE  (${WIDTH}x${HEIGHT})"
 
               if [[ $NOT_4_3_RATIO = true ]]; then
-                echo "  🟥 width x height must have a 4:3 ratio"
+                echo "  ▬ width x height must have a 4:3 ratio: resize height to ${EXPECTED_HEIGHT}"
               fi
 
               if [[ $BAD_WIDTH = true ]]; then
@@ -243,7 +244,7 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these ☝️ issues by resizing each ❌ image to be square and fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
+            echo "Fix these ☝️ issues by resizing each ❌ image to be 4:3 dimension ratio and fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
           fi
 
           exit $EXIT_VALUE
