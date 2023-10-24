@@ -1,5 +1,8 @@
 {
   "displayName": "Relay",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/4409",
+  "documentationURL": "https://learn.adafruit.com/adafruit-stemma-non-latching-mini-relay",
   "published": true,
   "autoSelectString": "relay",
   "mode": "DIGITAL",

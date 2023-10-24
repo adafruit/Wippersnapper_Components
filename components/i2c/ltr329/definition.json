@@ -1,4 +1,7 @@
 {
+  "vendor": "LITE-ON",
+  "productURL": "https://www.adafruit.com/product/5591",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ltr-329-ltr-303",
   "displayName": "LTR-329",
   "published": false,
   "i2cAddresses": [ "0x29" ],

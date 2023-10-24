@@ -1,5 +1,8 @@
 {
     "displayName": "HTS221",
+    "vendor": "STMicroelectronics",
+    "productURL": "https://www.adafruit.com/product/4535",
+    "documentationURL": "https://learn.adafruit.com/adafruit-hts221-temperature-humidity-sensor/overview",
     "published": true,
     "i2cAddresses": [ "0x5F" ],
     "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

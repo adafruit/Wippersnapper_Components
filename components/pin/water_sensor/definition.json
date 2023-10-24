@@ -1,5 +1,8 @@
 {
   "displayName": "Water Sensor",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/4965",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/4965/Datasheet.pdf",
   "published": true,
   "autoSelectString": "water",
   "mode": "DIGITAL",

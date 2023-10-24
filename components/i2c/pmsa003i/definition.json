@@ -1,5 +1,8 @@
 {
   "displayName": "PMSA003I",
+  "vendor": "PLANTOWER",
+  "productURL": "https://www.adafruit.com/product/4632",
+  "documentationURL": "https://learn.adafruit.com/pmsa003i",
   "published": true,
   "i2cAddresses": ["0x12"],
   "subcomponents": [ "pm10-std", "pm25-std", "pm100-std"]

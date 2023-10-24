@@ -1,4 +1,6 @@
 {
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/1536",
   "displayName": "Buzzer 5V",
   "published": true,
   "autoSelectString": "buzzer",

@@ -1,5 +1,8 @@
 {
   "displayName": "SCD30",
+  "vendor": "Sensirion",
+  "productURL": "https://www.adafruit.com/product/4867",
+  "documentationURL": "https://learn.adafruit.com/adafruit-scd30",
   "published": true,
   "i2cAddresses": ["0x61"],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity", "co2" ]

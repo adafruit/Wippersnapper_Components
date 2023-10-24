@@ -1,5 +1,8 @@
 {
   "displayName": "MPL115A2",
+  "vendor": "Freescale Semiconductor",
+  "productURL": "https://www.adafruit.com/product/992",
+  "documentationURL": "https://cdn-shop.adafruit.com/datasheets/MPL115A2.pdf",
   "published": true,
   "i2cAddresses": [ "0x60" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]

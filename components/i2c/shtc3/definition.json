@@ -1,5 +1,8 @@
 {
   "displayName": "SHTC3",
+  "vendor": "Sensirion",
+  "productURL": "https://www.adafruit.com/product/4636",
+  "documentationURL": "https://learn.adafruit.com/adafruit-sensirion-shtc3-temperature-humidity-sensor",
   "published": true,
   "i2cAddresses": [ "0x70" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

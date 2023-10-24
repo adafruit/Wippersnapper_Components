@@ -1,4 +1,6 @@
 {
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/4081",
   "displayName": "Flat Vibration Switch",
   "mode": "DIGITAL",
   "direction": "INPUT",

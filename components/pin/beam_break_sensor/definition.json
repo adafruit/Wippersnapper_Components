@@ -1,4 +1,7 @@
 {
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/2168",
+  "documentationURL": "https://learn.adafruit.com/ir-breakbeam-sensors",
   "displayName": "Beam Sensor",
   "published": true,
   "autoSelectString": "beam",

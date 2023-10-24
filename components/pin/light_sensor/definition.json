@@ -1,5 +1,8 @@
 {
   "displayName": "Light Sensor",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/161",
+  "documentationURL": "https://learn.adafruit.com/photocells",
   "published": true,
   "autoSelectString": "light",
   "mode": "ANALOG",

@@ -1,5 +1,8 @@
 {
   "displayName": "PIR Sensor",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/189",
+  "documentationURL": "https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview",
   "published": true,
   "autoSelectString": "pir",
   "mode": "DIGITAL",

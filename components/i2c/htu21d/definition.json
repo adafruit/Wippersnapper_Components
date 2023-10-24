@@ -1,5 +1,8 @@
 {
   "displayName": "HTU21D",
+  "vendor": "Measurement Specialties",
+  "productURL": "https://www.adafruit.com/product/1899",
+  "documentationURL": "https://learn.adafruit.com/adafruit-htu21d-f-temperature-humidity-sensor/overview",
   "published": false,
   "i2cAddresses": [ "0x40" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

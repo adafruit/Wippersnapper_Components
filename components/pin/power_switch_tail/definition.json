@@ -1,5 +1,8 @@
 {
   "displayName": "Power Switch",
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/2935",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/2935/P2935B%20datasheet.pdf",
   "published": true,
   "mode": "DIGITAL",
   "direction": "OUTPUT",

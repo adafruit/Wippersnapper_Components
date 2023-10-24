@@ -1,5 +1,8 @@
 {
   "displayName": "ADT7410",
+  "vendor": "Analog Devices",
+  "productURL": "https://www.adafruit.com/product/4089",
+  "documentationURL": "https://learn.adafruit.com/adt7410-breakout",
   "published": true,
   "i2cAddresses": [ "0x48" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit" ]

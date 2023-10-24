@@ -1,5 +1,8 @@
 {
   "displayName": "LED",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/301",
+  "documentationURL": "https://learn.adafruit.com/all-about-leds",
   "published": true,
   "autoSelectString": "led",
   "mode": "DIGITAL",

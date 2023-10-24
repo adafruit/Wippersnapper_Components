@@ -1,5 +1,8 @@
 {
   "displayName": "LC709203F",
+  "vendor": "ON Semiconductor",
+  "productURL": "https://www.adafruit.com/product/4712",
+  "documentationURL": "https://learn.adafruit.com/adafruit-lc709203f-lipo-lipoly-battery-monitor",
   "published": true,
   "i2cAddresses": [ "0x0B"],
   "subcomponents": [
