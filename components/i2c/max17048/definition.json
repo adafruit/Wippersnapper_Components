@@ -1,5 +1,8 @@
 {
   "displayName": "MAX17048/MAX17049",
+  "vendor": "Maxim Integrated",
+  "productURL": "https://www.adafruit.com/product/5580",
+  "documentationURL": "https://learn.adafruit.com/adafruit-max17048-lipoly-liion-fuel-gauge-and-battery-monitor",
   "published": true,
   "i2cAddresses": [ "0x36"],
   "subcomponents": [

@@ -1,6 +1,9 @@
 {
   "displayName": "Potentiometer",
   "published": true,
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/356",
+  "documentationURL": "https://learn.adafruit.com/make-it-change-potentiometers",
   "autoSelectString": "potentiometer",
   "mode": "ANALOG",
   "direction": "INPUT",

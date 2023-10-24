@@ -1,5 +1,8 @@
 {
   "displayName": "AM2315C",
+  "vendor": "ASAIR",
+  "productURL": "https://www.adafruit.com/product/5182",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/5182/5182_AM2315C.pdf",
   "published": true,
   "i2cAddresses": [ "0x38" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

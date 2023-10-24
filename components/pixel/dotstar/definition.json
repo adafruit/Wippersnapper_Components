@@ -3,5 +3,8 @@
   "autoSelectString": "dotstar",
   "pixelsType": "DOTSTAR",
   "defaultPixelsOrder": "BRG",
-  "published": true
+  "published": true,
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/2343",
+  "documentationURL": "https://learn.adafruit.com/adafruit-dotstar-leds"
 }

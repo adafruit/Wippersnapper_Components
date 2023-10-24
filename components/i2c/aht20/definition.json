@@ -1,7 +1,7 @@
 {
   "displayName": "AHT20",
   "published": true,
-  "vendor": "Adafruit",
+  "vendor": "ASAIR",
   "productURL": "https://www.adafruit.com/product/4566",
   "documentationURL": "https://learn.adafruit.com/adafruit-aht20",
   "description": "Inexpensive temperature and humidity sensor for I2C-capable boards.",

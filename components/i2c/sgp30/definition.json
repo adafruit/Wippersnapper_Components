@@ -1,5 +1,8 @@
 {
   "displayName": "SGP30",
+  "vendor": "Sensirion",
+  "productURL": "https://www.adafruit.com/product/3709",
+  "documentationURL": "https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor",
   "published": true,
   "i2cAddresses": [ "0x58" ],
   "subcomponents": [ "eco2", "tvoc" ]

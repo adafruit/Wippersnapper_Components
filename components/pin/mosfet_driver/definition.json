@@ -1,5 +1,8 @@
 {
   "displayName": "MOSFET Driver",
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/5648",
+  "documentationURL": "https://learn.adafruit.com/adafruit-mosfet-driver",
   "published": true,
   "autoSelectString": "mosfet",
   "mode": "DIGITAL",

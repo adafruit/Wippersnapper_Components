@@ -1,5 +1,8 @@
 {
   "displayName": "MS8607",
+  "vendor": "TE Connectivity",
+  "productURL": "https://www.adafruit.com/product/4716",
+  "documentationURL": "https://learn.adafruit.com/adafruit-te-ms8607-pht-sensor",
   "published": true,
   "i2cAddresses": [ "0x40", "0x76" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity", "pressure" ]

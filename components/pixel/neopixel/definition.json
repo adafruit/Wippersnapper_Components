@@ -3,5 +3,8 @@
   "autoSelectString": "neopixel",
   "pixelsType": "NEOPIXEL",
   "defaultPixelsOrder": "GRB",
-  "published": true
+  "published": true,
+  "vendor": "Generic",
+  "productURL": "http://www.adafruit.com/category/168",
+  "documentationURL": "https://learn.adafruit.com/adafruit-neopixel-uberguide"
 }

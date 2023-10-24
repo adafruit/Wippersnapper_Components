@@ -1,5 +1,8 @@
 {
   "displayName": "MPRLS",
+  "vendor": "Honeywell",
+  "productURL": "https://www.adafruit.com/product/3965",
+  "documentationURL": "https://learn.adafruit.com/adafruit-mprls-ported-pressure-sensor-breakout",
   "published": true,
   "i2cAddresses": [ "0x18" ],
   "subcomponents": [ "pressure" ]

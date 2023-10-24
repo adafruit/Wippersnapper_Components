@@ -1,5 +1,8 @@
 {
   "displayName": "INA219",
+  "vendor": "Texas Instruments",
+  "productURL": "https://www.adafruit.com/product/904",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
   "subcomponents": [ "voltage", "current" ]
