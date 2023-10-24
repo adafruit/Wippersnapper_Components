@@ -1,7 +1,7 @@
 {
   "displayName": "Generic Servo",
   "vendor": "Generic",
-  "productURL": "https://www.adafruit.com/products/169",
+  "productURL": "https://www.adafruit.com/product/169",
   "documentationURL": "https://learn.adafruit.com/using-servos-with-circuitpython",
   "published": true,
   "frequency": 50,
