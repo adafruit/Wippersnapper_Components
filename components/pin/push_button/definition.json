@@ -1,5 +1,8 @@
 {
   "displayName": "Push Button",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/367",
+  "documentationURL": "https://learn.adafruit.com/adafruit-arduino-lesson-6-digital-inputs?view=all",
   "published": true,
   "autoSelectString": "button",
   "mode": "DIGITAL",

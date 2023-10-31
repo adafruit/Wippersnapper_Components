@@ -1,5 +1,8 @@
 {
   "displayName": "Reed Switch",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/375",
+  "documentationURL": "https://learn.adafruit.com/no-code-iot-door-alarm-with-wippersnapper",
   "published": true,
   "autoSelectString": "reed",
   "mode": "DIGITAL",

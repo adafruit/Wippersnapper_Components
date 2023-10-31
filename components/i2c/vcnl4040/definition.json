@@ -1,5 +1,8 @@
 {
   "displayName": "VCNL4040",
+  "vendor": "Vishay",
+  "productURL": "https://www.adafruit.com/product/4161",
+  "documentationURL": "https://learn.adafruit.com/adafruit-vcnl4040-proximity-sensor",
   "published": false,
   "i2cAddresses": [ "0x60" ],
   "subcomponents": [

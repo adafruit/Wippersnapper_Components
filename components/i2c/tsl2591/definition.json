@@ -1,5 +1,8 @@
 {
   "displayName": "TSL2591",
+  "vendor": "ams",
+  "productURL": "https://www.adafruit.com/product/1980",
+  "documentationURL": "https://learn.adafruit.com/adafruit-tsl2591",
   "published": true,
   "i2cAddresses": [ "0x29", "0x39", "0x49" ],
   "subcomponents": [ "light" ]

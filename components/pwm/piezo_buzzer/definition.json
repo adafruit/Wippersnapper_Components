@@ -1,5 +1,8 @@
 {
   "displayName": "Piezo Buzzer",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/160",
+  "documentationURL": "https://learn.adafruit.com/using-piezo-buzzers-with-wippersnapper",
   "published": true,
   "pwmSetting": "variableFrequency",
   "visualization": {

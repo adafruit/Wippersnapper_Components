@@ -1,4 +1,7 @@
 {
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/2656",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/2656/Standard_eTape_Datasheet.pdf",
   "displayName": "Liquid Level Sensor",
   "published": true,
   "mode": "ANALOG",

@@ -1,5 +1,8 @@
 {
   "displayName": "BH1750",
+  "vendor": "ROHM Semiconductor",
+  "productURL": "https://www.adafruit.com/product/4681",
+  "documentationURL": "https://learn.adafruit.com/adafruit-bh1750-ambient-light-sensor",
   "published": true,
   "i2cAddresses": [ "0x23", "0x5C" ],
   "subcomponents": [ "light" ]

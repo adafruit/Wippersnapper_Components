@@ -1,5 +1,8 @@
 {
   "displayName": "Weatherproof SHT30",
+  "vendor": "Sensirion",
+  "productURL": "https://www.adafruit.com/product/4099",
+  "documentationURL": "https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout",
   "published": true,
   "i2cAddresses": [ "0x44" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

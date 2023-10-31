@@ -1,5 +1,8 @@
 {
   "displayName": "DS18B20",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/374",
+  "documentationURL": "https://learn.adafruit.com/using-ds18b20-temperature-sensor-with-wippersnapper",
   "published": true,
   "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit"],
   "sensorResolution": 12

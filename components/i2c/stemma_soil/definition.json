@@ -1,5 +1,8 @@
 {
   "displayName": "STEMMA Soil Sensor",
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/4026",
+  "documentationURL": "https://learn.adafruit.com/adafruit-stemma-soil-sensor-i2c-capacitive-moisture-sensor",
   "published": true,
   "i2cAddresses": [ "0x36","0x37","0x38","0x39"],
   "subcomponents": [

@@ -1,5 +1,8 @@
 {
   "displayName": "SGP40",
+  "vendor": "Sensirion",
+  "productURL": "https://www.adafruit.com/product/4829",
+  "documentationURL": "https://learn.adafruit.com/adafruit-sgp40",
   "published": true,
   "i2cAddresses": [ "0x59" ],
   "subcomponents": [ 

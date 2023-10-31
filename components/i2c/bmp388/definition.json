@@ -1,5 +1,8 @@
 {
   "displayName": "BMP388",
+  "vendor": "Bosch",
+  "productURL": "https://www.adafruit.com/product/3966",
+  "documentationURL": "https://learn.adafruit.com/adafruit-bmp388-bmp390-bmp3xx",
   "published": true,
   "i2cAddresses": [ "0x76", "0x77" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude" ]

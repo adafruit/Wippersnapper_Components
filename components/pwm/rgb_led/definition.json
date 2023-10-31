@@ -1,5 +1,8 @@
 {
   "displayName": "RGB LED",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/302",
+  "documentationURL": "https://learn.adafruit.com/adafruit-arduino-lesson-3-rgb-leds/overview",
   "pwmSetting": "fixedFrequency",
   "visualization": {
     "type": "color-picker"

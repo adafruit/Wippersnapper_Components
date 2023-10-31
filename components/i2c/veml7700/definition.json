@@ -1,5 +1,8 @@
 {
   "displayName": "VEML7700",
+  "vendor": "Vishay",
+  "productURL": "https://www.adafruit.com/product/4162",
+  "documentationURL": "https://learn.adafruit.com/adafruit-veml7700",
   "published": true,
   "i2cAddresses": [ "0x10" ],
   "subcomponents": [ "light" ]

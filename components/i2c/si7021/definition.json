@@ -1,5 +1,8 @@
 {
   "displayName": "Si7021",
+  "vendor": "Silicon Labs",
+  "productURL": "https://www.adafruit.com/product/3251",
+  "documentationURL": "https://learn.adafruit.com/adafruit-si7021-temperature-plus-humidity-sensor/overview",
   "published": true,
   "i2cAddresses": ["0x40"],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

@@ -1,5 +1,8 @@
 {
   "displayName": "ENS160",
+  "vendor": "Sciosense",
+  "productURL": "https://www.adafruit.com/product/5606",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ens160-mox-gas-sensor",
   "published": true,
   "i2cAddresses": [ "0x52", "0x53" ],
   "subcomponents": [ 
