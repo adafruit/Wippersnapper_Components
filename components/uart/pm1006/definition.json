@@ -3,7 +3,7 @@
   "vendor": "IKEA",
   "productURL": "https://www.ikea.com/us/en/p/vindriktning-air-quality-sensor-60515911/",
   "documentationURL": "https://learn.adafruit.com/ikea-vindriktning-hack-with-qt-py-esp32-s3-and-adafruit-io",
-  "published": true,
+  "published": false,
   "subcomponents": ["pm25-env"],
   "baudRate": 9600,
   "inverted": false
