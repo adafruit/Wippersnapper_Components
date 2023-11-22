@@ -1,0 +1,13 @@
+{
+  "displayName": "Analog Pin",
+  "published": true,
+  "vendor": "Generic",
+  "mode": "ANALOG",
+  "direction": "INPUT",
+  "defaultPeriod": 30,
+  "analogReadMode": "PIN_VOLTAGE",
+  "selectReadMode": true,
+  "visualization": {
+    "type": "slider"
+  }
+}
