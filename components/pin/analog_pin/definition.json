@@ -4,7 +4,7 @@
   "vendor": "Generic",
   "mode": "ANALOG",
   "direction": "INPUT",
-  "defaultPeriod": 60,
+  "defaultPeriod": 30,
   "analogReadMode": "PIN_VOLTAGE",
   "selectReadMode": true,
   "visualization": {
