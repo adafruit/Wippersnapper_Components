@@ -3,7 +3,7 @@
   "vendor": "Measurement Specialties",
   "productURL": "https://www.adafruit.com/product/2857",
   "documentationURL": "https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout/",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x40", "0x41" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
 }

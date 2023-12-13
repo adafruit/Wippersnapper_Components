@@ -3,7 +3,7 @@
   "vendor": "LITE-ON",
   "productURL": "https://www.adafruit.com/product/4831",
   "documentationURL": "https://learn.adafruit.com/adafruit-ltr390-uv-sensor",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x53" ],
   "subcomponents": [
     {
