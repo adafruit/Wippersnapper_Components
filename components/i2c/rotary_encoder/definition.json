@@ -1,0 +1,5 @@
+{
+	"displayName": "STEMMA QT Rotary Encoder",
+	"i2cAddresses": ["0x36", "0x37", "0x38", "0x39", "0x3A", "Ox3B", "0x3C", "0x3D"],
+	"subcomponents": ["unspecified", "raw"]
+}
