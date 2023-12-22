@@ -9,10 +9,6 @@
 		{
 			"displayName": "Rotary Encoder Value",
 			"sensorType": "raw"
-		},
-		{
-			"displayName": "Rotary Encoder Button",
-			"sensorType": "raw"
 		}
 	]
 }
