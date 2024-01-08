@@ -4,12 +4,12 @@
   "productURL": "https://www.adafruit.com/product/3317",
   "documentationURL": "https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout",
   "published": true,
-  "i2cAddresses": [ "0x29", "0x30", "0x31" ],
+  "i2cAddresses": [ "0x29" ],
   "subcomponents": [
     {
       "displayName": "ToF Sensor",
       "sensorType": "proximity",
-      "defaultPeriod": 900
+      "defaultPeriod": 30
     }
   ]
 }
