@@ -3,13 +3,14 @@
   "vendor": "Vishay",
   "productURL": "https://www.adafruit.com/product/4161",
   "documentationURL": "https://learn.adafruit.com/adafruit-vcnl4040-proximity-sensor",
+  "description": "The VCNL4040 is a handy two-in-one sensor, with a proximity sensor that works from 0 to 200mm (about 7.5 inches) and light sensor with range of 0.0125 to 6553 lux.",
   "published": false,
   "i2cAddresses": [ "0x60" ],
   "subcomponents": [
     "light",
     {
-      "displayName": "Raw Proximity",
-      "sensorType": "raw"
+      "displayName": "Proximity",
+      "sensorType": "proximity"
     }
   ]
 }
