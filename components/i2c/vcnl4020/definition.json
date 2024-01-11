@@ -1,0 +1,10 @@
+{
+  "displayName": "VCNL4020",
+  "vendor": "Vishay",
+  "productURL": "https://www.adafruit.com/product/5810",
+  "documentationURL": "https://learn.adafruit.com/adafruit-vcnl4020-proximity-and-light-sensor",
+  "description": "The VCNL4020 is a handy two-in-one sensor, with a proximity sensor that works from 0 to 200mm (about 7.5 inches) and light sensor with range of 0.26 to 16,000 lux.",
+  "published": false,
+  "i2cAddresses": [ "0x13" ],
+  "subcomponents": [ "light", "proximity" ]
+}
