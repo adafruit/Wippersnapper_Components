@@ -1,0 +1,15 @@
+{
+  "displayName": "VL53L1X",
+  "vendor": "STMicroelectronics",
+  "published": false,
+  "productURL": "https://www.adafruit.com/product/3967",
+  "documentationURL": "https://learn.adafruit.com/adafruit-vl53l1x",
+  "i2cAddresses": [ "0x29" ],
+  "subcomponents": [
+    {
+      "displayName": "ToF Sensor",
+      "sensorType": "proximity",
+      "defaultPeriod": 30
+    }
+  ]
+}
