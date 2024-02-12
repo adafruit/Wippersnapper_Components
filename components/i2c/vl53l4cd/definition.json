@@ -1,0 +1,11 @@
+{
+  "displayName": "VL53L4CD",
+  "i2cAddresses": [ "0x29"],
+  "subcomponents": [
+    {
+      "displayName": "ToF Sensor",
+      "sensorType": "proximity",
+      "defaultPeriod": 900
+    }
+  ]
+}
