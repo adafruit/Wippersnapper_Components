@@ -1,0 +1,15 @@
+{
+  "displayName": "VL53L4CX",
+  "published": false,
+  "vendor": "STMicroelectronics",
+  "productURL": "https://www.adafruit.com/product/5425",
+  "documentationURL": "https://learn.adafruit.com/adafruit-vl53l4cx-time-of-flight-distance-sensor",
+  "i2cAddresses": [ "0x29" ],
+  "subcomponents": [
+    {
+      "displayName": "ToF Sensor",
+      "sensorType": "proximity",
+      "defaultPeriod": 30
+    }
+  ]
+}
