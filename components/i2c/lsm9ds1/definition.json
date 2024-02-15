@@ -1,0 +1,5 @@
+{
+  "displayName": "LSM9DS1",
+  "i2cAddresses": [ "0x6B" ],
+  "subcomponents": [ "accelerometer" ]
+}
