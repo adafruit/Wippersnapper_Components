@@ -1,0 +1,11 @@
+{
+  "displayName": "NeoRGB Stemma",
+  "autoSelectString": "neorgb",
+  "description": "Speak NeoPixel to your RGB strips! NeoPixel to RGB PWM LEDs and Strips - STEMMA JST PH 2mm",
+  "pixelsType": "NEOPIXEL",
+  "defaultPixelsOrder": "RGB",
+  "published": false,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/5888",
+  "documentationURL": "https://learn.adafruit.com/adafruit-neorgb-stemma"
+}
