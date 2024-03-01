@@ -4,7 +4,7 @@
   "productURL": "https://www.adafruit.com/product/4161",
   "documentationURL": "https://learn.adafruit.com/adafruit-vcnl4040-proximity-sensor",
   "description": "Proximity sensor works from 0 to 200mm (about 7.5 inches) & light sensor with range of 0.0125 to 6,553.5 lux",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x60" ],
   "subcomponents": [ "light", "proximity" ]
 }
