@@ -1,0 +1,15 @@
+{
+  "displayName": "NAU7802",
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/4538",
+  "documentationURL": "https://learn.adafruit.com/adafruit-nau7802-24-bit-adc-stemma-qt-qwiic/overview",
+  "description": "24-bit ADC with 128x gain, used with a load cell for weight/force sensing",
+  "published": false,
+  "i2cAddresses": [ "0x2A"],
+  "subcomponents": [
+    {
+      "displayName": "Weight Sensor",
+      "sensorType": "raw"
+    }
+  ]
+}
