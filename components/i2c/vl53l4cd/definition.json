@@ -4,7 +4,7 @@
   "vendor": "STMicroelectronics",
   "productURL": "https://www.adafruit.com/product/5396",
   "documentationURL": "https://learn.adafruit.com/adafruit-vl53l4cd-time-of-flight-distance-sensor",
-  "description": "Time of Flight (ToF) distance Sensor with about ~1 to 1300mm range",
+  "description": "Time of Flight (ToF) distance sensor with about ~1 to 1300mm range",
   "i2cAddresses": [ "0x29" ],
   "subcomponents": [
     {
