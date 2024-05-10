@@ -1,9 +1,10 @@
 {
   "displayName": "VL53L1X",
   "vendor": "STMicroelectronics",
-  "published": false,
+  "published": true,
   "productURL": "https://www.adafruit.com/product/3967",
   "documentationURL": "https://learn.adafruit.com/adafruit-vl53l1x",
+  "description": "Time of Flight (ToF) distance sensor with about ~30 to 4000mm range",
   "i2cAddresses": [ "0x29" ],
   "subcomponents": [
     {
