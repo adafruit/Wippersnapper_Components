@@ -8,6 +8,7 @@
   "i2cAddresses": [ "0x68" ],
   "subcomponents": [ 
     {
+      "displayName": "ADC Reading (Volts)",
       "defaultPeriod": 30,
       "sensorType": "voltage"
     }
