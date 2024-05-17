@@ -1,0 +1,16 @@
+{
+  "displayName": "MCP3421",
+  "vendor": "Microchip",
+  "productURL": "https://www.adafruit.com/product/5870",
+  "documentationURL": "https://learn.adafruit.com/adafruit-mcp3421-18-bit-adc",
+  "description": "18-ADC. Great for Strain Gauges, Thermocouples and Pressure sensors, between 0 and 2.048 volts",
+  "published": false,
+  "i2cAddresses": [ "0x68" ],
+  "subcomponents": [ 
+    {
+      "displayName": "ADC Reading (Volts)",
+      "defaultPeriod": 30,
+      "sensorType": "voltage"
+    }
+  ]
+}
