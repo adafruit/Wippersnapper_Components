@@ -9,7 +9,7 @@
   "subcomponents": [ 
     {
       "defaultPeriod": 30,
-      "type": "voltage"
+      "sensorType": "voltage"
     }
   ]
 }
