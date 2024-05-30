@@ -1,0 +1,16 @@
+{
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/5913",
+  "documentationURL": "https://learn.adafruit.com/adafruit-stemma-reflective-photo-interrupt-sensor",
+  "displayName": "TCTR1000 Stemma reflective photo interrupt sensor",
+  "published": true,
+  "mode": "DIGITAL",
+  "direction": "INPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Solid",
+    "offIcon": "fa6:regular:bolt",
+    "onLabel": "Broken",
+    "onIcon": "fa6:solid:bolt-slash"
+  }
+}
