@@ -10,9 +10,9 @@
   "direction": "INPUT",
   "visualization": {
     "type": "switch",
-    "offLabel": "Solid",
+    "offLabel": "Signal",
     "offIcon": "fa6:regular:bolt",
-    "onLabel": "Broken",
+    "onLabel": "None",
     "onIcon": "fa6:solid:bolt-slash"
   }
 }
