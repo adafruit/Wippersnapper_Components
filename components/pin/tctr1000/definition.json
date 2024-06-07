@@ -1,0 +1,18 @@
+{
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/5913",
+  "documentationURL": "https://learn.adafruit.com/adafruit-stemma-reflective-photo-interrupt-sensor",
+  "displayName": "TCTR1000 Stemma Breakout",
+  "description": "Optical reflective sensor with digital output, 1-30mm range, and adjustable LED emitter brightness",
+  "published": true,
+  "mode": "DIGITAL",
+  "defaultPeriod": 30,
+  "direction": "INPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Signal",
+    "offIcon": "fa6:regular:bolt",
+    "onLabel": "None",
+    "onIcon": "fa6:solid:bolt-slash"
+  }
+}
