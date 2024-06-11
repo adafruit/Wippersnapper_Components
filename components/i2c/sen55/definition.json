@@ -1,0 +1,20 @@
+{
+  "displayName": "SEN55",
+  "vendor": "Sensirion",
+  "productURL": "https://www.digikey.com/en/products/filter/gas-sensors/530?s=N4IgjCBcoLQCxVAYygMwIYBsDOBTANCAPZQDa4ADFRQgLoC%2BjQA",
+  "documentationURL": "https://sensirion.com/media/documents/6791EFA0/62A1F68F/Sensirion_Datasheet_Environmental_Node_SEN5x.pdf",
+  "published": true,
+  "i2cAddresses": [
+    "0x69"
+  ],
+  "subcomponents": [
+    "ambient-temp",
+    "ambient-temp-fahrenheit",
+    "humidity",
+    "pm10-std",
+    "pm25-std",
+    "pm100-std",
+    "voc-index",
+    "nox-index"
+  ]
+}
