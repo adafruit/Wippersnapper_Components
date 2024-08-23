@@ -1,0 +1,10 @@
+{
+  "displayName": "HDC302x",
+  "vendor": "TI (Texas Instruments), Adafruit",
+  "productURL": "https://www.adafruit.com/product/5989",
+  "documentationURL": "https://learn.adafruit.com/adafruit-hdc3021-precision-temperature-humidity-sensor/overview",
+  "description": "Precision temperature (±0.1°C typical) and humidity (0.5% typ) sensors - HDC3020/HDC3021/HDC3022",
+  "published": false,
+  "i2cAddresses": [ "0x44", "0x45", "0x46", "0x47" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
+}
