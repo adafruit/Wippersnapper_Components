@@ -21,6 +21,12 @@
           "minLength": 3,
           "maxLength": 24
         },
+        "feedSuffix": {
+          "description": "A unique string used to create the feed name for this sub-component, e.g.'red' suffix and type='light' would give ws-001-light-red.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
         "sensorType": {
           "description": "One of the supported I2C sensor type strings (found in README).",
           "type": "string",
