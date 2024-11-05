@@ -5,5 +5,27 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor",
   "published": true,
   "i2cAddresses": [ "0x58" ],
-  "subcomponents": [ "eco2", "tvoc" ]
+  "subcomponents": [ "eco2", "tvoc" ],
+  "customProperties": [
+    {
+      "name": "input-temp",
+      "displayName": "Reference Ambient Temperature (°C)",
+      "type": "number",
+      "default": 20,
+      "description": "The reference ambient temperature in degrees Celsius.",
+      "displayed": true
+    },
+    {
+      "name": "input-humidity",
+      "displayName": "Reference Relative Humidity (%)",
+      "type": "number",
+      "default": 50,
+      "description": "The reference relative humidity in percent.",
+      "displayed": true,
+      "displayOptions": {
+        "min": 0,
+        "max": 100
+      }
+    }
+  ]
 }
