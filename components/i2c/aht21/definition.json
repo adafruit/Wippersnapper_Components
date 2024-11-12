@@ -1,5 +1,5 @@
 {
-    "vendor": "Hiletgo",
+    "vendor": "ASAIR",
     "documentationURL": "http://www.aosong.com/en/products-60.html",
     "displayName": "aht21",
     "i2cAddresses": [ "0x38"],
