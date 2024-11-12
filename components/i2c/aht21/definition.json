@@ -1,5 +1,7 @@
 {
     "vendor": "Hiletgo",
+    "documentationURL": "http://www.aosong.com/en/products-60.html",
+    "purchaseURL":"https://www.ebay.com/itm/404739218969",
     "displayName": "aht21",
     "i2cAddresses": [ "0x38"],
     "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity"]
