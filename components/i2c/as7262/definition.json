@@ -1,0 +1,40 @@
+{
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/3779",
+  "documentationURL": "https://learn.adafruit.com/adafruit-as7262-6-channel-visible-light-sensor",
+  "displayName": "AS7262",
+  "published": true,
+  "i2cAddresses": [ "0x49" ],
+  "subcomponents": [
+    {
+      "displayName": "Violet / Magenta",
+      "sensorType": "light",
+      "feedSuffix": "violet"
+    },
+    {
+      "displayName": "Blue",
+      "sensorType": "light",
+      "feedSuffix": "blue"
+    },
+    {
+      "displayName": "Green",
+      "sensorType": "light",
+      "feedSuffix": "green"
+    },
+    {
+      "displayName": "Yellow",
+      "sensorType": "light",
+      "feedSuffix": "yellow"
+    },
+    {
+      "displayName": "Orange",
+      "sensorType": "light",
+      "feedSuffix": "orange"
+    },
+    {
+      "displayName": "Red",
+      "sensorType": "light",
+      "feedSuffix": "red"
+    }
+  ]
+}
