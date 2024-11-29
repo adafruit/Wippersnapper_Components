@@ -1,0 +1,12 @@
+{
+  "displayName": "ezo_ph",
+  "published": true,
+  "i2cAddresses": [ "0x63"],
+  "subcomponents": [
+    "raw",
+    {
+      "displayName": "PH_Value",
+      "sensorType": "raw"
+    }
+  ]
+}
