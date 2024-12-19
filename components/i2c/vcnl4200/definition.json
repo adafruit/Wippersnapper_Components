@@ -1,0 +1,10 @@
+{
+  "displayName": "VCNL4200",
+  "vendor": "Vishay",
+  "productURL": "https://www.adafruit.com/product/6064",
+  "documentationURL": "https://learn.adafruit.com/adafruit-vcnl4200-long-distance-ir-proximity-and-light-sensor",
+  "description": "Proximity sensor works from 0 to 1.5m (about 59 inches) & light sensor with range of 0.003 to 1570 lux",
+  "published": false,
+  "i2cAddresses": [ "0x51" ],
+  "subcomponents": [ "light", "proximity" ]
+}
