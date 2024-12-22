@@ -1,7 +1,7 @@
 {
   "displayName": "SEN66",
   "vendor": "Sensirion",
-  "productURL": "https://www.digikey.ch/en/products/detail/sensirion-ag/SEN66-SIN-T/25700945?s=N4IgTCBcDaIM4FMB2A2FIC6BfIA",
+  "productURL": "https://www.digikey.com/en/products/detail/sensirion-ag/SEN66-SIN-T/25700945?s=N4IgTCBcDaIMoFEByA2FIC6BfIA",
   "documentationURL": "https://sensirion.com/media/documents/FAFC548D/6731FFFA/Sensirion_Datasheet_SEN6x.pdf",
   "published": false,
   "i2cAddresses": [
