@@ -3,9 +3,9 @@
   "vendor": "Sensirion",
   "productURL": "https://www.digikey.ch/en/products/detail/sensirion-ag/SEN66-SIN-T/25700945?s=N4IgTCBcDaIM4FMB2A2FIC6BfIA",
   "documentationURL": "https://sensirion.com/media/documents/FAFC548D/6731FFFA/Sensirion_Datasheet_SEN6x.pdf",
-  "published": true,
+  "published": false,
   "i2cAddresses": [
-    "0x6b"
+    "0x6B"
   ],
   "subcomponents": [
     "ambient-temp",
@@ -15,7 +15,7 @@
     "pm25-std",
     "pm100-std",
     "voc-index",
-    "nox-index"
+    "nox-index",
     "co2"
   ]
 }
