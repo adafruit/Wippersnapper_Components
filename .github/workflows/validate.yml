@@ -184,7 +184,7 @@ jobs:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
       - uses: actions/checkout@v3
-      - uses: mfinelli/setup-imagemagick@v2
+      - uses: mfinelli/setup-imagemagick@v6
       - name: Validate Image Dimensions
         run: |
           EXIT_VALUE=0
@@ -201,8 +201,8 @@ jobs:
             fi
 
             # use imagemagick to pull the dimensions
-            WIDTH=`identify -ping -format "%w" ${FILE}[0]`
-            HEIGHT=`identify -ping -format "%h" ${FILE}[0]`
+            WIDTH=`magick identify -ping -format "%w" ${FILE}[0]`
+            HEIGHT=`magick identify -ping -format "%h" ${FILE}[0]`
             EXPECTED_HEIGHT=$(("$WIDTH"*3/4))
 
             NOT_4_3_RATIO=false
