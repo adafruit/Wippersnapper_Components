@@ -3,6 +3,7 @@
   "vendor": "STMicroelectronics",
   "productURL": "https://www.adafruit.com/product/6067",
   "documentationURL": "https://learn.adafruit.com/adafruit-lps28-pressure-sensor",
+  "description": "From 260 to 4060 hPa, this is our largest range pressure sensor (24bit).",
   "published": false,
   "i2cAddresses": [ "0x5C", "0x5D" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
