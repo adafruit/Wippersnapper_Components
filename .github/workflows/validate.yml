@@ -19,10 +19,10 @@ jobs:
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
 
       - name: Validate ${{ matrix.componentType }} Components
-        uses: lorennorman/validate-json-action@master
+        uses: lorennorman/validate-json-action@ec276364a73f1f64e14706fa43462cf84c5829a1
         with:
           schema: /components/${{ matrix.componentType }}/schema.json
           jsons: components/${{ matrix.componentType }}/*/definition.json
@@ -34,7 +34,7 @@ jobs:
       # All files that were Added, Copied, Modified, or Renamed
       files: ${{ steps.list-changed-files.outputs.all_changed_files }} ${{ steps.list-all-files.outputs.all_files }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
       - name: List All Changed Files
         if:  ${{ !inputs.all_files }}
         id: list-changed-files
@@ -57,7 +57,7 @@ jobs:
       # Extract the permission for later jobs to use
       has-write-permission: ${{ steps.set-permission.outputs.has-permission }}
     steps:
-      - uses: octokit/request-action@v2.x
+      - uses: octokit/request-action@05a2312de9f8207044c4c9e41fe19703986acc13
         id: fetch-permissions
         with:
           route: GET /repos/${{ github.repository }}/collaborators/${{ github.actor }}/permission
@@ -78,7 +78,7 @@ jobs:
       CAN_WRITE_TO_REPO: ${{ needs.check-user-permissions.outputs.has-write-permission }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
       - name: Validate Only Expected Filenames
         run: |
           EXIT_VALUE=0
@@ -133,7 +133,7 @@ jobs:
     env:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
       - name: Validate Image File Extension<->Mimetype Agreement
         run: |
           EXIT_VALUE=0
@@ -189,8 +189,8 @@ jobs:
     env:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: mfinelli/setup-imagemagick@v6
+      - uses: actions/checkout@checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: mfinelli/setup-imagemagick@9b725c21ddff33dd8f153c821514c61eabfa7d8f
       - name: Validate Image Dimensions
         run: |
           EXIT_VALUE=0
@@ -264,7 +264,7 @@ jobs:
     env:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
       - name: Validate Image File Sizes
         run: |
           EXIT_VALUE=0
