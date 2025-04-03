@@ -1,0 +1,9 @@
+{
+  "displayName": "INA260",
+  "vendor": "Texas Instruments",
+  "productURL": "https://www.adafruit.com/product/4226",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ina260-current-voltage-power-sensor-breakout",
+  "published": false,
+  "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
+  "subcomponents": [ "voltage", "current", "power" ]
+}
