@@ -4,7 +4,7 @@
 	"productURL": "https://www.adafruit.com/product/4991",
 	"documentationURL": "https://learn.adafruit.com/adafruit-i2c-qt-rotary-encoder",
 	"published": false,
-	"i2cAddresses": ["0x36", "0x37", "0x38", "0x39", "0x3A", "Ox3B", "0x3C", "0x3D"],
+	"i2cAddresses": ["0x36", "0x37", "0x38", "0x39", "0x3A", "0x3B", "0x3C", "0x3D"],
 	"subcomponents": [
 		{
 			"displayName": "Rotary Encoder Value",

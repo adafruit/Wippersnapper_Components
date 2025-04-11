@@ -1,8 +1,8 @@
 {
   "displayName": "HTU31D",
-  "vendor": "Measurement Specialties",
+  "vendor": "TE Connectivity",
   "productURL": "https://www.adafruit.com/product/2857",
-  "documentationURL": "https://learn.adafruit.com/adafruit-sht31-d-temperature-and-humidity-sensor-breakout/",
+  "documentationURL": "https://www.adafruit.com/product/4832",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]

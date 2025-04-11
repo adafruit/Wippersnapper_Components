@@ -5,7 +5,7 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-mcp9601",
   "description": "Thermocouple / ambient temperature sensor. *Note* Needs hotplugging after i2c scans + selecting component!",
   "published": false,
-  "i2cAddresses": [ "0x60", "0x61", "0x62", "0x63", "0x64", "0x65", "0x66", "0x67"],
+  "i2cAddresses": [ "0x67", "0x66", "0x65", "0x64", "0x63", "0x62", "0x61", "0x60"],
   "subcomponents": [ 
     {
       "displayName": "Ambient Temperature (°C)",

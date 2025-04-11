@@ -4,6 +4,6 @@
   "productURL": "https://www.adafruit.com/product/4258",
   "documentationURL": "https://learn.adafruit.com/lps35hw-water-resistant-pressure-sensor",
   "published": true,
-  "i2cAddresses": [ "0x5C", "0x5D" ],
+  "i2cAddresses": [ "0x5D", "0x5C" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
 }
