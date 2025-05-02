@@ -3,6 +3,7 @@
   "vendor": "Generic",
   "productURL": "https://www.adafruit.com/product/375",
   "documentationURL": "https://learn.adafruit.com/no-code-iot-door-alarm-with-wippersnapper",
+  "description": "A Magnetic Contact Switch (Door/Window Sensor), with Normally Open (NO) or Closed (NC) contacts",
   "published": true,
   "autoSelectString": "reed",
   "mode": "DIGITAL",
