@@ -1,7 +1,7 @@
 {
   "displayName": "SEN66",
   "vendor": "Sensirion",
-  "productURL": "https://www.digikey.com/en/products/detail/sensirion-ag/SEN66-SIN-T/25700945?s=N4IgTCBcDaIMoFEByA2FIC6BfIA",
+  "productURL": "https://www.adafruit.com/product/6331",
   "documentationURL": "https://sensirion.com/media/documents/FAFC548D/6731FFFA/Sensirion_Datasheet_SEN6x.pdf",
   "published": true,
   "i2cAddresses": [
