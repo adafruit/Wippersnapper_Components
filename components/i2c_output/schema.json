@@ -1,0 +1,69 @@
+{
+  "title": "I2C Output Component Definition",
+  "description": "I2C Output component for use in Adafruit IO",
+  "type": "object",
+  "required": [ "displayName", "vendor", "outputType"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "published": {
+      "description": "If True, this component is supported by the current firmware version and will be displayed to all users. Otherwise, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "A brief description describing this component's capabilities.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
+    "productURL": {
+      "description": "Link to this component's homepage.",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationURL": {
+      "description": "Link to this component's documentation.",
+      "type": "string",
+      "format": "uri"
+    },
+    "vendor": {
+      "description": "Name of the company that makes this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "outputType": {
+      "description": "The type of i2c output component. Corresponds to `I2cOutputAdd` in i2c.proto",
+      "type": "string",
+      "pattern": "^(CHARLCD|7SEG|ALPHANUM)$"
+    },
+    "charLcdColumns": {
+      "description": "The number of columns for a character LCD. Corresponds to `CharLCDConfig` in i2c.proto.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 128
+    },
+    "charLcdRows": {
+      "description": "The number of rows for a character LCD. Corresponds to `CharLCDConfig` in i2c.proto.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 16
+    },
+    "ledBackpackAlignment": {
+      "description": "The alignment for the LED backpack. Corresponds to `LedBackpackConfig` in i2c.proto. Defaults to RIGHT.",
+      "type": "string",
+      "pattern": "^(LEFT|RIGHT)$"
+    },
+    "ledBackpackBrightness": {
+      "description": "The brightness of a LED backpack. Corresponds to `CharLCDConfig` in i2c.proto.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 15
+    }
+  }
+}
