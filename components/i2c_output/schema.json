@@ -2,7 +2,7 @@
   "title": "I2C Output Component Definition",
   "description": "I2C Output component for use in Adafruit IO",
   "type": "object",
-  "required": [ "displayName", "vendor", "outputType"],
+  "required": [ "displayName", "vendor", "outputType", "i2cAddresses"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -36,6 +36,14 @@
       "type": "string",
       "minLength": 3,
       "maxLength": 24
+    },
+    "i2cAddresses": {
+    "description": "List of supported I2C addresses for this component.",
+    "type": "array",
+    "items": {
+        "type": "string",
+        "pattern": "^0x[0-9A-Fa-f]{2}$"
+      }
     },
     "outputType": {
       "description": "The type of i2c output component. Corresponds to `I2cOutputAdd` in i2c.proto",
