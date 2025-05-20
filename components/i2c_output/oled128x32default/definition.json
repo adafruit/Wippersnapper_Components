@@ -1,0 +1,13 @@
+{
+  "displayName": "128x32 OLED (Default Font)",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/938",
+  "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
+  "description": "Monochrome 128x32 OLED graphic display with the default font size.",
+  "i2cAddresses": [ "0x3D" ],
+  "outputType": "OLED",
+  "oledWidth": 128,
+  "oledHeight": 32,
+  "textSize": "SZ_DEFAULT"
+}

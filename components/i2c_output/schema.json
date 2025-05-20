@@ -48,7 +48,7 @@
     "outputType": {
       "description": "The type of i2c output component. Corresponds to `I2cOutputAdd` in i2c.proto",
       "type": "string",
-      "pattern": "^(CHARLCD|7SEG|ALPHANUM)$"
+      "pattern": "^(CHARLCD|7SEG|ALPHANUM|OLED)$"
     },
     "charLcdColumns": {
       "description": "The number of columns for a character LCD. Corresponds to `CharLCDConfig` in i2c.proto.",
@@ -72,6 +72,23 @@
       "type": "number",
       "minimum": 0,
       "maximum": 15
+    },
+    "oledWidth": {
+      "description": "The width of an OLED display, in pixels.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 128
+    },
+    "oledHeight": {
+      "description": "The height of an OLED display, in pixels.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 64
+    },
+    "textSize": {
+      "description": "The font magnification size for a OLED display. Corresponds to `SSD1306TextSize` in i2c.proto.",
+      "type": "string",
+      "pattern": "^(SZ_DEFAULT|SZ_LARGE)$"
     }
   }
 }
