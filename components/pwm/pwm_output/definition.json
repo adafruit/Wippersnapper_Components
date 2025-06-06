@@ -1,0 +1,12 @@
+{
+  "displayName": "PWM Output",
+  "vendor": "Generic",
+  "description": "A Pulse-Width-Modulated component with fixed frequency. Duty cycle can be set from 0-255",
+  "productURL": "https://www.adafruit.com/product/301",
+  "documentationURL": "https://learn.adafruit.com/improve-brushed-dc-motor-performance/pwm-and-brushed-dc-motors",
+  "published": true,
+  "pwmSetting": "fixedFrequency",
+  "visualization": {
+    "type": "slider-pwm"
+  }
+}
