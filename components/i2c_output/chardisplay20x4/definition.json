@@ -1,6 +1,6 @@
 {
   "displayName": "20x4 Character Display",
-  "published": true,
+  "published": false,
   "vendor": "Adafruit",
   "productURL": "https://www.adafruit.com/product/198",
   "documentationURL": "https://learn.adafruit.com/i2c-spi-lcd-backpack",
