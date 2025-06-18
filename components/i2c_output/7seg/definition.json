@@ -1,0 +1,12 @@
+{
+  "displayName": "7-Segment LED Matrix",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/878",
+  "documentationURL": "https://learn.adafruit.com/adafruit-led-backpack/0-dot-56-seven-segment-backpack",
+  "description": "7-Segment LED Matrix with I2C Backpack",
+  "i2cAddresses": [ "0x70", "0x71", "0x72", "0x73", "0x74", "0x75", "0x76", "0x77" ],
+  "outputType": "7SEG",
+  "ledBackpackAlignment": "RIGHT",
+  "ledBackpackBrightness": 8
+}
