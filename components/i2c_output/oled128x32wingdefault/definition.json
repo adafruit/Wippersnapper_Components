@@ -1,0 +1,13 @@
+{
+  "displayName": "128x32 OLED Featherwing (Default)",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/2900",
+  "documentationURL": "https://learn.adafruit.com/adafruit-oled-featherwing",
+  "description": "Monochrome 128x32 OLED graphic display with the default font size.",
+  "i2cAddresses": [ "0x3C" ],
+  "outputType": "OLED",
+  "oledWidth": 128,
+  "oledHeight": 32,
+  "textSize": "SZ_DEFAULT"
+}
