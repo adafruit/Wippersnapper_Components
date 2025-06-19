@@ -1,0 +1,13 @@
+{
+  "displayName": "128x32 OLED (Large Font)",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/4440",
+  "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
+  "description": "Monochrome 128x32 I2C OLED Display with a larger font size",
+  "i2cAddresses": [ "0x3C" ],
+  "outputType": "OLED",
+  "oledWidth": 128,
+  "oledHeight": 32,
+  "textSize": "SZ_LARGE"
+}
