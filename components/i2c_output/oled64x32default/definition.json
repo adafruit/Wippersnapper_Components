@@ -1,0 +1,13 @@
+{
+  "displayName": "64x32 OLED (Default)",
+  "published": true,
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/4650",
+  "documentationURL": "https://learn.adafruit.com/adafruit-128x64-oled-featherwing",
+  "description": "Monochrome 64x32 I2C OLED Display with the default font size. (SH1107)",
+  "i2cAddresses": [ "0x3D", "0x3C" ],
+  "outputType": "OLED",
+  "oledWidth": 64,
+  "oledHeight": 32,
+  "textSize": "SZ_DEFAULT"
+}
