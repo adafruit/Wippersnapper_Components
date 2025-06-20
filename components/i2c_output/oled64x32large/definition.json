@@ -1,0 +1,13 @@
+{
+  "displayName": "64x32 OLED SH1107 (Large Font)",
+  "published": true,
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/4650",
+  "documentationURL": "https://learn.adafruit.com/adafruit-128x64-oled-featherwing",
+  "description": "Monochrome 64x32 I2C OLED Display with a larger font size.",
+  "i2cAddresses": [ "0x3D", "0x3C" ],
+  "outputType": "OLED",
+  "oledWidth": 64,
+  "oledHeight": 32,
+  "textSize": "SZ_LARGE"
+}
