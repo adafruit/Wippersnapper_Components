@@ -4,7 +4,7 @@
   "vendor": "Adafruit",
   "productURL": "https://www.adafruit.com/product/2900",
   "documentationURL": "https://learn.adafruit.com/adafruit-oled-featherwing",
-  "description": "Monochrome 128x32 OLED graphic display with the default font size.",
+  "description": "Monochrome 128x32 OLED graphic display with the default font size (SSD1306)",
   "i2cAddresses": [ "0x3C" ],
   "outputType": "OLED",
   "oledWidth": 128,
