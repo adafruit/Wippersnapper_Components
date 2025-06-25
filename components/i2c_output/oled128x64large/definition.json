@@ -5,7 +5,7 @@
   "productURL": "https://www.adafruit.com/product/938",
   "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
   "description": "Monochrome 128x64 I2C OLED Display with a larger font size (SSD1306)",
-  "i2cAddresses": [ "0x3C", "0x3D" ],
+  "i2cAddresses": [ "0x3D", "0x3C" ],
   "outputType": "OLED",
   "oledWidth": 128,
   "oledHeight": 64,
