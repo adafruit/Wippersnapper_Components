@@ -1,0 +1,10 @@
+{
+  "displayName": "INA238",
+  "vendor": "Texas Instruments",
+  "productURL": "https://www.adafruit.com/product/6349",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ina238-dc-current-voltage-power-monitor",
+  "description": "85V, 16-bit, high-precision power monitor (up to 10A, 0.1% gain error)",
+  "published": true,
+  "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
+  "subcomponents": [ "voltage", "current" ]
+}
