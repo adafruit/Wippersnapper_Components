@@ -4,7 +4,7 @@
   "productURL": "https://www.adafruit.com/product/6340",
   "documentationURL": "https://learn.adafruit.com/adafruit-ina237-dc-current-voltage-power-monitor",
   "description": "85V, 16-bit, good-precision power monitor (up to 10A, 0.3% gain error)",
-  "published": true,
+  "published": false,
   "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
   "subcomponents": [ "voltage", "current" ]
 }
