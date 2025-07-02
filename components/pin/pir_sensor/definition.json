@@ -3,7 +3,7 @@
   "vendor": "Generic",
   "productURL": "https://www.adafruit.com/product/189",
   "documentationURL": "https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/overview",
-  "description": "Passive Infra-Red (PIR) motion sensor for detecting presence and movement through thermal changes",
+  "description": "Passive Infra-Red (PIR) motion sensor for detecting presence and movement through infrared thermal changes",
   "published": true,
   "autoSelectString": "pir",
   "mode": "DIGITAL",

@@ -2,6 +2,7 @@
   "vendor": "Generic",
   "productURL": "https://www.adafruit.com/product/2168",
   "documentationURL": "https://learn.adafruit.com/ir-breakbeam-sensors",
+  "description": "Break beam sensor for detecting interruption of an invisible infrared light beam between emitter and receiver",
   "displayName": "Beam Sensor",
   "published": true,
   "autoSelectString": "beam",
