@@ -1,0 +1,10 @@
+{
+  "displayName": "D6T-1A Thermal Sensor",
+  "description": "Non-contact MEMS thermal infrared sensor for precise temperature detection (D6T-1A-01/D6T-1A-02)",
+  "vendor": "OMRON",
+  "productURL": "https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/D6T-1A-02/8602566",
+  "documentationURL": "https://omronfs.omron.com/en_US/ecb/products/pdf/en_D6T_users_manual.pdf",
+  "published": false,
+  "i2cAddresses": ["0x0A"],
+  "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit", "object-temp", "object-temp-fahrenheit"]
+}
