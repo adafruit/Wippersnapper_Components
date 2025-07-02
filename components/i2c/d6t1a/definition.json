@@ -6,5 +6,22 @@
   "documentationURL": "https://omronfs.omron.com/en_US/ecb/products/pdf/en_D6T_users_manual.pdf",
   "published": false,
   "i2cAddresses": ["0x0A"],
-  "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit", "object-temp", "object-temp-fahrenheit"]
+  "subcomponents": [
+    {
+      "displayName": "Ambient Temperature (°C)",
+      "sensorType": "ambient-temp"
+    },
+    {
+      "displayName": "Ambient Temperature (°F)",
+      "sensorType": "ambient-temp-fahrenheit"
+    },
+    {
+      "displayName": "Measured Object Temp (°C)",
+      "sensorType": "object-temp"
+    },
+    {
+      "displayName": "Measured Object Temp (°F)",
+      "sensorType": "object-temp-fahrenheit"
+    }
+  ]
 }
