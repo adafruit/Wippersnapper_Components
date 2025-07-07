@@ -13,7 +13,7 @@
           "description": "The human-friendly name of this sensor.",
           "type": "string",
           "minLength": 3,
-          "maxLength": 24
+          "maxLength": 30
         },
         "type": {
           "description": "A unique string used to look up this sensor's definition, and its parent component's definition.",
