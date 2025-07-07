@@ -5,7 +5,7 @@
   "productURL": "https://www.adafruit.com/product/4440",
   "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
   "description": "Monochrome 128x32 OLED graphic display with the default font size.",
-  "i2cAddresses": [ "0x3C" ],
+  "i2cAddresses": [ "0x3C", "0x3D" ],
   "outputType": "OLED",
   "oledWidth": 128,
   "oledHeight": 32,
