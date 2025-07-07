@@ -1,10 +1,10 @@
 {
-  "displayName": "128x64 OLED Featherwing (Large Font)",
+  "displayName": "128x64 OLED'wing (Large)",
   "published": true,
   "vendor": "Adafruit",
   "productURL": "https://www.adafruit.com/product/4650",
   "documentationURL": "https://learn.adafruit.com/adafruit-128x64-oled-featherwing",
-  "description": "Monochrome 128x64 I2C OLED Display with a larger font size (SH1107)",
+  "description": "Monochrome 128x64 OLED featherwing display with the default font size (SH1107)",
   "i2cAddresses": [ "0x3D", "0x3C" ],
   "outputType": "OLED",
   "oledWidth": 128,
