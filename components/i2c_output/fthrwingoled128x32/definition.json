@@ -1,0 +1,13 @@
+{
+  "displayName": "128x32 OLED'wing (Small)",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/2900",
+  "documentationURL": "https://learn.adafruit.com/adafruit-oled-featherwing",
+  "description": "Monochrome 128x32 OLED featherwing display with the default font size (SSD1306)",
+  "i2cAddresses": [ "0x3C" ],
+  "outputType": "OLED",
+  "oledWidth": 128,
+  "oledHeight": 32,
+  "textSize": "SZ_DEFAULT"
+}
