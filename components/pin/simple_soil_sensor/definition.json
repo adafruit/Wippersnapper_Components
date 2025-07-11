@@ -4,10 +4,10 @@
   "vendor": "Adafruit",
   "description": "Resistive style soil moisture sensor, measuring the conductivity between the two prongs (Analog signal)",
   "productURL": "https://www.adafruit.com/product/6362",
-  "autoSelectString": "A0",
+  "autoSelectString": "JST",
   "mode": "ANALOG",
   "direction": "INPUT",
-  "defaultPeriod": 10,
+  "defaultPeriod": 30,
   "analogReadMode": "PIN_VALUE",
   "selectReadMode": true,
   "visualization": {
