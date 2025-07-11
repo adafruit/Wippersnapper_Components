@@ -1,0 +1,15 @@
+{
+  "displayName": "Simple Soil Sensor",
+  "published": false,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/6362",
+  "autoSelectString": "A0",
+  "mode": "ANALOG",
+  "direction": "INPUT",
+  "defaultPeriod": 10,
+  "analogReadMode": "PIN_VALUE",
+  "selectReadMode": true,
+  "visualization": {
+    "type": "slider"
+  }
+}
