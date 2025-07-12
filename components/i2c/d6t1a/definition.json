@@ -4,7 +4,7 @@
   "vendor": "OMRON",
   "productURL": "https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/D6T-1A-02/8602566",
   "documentationURL": "https://omronfs.omron.com/en_US/ecb/products/pdf/en_D6T_users_manual.pdf",
-  "published": false,
+  "published": true,
   "i2cAddresses": ["0x0A"],
   "subcomponents": [
     {
