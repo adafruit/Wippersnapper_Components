@@ -1,0 +1,9 @@
+{
+  "displayName": "Adafruit Mini GPS",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/4415",
+  "documentationURL": "https://learn.adafruit.com/adafruit-mini-gps-pa1010d-module",
+  "description": "Adafruit Mini GPS PA1010D",
+  "i2cAddresses": [ "0x10" ]
+}

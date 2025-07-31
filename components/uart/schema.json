@@ -4,9 +4,15 @@
   "type": "object",
   "$defs": {
     "subcomponent": {
-      "type": ["string", "object"],
+      "type": [
+        "string",
+        "object"
+      ],
       "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$",
-      "required": [ "displayName", "sensorType" ],
+      "required": [
+        "displayName",
+        "sensorType"
+      ],
       "additionalProperties": false,
       "properties": {
         "displayName": {
@@ -22,20 +28,17 @@
           "maxLength": 24
         },
         "sensorType": {
-          "description": "One of the supported I2C sensor type strings (found in README).",
+          "description": "One of the supported sensor-type strings (found in README).",
           "type": "string",
           "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$"
-        },
-        "defaultPeriod": {
-          "description": "What period to the form should default to for this sensor.",
-          "type": "number",
-          "minimum": 30,
-          "maximum": 86400
         }
       }
     }
   },
-  "required": [ "displayName", "vendor", "subcomponents", "baudRate"],
+  "required": [
+    "displayName",
+    "vendor"
+  ],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -70,10 +73,23 @@
       "minLength": 3,
       "maxLength": 24
     },
-    "subcomponents": {
-        "description": "List of sensor subcomponents comprising the primary UART component.",
-        "type": "array",
-        "items": { "$ref": "#/$defs/subcomponent" }
+    "txPin": {
+      "description": "The desired UART TX pin",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16
+    },
+    "rxPin": {
+      "description": "The desired UART RX pin",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16
+    },
+    "portNumber": {
+      "description": "The desired UART bus port number",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 3
     },
     "baudRate": {
       "description": "The desired UART bus baud rate, in bps.",
@@ -81,9 +97,167 @@
       "minimum": 1200,
       "maximum": 256000
     },
-    "inverted": {
-      "description": "When True, this component will invert TX/RX signals on the UART bus.",
+    "format": {
+      "description": "The data, parity, and stop bits configuration for the serial port. Defaults to 8N1 (8 data bits, no parity, 1 stop bit).",
+      "type": "string",
+      "enum": [
+        "unspecified",
+        "8n1",
+        "5n1",
+        "6n1",
+        "7n1",
+        "5n2",
+        "6n2",
+        "7n2",
+        "8n2",
+        "5e1",
+        "6e1",
+        "7e1",
+        "8e1",
+        "5e2",
+        "6e2",
+        "7e2",
+        "8e2",
+        "5o1",
+        "6o1",
+        "7o1",
+        "8o1",
+        "5o2",
+        "6o2",
+        "7o2",
+        "8o2"
+      ],
+      "default": "8n1"
+    },
+    "timeout": {
+      "description": "Maximum milliseconds to wait for serial data. Defaults to 1000 ms.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 65535
+    },
+    "use_sw_serial": {
+      "description": "If True, uses software serial instead of hardware serial. Defaults to False.",
       "type": "boolean"
+    },
+    "invert_sw_serial": {
+      "description": "If True, inverts the UART signal on RX and TX pins. Defaults to False.",
+      "type": "boolean"
+    },
+    "deviceId": {
+      "description": "The unique identifier string for the UART device.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 30
+    },
+    "deviceType": {
+      "description": "The data, parity, and stop bits configuration for the serial port. Defaults to 8N1 (8 data bits, no parity, 1 stop bit).",
+      "type": "string",
+      "enum": [
+        "unspecified",
+        "generic_input",
+        "generic_output",
+        "gps",
+        "pm25aqi",
+        "tm22xx"
+      ],
+      "default": "unspecified"
+    },
+    "pm25aqi": {
+      "type": "object",
+      "description": "Configuration for PM2.5 AQI sensors",
+      "required": [
+        "period",
+        "sensor_types"
+      ],
+      "properties": {
+        "is_pm1006": {
+          "type": "boolean",
+          "description": "True if the device is a PM1006 AQ sensor",
+          "default": false
+        },
+        "period": {
+          "type": "integer",
+          "description": "The period to poll the device, in milliseconds",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "sensor_types": {
+          "type": "array",
+          "description": "SI Types for each sensor on the I2c device",
+          "items": {
+            "$ref": "#/$defs/subcomponent"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "generic_input": {
+      "type": "object",
+      "description": "Configuration for generic UART input devices.",
+      "required": [
+        "line_ending",
+        "period",
+        "sensor_types"
+      ],
+      "properties": {
+        "line_ending": {
+          "description": "The line ending format for incoming data.",
+          "type": "string",
+          "enum": [
+            "unspecified",
+            "lf",
+            "crlf",
+            "timeout_100ms",
+            "timeout_1000ms"
+          ],
+          "default": "unspecified"
+        },
+        "period": {
+          "type": "integer",
+          "description": "The period to poll the device, in milliseconds",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "sensor_types": {
+          "type": "array",
+          "description": "SI Types for each sensor on the I2c device",
+          "items": {
+            "$ref": "#/$defs/subcomponent"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "gps": {
+      "type": "object",
+      "description": "Configuration for GPS devices.",
+      "required": [
+        "period"
+      ],
+      "properties": {
+        "commands_pmtks": {
+          "type": "array",
+          "description": "List of PMTK commands (MediaTek) in string format",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commands_ubxes": {
+          "type": "array",
+          "description": "List of UBX commands (U-Blox) in bytes format",
+          "items": {
+            "type": "string",
+            "contentEncoding": "base64"
+          }
+        },
+        "period": {
+          "type": "integer",
+          "description": "Desired period to poll the GPS module, in milliseconds",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "additionalProperties": false
     }
   }
 }

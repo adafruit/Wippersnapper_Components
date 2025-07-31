@@ -1,0 +1,9 @@
+{
+  "displayName": "GNSS Receiver - MAX-M10S",
+  "published": true,
+  "vendor": "Sparkfun",
+  "productURL": "https://www.sparkfun.com/sparkfun-gnss-receiver-breakout-max-m10s-qwiic.html",
+  "documentationURL": "https://learn.sparkfun.com/tutorials/gnss-receiver-breakout---max-m10s-qwiic-hookup-guide",
+  "description": "GNSS Receiver Breakout - MAX-M10S",
+  "i2cAddresses": [ "0x42" ]
+}
