@@ -76,13 +76,13 @@
       "minLength": 3,
       "maxLength": 24
     },
-    "txPin": {
+    "pinTx": {
       "description": "The desired UART TX pin",
       "type": "string",
       "minLength": 1,
       "maxLength": 16
     },
-    "rxPin": {
+    "pinRx": {
       "description": "The desired UART RX pin",
       "type": "string",
       "minLength": 1,
@@ -198,7 +198,6 @@
       "type": "object",
       "description": "Configuration for generic UART input devices.",
       "required": [
-        "line_ending",
         "period",
         "sensor_types"
       ],
