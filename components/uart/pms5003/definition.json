@@ -1,10 +1,10 @@
 {
   "displayName": "pms5003",
   "vendor": "PLANTOWER",
+  "deviceId": "pms5003",
   "productURL": "https://www.adafruit.com/product/3686",
   "documentationURL": "https://learn.adafruit.com/pm25-air-quality-sensor",
   "published": true,
-  "subcomponents": ["pm10-std", "pm25-std", "pm100-std", "pm10-env", "pm25-env", "pm100-env"],
   "baudRate": 9600,
-  "inverted": false
+  "deviceType": "pm25aqi"
 }

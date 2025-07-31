@@ -37,7 +37,10 @@
   },
   "required": [
     "displayName",
-    "vendor"
+    "vendor",
+    "deviceId",
+    "baudRate",
+    "deviceType"
   ],
   "additionalProperties": false,
   "properties": {
