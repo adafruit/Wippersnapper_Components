@@ -3,7 +3,7 @@
   "vendor": "e-Gizmo",
   "deviceId": "pm1006",
   "productURL": "https://www.adafruit.com/product/4019",
-  "documentationURL": "https://learn.adafruit.com/ultrasonic-sonar-distance-sensors/overview",
+  "documentationURL": "https://learn.adafruit.com/ultrasonic-sonar-distance-sensors",
   "published": true,
   "baudRate": 9600,
   "deviceType": "generic_input",
