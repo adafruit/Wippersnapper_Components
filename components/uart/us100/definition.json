@@ -1,0 +1,14 @@
+{
+  "displayName": "US-100 Distance Sensor",
+  "vendor": "e-Gizmo",
+  "deviceId": "pm1006",
+  "productURL": "https://www.adafruit.com/product/4019",
+  "documentationURL": "https://learn.adafruit.com/ultrasonic-sonar-distance-sensors/overview",
+  "published": true,
+  "baudRate": 9600,
+  "deviceType": "generic_input",
+  "generic_input": {
+    "sensor_types": ["raw", "ambient-temp"],
+    "period": 30
+  }
+}
