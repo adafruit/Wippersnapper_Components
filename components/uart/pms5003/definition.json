@@ -6,5 +6,9 @@
   "documentationURL": "https://learn.adafruit.com/pm25-air-quality-sensor",
   "published": true,
   "baudRate": 9600,
-  "deviceType": "pm25aqi"
+  "deviceType": "pm25aqi",
+  "pm25aqi": {
+    "period": 30000,
+    "sensor_types": ["pm10-std", "pm25-std", "pm100-std", "pm10-env", "pm25-env", "pm100-env"]
+  }
 }
