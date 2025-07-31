@@ -6,5 +6,10 @@
   "documentationURL": "https://learn.adafruit.com/ikea-vindriktning-hack-with-qt-py-esp32-s3-and-adafruit-io",
   "published": true,
   "baudRate": 9600,
-  "deviceType": "pm25aqi"
+  "deviceType": "pm25aqi",
+  "pm25aqi": {
+    "is_pm1006": true,
+    "period": 30000,
+    "sensor_types": ["pm25-env"]
+  }
 }
