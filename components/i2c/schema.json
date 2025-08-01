@@ -35,7 +35,7 @@
       }
     }
   },
-  "required": [ "displayName", "vendor", "i2cAddresses", "subcomponents" ],
+  "required": [ "displayName", "vendor", "i2cAddresses"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -81,6 +81,41 @@
       "description": "List of sensors on this I2C component.",
       "type": "array",
       "items": { "$ref": "#/$defs/subcomponent" }
+    },
+    "isGps": {
+      "description": "If true, this component is a GPS module.",
+      "type": "boolean"
+    },
+    "gps": {
+      "type": "object",
+      "description": "Configuration for GPS devices.",
+      "required": [
+        "period"
+      ],
+      "properties": {
+        "commands_pmtks": {
+          "type": "array",
+          "description": "List of PMTK commands (MediaTek) in string format",
+          "items": {
+            "type": "string"
+          }
+        },
+        "commands_ubxes": {
+          "type": "array",
+          "description": "List of UBX commands (U-Blox) in bytes format",
+          "items": {
+            "type": "string",
+            "contentEncoding": "base64"
+          }
+        },
+        "period": {
+          "type": "integer",
+          "description": "Desired period to poll the GPS module, in milliseconds",
+          "minimum": 0,
+          "maximum": 65535
+        }
+      },
+      "additionalProperties": false
     }
   }
 }

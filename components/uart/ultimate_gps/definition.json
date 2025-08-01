@@ -1,7 +1,7 @@
 {
   "displayName": "Adafruit Ultimate GPS Breakout",
   "vendor": "Adafruit",
-  "deviceId": "ultimategps",
+  "deviceId": "adaultimategps",
   "productURL": "https://www.adafruit.com/product/5440",
   "documentationURL": "https://learn.adafruit.com/adafruit-ultimate-gps/",
   "published": true,
