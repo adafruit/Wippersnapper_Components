@@ -1,7 +1,7 @@
 {
   "displayName": "US-100 Distance Sensor",
   "vendor": "e-Gizmo",
-  "deviceId": "pm1006",
+  "deviceId": "us100",
   "productURL": "https://www.adafruit.com/product/4019",
   "documentationURL": "https://learn.adafruit.com/ultrasonic-sonar-distance-sensors",
   "published": true,
