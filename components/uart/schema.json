@@ -161,7 +161,7 @@
         "generic_output",
         "gps",
         "pm25aqi",
-        "tm22xx"
+        "tmc22xx"
       ],
       "default": "unspecified"
     },
