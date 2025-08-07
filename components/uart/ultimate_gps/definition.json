@@ -4,7 +4,19 @@
   "deviceId": "adaultimategps",
   "productURL": "https://www.adafruit.com/product/5440",
   "documentationURL": "https://learn.adafruit.com/adafruit-ultimate-gps/",
+  "description": "High-performance GPS module with 10Hz updates and external antenna support",
   "published": true,
   "baudRate": 9600,
-  "deviceType": "gps"
+  "format": "8n1",
+  "timeout": 1000,
+  "use_sw_serial": false,
+  "invert_sw_serial": false,
+  "deviceType": "gps",
+  "gps": {
+    "period": 1000,
+    "commands_pmtks": [
+      "PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+      "PMTK220,1000"
+    ]
+  }
 }

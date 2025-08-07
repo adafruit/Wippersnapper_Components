@@ -3,7 +3,15 @@
   "vendor": "SparkFun",
   "productURL": "https://www.sparkfun.com/sparkfun-gnss-receiver-breakout-max-m10s-qwiic.html",
   "documentationURL": "https://learn.sparkfun.com/tutorials/gnss-receiver-breakout---max-m10s-qwiic-hookup-guide",
+  "description": "High-precision GNSS receiver with multi-constellation support and I2C interface",
   "published": true,
   "i2cAddresses": [ "0x42" ],
-  "isGps": true
+  "isGps": true,
+  "gps": {
+    "period": 1000,
+    "commands_ubxes": [
+      "JgAABgEIBgAxnyk=",
+      "JgAABgEIOAAwTBI="
+    ]
+  }
 }
