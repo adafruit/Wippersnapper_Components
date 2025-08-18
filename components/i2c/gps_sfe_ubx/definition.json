@@ -8,10 +8,6 @@
   "i2cAddresses": [ "0x42" ],
   "isGps": true,
   "gps": {
-    "period": 1000,
-    "commands_ubxes": [
-      "JgAABgEIBgAxnyk=",
-      "JgAABgEIOAAwTBI="
-    ]
+    "period": 1000
   }
 }
