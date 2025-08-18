@@ -13,10 +13,6 @@
   "invert_sw_serial": false,
   "deviceType": "gps",
   "gps": {
-    "period": 1000,
-    "commands_pmtks": [
-      "PMTK314,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-      "PMTK220,1000"
-    ]
+    "period": 1000
   }
 }
