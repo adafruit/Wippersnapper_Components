@@ -1,6 +1,6 @@
 {
-  "displayName": "MLX90632 (Medical Range)",
-  "description": "Non-contact MEMS thermal far-infrared sensor for precise temperature detection (medical measurement range).",
+  "displayName": "MLX90632-D (Medical Range)",
+  "description": "Non-contact far-infrared temperature sensor (medical range + higher accuracy).",
   "vendor": "Melexis",
   "productURL": "https://www.adafruit.com/product/6403",
   "documentationURL": "https://cdn-shop.adafruit.com/product-files/6403/MLX90632-Datasheet-Melexis.PDF",
