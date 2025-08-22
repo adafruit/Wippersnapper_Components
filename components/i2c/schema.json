@@ -29,7 +29,7 @@
         "defaultPeriod": {
           "description": "What period to the form should default to for this sensor.",
           "type": "number",
-          "minimum": 30,
+          "minimum": 1,
           "maximum": 86400
         }
       }
