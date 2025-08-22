@@ -1,5 +1,5 @@
 {
-  "displayName": "MLX90632-B (Standard Range)",
+  "displayName": "MLX90632-B (Standard)",
   "description": "Non-contact far-infrared temperature sensor (standard range + accuracy)",
   "vendor": "Melexis",
   "productURL": "https://www.digikey.com/en/products/detail/melexis-technologies-nv/MLX90632SLD-BCB-000-RE/8259656",
