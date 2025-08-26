@@ -53,11 +53,21 @@
                     "enum": [
                         "unspecified",
                         "oled",
-                        "epd"
+                        "epd",
+                        "tft"
                     ]
                 },
                 "spiEpd": {
                     "description": "Optional EPD SPI configuration.",
+                    "type": "object",
+                    "properties": {
+                        "bus": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "spiTft": {
+                    "description": "Optional TFT SPI configuration.",
                     "type": "object",
                     "properties": {
                         "bus": {
@@ -79,6 +89,29 @@
                                 "grayscale4",
                                 "mono"
                             ]
+                        }
+                    }
+                },
+                "tftConfig": {
+                    "description": "Optional TFT Configuration",
+                    "type": "object",
+                    "required": [
+                        "width",
+                        "height",
+                        "rotation"
+                    ],
+                    "properties": {
+                        "width": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "height": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "rotation": {
+                            "type": "integer",
+                            "enum": [0, 1, 2, 3]
                         }
                     }
                 }
