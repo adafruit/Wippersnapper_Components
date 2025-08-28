@@ -1,0 +1,27 @@
+{
+  "displayName": "MLX90632",
+  "description": "Non-contact far-infrared temperature sensor (medical range + higher accuracy).",
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/6403",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/6403/MLX90632-Datasheet-Melexis.PDF",
+  "published": true,
+  "i2cAddresses": ["0x3A", "0x3B"],
+  "subcomponents": [
+    {
+      "displayName": "Ambient Temperature (°C)",
+      "sensorType": "ambient-temp"
+    },
+    {
+      "displayName": "Ambient Temperature (°F)",
+      "sensorType": "ambient-temp-fahrenheit"
+    },
+    {
+      "displayName": "Measured Object Temp (°C)",
+      "sensorType": "object-temp"
+    },
+    {
+      "displayName": "Measured Object Temp (°F)",
+      "sensorType": "object-temp-fahrenheit"
+    }
+  ]
+}
