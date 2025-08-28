@@ -1,10 +1,10 @@
 {
-  "displayName": "MLX90632-D (Medical Rng)",
+  "displayName": "MLX90632",
   "description": "Non-contact far-infrared temperature sensor (medical range + higher accuracy).",
-  "vendor": "Melexis",
+  "vendor": "Adafruit",
   "productURL": "https://www.adafruit.com/product/6403",
   "documentationURL": "https://cdn-shop.adafruit.com/product-files/6403/MLX90632-Datasheet-Melexis.PDF",
-  "published": false,
+  "published": true,
   "i2cAddresses": ["0x3A", "0x3B"],
   "subcomponents": [
     {

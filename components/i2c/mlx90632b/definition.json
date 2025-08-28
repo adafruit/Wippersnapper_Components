@@ -4,7 +4,7 @@
   "vendor": "Melexis",
   "productURL": "https://www.digikey.com/en/products/detail/melexis-technologies-nv/MLX90632SLD-BCB-000-RE/8259656",
   "documentationURL": "https://cdn-shop.adafruit.com/product-files/6403/MLX90632-Datasheet-Melexis.PDF",
-  "published": false,
+  "published": true,
   "i2cAddresses": ["0x3A", "0x3B"],
   "subcomponents": [
     {
