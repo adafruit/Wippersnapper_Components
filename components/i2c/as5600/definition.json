@@ -1,0 +1,16 @@
+{
+  "displayName": "AS5600 Magnetic Angle",
+  "vendor": "ams",
+  "productURL": "https://www.adafruit.com/product/6357",
+  "documentationURL": "https://learn.adafruit.com/adafruit-as5600-magnetic-angle-sensor",
+  "description": "Magnetic angle (0-359) I2C sensor with 0.1° precision and 0.4° accuracy",
+  "published": true,
+  "i2cAddresses": [ "0x36" ],
+  "subcomponents": [
+    {
+      "displayName": "Angle",
+      "defaultPeriod": 5,
+      "sensorType": "raw"
+    }
+  ]
+}
