@@ -1,0 +1,19 @@
+{
+    "displayName": "ESP32-S3 Reverse TFT Feather",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/5691",
+    "documentationURL": "https://learn.adafruit.com/esp32-s3-reverse-tft-feather",
+    "published": false,
+    "description": "1.14\" TFT on the Adafruit ESP32-S3 Reverse TFT Feather",
+    "displayType": {
+        "type": "tft",
+        "spiTft": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 135,
+            "height": 240,
+            "rotation": 3
+        }
+    }
+}
