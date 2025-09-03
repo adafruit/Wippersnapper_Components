@@ -1,0 +1,19 @@
+{
+    "displayName": "FunHouse TFT",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4985",
+    "documentationURL": "https://learn.adafruit.com/adafruit-funhouse",
+    "published": false,
+    "description": "1.54\" TFT on the Adafruit FunHouse.",
+    "displayType": {
+        "type": "tft",
+        "spiTft": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 240,
+            "height": 240,
+            "rotation": 0
+        }
+    }
+}
