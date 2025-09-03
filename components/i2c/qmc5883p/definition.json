@@ -1,0 +1,14 @@
+{
+  "displayName": "QMC5883P",
+  "vendor": "QST Corporation",
+  "productURL": "https://www.adafruit.com/product/6388",
+  "documentationURL": "https://learn.adafruit.com/adafruit-qmc5883p-triple-axis-magnetometer",
+  "published": false,
+  "i2cAddresses": [ "0x2C" ],
+  "subcomponents": [
+    {
+      "displayName": "Magnetic Magnitude (gauss)",
+      "sensorType": "raw"
+    }
+  ]
+}
