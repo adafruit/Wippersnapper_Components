@@ -1,0 +1,9 @@
+{
+  "displayName": "BMP585",
+  "vendor": "Bosch",
+  "productURL": "https://www.adafruit.com/product/6413",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/6413/bst-bmp585-ds003.pdf",
+  "published": false,
+  "i2cAddresses": [ "0x47", "0x46" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude" ]
+}
