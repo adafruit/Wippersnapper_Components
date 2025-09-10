@@ -1,17 +1,20 @@
 {
-    "displayName": "2.9\" Grayscale eInk Display",
+    "displayName": "2.9\" Grayscale eInk Display (ILI0373)",
     "vendor": "Adafruit",
     "productURL": "https://www.adafruit.com/product/4777",
     "documentationURL": "https://learn.adafruit.com/adafruit-2-9-eink-display-breakouts-and-featherwings",
     "published": false,
-    "description": "Adafruit 2.9\" Grayscale eInk / ePaper Display FeatherWing - SSD1680 - Mono / 4 Grayscale",
+    "description": "Adafruit 2.9\" Grayscale eInk / ePaper Display FeatherWing - ILI0373 - Mono / 4 Grayscale",
     "displayType": {
         "type": "epd",
+        "driver": "epd_ili0373",
         "spiEpd": {
             "bus": 0
         },
         "epdConfig": {
-            "mode": "mono"
+            "mode": "mono",
+            "width": 296,
+            "height": 128
         }
     }
 }

@@ -7,12 +7,13 @@
     "description": "1.54\" 240x240 Wide Angle TFT LCD Display with MicroSD - ST7789 with EYESPI Connector.",
     "displayType": {
         "type": "tft",
+        "driver": "tft_st7789",
         "spiTft": {
             "bus": 0
         },
         "tftConfig": {
-            "width": 240,
             "height": 240,
+            "width": 240,
             "rotation": 0
         }
     }

@@ -7,12 +7,13 @@
     "description": "Adafruit 1.14\" 240x135 Color TFT Display + MicroSD Card Breakout - ST7789",
     "displayType": {
         "type": "tft",
+        "driver": "tft_st7789",
         "spiTft": {
             "bus": 0
         },
         "tftConfig": {
-            "width": 135,
             "height": 240,
+            "width": 135,
             "rotation": 3
         }
     }
