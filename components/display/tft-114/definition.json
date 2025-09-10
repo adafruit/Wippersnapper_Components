@@ -1,0 +1,20 @@
+{
+    "displayName": "1.14\" TFT LCD Display",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4383",
+    "documentationURL": "https://learn.adafruit.com/adafruit-1-14-240x135-color-tft-breakout",
+    "published": false,
+    "description": "Adafruit 1.14\" 240x135 Color TFT Display + MicroSD Card Breakout - ST7789",
+    "displayType": {
+        "type": "tft",
+        "driver": "tft_st7789",
+        "spiTft": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "height": 240,
+            "width": 135,
+            "rotation": 3
+        }
+    }
+}
