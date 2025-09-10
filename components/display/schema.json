@@ -4,6 +4,7 @@
     "type": "object",
     "required": [
         "displayName",
+        "displayType",
         "vendor"
     ],
     "additionalProperties": false,
