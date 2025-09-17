@@ -3,7 +3,7 @@
   "vendor": "Bosch",
   "productURL": "https://www.adafruit.com/product/6407",
   "documentationURL": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp581-ds004.pdf",
-  "published": false,
+  "published": true,
   "i2cAddresses": [ "0x47", "0x46" ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude" ]
 }
