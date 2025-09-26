@@ -1,0 +1,10 @@
+{
+  "displayName": "SPA06-003",
+  "vendor": "Goertek",
+  "productURL": "https://www.adafruit.com/product/6420",
+  "documentationURL": "https://learn.adafruit.com/adafruit-spa06-003-temperature-pressure-sensor/",
+  "description": "300-1100hPa (-500 to 9000m) Relative accuracy ±3Pa (±0.25 meter), absolute ±30Pa (±2.5m). Temperature ±1°C",
+  "published": false,
+  "i2cAddresses": [ "0x77", "0x76" ],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
+}
