@@ -3,7 +3,6 @@
     "vendor": "Adafruit",
     "productURL": "https://www.adafruit.com/product/3787",
     "documentationURL": "https://learn.adafruit.com/adafruit-1-3-and-1-54-240-x-240-wide-angle-tft-lcd-displays",
-    "published": false,
     "description": "1.54\" 240x240 Wide Angle TFT LCD Display with MicroSD - ST7789 with EYESPI Connector.",
     "displayType": {
         "type": "tft",
