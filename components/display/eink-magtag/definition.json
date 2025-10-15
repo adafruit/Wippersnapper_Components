@@ -3,7 +3,7 @@
     "vendor": "Adafruit",
     "productURL": "https://www.adafruit.com/product/4800",
     "documentationURL": "https://learn.adafruit.com/adafruit-magtag",
-    "published": true,
+    "published": false,
     "description": "Adds the Adafruit MagTag's 2.9\" E-Ink display to your project.",
     "displayType": {
         "type": "epd",
