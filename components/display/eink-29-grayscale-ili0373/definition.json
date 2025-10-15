@@ -12,7 +12,7 @@
             "bus": 0
         },
         "epdConfig": {
-            "mode": "mono",
+            "mode": "grayscale4",
             "width": 296,
             "height": 128
         }

@@ -1,0 +1,20 @@
+{
+    "displayName": "MagTag - 2.9\" E-Ink Display",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4800",
+    "documentationURL": "https://learn.adafruit.com/adafruit-magtag",
+    "published": false,
+    "description": "Adds the Adafruit MagTag's 2.9\" E-Ink display to your project.",
+    "displayType": {
+        "type": "epd",
+        "driver": "unspecified",
+        "spiEpd": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "unspecified",
+            "width": 296,
+            "height": 128
+        }
+    }
+}
