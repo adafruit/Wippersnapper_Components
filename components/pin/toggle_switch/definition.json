@@ -8,6 +8,7 @@
   "mode": "DIGITAL",
   "direction": "INPUT",
   "defaultPeriod": 30,
+  "selectPullUp": true,
   "visualization": {
     "type": "switch",
     "offLabel": "Off",

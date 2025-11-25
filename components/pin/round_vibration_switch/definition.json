@@ -1,12 +1,12 @@
 {
   "vendor": "Generic",
-  "productURL": "https://www.adafruit.com/product/4081",
-  "displayName": "Flat Vibration Switch",
-  "description": "Low sensitivity, directional vibration-induced trigger switch. Triggers when bumped from the side only",
+  "productURL": "https://www.adafruit.com/product/1766",
+  "displayName": "Round Vibration Switch",
+  "description": "Vibration-induced trigger switch. Triggers best when bumped from the sides.",
   "mode": "DIGITAL",
   "direction": "INPUT",
   "published": true,
-  "defaultPeriod":30,
+  "defaultPeriod":0,
   "selectPullUp": true,
   "visualization": {
     "type": "switch",
