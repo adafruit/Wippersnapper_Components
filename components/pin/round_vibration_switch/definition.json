@@ -6,7 +6,7 @@
   "mode": "DIGITAL",
   "direction": "INPUT",
   "published": true,
-  "defaultPeriod":0,
+  "defaultPeriod": 30,
   "selectPullUp": true,
   "visualization": {
     "type": "switch",
