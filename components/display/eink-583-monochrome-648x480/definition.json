@@ -1,0 +1,20 @@
+{
+    "displayName": "5.83\" Monochrome eInk (UC8179)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/6397",
+    "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
+    "published": true,
+    "description": "5.83\" 648x480 Monochrome Black / White eInk / ePaper - Bare Display with UC8179 Chipset.",
+    "displayType": {
+        "type": "epd",
+        "driver": "epd_uc8179",
+        "spiEpd": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "monochrome",
+            "width": 648,
+            "height": 480
+        }
+    }
+}
