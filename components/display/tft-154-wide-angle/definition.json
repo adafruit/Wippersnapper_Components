@@ -14,7 +14,8 @@
         "tftConfig": {
             "height": 240,
             "width": 240,
-            "rotation": 0
+            "rotation": 0,
+            "textSize": 3
         }
     }
 }
