@@ -92,7 +92,8 @@
                     "required": [
                         "mode",
                         "width",
-                        "height"
+                        "height",
+                        "textSize"
                     ],
                     "properties": {
                         "mode": {
@@ -113,6 +114,10 @@
                         "description": "Height of the EPD display, in pixels",
                         "type": "integer",
                         "minimum": 1
+                    },
+                    "textSize": {
+                        "type": "integer",
+                        "description": "The default text size for the display (Scale of 8x5 px font) - Possibly Driver specific translation"
                     }
                 },
                 "tftConfig": {
@@ -121,7 +126,8 @@
                     "required": [
                         "width",
                         "height",
-                        "rotation"
+                        "rotation",
+                        "textSize"
                     ],
                     "properties": {
                         "width": {
@@ -135,6 +141,10 @@
                         "rotation": {
                             "type": "integer",
                             "enum": [0, 1, 2, 3]
+                        },
+                        "textSize": {
+                            "type": "integer",
+                            "description": "The default text size for the display (Scale of 8x5 px font) - Possibly Driver specific translation"
                         }
                     }
                 }

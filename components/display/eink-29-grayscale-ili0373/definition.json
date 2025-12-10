@@ -14,7 +14,8 @@
         "epdConfig": {
             "mode": "grayscale4",
             "width": 296,
-            "height": 128
+            "height": 128,
+            "textSize": 3
         }
     }
 }
