@@ -92,7 +92,8 @@
                     "required": [
                         "mode",
                         "width",
-                        "height"
+                        "height",
+                        "textSize"
                     ],
                     "properties": {
                         "mode": {
@@ -125,7 +126,8 @@
                     "required": [
                         "width",
                         "height",
-                        "rotation"
+                        "rotation",
+                        "textSize"
                     ],
                     "properties": {
                         "width": {
