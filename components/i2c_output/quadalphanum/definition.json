@@ -4,7 +4,7 @@
   "vendor": "Adafruit",
   "productURL": "https://www.adafruit.com/product/1911",
   "documentationURL": "https://learn.adafruit.com/adafruit-led-backpack/0-54-alphanumeric",
-  "description": "Quad Alphanumeric Display 0.54\" Digits w/ I2C Backpack - STEMMA QT / Qwiic",
+  "description": "Quad Alphanumeric segmented display. 0.54\" digits w/ I2C backpack (STEMMA QT / Qwiic)",
   "i2cAddresses": [ "0x70", "0x71", "0x72", "0x73", "0x74", "0x75", "0x76", "0x77" ],
   "outputType": "ALPHANUM",
   "ledBackpackAlignment": "RIGHT",
