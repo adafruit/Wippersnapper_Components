@@ -14,7 +14,8 @@
         "epdConfig": {
             "mode": "mono",
             "width": 648,
-            "height": 480
+            "height": 480,
+            "textSize": 3
         }
     }
 }
