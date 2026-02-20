@@ -1,0 +1,16 @@
+{
+  "displayName": "SGP41",
+  "vendor": "Sensirion",
+  "productURL": "https://www.adafruit.com/product/6455",
+  "documentationURL": "https://learn.adafruit.com/adafruit-sgp41-multi-pixel-gas-sensor-breakout",
+  "published": true,
+  "i2cAddresses": [ "0x59" ],
+  "subcomponents": [
+    "voc-index",
+    "nox-index",
+    {
+      "displayName": "Raw VOC Ticks (For Reference Only)",
+      "sensorType": "raw"
+    }
+  ]
+}
