@@ -9,7 +9,7 @@
     "voc-index",
     "nox-index",
     {
-      "displayName": "Raw VOC Ticks (For Reference Only)",
+      "displayName": "Raw VOC Ticks (Reference)",
       "sensorType": "raw"
     }
   ]
