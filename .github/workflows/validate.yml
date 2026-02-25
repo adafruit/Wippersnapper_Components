@@ -195,53 +195,51 @@ jobs:
         run: |
           EXIT_VALUE=0
 
-          MAX_WIDTH=400
-          MAX_HEIGHT=300
-
-          echo "Evaluating Files $FILES"
+          MIN_WIDTH=800
+          MAX_WIDTH=2160
+          # Height is enforced via 4:3 aspect ratio (height = width * 3 / 4)
+          ASPECT_TOLERANCE_PX=2
 
           for FILE in $FILES; do
             if ! [[ $FILE =~ \.(svg|jpe?g|png)$ ]]; then
-              echo "$FILE: not an image"
               continue # non-image file
             fi
 
-            # use imagemagick to pull the dimensions
-            WIDTH=`magick identify -ping -format "%w" ${FILE}[0]`
-            HEIGHT=`magick identify -ping -format "%h" ${FILE}[0]`
-            EXPECTED_HEIGHT=$(("$WIDTH"*3/4))
-
-            NOT_4_3_RATIO=false
-            if [[ $EXPECTED_HEIGHT -ne "$HEIGHT" ]]; then
-              EXIT_VALUE=1
-              NOT_4_3_RATIO=true
-            fi
+            # use imagemagick for width/height
+            DIMS=$(magick identify -ping -format "%w %h" ${FILE}[0])
+            WIDTH=$(echo "$DIMS" | cut -d' ' -f1)
+            HEIGHT=$(echo "$DIMS" | cut -d' ' -f2)
 
             BAD_WIDTH=false
-            if [[ "$WIDTH" -gt "$MAX_WIDTH" ]]; then
+            if [[ "$WIDTH" -lt "$MIN_WIDTH" || "$WIDTH" -gt "$MAX_WIDTH" ]]; then
               EXIT_VALUE=1
               BAD_WIDTH=true
             fi
 
-            BAD_HEIGHT=false
-            if [[ "$HEIGHT" -gt "$MAX_HEIGHT" ]]; then
+            # 4:3 aspect ratio check (height ~= width * 3 / 4)
+            EXPECTED_HEIGHT=$(( (WIDTH * 3 + 2) / 4 ))
+            EXPECTED_WIDTH=$(( (HEIGHT * 4 + 1) / 3 ))
+            BAD_ASPECT=false
+            if [[ "$HEIGHT" -lt $((EXPECTED_HEIGHT - ASPECT_TOLERANCE_PX)) || "$HEIGHT" -gt $((EXPECTED_HEIGHT + ASPECT_TOLERANCE_PX)) ]]; then
               EXIT_VALUE=1
-              BAD_HEIGHT=true
+              BAD_ASPECT=true
             fi
 
-            if [[ $EXIT_VALUE = 1 ]]; then
+            if [[ $BAD_WIDTH = true || $BAD_ASPECT = true ]]; then
               echo "❌ $FILE  (${WIDTH}x${HEIGHT})"
-
-              if [[ $NOT_4_3_RATIO = true ]]; then
-                echo "  ▬ width x height must have a 4:3 ratio: resize height to ${EXPECTED_HEIGHT}"
-              fi
-
               if [[ $BAD_WIDTH = true ]]; then
-                echo "  ↔️ width must be ${MAX_WIDTH} pixels or less"
+                echo "  ↔️ width must be between ${MIN_WIDTH}px and ${MAX_WIDTH}px"
               fi
 
-              if [[ $BAD_HEIGHT = true ]]; then
-                echo "  ↕️ height must be ${MAX_HEIGHT} pixels or less"
+              if [[ $BAD_ASPECT = true ]]; then
+                if [[ "$HEIGHT" -gt $((EXPECTED_HEIGHT + ASPECT_TOLERANCE_PX)) ]]; then
+                  echo "  ↕️ image is too tall for 4:3"
+                else
+                  echo "  ↔️ image is too wide for 4:3"
+                fi
+
+                echo "    - keep ${WIDTH}px width  → height ~${EXPECTED_HEIGHT}px"
+                echo "    - keep ${HEIGHT}px height → width ~${EXPECTED_WIDTH}px"
               fi
 
             else
@@ -250,7 +248,7 @@ jobs:
           done
 
           if [[ $EXIT_VALUE = 1 ]]; then
-            echo "Fix these ☝️ issues by resizing each ❌ image to be 4:3 dimension ratio and fit within ${MAX_WIDTH}x${MAX_HEIGHT}."
+            echo "Fix these ☝️ issues by resizing each ❌ image to width ${MIN_WIDTH}-${MAX_WIDTH}px and 4:3 aspect ratio."
           fi
 
           exit $EXIT_VALUE
