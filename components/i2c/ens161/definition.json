@@ -1,0 +1,16 @@
+{
+  "displayName": "ENS161",
+  "vendor": "Sciosense",
+  "productURL": "https://www.adafruit.com/product/6431",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ens161-mox-gas-sensor",
+  "published": true,
+  "i2cAddresses": [ "0x52", "0x53" ],
+  "subcomponents": [ 
+    "tvoc",
+    "eco2",
+    {
+      "displayName": "AQI",
+      "sensorType": "raw"
+    }
+  ]
+}
