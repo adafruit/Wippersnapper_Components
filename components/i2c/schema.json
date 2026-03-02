@@ -21,6 +21,12 @@
           "minLength": 3,
           "maxLength": 24
         },
+        "feedSuffix": {
+          "description": "A unique string used to create the feed name for this sub-component, e.g.'red' suffix and type='light' would give ws-001-light-red.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 24
+        },
         "sensorType": {
           "description": "One of the supported I2C sensor type strings (found in README).",
           "type": "string",
@@ -81,6 +87,63 @@
       "description": "List of sensors on this I2C component.",
       "type": "array",
       "items": { "$ref": "#/$defs/subcomponent" }
+    },
+    "customProperties": {
+      "description": "A list of custom properties that this component supports.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [ "name", "type", "description", "default", "displayed" ],
+        "properties": {
+          "name": {
+            "description": "The name and key of the custom property.",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 24
+          },
+          "type": {
+            "description": "The type of the custom property.",
+            "type": "string",
+            "pattern": "^(color|string|number|boolean|range|list)$"
+          },
+          "description": {
+            "description": "A brief description of the custom property.",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 255
+          },
+          "default": {
+            "description": "The default value of the custom property.",
+            "type": ["string", "number", "boolean"]
+          },
+          "displayed": {
+            "description": "If true, this custom property will be displayed in the UI.",
+            "type": "boolean"
+          },
+          "displayName": {
+            "description": "The human-friendly name of this custom property.",
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 150
+          },
+          "displayOptions": {
+            "description": "Options or values for the custom property.",
+            "type": "object",
+            "optionalProperties": {
+              "min": { "type": "number" },
+              "max": { "type": "number" },
+              "step": { "type": "number" },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [ "key", "displayText" ]
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
