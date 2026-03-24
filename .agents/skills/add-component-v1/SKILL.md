@@ -230,13 +230,16 @@ The definition.json must validate against `components/i2c/schema.json`. Key cons
 
 1. **From Adafruit product API:** `https://www.adafruit.com/api/product/<PID>` — the
    `product_image` field gives the default image URL (typically `640x480`).
-2. **Use the original resolution source** for best quality when downscaling. The Adafruit CDN
-   URL contains a resolution prefix that can be replaced with `original`:
-   - `https://cdn-shop.adafruit.com/original/<PID>-NN.jpg` — **original source (always use this)**
-   - `https://cdn-shop.adafruit.com/970x728/<PID>-NN.jpg` — high res fallback
-   - `https://cdn-shop.adafruit.com/640x480/<PID>-NN.jpg` — medium (API default)
+2. **CRITICAL — Always use the `/original/` CDN URL, NOT `970x728` or `640x480`.**
+   The Adafruit CDN URL contains a resolution prefix. You MUST replace it with `original`
+   to get the highest-resolution source for downscaling. Downloading a pre-scaled version
+   (e.g. `970x728`) produces a blurry 400x300 result.
+   - **USE THIS:** `https://cdn-shop.adafruit.com/original/<PID>-NN.jpg`
+   - NOT: `https://cdn-shop.adafruit.com/970x728/<PID>-NN.jpg`
+   - NOT: `https://cdn-shop.adafruit.com/640x480/<PID>-NN.jpg`
    - Where `NN` is the image number (`01` = default, `00`-`04` are common variants)
-   - Simply replace the resolution part (e.g. `640x480`) with `original` in any CDN URL
+   - If you scraped a URL from the product page or API, replace the resolution part
+     (e.g. `970x728`, `640x480`) with `original` before downloading
 3. **Check all available shots** by testing `00` through `04` — pick the straight-on close-up
    of the breakout board with a plain background. Avoid lifestyle shots, angled shots with other
    boards, or images where the board is very small in the frame.
