@@ -71,7 +71,7 @@ All pull requests are automatically validated by CI. The validation pipeline che
 
 ## Common Fields
 
-All component types share these optional fields (in addition to their type-specific required fields):
+All component types share these fields (in addition to their type-specific required fields):
 
 | Field              | Type    | Description                                                                                                         |
 |--------------------|---------|---------------------------------------------------------------------------------------------------------------------|
@@ -509,9 +509,20 @@ UART components represent serial-bus-based sensors such as air quality monitors.
 
 | Field           | Type    | Description                                                                           |
 |-----------------|---------|---------------------------------------------------------------------------------------|
-| `subcomponents` | array   | List of sensor subcomponents (same format as [I2C subcomponents](#i2c-subcomponent-format)). |
+| `subcomponents` | array   | List of sensor subcomponents. Each item is either a sensor type string or an object (see below). |
 | `baudRate`      | number  | UART baud rate in bps (1200–256000).                                                  |
 | `inverted`      | boolean | If `true`, TX/RX signals on the UART bus are inverted.                                |
+
+#### UART Subcomponent Format
+
+UART subcomponents follow the same pattern as [I2C subcomponents](#i2c-subcomponent-format) — either a simple sensor type string (e.g. `"pm25-std"`) or an object — with these differences:
+
+| Field          | Type   | Description                                                                    |
+|----------------|--------|--------------------------------------------------------------------------------|
+| `displayName`  | string | **(required)** Human-friendly name of the sensor. 3–24 characters.             |
+| `sensorType`   | string | **(required)** One of the supported [Sensor Types](#sensor-types).             |
+| `type`         | string | A unique lookup string for this sensor and its parent component. 3–24 chars.   |
+| `defaultPeriod`| number | Default polling period in seconds (30–86400). Note: minimum is 30, not 1 as in I2C. |
 
 <details>
 <summary>Example: PMS5003 Air Quality Sensor</summary>
@@ -537,6 +548,8 @@ UART components represent serial-bus-based sensors such as air quality monitors.
 ## Sensor Types
 
 Sensor type strings are used in the `subcomponents` arrays of I2C, UART, and DS18x20 components. The centralized registry of display names and default polling periods is in [`components/sensors.json`](components/sensors.json).
+
+Every sensor type in `sensors.json` has a `defaultPeriod` of **900 seconds (15 minutes)**. This is the polling interval used unless a subcomponent's own `defaultPeriod` field overrides it (see [I2C Subcomponent Format](#i2c-subcomponent-format) and [UART Subcomponent Format](#uart-subcomponent-format)).
 
 | Sensor Type                | Display Name                             |
 |----------------------------|------------------------------------------|
