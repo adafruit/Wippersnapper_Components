@@ -1,0 +1,21 @@
+{
+    "displayName": "OLED 128x64 FW (SH1107)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4650",
+    "documentationURL": "https://learn.adafruit.com/adafruit-128x64-oled-featherwing",
+    "published": true,
+    "description": "Monochrome 128x64 OLED FeatherWing display with SH1107 driver over I2C.",
+    "displayType": {
+        "type": "oled",
+        "driver": "SH1107",
+        "panel": "128x64",
+        "i2c": {
+            "addresses": ["0x3D", "0x3C"]
+        },
+        "displayConfig": {
+            "width": 128,
+            "height": 64,
+            "textSize": 1
+        }
+    }
+}
