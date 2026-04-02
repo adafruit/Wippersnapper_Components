@@ -41,8 +41,15 @@
             "minLength": 3,
             "maxLength": 24
         },
+        "oldNames": {
+            "description": "Previous component folder names from v1 (display/ and i2c_output/) for migration of existing user configurations.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
         "displayType": {
-            "description": "Display configuration and type, maps to DisplayAddOrReplace",
+            "description": "Display configuration and type, maps to ws.display.Add",
             "type": "object",
             "required": [
                 "type",
@@ -50,26 +57,30 @@
             ],
             "properties": {
                 "type": {
-                    "description": "The type of display",
+                    "description": "The class of display (maps to DisplayClass enum)",
                     "type": "string",
                     "enum": [
                         "unspecified",
                         "epd",
-                        "tft"
+                        "tft",
+                        "oled",
+                        "led_backpack",
+                        "char_lcd"
                     ]
                 },
                 "driver": {
-                    "description": "The specific driver to use for the display",
+                    "description": "Driver chip name string (e.g. \"SSD1680\", \"ST7789\", \"SSD1306\", \"HT16K33\")",
                     "type": "string",
-                    "enum": [
-                        "unspecified",
-                        "epd_ssd1680",
-                        "epd_ili0373",
-                        "tft_st7789"
-                    ]
+                    "minLength": 1,
+                    "maxLength": 32
+                },
+                "panel": {
+                    "description": "Panel identifier for same-driver disambiguation. Format: \"{size}-{WxH}-{mode}\" or \"adafruit-{product_id}\"",
+                    "type": "string",
+                    "maxLength": 32
                 },
                 "spiEpd": {
-                    "description": "Optional EPD SPI configuration.",
+                    "description": "SPI configuration for EPD displays.",
                     "type": "object",
                     "properties": {
                         "bus": {
@@ -78,7 +89,7 @@
                     }
                 },
                 "spiTft": {
-                    "description": "Optional TFT SPI configuration.",
+                    "description": "SPI configuration for TFT displays.",
                     "type": "object",
                     "properties": {
                         "bus": {
@@ -86,8 +97,22 @@
                         }
                     }
                 },
+                "i2c": {
+                    "description": "I2C configuration for OLED/LED backpack/Character LCD displays.",
+                    "type": "object",
+                    "properties": {
+                        "addresses": {
+                            "description": "List of supported I2C addresses for this device (hex strings, e.g. [\"0x3C\", \"0x3D\"]). First entry is the default.",
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "pattern": "^0x[0-9A-Fa-f]{2}$"
+                            }
+                        }
+                    }
+                },
                 "epdConfig": {
-                    "description": "Optional EPD Configuration",
+                    "description": "Configuration for EPD displays",
                     "type": "object",
                     "required": [
                         "mode",
@@ -103,25 +128,25 @@
                                 "grayscale4",
                                 "mono"
                             ]
+                        },
+                        "width": {
+                            "description": "Width of the EPD display, in pixels",
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "height": {
+                            "description": "Height of the EPD display, in pixels",
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "textSize": {
+                            "type": "integer",
+                            "description": "The default text size for the display (Scale of 8x5 px font)"
                         }
-                    },
-                    "width": {
-                        "description": "Width of the EPD display, in pixels",
-                        "type": "integer",
-                        "minimum": 1
-                    },
-                    "height": {
-                        "description": "Height of the EPD display, in pixels",
-                        "type": "integer",
-                        "minimum": 1
-                    },
-                    "textSize": {
-                        "type": "integer",
-                        "description": "The default text size for the display (Scale of 8x5 px font) - Possibly Driver specific translation"
                     }
                 },
                 "tftConfig": {
-                    "description": "Optional TFT Configuration",
+                    "description": "Configuration for TFT displays",
                     "type": "object",
                     "required": [
                         "width",
@@ -144,7 +169,71 @@
                         },
                         "textSize": {
                             "type": "integer",
-                            "description": "The default text size for the display (Scale of 8x5 px font) - Possibly Driver specific translation"
+                            "description": "The default text size for the display (Scale of 8x5 px font)"
+                        }
+                    }
+                },
+                "displayConfig": {
+                    "description": "Generic display properties (for OLED and other pixel displays)",
+                    "type": "object",
+                    "required": [
+                        "width",
+                        "height",
+                        "textSize"
+                    ],
+                    "properties": {
+                        "width": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "height": {
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "rotation": {
+                            "type": "integer",
+                            "enum": [0, 1, 2, 3]
+                        },
+                        "textSize": {
+                            "type": "integer",
+                            "description": "The default text size for the display (Scale of 8x5 px font)"
+                        }
+                    }
+                },
+                "ledBackpackConfig": {
+                    "description": "Configuration for LED backpack displays (HT16K33-based)",
+                    "type": "object",
+                    "properties": {
+                        "brightness": {
+                            "description": "Brightness level 0 (off) to 15 (full)",
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 15
+                        },
+                        "alignment": {
+                            "description": "Text alignment",
+                            "type": "string",
+                            "enum": ["left", "right"]
+                        }
+                    }
+                },
+                "charLcdConfig": {
+                    "description": "Configuration for character LCD displays",
+                    "type": "object",
+                    "required": [
+                        "rows",
+                        "columns"
+                    ],
+                    "properties": {
+                        "rows": {
+                            "description": "Number of text rows",
+                            "type": "integer",
+                            "minimum": 1
+                        },
+                        "columns": {
+                            "description": "Number of text columns",
+                            "type": "integer",
+                            "minimum": 1
                         }
                     }
                 }

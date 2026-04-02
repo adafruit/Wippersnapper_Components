@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        componentType: [pin, i2c, i2c_output, servo, ds18x20, pwm, pixel, uart, display]
+        componentType: [pin, i2c, servo, ds18x20, pwm, pixel, uart, display]
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
@@ -25,7 +25,7 @@ jobs:
         uses: lorennorman/validate-json-action@ec276364a73f1f64e14706fa43462cf84c5829a1
         with:
           schema: /components/${{ matrix.componentType }}/schema.json
-          jsons: components/${{ matrix.componentType }}/*/definition.json
+          jsons: components/${{ matrix.componentType }}/**/definition.json
 
   gather-relevant-files:
     name: Gather Relevant Files
@@ -84,10 +84,10 @@ jobs:
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
+          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm|pixel|uart|display)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
+          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel|uart|display)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
