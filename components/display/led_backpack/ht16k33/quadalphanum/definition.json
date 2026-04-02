@@ -5,12 +5,24 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-led-backpack/0-54-alphanumeric",
     "published": true,
     "description": "Quad Alphanumeric segmented display. 0.54\" digits w/ I2C backpack (STEMMA QT / Qwiic).",
+    "oldNames": [
+        "quadalphanum"
+    ],
     "displayType": {
         "type": "led_backpack",
         "driver": "HT16K33",
         "panel": "quadalphanum",
         "i2c": {
-            "addresses": ["0x70", "0x71", "0x72", "0x73", "0x74", "0x75", "0x76", "0x77"]
+            "addresses": [
+                "0x70",
+                "0x71",
+                "0x72",
+                "0x73",
+                "0x74",
+                "0x75",
+                "0x76",
+                "0x77"
+            ]
         },
         "ledBackpackConfig": {
             "brightness": 8,

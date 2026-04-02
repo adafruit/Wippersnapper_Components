@@ -5,6 +5,9 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-magtag",
     "published": true,
     "description": "Adafruit MagTag's built-in 2.9\" E-Ink display. Driver auto-detected by board variant.",
+    "oldNames": [
+        "eink-magtag"
+    ],
     "displayType": {
         "type": "epd",
         "driver": "MAGTAG",

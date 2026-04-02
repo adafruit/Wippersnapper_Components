@@ -5,6 +5,9 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
     "published": true,
     "description": "3.7\" 416x240 Monochrome Black/White eInk / ePaper - Bare Display with UC8253 Chipset.",
+    "oldNames": [
+        "eink-37-monochrome-416x240"
+    ],
     "displayType": {
         "type": "epd",
         "driver": "UC8253",

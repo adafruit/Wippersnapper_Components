@@ -41,6 +41,13 @@
             "minLength": 3,
             "maxLength": 24
         },
+        "oldNames": {
+            "description": "Previous component folder names from v1 (display/ and i2c_output/) for migration of existing user configurations.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
         "displayType": {
             "description": "Display configuration and type, maps to ws.display.Add",
             "type": "object",

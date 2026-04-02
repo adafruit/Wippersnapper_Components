@@ -5,12 +5,18 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-oled-featherwing",
     "published": true,
     "description": "Monochrome 128x32 OLED FeatherWing display with SSD1306 driver over I2C.",
+    "oldNames": [
+        "fthrwingoled128x32",
+        "fthrwingoled128x32lg"
+    ],
     "displayType": {
         "type": "oled",
         "driver": "SSD1306",
         "panel": "128x32",
         "i2c": {
-            "addresses": ["0x3C"]
+            "addresses": [
+                "0x3C"
+            ]
         },
         "displayConfig": {
             "width": 128,

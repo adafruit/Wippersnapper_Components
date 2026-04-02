@@ -5,12 +5,19 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-monochrome-1-12-in-128x128-oled",
     "published": true,
     "description": "Monochrome 1.12\" 128x128 OLED display with SH1107 driver over I2C.",
+    "oldNames": [
+        "oled128x128m112",
+        "oled128x128m112lg"
+    ],
     "displayType": {
         "type": "oled",
         "driver": "SH1107",
         "panel": "128x128",
         "i2c": {
-            "addresses": ["0x3C", "0x3D"]
+            "addresses": [
+                "0x3C",
+                "0x3D"
+            ]
         },
         "displayConfig": {
             "width": 128,

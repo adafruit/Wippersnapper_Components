@@ -5,6 +5,9 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-2-9-eink-display-breakouts-and-featherwings",
     "published": true,
     "description": "Adafruit 2.9\" Grayscale eInk / ePaper Display FeatherWing - ILI0373 - Mono / 4 Grayscale",
+    "oldNames": [
+        "eink-29-grayscale-ili0373"
+    ],
     "displayType": {
         "type": "epd",
         "driver": "ILI0373",

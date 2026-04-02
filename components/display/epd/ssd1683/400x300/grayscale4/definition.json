@@ -5,6 +5,9 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
     "published": true,
     "description": "4.2\" 300x400 Monochrome or 4-Gray eInk / ePaper - Bare Display with SSD1683 driver.",
+    "oldNames": [
+        "eink-42-grayscale-300x400"
+    ],
     "displayType": {
         "type": "epd",
         "driver": "SSD1683",

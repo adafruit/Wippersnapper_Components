@@ -5,12 +5,24 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-led-backpack/0-dot-56-seven-segment-backpack",
     "published": true,
     "description": "7-Segment LED Matrix with I2C Backpack (HT16K33).",
+    "oldNames": [
+        "7seg"
+    ],
     "displayType": {
         "type": "led_backpack",
         "driver": "HT16K33",
         "panel": "4digit-7seg",
         "i2c": {
-            "addresses": ["0x70", "0x71", "0x72", "0x73", "0x74", "0x75", "0x76", "0x77"]
+            "addresses": [
+                "0x70",
+                "0x71",
+                "0x72",
+                "0x73",
+                "0x74",
+                "0x75",
+                "0x76",
+                "0x77"
+            ]
         },
         "ledBackpackConfig": {
             "brightness": 8,
