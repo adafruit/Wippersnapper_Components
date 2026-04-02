@@ -1,20 +1,20 @@
 {
-    "displayName": "OLED 128x64 (SSD1306)",
+    "displayName": "128x32 OLED (SSD1306)",
     "vendor": "Adafruit",
-    "productURL": "https://www.adafruit.com/product/938",
+    "productURL": "https://www.adafruit.com/product/4440",
     "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
     "published": true,
-    "description": "Monochrome 128x64 OLED display with SSD1306 driver over I2C. Also available as FeatherWing.",
+    "description": "Monochrome 128x32 OLED breakout display with SSD1306 driver over I2C (STEMMA QT / Qwiic).",
     "displayType": {
         "type": "oled",
         "driver": "SSD1306",
-        "panel": "128x64",
+        "panel": "128x32",
         "i2c": {
-            "addresses": ["0x3D", "0x3C"]
+            "addresses": ["0x3C", "0x3D"]
         },
         "displayConfig": {
             "width": 128,
-            "height": 64,
+            "height": 32,
             "textSize": 1
         }
     }

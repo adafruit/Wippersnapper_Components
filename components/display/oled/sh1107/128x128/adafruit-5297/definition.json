@@ -1,20 +1,20 @@
 {
-    "displayName": "OLED 128x64 (SH1106)",
+    "displayName": "1.12\" 128x128 OLED",
     "vendor": "Adafruit",
     "productURL": "https://www.adafruit.com/product/5297",
-    "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
+    "documentationURL": "https://learn.adafruit.com/adafruit-monochrome-1-12-in-128x128-oled",
     "published": true,
-    "description": "1.3\" 128x64 Monochrome OLED display with SH1106 driver over I2C.",
+    "description": "Monochrome 1.12\" 128x128 OLED display with SH1107 driver over I2C.",
     "displayType": {
         "type": "oled",
-        "driver": "SH1106",
-        "panel": "128x64",
+        "driver": "SH1107",
+        "panel": "128x128",
         "i2c": {
             "addresses": ["0x3C", "0x3D"]
         },
         "displayConfig": {
             "width": 128,
-            "height": 64,
+            "height": 128,
             "textSize": 1
         }
     }

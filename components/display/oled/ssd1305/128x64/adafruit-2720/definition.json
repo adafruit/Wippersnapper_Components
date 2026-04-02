@@ -1,5 +1,5 @@
 {
-    "displayName": "OLED 128x64 (SSD1305)",
+    "displayName": "128x64 OLED (SSD1305)",
     "vendor": "Adafruit",
     "productURL": "https://www.adafruit.com/product/2720",
     "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
