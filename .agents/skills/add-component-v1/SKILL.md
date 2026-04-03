@@ -2,11 +2,12 @@
 name: add-component-v1
 description: >
   Adds a new I2C sensor component definition to the Wippersnapper_Components repository.
-  Use this skill whenever the user wants to add a new sensor component, create a definition.json,
-  add an image for a WipperSnapper I2C component, or even just mentions a sensor name in the
-  context of WipperSnapper or Adafruit IO. Also use when the user says "add component",
-  "new sensor", "component definition", or asks about what subcomponents or I2C addresses a
-  sensor uses. Covers: research, definition.json creation, product image acquisition, CI
+  Use this skill whenever the user wants to create a matching PR from the firmware repo,
+  add a new sensor component, create a definition.json, add an image for a WipperSnapper
+  I2C component, or even just mentions a sensor name in the context of WipperSnapper or
+  Adafruit IO. Also use when the user says "add component", "matching PR", "new sensor",
+  "component definition", or asks about what subcomponents or I2C addresses a sensor uses.
+  Covers: research, definition.json creation, product image acquisition, CI
   validation, and PR creation. This skill is for the components repo only — firmware driver
   changes belong in Adafruit_Wippersnapper_Arduino (see the add-sensor-component-v1 skill there).
 ---
