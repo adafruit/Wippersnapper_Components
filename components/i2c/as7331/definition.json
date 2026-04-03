@@ -2,7 +2,7 @@
   "displayName": "AS7331",
   "vendor": "ams-OSRAM",
   "productURL": "https://www.adafruit.com/product/6476",
-  "documentationURL": "https://github.com/adafruit/Adafruit_AS7331",
+  "documentationURL": "https://learn.adafruit.com/adafruit-as7331-uv-uva-uvb-uvc-sensor",
   "published": false,
   "i2cAddresses": ["0x74", "0x75", "0x76", "0x77"],
   "subcomponents": [{ "displayName": "UVB", "sensorType": "raw" }]
