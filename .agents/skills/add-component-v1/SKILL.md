@@ -44,7 +44,18 @@ Accepts a sensor name as argument (e.g. `/add-component-v1 TMP119`).
 The user may also provide: datasheet URL, product page URL, learn guide URL, vendor name,
 I2C addresses, and what the sensor measures. If not provided, research them.
 
+The user may also reference a companion firmware PR that contains a suggested `definition.json`.
+**Treat PR-provided definitions as hints, not as verified data.** Always run Step 0 research
+independently — firmware PR authors often use GitHub library URLs instead of learn guides,
+miss I2C addresses, or use suboptimal field values. Every field must be verified against
+authoritative sources (product page, learn guide, datasheet) before use.
+
 ## Step 0 — Research the Sensor (MANDATORY before creating any files)
+
+> **Do not skip this step.** Even if a firmware PR or the user supplies a complete
+> `definition.json`, you MUST independently verify every field — especially `documentationURL`
+> (must be a learn guide for Adafruit products, not a GitHub repo) and `i2cAddresses` (must
+> include all ADDR pin combinations). Copying unverified values from PRs has caused bad PRs.
 
 ### Check for duplicates first
 
@@ -153,7 +164,9 @@ implements the Celsius version.
   - Manufacturer: `http://www.aosong.com/en/products-60.html` (used by AHT21)
 
 **`documentationURL`** — technical docs for the sensor:
-- **Adafruit products:** Adafruit learn guide (preferred)
+- **Adafruit products:** Adafruit learn guide (preferred). Find it on the product page
+  (search for `learn.adafruit.com`). **Never use a GitHub library repo URL** (e.g.
+  `github.com/adafruit/Adafruit_<SENSOR>`) — that is source code, not documentation.
 - **Non-Adafruit products:** Manufacturer documentation page, wiki, or datasheet PDF URL.
   Examples: Sensirion datasheet PDFs, OMRON user manuals
 - Third-party domain URLs may initially fail CI URL validation until a maintainer adds the
