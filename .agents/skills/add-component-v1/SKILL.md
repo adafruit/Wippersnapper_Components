@@ -254,9 +254,10 @@ The definition.json must validate against `components/i2c/schema.json`. Key cons
    - Where `NN` is the image number (`01` = default, `00`-`04` are common variants)
    - If you scraped a URL from the product page or API, replace the resolution part
      (e.g. `970x728`, `640x480`) with `original` before downloading
-3. **Check all available shots** by testing `00` through `04` — pick the straight-on close-up
-   of the breakout board with a plain background. Avoid lifestyle shots, angled shots with other
-   boards, or images where the board is very small in the frame.
+3. **Check all available shots** by testing `00` through `04` — pick the slight-angle / isometric
+   close-up of the breakout board with a plain background (this is the standard Adafruit product
+   photo style, typically image `00`). Avoid lifestyle shots, shots with other boards or
+   accessories in the frame, or images where the board is very small in the frame.
 4. Compare with existing component images (e.g. `components/i2c/sgp41/image.jpg`) for the
    expected style: close-up, slight angle, plain dark background, board well-centered.
 
