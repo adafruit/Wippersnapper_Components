@@ -1,0 +1,9 @@
+{
+  "displayName": "APDS9999",
+  "vendor": "Broadcom",
+  "productURL": "https://www.adafruit.com/product/6461",
+  "documentationURL": "https://learn.adafruit.com/adafruit-apds9999-proximity-lux-light-color-sensor",
+  "published": false,
+  "i2cAddresses": ["0x52"],
+  "subcomponents": ["light", "proximity"]
+}
