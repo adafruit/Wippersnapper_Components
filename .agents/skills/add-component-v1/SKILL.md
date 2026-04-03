@@ -242,8 +242,9 @@ The definition.json must validate against `components/i2c/schema.json`. Key cons
 
 **For Adafruit products:**
 
-1. **From Adafruit product API:** `https://www.adafruit.com/api/product/<PID>` — the
-   `product_image` field gives the default image URL (typically `640x480`).
+1. **Scrape all image URLs from the product page:** Fetch `https://www.adafruit.com/product/<PID>`
+   and extract all `cdn-shop.adafruit.com` image URLs. The product page gallery contains every
+   available shot — don't guess image numbers, as they are not necessarily contiguous.
 2. **CRITICAL — Always use the `/original/` CDN URL, NOT `970x728` or `640x480`.**
    The Adafruit CDN URL contains a resolution prefix. You MUST replace it with `original`
    to get the highest-resolution source for downscaling. Downloading a pre-scaled version
@@ -251,10 +252,9 @@ The definition.json must validate against `components/i2c/schema.json`. Key cons
    - **USE THIS:** `https://cdn-shop.adafruit.com/original/<PID>-NN.jpg`
    - NOT: `https://cdn-shop.adafruit.com/970x728/<PID>-NN.jpg`
    - NOT: `https://cdn-shop.adafruit.com/640x480/<PID>-NN.jpg`
-   - Where `NN` is the image number (`01` = default, `00` and up are common variants)
-   - If you scraped a URL from the product page or API, replace the resolution part
+   - For each image URL scraped from the product page, replace the resolution part
      (e.g. `970x728`, `640x480`) with `original` before downloading
-3. **Check all available shots** by incrementing from `00` until you get a 404 — pick the slight-angle / isometric
+3. **Check all available shots** from the scraped URLs — pick the slight-angle / isometric
    close-up of the breakout board with a plain background (this is the standard Adafruit product
    photo style, typically image `00`). Avoid lifestyle shots, shots with other boards or
    accessories in the frame, or images where the board is very small in the frame.
@@ -390,7 +390,7 @@ import urllib.request, io, os
 
 # 1. Download original resolution source (best quality)
 PID = '<product_id>'
-IMAGE_NUM = '01'  # try 00, 01, 02, ... until 404 to find best shot
+IMAGE_NUM = '01'  # use image numbers scraped from product page
 url = f'https://cdn-shop.adafruit.com/original/{PID}-{IMAGE_NUM}.jpg'
 data = urllib.request.urlopen(url).read()
 img = Image.open(io.BytesIO(data))
