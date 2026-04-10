@@ -2,6 +2,7 @@
   "displayName": "AS7331",
   "vendor": "ams-OSRAM",
   "productURL": "https://www.adafruit.com/product/6476",
+  "description": "This sensor prints UVA/B/C to serial and logs UVB to Adafruit IO (WS v1 limitation)",
   "documentationURL": "https://learn.adafruit.com/adafruit-as7331-uv-uva-uvb-uvc-sensor",
   "published": true,
   "i2cAddresses": ["0x74", "0x75", "0x76", "0x77"],
