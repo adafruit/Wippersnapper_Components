@@ -1,7 +1,7 @@
 {
   "displayName": "STCC4",
   "description": "Miniature thermal conductivity CO2 sensor with onboard SHT41 for temperature and humidity",
-  "vendor": "Sensirion",
+  "vendor": "Sensirion (Adafruit)",
   "productURL": "https://www.adafruit.com/product/6478",
   "documentationURL": "https://learn.adafruit.com/adafruit-stcc4-and-sht41-co2-temperature-humidity-sensor",
   "published": false,
