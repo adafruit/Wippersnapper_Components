@@ -1,0 +1,9 @@
+{
+  "displayName": "MAX44009",
+  "vendor": "Maxim Integrated",
+  "productURL": "https://www.adafruit.com/product/6498",
+  "documentationURL": "https://learn.adafruit.com/adafruit-max44009-lux-light-sensor",
+  "published": false,
+  "i2cAddresses": ["0x4A", "0x4B"],
+  "subcomponents": ["light"]
+}
