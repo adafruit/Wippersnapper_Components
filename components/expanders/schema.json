@@ -1,0 +1,78 @@
+{
+  "title": "Expander Component Definition",
+  "description": "A GPIO/Peripheral Expander component for use in Adafruit IO",
+  "type": "object",
+  "$defs": {
+    "expanderPin": {
+      "type": "object",
+      "description": "A single pin exposed by a GPIO/peripheral expander.",
+      "required": ["channel", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "channel": {
+        "description": "The channel/port identifier on the expander chip.",
+        "type": "string",
+        "pattern": "^[A-Za-z0-9_]+$"
+        },
+        "type": {
+          "description": "The pin's capability type(s), i.e.: analog, digital, pwm, etc.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    }
+  },
+  "required": ["displayName", "vendor", "i2cAddresses", "channels"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "A brief description describing this component's capabilities.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
+    "productURL": {
+      "description": "Link to this component's homepage.",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationURL": {
+      "description": "Link to this component's documentation.",
+      "type": "string",
+      "format": "uri"
+    },
+    "vendor": {
+      "description": "Name of the company that makes this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "i2cAddresses": {
+      "description": "List of I2C addresses (as hex string, like \"0x38\") this component can appear on.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "channels": {
+      "description": "List of channels exposed by this expander.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/expanderPin" },
+      "minItems": 1
+    }
+  }
+}

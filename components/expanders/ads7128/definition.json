@@ -1,0 +1,18 @@
+{
+  "displayName": "ADS7128",
+  "description": "8-channel GPIO expander with 12-bit ADC.",
+  "published": false,
+  "vendor": "Texas Instruments",
+  "documentationURL": "https://www.ti.com/lit/gpn/ADS7128",
+  "i2cAddresses": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16", "0x17"],
+  "channels": [
+    { "channel": "AIN0", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN1", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN2", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN3", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN4", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN5", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN6", "type": ["analog-in", "digital-in-out"] },
+    { "channel": "AIN7", "type": ["analog-in", "digital-in-out"] }
+  ]
+}

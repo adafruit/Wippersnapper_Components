@@ -1,0 +1,27 @@
+{
+  "displayName": "AW9523",
+  "description": "16-pin GPIO expander and constant-current LED driver.",
+  "published": false,
+  "vendor": "Awinic",
+  "productURL": "https://www.adafruit.com/product/4886",
+  "documentationURL": "https://cdn-shop.adafruit.com/product-files/4886/AW9523%20English%20Datasheet.pdf",
+  "i2cAddresses": ["0x58", "0x59", "0x5A", "0x5B"],
+  "channels": [
+    { "channel": "P0_0", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_1", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_2", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_3", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_4", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_5", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_6", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P0_7", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_0", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_1", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_2", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_3", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_4", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_5", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_6", "type": ["digital-in-out", "analog-out"] },
+    { "channel": "P1_7", "type": ["digital-in-out", "analog-out"] }
+  ]
+}

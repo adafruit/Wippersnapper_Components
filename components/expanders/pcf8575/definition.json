@@ -1,0 +1,27 @@
+{
+  "displayName": "PCF8575",
+  "description": "16-pin I2C GPIO expander.",
+  "published": false,
+  "vendor": "Texas Instruments",
+  "productURL": "https://www.adafruit.com/product/5611",
+  "documentationURL": "https://www.ti.com/lit/ds/symlink/pcf8575.pdf",
+  "i2cAddresses": ["0x20", "0x21", "0x22", "0x23", "0x24", "0x25", "0x26", "0x27"],
+  "channels": [
+    { "channel": "P0", "type": ["digital-in-out"] },
+    { "channel": "P1", "type": ["digital-in-out"] },
+    { "channel": "P2", "type": ["digital-in-out"] },
+    { "channel": "P3", "type": ["digital-in-out"] },
+    { "channel": "P4", "type": ["digital-in-out"] },
+    { "channel": "P5", "type": ["digital-in-out"] },
+    { "channel": "P6", "type": ["digital-in-out"] },
+    { "channel": "P7", "type": ["digital-in-out"] },
+    { "channel": "P8", "type": ["digital-in-out"] },
+    { "channel": "P9", "type": ["digital-in-out"] },
+    { "channel": "P10", "type": ["digital-in-out"] },
+    { "channel": "P11", "type": ["digital-in-out"] },
+    { "channel": "P12", "type": ["digital-in-out"] },
+    { "channel": "P13", "type": ["digital-in-out"] },
+    { "channel": "P14", "type": ["digital-in-out"] },
+    { "channel": "P15", "type": ["digital-in-out"] }
+  ]
+}

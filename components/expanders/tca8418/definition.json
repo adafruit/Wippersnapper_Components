@@ -1,0 +1,29 @@
+{
+  "displayName": "TCA8418",
+  "description": "18-pin I2C GPIO expander and keyboard matrix.",
+  "published": false,
+  "vendor": "Texas Instruments",
+  "productURL": "https://www.adafruit.com/product/4918",
+  "documentationURL": "https://cdn-learn.adafruit.com/assets/assets/000/115/118/original/tca8418.pdf?1663246975",
+  "i2cAddresses": ["0x34"],
+  "channels": [
+    { "channel": "C0", "type": ["digital-in-out"] },
+    { "channel": "C1", "type": ["digital-in-out"] },
+    { "channel": "C2", "type": ["digital-in-out"] },
+    { "channel": "C3", "type": ["digital-in-out"] },
+    { "channel": "C4", "type": ["digital-in-out"] },
+    { "channel": "C5", "type": ["digital-in-out"] },
+    { "channel": "C6", "type": ["digital-in-out"] },
+    { "channel": "C7", "type": ["digital-in-out"] },
+    { "channel": "C8", "type": ["digital-in-out"] },
+    { "channel": "C9", "type": ["digital-in-out"] },
+    { "channel": "R0", "type": ["digital-in-out"] },
+    { "channel": "R1", "type": ["digital-in-out"] },
+    { "channel": "R2", "type": ["digital-in-out"] },
+    { "channel": "R3", "type": ["digital-in-out"] },
+    { "channel": "R4", "type": ["digital-in-out"] },
+    { "channel": "R5", "type": ["digital-in-out"] },
+    { "channel": "R6", "type": ["digital-in-out"] },
+    { "channel": "R7", "type": ["digital-in-out"] }
+  ]
+}
