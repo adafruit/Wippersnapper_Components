@@ -6,7 +6,7 @@
     "expanderPin": {
       "type": "object",
       "description": "A single pin exposed by a GPIO/peripheral expander.",
-      "required": ["displayName", "channel", "type"],
+      "required": ["displayName", "channel"],
       "additionalProperties": false,
       "properties": {
         "displayName": {
@@ -19,15 +19,35 @@
           "type": "integer",
           "minimum": 0
         },
-        "type": {
-          "description": "The pin's capability type(s), i.e.: analog, digital, pwm, etc.",
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1,
-          "uniqueItems": true
+        "isGPIO": {
+          "description": "If true, this pin supports digital GPIO.",
+          "type": "boolean"
+        },
+        "direction": {
+          "description": "The direction(s) this GPIO pin supports. Only valid when isGPIO is true.",
+          "type": "string",
+          "enum": ["INPUT", "OUTPUT", "INPUT_OUTPUT"]
+        },
+        "isPWM": {
+          "description": "If true, this pin supports PWM / analog output (e.g. LED constant-current drive).",
+          "type": "boolean"
+        },
+        "isADC": {
+          "description": "If true, this pin supports analog-to-digital conversion (analog input).",
+          "type": "boolean"
         }
+      },
+      "anyOf": [
+        { "required": ["isGPIO"] },
+        { "required": ["isPWM"] },
+        { "required": ["isADC"] }
+      ],
+      "if": {
+        "properties": { "isGPIO": { "const": true } },
+        "required": ["isGPIO"]
+      },
+      "then": {
+        "required": ["direction"]
       }
     }
   },

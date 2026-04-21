@@ -6,13 +6,13 @@
   "documentationURL": "https://www.mouser.com/datasheet/2/115/DIOD_S_A0004566212_1-2542464.pdf",
   "i2cAddresses": ["0x43"],
   "channels": [
-    { "displayName": "P0", "channel": 0, "type": ["digital-in-out"] },
-    { "displayName": "P1", "channel": 1, "type": ["digital-in-out"] },
-    { "displayName": "P2", "channel": 2, "type": ["digital-in-out"] },
-    { "displayName": "P3", "channel": 3, "type": ["digital-in-out"] },
-    { "displayName": "P4", "channel": 4, "type": ["digital-in-out"] },
-    { "displayName": "P5", "channel": 5, "type": ["digital-in-out"] },
-    { "displayName": "P6", "channel": 6, "type": ["digital-in-out"] },
-    { "displayName": "P7", "channel": 7, "type": ["digital-in-out"] }
+    { "displayName": "P0", "channel": 0, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P1", "channel": 1, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P2", "channel": 2, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P3", "channel": 3, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P4", "channel": 4, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P5", "channel": 5, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P6", "channel": 6, "isGPIO": true, "direction": "INPUT_OUTPUT" },
+    { "displayName": "P7", "channel": 7, "isGPIO": true, "direction": "INPUT_OUTPUT" }
   ]
 }

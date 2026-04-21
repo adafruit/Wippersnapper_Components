@@ -6,13 +6,13 @@
   "documentationURL": "https://www.ti.com/lit/gpn/ADS7128",
   "i2cAddresses": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16", "0x17"],
   "channels": [
-    { "displayName": "AIN0", "channel": 0, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN1", "channel": 1, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN2", "channel": 2, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN3", "channel": 3, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN4", "channel": 4, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN5", "channel": 5, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN6", "channel": 6, "type": ["analog-in", "digital-in-out"] },
-    { "displayName": "AIN7", "channel": 7, "type": ["analog-in", "digital-in-out"] }
+    { "displayName": "AIN0", "channel": 0, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN1", "channel": 1, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN2", "channel": 2, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN3", "channel": 3, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN4", "channel": 4, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN5", "channel": 5, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN6", "channel": 6, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true },
+    { "displayName": "AIN7", "channel": 7, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true }
   ]
 }
