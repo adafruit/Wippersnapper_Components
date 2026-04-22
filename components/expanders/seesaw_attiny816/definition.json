@@ -4,6 +4,7 @@
   "published": false,
   "vendor": "Adafruit",
   "productURL": "https://www.adafruit.com/product/5681",
+  "documentationURL": "https://learn.adafruit.com/adafruit-attiny817-seesaw",
   "i2cAddresses": ["0x49", "0x4A", "0x4B", "0x4C"],
   "channels": [
     { "displayName": "0", "channel": 0, "isGPIO": true, "direction": "INPUT_OUTPUT", "isADC": true, "isPWM": true },
