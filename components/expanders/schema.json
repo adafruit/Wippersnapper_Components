@@ -12,7 +12,7 @@
         "displayName": {
           "description": "The human-readable label for this pin, shown in the Adafruit IO UI.",
           "type": "string",
-          "pattern": "^[A-Za-z0-9_]+$"
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9_ \\-\\[\\]()]{2,}$"
         },
         "name": {
           "description": "The numeric pin/name index passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
@@ -26,7 +26,15 @@
         "direction": {
           "description": "For pins that have a fixed direction, the pin's direction. Leave blank if it supports both.",
           "type": "string",
-          "enum": ["INPUT", "INPUT_PULLUP", "OUTPUT"]
+          "enum": ["INPUT", "OUTPUT"]
+        },
+        "hasPullup": {
+          "description": "If true, this pin supports an internal pull-up resistor (only valid if hasGPIO is true).",
+          "type": "boolean"
+        },
+        "hasPulldown": {
+          "description": "If true, this pin supports an internal pull-down resistor (only valid if hasGPIO is true).",
+          "type": "boolean"
         },
         "hasPWM": {
           "description": "If true, this pin supports PWM / analog output (e.g. LED constant-current drive).",
@@ -51,7 +59,7 @@
       }
     }
   },
-  "required": ["displayName", "vendor", "i2cAddresses", "pins"],
+  "required": ["displayName", "vendor", "description", "documentationURL", "productURL", "i2cAddresses", "pins"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
