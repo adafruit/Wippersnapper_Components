@@ -6,7 +6,7 @@
     "expanderPin": {
       "type": "object",
       "description": "A single pin exposed by a GPIO/peripheral expander.",
-      "required": ["displayName", "channel"],
+      "required": ["displayName", "name"],
       "additionalProperties": false,
       "properties": {
         "displayName": {
@@ -14,44 +14,44 @@
           "type": "string",
           "pattern": "^[A-Za-z0-9_]+$"
         },
-        "channel": {
-          "description": "The numeric pin/channel index passed to firmware (e.g. expander->pinMode(channel, OUTPUT)).",
+        "name": {
+          "description": "The numeric pin/name index passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
           "type": "integer",
           "minimum": 0
         },
-        "isGPIO": {
+        "hasGPIO": {
           "description": "If true, this pin supports digital GPIO.",
           "type": "boolean"
         },
         "direction": {
-          "description": "The direction(s) this GPIO pin supports. Only valid when isGPIO is true.",
+          "description": "For pins that have a fixed direction, the pin's direction. Leave blank if it supports both.",
           "type": "string",
-          "enum": ["INPUT", "OUTPUT", "INPUT_OUTPUT"]
+          "enum": ["INPUT", "INPUT_PULLUP", "OUTPUT"]
         },
-        "isPWM": {
+        "hasPWM": {
           "description": "If true, this pin supports PWM / analog output (e.g. LED constant-current drive).",
           "type": "boolean"
         },
-        "isADC": {
+        "hasADC": {
           "description": "If true, this pin supports analog-to-digital conversion (analog input).",
           "type": "boolean"
         }
       },
       "anyOf": [
-        { "required": ["isGPIO"] },
-        { "required": ["isPWM"] },
-        { "required": ["isADC"] }
+        { "required": ["hasGPIO"] },
+        { "required": ["hasPWM"] },
+        { "required": ["hasADC"] }
       ],
       "if": {
-        "properties": { "isGPIO": { "const": true } },
-        "required": ["isGPIO"]
+        "properties": { "hasGPIO": { "const": true } },
+        "required": ["hasGPIO"]
       },
       "then": {
         "required": ["direction"]
       }
     }
   },
-  "required": ["displayName", "vendor", "i2cAddresses", "channels"],
+  "required": ["displayName", "vendor", "i2cAddresses", "pins"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -93,8 +93,8 @@
         "type": "string"
       }
     },
-    "channels": {
-      "description": "List of channels exposed by this expander.",
+    "pins": {
+      "description": "List of pins exposed by this expander.",
       "type": "array",
       "items": { "$ref": "#/$defs/expanderPin" },
       "minItems": 1

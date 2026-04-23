@@ -7,13 +7,13 @@
   "documentationURL": "https://cdn-learn.adafruit.com/assets/assets/000/113/910/original/pcf8574.pdf?1659477228",
   "i2cAddresses": ["0x20", "0x21", "0x22", "0x23", "0x24", "0x25", "0x26", "0x27"],
   "channels": [
-    { "displayName": "P0", "channel": 0, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P1", "channel": 1, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P2", "channel": 2, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P3", "channel": 3, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P4", "channel": 4, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P5", "channel": 5, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P6", "channel": 6, "isGPIO": true, "direction": "INPUT_OUTPUT" },
-    { "displayName": "P7", "channel": 7, "isGPIO": true, "direction": "INPUT_OUTPUT" }
+    {"displayName": "P0", "name": 0, "hasGPIO": true},
+    {"displayName": "P1", "name": 1, "hasGPIO": true},
+    {"displayName": "P2", "name": 2, "hasGPIO": true},
+    {"displayName": "P3", "name": 3, "hasGPIO": true},
+    {"displayName": "P4", "name": 4, "hasGPIO": true},
+    {"displayName": "P5", "name": 5, "hasGPIO": true},
+    {"displayName": "P6", "name": 6, "hasGPIO": true},
+    {"displayName": "P7", "name": 7, "hasGPIO": true}
   ]
 }
