@@ -49,14 +49,7 @@
         { "required": ["hasGPIO"] },
         { "required": ["hasPWM"] },
         { "required": ["hasADC"] }
-      ],
-      "if": {
-        "properties": { "hasGPIO": { "const": true } },
-        "required": ["hasGPIO"]
-      },
-      "then": {
-        "required": ["direction"]
-      }
+      ]
     }
   },
   "required": ["displayName", "vendor", "description", "documentationURL", "productURL", "i2cAddresses", "pins"],
