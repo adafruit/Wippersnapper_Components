@@ -6,7 +6,7 @@
   "productURL": "https://www.adafruit.com/product/5233",
   "documentationURL": "https://learn.adafruit.com/adafruit-attiny817-seesaw",
   "i2cAddresses": ["0x49", "0x4A", "0x4B", "0x4C"],
-  "channels": [
+  "pins": [
     {"displayName": "0", "name": 0, "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true},
     {"displayName": "1", "name": 1, "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true},
     {"displayName": "2", "name": 2, "hasGPIO": true, "hasPullup": true, "hasADC": true},

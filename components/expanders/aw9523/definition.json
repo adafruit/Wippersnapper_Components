@@ -6,7 +6,7 @@
   "productURL": "https://www.adafruit.com/product/4886",
   "documentationURL": "https://cdn-shop.adafruit.com/product-files/4886/AW9523%20English%20Datasheet.pdf",
   "i2cAddresses": ["0x58", "0x59", "0x5A", "0x5B"],
-  "channels": [
+  "pins": [
     {"displayName": "0", "name": 0, "hasGPIO": true, "hasPWM": true},
     {"displayName": "1", "name": 1, "hasGPIO": true, "hasPWM": true},
     {"displayName": "2", "name": 2, "hasGPIO": true, "hasPWM": true},

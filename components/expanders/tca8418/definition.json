@@ -6,7 +6,7 @@
   "productURL": "https://www.adafruit.com/product/4918",
   "documentationURL": "https://learn.adafruit.com/adafruit-tca8418-keypad-matrix-and-gpio-expander-breakout",
   "i2cAddresses": ["0x34"],
-  "channels": [
+  "pins": [
     {"displayName": "C0", "name": 8, "hasGPIO": true, "hasPullup": true},
     {"displayName": "C1", "name": 9, "hasGPIO": true, "hasPullup": true},
     {"displayName": "C2", "name": 10, "hasGPIO": true, "hasPullup": true},

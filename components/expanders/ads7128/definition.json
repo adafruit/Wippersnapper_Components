@@ -5,7 +5,7 @@
   "vendor": "Texas Instruments",
   "documentationURL": "https://www.ti.com/lit/gpn/ADS7128",
   "i2cAddresses": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16", "0x17"],
-  "channels": [
+  "pins": [
     {"displayName": "AIN0", "name": 0, "hasGPIO": true, "hasADC": true},
     {"displayName": "AIN1", "name": 1, "hasGPIO": true, "hasADC": true},
     {"displayName": "AIN2", "name": 2, "hasGPIO": true, "hasADC": true},

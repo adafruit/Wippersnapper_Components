@@ -5,7 +5,7 @@
   "vendor": "Diodes Incorporated",
   "documentationURL": "https://www.mouser.com/datasheet/2/115/DIOD_S_A0004566212_1-2542464.pdf",
   "i2cAddresses": ["0x43"],
-  "channels": [
+  "pins": [
     {"displayName": "P0", "name": 0, "hasGPIO": true},
     {"displayName": "P1", "name": 1, "hasGPIO": true},
     {"displayName": "P2", "name": 2, "hasGPIO": true},
