@@ -12,7 +12,7 @@
         "displayName": {
           "description": "The human-readable label for this pin, shown in the Adafruit IO UI.",
           "type": "string",
-          "pattern": "^[A-Za-z0-9_][A-Za-z0-9_ \\-\\[\\]()]{2,}$"
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9_ \\-\\[\\]()]*$"
         },
         "name": {
           "description": "The numeric pin/name index passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
