@@ -3,6 +3,7 @@
   "description": "8-name GPIO expander with 12-bit ADC.",
   "published": false,
   "vendor": "Texas Instruments",
+  "productURL": "https://www.ti.com/product/ADS7128",
   "documentationURL": "https://www.ti.com/lit/gpn/ADS7128",
   "i2cAddresses": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16", "0x17"],
   "pins": [
