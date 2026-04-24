@@ -1,6 +1,6 @@
 {
   "displayName": "ADS7128",
-  "description": "8-name GPIO expander with 12-bit ADC.",
+  "description": "8-channel GPIO expander with 12-bit ADC.",
   "published": false,
   "vendor": "Texas Instruments",
   "productURL": "https://www.ti.com/product/ADS7128",
