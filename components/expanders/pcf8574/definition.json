@@ -7,13 +7,13 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-pcf8574",
   "i2cAddresses": ["0x20", "0x21", "0x22", "0x23", "0x24", "0x25", "0x26", "0x27"],
   "pins": [
-    {"displayName": "P0", "name": 0, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P1", "name": 1, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P2", "name": 2, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P3", "name": 3, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P4", "name": 4, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P5", "name": 5, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P6", "name": 6, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "P7", "name": 7, "hasGPIO": true, "hasPullup": true}
+    {"displayName": "P0", "name": "0", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P1", "name": "1", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P2", "name": "2", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P3", "name": "3", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P4", "name": "4", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P5", "name": "5", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P6", "name": "6", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "P7", "name": "7", "hasGPIO": true, "hasPullup": true}
   ]
 }

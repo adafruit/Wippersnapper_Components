@@ -15,9 +15,9 @@
           "pattern": "^[A-Za-z0-9_][A-Za-z0-9_ \\-\\[\\]()]*$"
         },
         "name": {
-          "description": "The numeric pin/name index passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
-          "type": "integer",
-          "minimum": 0
+          "description": "The pin identifier passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "hasGPIO": {
           "description": "If true, this pin supports digital GPIO.",

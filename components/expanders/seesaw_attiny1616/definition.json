@@ -7,17 +7,17 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-attiny817-seesaw",
   "i2cAddresses": ["0x49", "0x4A", "0x4B", "0x4C"],
   "pins": [
-    {"displayName": "0", "name": 0, "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true},
-    {"displayName": "1", "name": 1, "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true},
-    {"displayName": "2", "name": 2, "hasGPIO": true, "hasPullup": true, "hasADC": true},
-    {"displayName": "3", "name": 3, "hasGPIO": true, "hasPullup": true, "hasADC": true},
-    {"displayName": "4", "name": 4, "hasGPIO": true, "hasPullup": true, "hasADC": true},
-    {"displayName": "5", "name": 5, "hasGPIO": true, "hasPullup": true, "hasADC": true},
-    {"displayName": "6", "name": 6, "hasGPIO": true, "hasPullup": true},
-    {"displayName": "7", "name": 7, "hasGPIO": true, "hasPullup": true, "hasPWM": true},
-    {"displayName": "11", "name": 11, "hasGPIO": true, "hasPullup": true, "hasPWM": true},
-    {"displayName": "14", "name": 14, "hasGPIO": true, "hasPullup": true, "hasADC": true},
-    {"displayName": "15", "name": 15, "hasGPIO": true, "hasPullup": true, "hasADC": true},
-    {"displayName": "16", "name": 16, "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true}
+    {"displayName": "0", "name": "0", "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true},
+    {"displayName": "1", "name": "1", "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true},
+    {"displayName": "2", "name": "2", "hasGPIO": true, "hasPullup": true, "hasADC": true},
+    {"displayName": "3", "name": "3", "hasGPIO": true, "hasPullup": true, "hasADC": true},
+    {"displayName": "4", "name": "4", "hasGPIO": true, "hasPullup": true, "hasADC": true},
+    {"displayName": "5", "name": "5", "hasGPIO": true, "hasPullup": true, "hasADC": true},
+    {"displayName": "6", "name": "6", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "7", "name": "7", "hasGPIO": true, "hasPullup": true, "hasPWM": true},
+    {"displayName": "11", "name": "11", "hasGPIO": true, "hasPullup": true, "hasPWM": true},
+    {"displayName": "14", "name": "14", "hasGPIO": true, "hasPullup": true, "hasADC": true},
+    {"displayName": "15", "name": "15", "hasGPIO": true, "hasPullup": true, "hasADC": true},
+    {"displayName": "16", "name": "16", "hasGPIO": true, "hasPullup": true, "hasADC": true, "hasPWM": true}
   ]
 }
