@@ -1,0 +1,104 @@
+{
+  "title": "Expander Component Definition",
+  "description": "A GPIO/Peripheral Expander component for use in Adafruit IO",
+  "type": "object",
+  "$defs": {
+    "expanderPin": {
+      "type": "object",
+      "description": "A single pin exposed by a GPIO/peripheral expander.",
+      "required": ["displayName", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "description": "The human-readable label for this pin, shown in the Adafruit IO UI.",
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9_ \\-\\[\\]()]*$"
+        },
+        "name": {
+          "description": "The pin identifier passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_]+$"
+        },
+        "hasGPIO": {
+          "description": "If true, this pin supports digital GPIO.",
+          "type": "boolean"
+        },
+        "direction": {
+          "description": "For pins that have a fixed direction, the pin's direction. Leave blank if it supports both.",
+          "type": "string",
+          "enum": ["INPUT", "OUTPUT"]
+        },
+        "hasPullup": {
+          "description": "If true, this pin supports an internal pull-up resistor (only valid if hasGPIO is true).",
+          "type": "boolean"
+        },
+        "hasPulldown": {
+          "description": "If true, this pin supports an internal pull-down resistor (only valid if hasGPIO is true).",
+          "type": "boolean"
+        },
+        "hasPWM": {
+          "description": "If true, this pin supports PWM / analog output (e.g. LED constant-current drive).",
+          "type": "boolean"
+        },
+        "hasADC": {
+          "description": "If true, this pin supports analog-to-digital conversion (analog input).",
+          "type": "boolean"
+        }
+      },
+      "anyOf": [
+        { "required": ["hasGPIO"] },
+        { "required": ["hasPWM"] },
+        { "required": ["hasADC"] }
+      ]
+    }
+  },
+  "required": ["displayName", "vendor", "description", "documentationURL", "productURL", "i2cAddresses", "pins"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "A brief description describing this component's capabilities.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
+    "productURL": {
+      "description": "Link to this component's homepage.",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationURL": {
+      "description": "Link to this component's documentation.",
+      "type": "string",
+      "format": "uri"
+    },
+    "vendor": {
+      "description": "Name of the company that makes this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "i2cAddresses": {
+      "description": "List of I2C addresses (as hex string, like \"0x38\") this component can appear on.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pins": {
+      "description": "List of pins exposed by this expander.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/expanderPin" },
+      "minItems": 1
+    }
+  }
+}

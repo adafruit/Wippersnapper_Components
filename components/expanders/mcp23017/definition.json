@@ -1,0 +1,27 @@
+{
+  "displayName": "MCP23017",
+  "description": "16-pin GPIO expander",
+  "published": true,
+  "vendor": "Microchip Technology",
+  "productURL": "https://www.adafruit.com/product/5346",
+  "documentationURL": "https://learn.adafruit.com/adafruit-mcp23017-i2c-gpio-expander",
+  "i2cAddresses": ["0x20", "0x21", "0x22", "0x23", "0x24", "0x25", "0x26", "0x27"],
+  "pins": [
+    {"displayName": "A0", "name": "0", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A1", "name": "1", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A2", "name": "2", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A3", "name": "3", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A4", "name": "4", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A5", "name": "5", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A6", "name": "6", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "A7", "name": "7", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B0", "name": "8", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B1", "name": "9", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B2", "name": "10", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B3", "name": "11", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B4", "name": "12", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B5", "name": "13", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B6", "name": "14", "hasGPIO": true, "hasPullup": true},
+    {"displayName": "B7", "name": "15", "hasGPIO": true, "hasPullup": true}
+  ]
+}

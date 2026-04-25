@@ -1,0 +1,19 @@
+{
+  "displayName": "ADS7128",
+  "description": "8-channel GPIO expander with 12-bit ADC.",
+  "published": false,
+  "vendor": "Texas Instruments",
+  "productURL": "https://www.ti.com/product/ADS7128",
+  "documentationURL": "https://www.ti.com/lit/gpn/ADS7128",
+  "i2cAddresses": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16", "0x17"],
+  "pins": [
+    {"displayName": "AIN0", "name": "0", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN1", "name": "1", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN2", "name": "2", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN3", "name": "3", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN4", "name": "4", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN5", "name": "5", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN6", "name": "6", "hasGPIO": true, "hasADC": true},
+    {"displayName": "AIN7", "name": "7", "hasGPIO": true, "hasADC": true}
+  ]
+}
