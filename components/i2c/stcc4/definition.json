@@ -4,7 +4,7 @@
   "vendor": "Sensirion (Adafruit)",
   "productURL": "https://www.adafruit.com/product/6478",
   "documentationURL": "https://learn.adafruit.com/adafruit-stcc4-and-sht41-co2-temperature-humidity-sensor",
-  "published": false,
+  "published": true,
   "i2cAddresses": ["0x64", "0x65"],
   "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit", "humidity", "co2"]
 }
