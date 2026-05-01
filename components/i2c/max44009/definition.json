@@ -3,7 +3,8 @@
   "vendor": "Maxim (Adafruit)",
   "productURL": "https://www.adafruit.com/product/6498",
   "documentationURL": "https://learn.adafruit.com/adafruit-max44009-lux-light-sensor",
+  "description": "Ambient light sensor with ultra-wide 22bit dynamic range (0.045 to 188,000 lux)",
   "published": true,
   "i2cAddresses": ["0x4A", "0x4B"],
-  "subcomponents": ["light"]
+  "subcomponents": ["lux"]
 }
