@@ -5,5 +5,5 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-max44009-lux-light-sensor",
   "published": true,
   "i2cAddresses": ["0x4A", "0x4B"],
-  "subcomponents": ["light"]
+  "subcomponents": ["lux"]
 }
