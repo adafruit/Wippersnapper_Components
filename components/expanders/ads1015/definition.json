@@ -1,0 +1,15 @@
+{
+  "displayName": "ADS1015",
+  "description": "12-Bit ADC - 4 Channel.",
+  "published": true,
+  "vendor": "Adafruit Industries",
+  "productURL": "https://www.adafruit.com/product/1083",
+  "documentationURL": "https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/",
+  "i2cAddresses": ["0x48", "0x49", "0x4A", "0x4B"],
+  "pins": [
+    {"displayName": "A0", "name": "0", "hasGPIO": false, "hasADC": true},
+    {"displayName": "A1", "name": "1", "hasGPIO": false, "hasADC": true},
+    {"displayName": "A2", "name": "2", "hasGPIO": false, "hasADC": true},
+    {"displayName": "A3", "name": "3", "hasGPIO": false, "hasADC": true}
+  ]
+}
