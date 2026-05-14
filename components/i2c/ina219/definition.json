@@ -5,5 +5,14 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
+  "settings": [
+    {
+      "name": "calibration",
+      "displayName": "Calibration",
+      "description": "Sets the voltage range and max current measurement.",
+      "default": 0,
+      "options": ["32V, 2A", "32V, 1A", "16V, 400mA"]
+    }
+  ],
   "subcomponents": [ "voltage", "current" ]
 }

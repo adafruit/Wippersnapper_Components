@@ -5,6 +5,15 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-ens160-mox-gas-sensor",
   "published": true,
   "i2cAddresses": [ "0x52", "0x53" ],
+  "settings": [
+    {
+      "name": "mode",
+      "displayName": "Mode",
+      "description": "Sets the operating mode of the sensor.",
+      "default": 2,
+      "options": ["Deep Sleep", "Idle", "Standard", "Low Power"]
+    }
+  ],
   "subcomponents": [ 
     "tvoc",
     "eco2",

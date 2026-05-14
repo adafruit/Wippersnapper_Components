@@ -6,6 +6,26 @@
   "description": "Thermocouple / ambient temperature sensor. *Note* Needs hotplugging after i2c scans + selecting component!",
   "published": false,
   "i2cAddresses": [ "0x67", "0x66", "0x65", "0x64", "0x63", "0x62", "0x61", "0x60"],
+  "settings": [
+    {
+      "name": "thermocouple_type",
+      "displayName": "Thermocouple Type",
+      "default": 0,
+      "options": ["Type K", "Type J", "Type T", "Type N", "Type S", "Type E", "Type B", "Type R"]
+    },
+    {
+      "name": "adc_resolution",
+      "displayName": "ADC Resolution",
+      "default": 0,
+      "options": ["18-bit", "16-bit", "14-bit", "12-bit"]
+    },
+    {
+      "name": "ambient_resolution",
+      "displayName": "Ambient Resolution",
+      "default": 0,
+      "options": ["0.25°C", "0.125°C", "0.0625°C", "0.03125°C"]
+    }
+  ],
   "subcomponents": [ 
     {
       "displayName": "Ambient Temperature (°C)",
