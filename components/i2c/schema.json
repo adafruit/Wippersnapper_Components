@@ -3,6 +3,42 @@
   "description": "An I2C-based WipperSnapper component for use in Adafruit IO",
   "type": "object",
   "$defs": {
+    "setting": {
+      "type": "object",
+      "description": "A configurable device setting. Firmware receives the selected option's 0-based index.",
+      "required": ["name", "displayName", "options"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "description": "Machine-readable key sent to firmware.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "displayName": {
+          "description": "Human-readable label shown in the UI.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "description": {
+          "description": "Optional helper text explaining what this setting controls.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "default": {
+          "description": "Index of the default option (0-based). Defaults to 0 if omitted.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "options": {
+          "description": "Ordered list of option labels. The selected index is sent to firmware.",
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 0
+        }
+      }
+    },
     "subcomponent": {
       "type": ["string", "object"],
       "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$",
@@ -76,6 +112,11 @@
       "items": {
         "type": "string"
       }
+    },
+    "settings": {
+      "description": "Configurable device-level settings (e.g. gain, sample rate, integration time).",
+      "type": "array",
+      "items": { "$ref": "#/$defs/setting" }
     },
     "subcomponents": {
       "description": "List of sensors on this I2C component.",

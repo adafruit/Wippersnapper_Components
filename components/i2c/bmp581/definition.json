@@ -5,5 +5,37 @@
   "documentationURL": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp581-ds004.pdf",
   "published": true,
   "i2cAddresses": [ "0x47", "0x46" ],
+  "settings": [
+    {
+      "name": "temp_oversampling",
+      "displayName": "Temperature Oversampling",
+      "default": 0,
+      "options": ["1x", "2x", "4x", "8x", "16x", "32x", "64x", "128x"]
+    },
+    {
+      "name": "pressure_oversampling",
+      "displayName": "Pressure Oversampling",
+      "default": 0,
+      "options": ["1x", "2x", "4x", "8x", "16x", "32x", "64x", "128x"]
+    },
+    {
+      "name": "iir_filter",
+      "displayName": "IIR Filter",
+      "default": 0,
+      "options": ["Bypass", "Coeff 1", "Coeff 3", "Coeff 7", "Coeff 15", "Coeff 31", "Coeff 63", "Coeff 127"]
+    },
+    {
+      "name": "output_data_rate",
+      "displayName": "Output Data Rate",
+      "default": 0,
+      "options": ["50 Hz", "45 Hz", "40 Hz", "35 Hz", "30 Hz", "25 Hz", "20 Hz", "15 Hz", "10 Hz", "5 Hz", "4 Hz", "3 Hz", "2 Hz", "1 Hz", "0.5 Hz", "0.25 Hz", "0.125 Hz"]
+    },
+    {
+      "name": "power_mode",
+      "displayName": "Power Mode",
+      "default": 1,
+      "options": ["Standby", "Normal", "Forced", "Continuous", "Deep Standby"]
+    }
+  ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude" ]
 }

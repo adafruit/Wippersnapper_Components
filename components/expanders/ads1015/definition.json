@@ -6,6 +6,22 @@
   "productURL": "https://www.adafruit.com/product/1083",
   "documentationURL": "https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/",
   "i2cAddresses": ["0x48", "0x49", "0x4A", "0x4B"],
+  "settings": [
+    {
+      "name": "gain",
+      "displayName": "Gain",
+      "description": "Programmable gain amplifier setting.",
+      "default": 0,
+      "options": [
+        "2/3x (±6.144V)",
+        "1x (±4.096V)",
+        "2x (±2.048V)",
+        "4x (±1.024V)",
+        "8x (±0.512V)",
+        "16x (±0.256V)"
+      ]
+    }
+  ],
   "pins": [
     {"displayName": "A0", "name": "0", "hasGPIO": false, "hasADC": true},
     {"displayName": "A1", "name": "1", "hasGPIO": false, "hasADC": true},

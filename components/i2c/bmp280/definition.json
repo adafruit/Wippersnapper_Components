@@ -5,5 +5,38 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout",
   "published": true,
   "i2cAddresses": [ "0x77", "0x76" ],
+  "settings": [
+    {
+      "name": "mode",
+      "displayName": "Mode",
+      "description": "Sets the measurement mode of the sensor.",
+      "default": 2,
+      "options": ["Sleep", "Forced", "Normal"]
+    },
+    {
+      "name": "temp_oversampling",
+      "displayName": "Temperature Oversampling",
+      "default": 0,
+      "options": ["None", "1x", "2x", "4x", "8x", "16x"]
+    },
+    {
+      "name": "pressure_oversampling",
+      "displayName": "Pressure Oversampling",
+      "default": 0,
+      "options": ["None", "1x", "2x", "4x", "8x", "16x"]
+    },
+    {
+      "name": "filter",
+      "displayName": "Filter",
+      "default": 0,
+      "options": ["Off", "2x", "4x", "8x", "16x"]
+    },
+    {
+      "name": "standby",
+      "displayName": "Standby Duration",
+      "default": 0,
+      "options": ["1ms", "62.5ms", "125ms", "250ms", "500ms", "1000ms", "2000ms", "4000ms"]
+    }
+  ],
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude" ]
 }
