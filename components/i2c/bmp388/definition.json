@@ -4,32 +4,47 @@
   "productURL": "https://www.adafruit.com/product/3966",
   "documentationURL": "https://learn.adafruit.com/adafruit-bmp388-bmp390-bmp3xx",
   "published": true,
-  "i2cAddresses": [ "0x77", "0x76" ],
-  "settings": [
-    {
-      "name": "temp_oversampling",
+  "i2cAddresses": ["0x77", "0x76"],
+  "settings": {
+    "temp_oversampling": {
       "displayName": "Temperature Oversampling",
       "default": 0,
       "options": ["None", "2x", "4x", "8x", "16x", "32x"]
     },
-    {
-      "name": "pressure_oversampling",
+    "pressure_oversampling": {
       "displayName": "Pressure Oversampling",
       "default": 0,
       "options": ["None", "2x", "4x", "8x", "16x", "32x"]
     },
-    {
-      "name": "iir_filter",
+    "iir_filter": {
       "displayName": "IIR Filter",
       "default": 0,
-      "options": ["Off", "Coeff 1", "Coeff 3", "Coeff 7", "Coeff 15", "Coeff 31", "Coeff 63", "Coeff 127"]
+      "options": [
+        "Off",
+        "Coeff 1",
+        "Coeff 3",
+        "Coeff 7",
+        "Coeff 15",
+        "Coeff 31",
+        "Coeff 63",
+        "Coeff 127"
+      ]
     },
-    {
-      "name": "output_data_rate",
+    "output_data_rate": {
       "displayName": "Output Data Rate",
       "default": 0,
-      "options": ["50 Hz", "25 Hz", "12.5 Hz", "6.25 Hz", "3.1 Hz", "1.5 Hz", "0.78 Hz", "0.39 Hz", "0.2 Hz"]
+      "options": [
+        "50 Hz",
+        "25 Hz",
+        "12.5 Hz",
+        "6.25 Hz",
+        "3.1 Hz",
+        "1.5 Hz",
+        "0.78 Hz",
+        "0.39 Hz",
+        "0.2 Hz"
+      ]
     }
-  ],
-  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude" ]
+  },
+  "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit", "pressure", "altitude"]
 }

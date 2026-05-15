@@ -4,28 +4,25 @@
   "productURL": "https://www.adafruit.com/product/4821",
   "documentationURL": "https://learn.adafruit.com/adafruit-tmp117-high-accuracy-i2c-temperature-monitor",
   "published": true,
-  "i2cAddresses": [ "0x48", "0x49", "0x4A", "0x4B" ],
-  "settings": [
-    {
-      "name": "averaged_samples",
+  "i2cAddresses": ["0x48", "0x49", "0x4A", "0x4B"],
+  "settings": {
+    "averaged_samples": {
       "displayName": "Averaged Samples",
       "default": 0,
       "options": ["1x", "8x", "32x", "64x"]
     },
-    {
-      "name": "read_delay",
+    "read_delay": {
       "displayName": "Read Delay",
       "description": "The minimum delay between new measurements.",
       "default": 0,
       "options": ["0ms", "125ms", "250ms", "500ms", "1000ms", "4000ms", "8000ms", "16000ms"]
     },
-    {
-      "name": "mode",
+    "mode": {
       "displayName": "Mode",
       "description": "Sets the measurement mode of the sensor.",
       "default": 0,
       "options": ["Continuous", "Shutdown", "One Shot"]
     }
-  ],
-  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit" ]
+  },
+  "subcomponents": ["ambient-temp", "ambient-temp-fahrenheit"]
 }

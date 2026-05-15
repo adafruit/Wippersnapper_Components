@@ -4,22 +4,20 @@
   "productURL": "https://www.adafruit.com/product/4162",
   "documentationURL": "https://learn.adafruit.com/adafruit-veml7700",
   "published": true,
-  "i2cAddresses": [ "0x10" ],
-  "settings": [
-    {
-      "name": "gain",
+  "i2cAddresses": ["0x10"],
+  "settings": {
+    "gain": {
       "displayName": "Gain",
       "description": "ALS gain.",
       "default": 0,
       "options": ["1x", "2x", "1/8x", "1/4x"]
     },
-    {
-      "name": "integration_time",
+    "integration_time": {
       "displayName": "Integration Time",
       "description": "ALS integration time.",
       "default": 2,
       "options": ["25ms", "50ms", "100ms", "200ms", "400ms", "800ms"]
     }
-  ],
-  "subcomponents": [ "light" ]
+  },
+  "subcomponents": ["light"]
 }

@@ -5,51 +5,51 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-apds9999-proximity-lux-light-color-sensor",
   "published": true,
   "i2cAddresses": ["0x52"],
-  "settings": [
-    {
-      "name": "light_gain",
+  "settings": {
+    "light_gain": {
       "displayName": "Light Gain",
       "description": "ALS gain.",
       "default": 0,
       "options": ["1x", "3x", "6x", "9x", "18x"]
     },
-    {
-      "name": "light_resolution",
+    "light_resolution": {
       "displayName": "Light Resolution",
       "default": 0,
-      "options": ["20-bit (400ms)", "19-bit (200ms)", "18-bit (100ms)", "17-bit (50ms)", "16-bit (25ms)", "13-bit (3.125ms)"]
+      "options": [
+        "20-bit (400ms)",
+        "19-bit (200ms)",
+        "18-bit (100ms)",
+        "17-bit (50ms)",
+        "16-bit (25ms)",
+        "13-bit (3.125ms)"
+      ]
     },
-    {
-      "name": "light_meas_rate",
+    "light_meas_rate": {
       "displayName": "Light Measurement Rate",
       "default": 2,
       "options": ["25ms", "50ms", "100ms", "200ms", "500ms", "1000ms", "2000ms"]
     },
-    {
-      "name": "prox_resolution",
+    "prox_resolution": {
       "displayName": "Proximity Resolution",
       "default": 0,
       "options": ["8-bit", "9-bit", "10-bit", "11-bit"]
     },
-    {
-      "name": "prox_meas_rate",
+    "prox_meas_rate": {
       "displayName": "Proximity Measurement Rate",
       "description": "Actual measurement period is approximately 3x the programmed value.",
       "default": 4,
       "options": ["6.25ms", "12.5ms", "25ms", "50ms", "100ms", "200ms", "400ms"]
     },
-    {
-      "name": "led_current",
+    "led_current": {
       "displayName": "LED Current",
       "default": 0,
       "options": ["10mA", "25mA"]
     },
-    {
-      "name": "led_frequency",
+    "led_frequency": {
       "displayName": "LED Frequency",
       "default": 0,
       "options": ["60 kHz", "70 kHz", "80 kHz", "90 kHz", "100 kHz"]
     }
-  ],
+  },
   "subcomponents": ["light", "proximity"]
 }
