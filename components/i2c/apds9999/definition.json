@@ -9,12 +9,12 @@
     "light_gain": {
       "displayName": "Light Gain",
       "description": "ALS gain.",
-      "default": 0,
+      "default": 3,
       "options": ["1x", "3x", "6x", "9x", "18x"]
     },
     "light_resolution": {
       "displayName": "Light Resolution",
-      "default": 0,
+      "default": 2,
       "options": [
         "20-bit (400ms)",
         "19-bit (200ms)",
@@ -31,7 +31,7 @@
     },
     "prox_resolution": {
       "displayName": "Proximity Resolution",
-      "default": 0,
+      "default": 3,
       "options": ["8-bit", "9-bit", "10-bit", "11-bit"]
     },
     "prox_meas_rate": {
@@ -39,16 +39,6 @@
       "description": "Actual measurement period is approximately 3x the programmed value.",
       "default": 4,
       "options": ["6.25ms", "12.5ms", "25ms", "50ms", "100ms", "200ms", "400ms"]
-    },
-    "led_current": {
-      "displayName": "LED Current",
-      "default": 0,
-      "options": ["10mA", "25mA"]
-    },
-    "led_frequency": {
-      "displayName": "LED Frequency",
-      "default": 0,
-      "options": ["60 kHz", "70 kHz", "80 kHz", "90 kHz", "100 kHz"]
     }
   },
   "subcomponents": ["light", "proximity"]
