@@ -9,7 +9,7 @@
     "light_gain": {
       "displayName": "Light Gain",
       "description": "ALS gain.",
-      "default": 3,
+      "default": 1,
       "options": ["1x", "3x", "6x", "9x", "18x"]
     },
     "light_resolution": {
