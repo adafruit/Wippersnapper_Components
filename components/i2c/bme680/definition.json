@@ -8,22 +8,22 @@
   "settings": {
     "temp_oversampling": {
       "displayName": "Temperature Oversampling",
-      "default": 0,
+      "default": 3,
       "options": ["None", "1x", "2x", "4x", "8x", "16x"]
     },
     "pressure_oversampling": {
       "displayName": "Pressure Oversampling",
-      "default": 0,
+      "default": 3,
       "options": ["None", "1x", "2x", "4x", "8x", "16x"]
     },
     "humidity_oversampling": {
       "displayName": "Humidity Oversampling",
-      "default": 0,
+      "default": 2,
       "options": ["None", "1x", "2x", "4x", "8x", "16x"]
     },
     "iir_filter": {
       "displayName": "IIR Filter",
-      "default": 0,
+      "default": 2,
       "options": ["Off", "Size 1", "Size 3", "Size 7", "Size 15", "Size 31", "Size 63", "Size 127"]
     }
   },
