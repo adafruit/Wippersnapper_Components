@@ -17,6 +17,12 @@
       "description": "ALS integration time.",
       "default": 2,
       "options": ["25ms", "50ms", "100ms", "200ms", "400ms", "800ms"]
+    },
+    "lux_method": {
+      "displayName": "Lux Reading Method",
+      "description": "Method used to calculate lux.",
+      "default": 0,
+      "options": ["VEML_LUX_NORMAL", "VEML_LUX_CORRECTED", "VEML_LUX_AUTO", "VEML_LUX_NORMAL_NOWAIT", "VEML_LUX_CORRECTED_NOWAIT"]
     }
   },
   "subcomponents": ["light"]
