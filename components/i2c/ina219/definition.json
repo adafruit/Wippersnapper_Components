@@ -8,9 +8,9 @@
   "settings": {
     "calibration": {
       "displayName": "Calibration",
-      "description": "Sets the voltage range and max current measurement.",
+      "description": "Sets the voltage range and max current measurement, dictated by the shunt resistor value.",
       "default": 0,
-      "options": ["32V, 2A", "32V, 1A", "16V, 400mA"]
+      "options": ["32V_2A", "32V_1A", "16V_400mA"]
     }
   },
   "subcomponents": ["voltage", "current"]
