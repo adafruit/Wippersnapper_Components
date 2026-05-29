@@ -9,7 +9,7 @@
     "gain": {
       "displayName": "Gain",
       "description": "ALS gain.",
-      "default": 0,
+      "default": 1,
       "options": ["1x", "2x", "4x", "8x", "48x", "96x"]
     },
     "integration_time": {
@@ -20,7 +20,7 @@
     },
     "measurement_rate": {
       "displayName": "Measurement Rate",
-      "default": 0,
+      "default": 3,
       "options": ["50ms", "100ms", "200ms", "500ms", "1000ms", "2000ms"]
     }
   },
