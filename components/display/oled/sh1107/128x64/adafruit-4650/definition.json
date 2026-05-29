@@ -12,7 +12,7 @@
     "displayType": {
         "type": "oled",
         "driver": "SH1107",
-        "panel": "128x64",
+        "panel": "128x64featherwing",
         "i2c": {
             "addresses": [
                 "0x3D",

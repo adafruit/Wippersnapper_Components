@@ -12,7 +12,7 @@
     "displayType": {
         "type": "oled",
         "driver": "SSD1306",
-        "panel": "128x32",
+        "panel": "128x32featherwing",
         "i2c": {
             "addresses": [
                 "0x3C"
