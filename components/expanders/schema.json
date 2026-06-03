@@ -3,6 +3,37 @@
   "description": "A GPIO/Peripheral Expander component for use in Adafruit IO",
   "type": "object",
   "$defs": {
+    "setting": {
+      "type": "object",
+      "description": "A configurable device setting. Firmware receives the selected option's 0-based index.",
+      "required": ["displayName", "options"],
+      "additionalProperties": false,
+      "properties": {
+        "displayName": {
+          "description": "Human-readable label shown in the UI.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "description": {
+          "description": "Optional helper text explaining what this setting controls.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "default": {
+          "description": "Index of the default option (0-based). Defaults to 0 if omitted.",
+          "type": "integer",
+          "minimum": 0
+        },
+        "options": {
+          "description": "Ordered list of option labels. The selected index is sent to firmware.",
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2
+        }
+      }
+    },
     "expanderPin": {
       "type": "object",
       "description": "A single pin exposed by a GPIO/peripheral expander.",
@@ -93,6 +124,12 @@
       "items": {
         "type": "string"
       }
+    },
+    "settings": {
+      "description": "Configurable device-level settings (e.g. gain, sample rate, integration time). Each key is the machine-readable name sent to firmware.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][a-z0-9_]*$" },
+      "additionalProperties": { "$ref": "#/$defs/setting" }
     },
     "pins": {
       "description": "List of pins exposed by this expander.",

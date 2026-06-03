@@ -4,11 +4,36 @@
   "productURL": "https://www.adafruit.com/product/6388",
   "documentationURL": "https://learn.adafruit.com/adafruit-qmc5883p-triple-axis-magnetometer",
   "published": true,
-  "i2cAddresses": [ "0x2C" ],
-  "subcomponents": [
-    {
-      "displayName": "Magnetic Magnitude (gauss)",
-      "sensorType": "raw"
+  "i2cAddresses": ["0x2C"],
+  "settings": {
+    "mode": {
+      "displayName": "Mode",
+      "description": "Sets the operating mode of the sensor.",
+      "default": 3,
+      "options": ["Suspend", "Normal", "Single", "Continuous"]
+    },
+    "output_data_rate": {
+      "displayName": "Output Data Rate",
+      "default": 0,
+      "options": ["10 Hz", "50 Hz", "100 Hz", "200 Hz"]
+    },
+    "oversample_ratio": {
+      "displayName": "Over Sample Ratio",
+      "default": 0,
+      "options": ["8", "4", "2", "1"]
+    },
+    "downsample_ratio": {
+      "displayName": "Down Sample Ratio",
+      "default": 0,
+      "options": ["1", "2", "4", "8"]
+    },
+    "range": {
+      "displayName": "Field Range",
+      "default": 0,
+      "options": ["±30 Gauss", "±12 Gauss", "±8 Gauss", "±2 Gauss"]
     }
+  },
+  "subcomponents": [
+    {"displayName": "Magnetic Magnitude (gauss)", "sensorType": "raw"}
   ]
 }
