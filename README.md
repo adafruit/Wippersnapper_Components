@@ -35,6 +35,7 @@ components/
 ├── pwm/             # PWM-controlled devices (dimmable LEDs, buzzers)
 ├── servo/           # Servo motor controllers
 ├── uart/            # UART/serial-based sensors
+├── telemetry/       # Device/host telemetry metrics (RSSI, latency, boot reason)
 └── sensors.json     # Centralized registry of sensor type definitions
 ```
 
@@ -541,6 +542,56 @@ UART subcomponents follow the same pattern as [I2C subcomponents](#i2c-subcompon
   ],
   "baudRate": 9600,
   "inverted": false
+}
+```
+</details>
+
+### Telemetry
+
+Telemetry components represent device- or host-level metrics that the firmware samples and reports, rather than a physical attached part. Each telemetry component is a single metric (e.g. Wi-Fi RSSI, broker latency, boot reason) and maps to a firmware telemetry driver. The metric reports its value inside a `ws.telemetry.Event`, and the broker schedules reporting via `ws.telemetry.Add` (`name`, `period`).
+
+Telemetry components have no associated image.
+
+**Required fields:** `displayName`, `vendor`, `telemetryName`, `valueKind`
+
+| Field           | Type    | Description                                                                                                          |
+|-----------------|---------|----------------------------------------------------------------------------------------------------------------------|
+| `telemetryName` | string  | **(required)** The metric name sent in `ws.telemetry.Add.name`. Must exactly match a firmware driver's `NAME`. 1–32 chars. |
+| `valueKind`     | string  | **(required)** The reported value kind, matching the firmware driver's `KIND`: `float`, `bytes`, or `bool`.          |
+| `unit`          | string  | Optional human-readable unit for display (e.g. `dBm`, `ms`). 1–16 chars.                                             |
+| `reportOnce`    | boolean | If `true`, the metric is reported a single time when added (period 0) rather than periodically (e.g. `boot_reason`). |
+| `defaultPeriod` | number  | Default reporting period in seconds (0–86400). A positive value reports periodically; `0` reports once at add time. Ignored when `reportOnce` is `true`. |
+
+<details>
+<summary>Example: Wi-Fi RSSI</summary>
+
+```json
+{
+  "displayName": "Wi-Fi RSSI",
+  "vendor": "Adafruit",
+  "description": "Reports the device's Wi-Fi signal strength (RSSI) in dBm. Only available on boards with a wireless interface.",
+  "published": false,
+  "telemetryName": "rssi",
+  "valueKind": "float",
+  "unit": "dBm",
+  "defaultPeriod": 300
+}
+```
+</details>
+
+<details>
+<summary>Example: Boot Reason (one-shot)</summary>
+
+```json
+{
+  "displayName": "Boot Reason",
+  "vendor": "Adafruit",
+  "description": "Reports a best-effort boot/reset reason for the device as a string. Published once when added, never on a periodic cadence.",
+  "published": false,
+  "telemetryName": "boot_reason",
+  "valueKind": "bytes",
+  "reportOnce": true,
+  "defaultPeriod": 0
 }
 ```
 </details>
