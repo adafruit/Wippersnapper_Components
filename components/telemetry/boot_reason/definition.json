@@ -1,0 +1,11 @@
+{
+  "displayName": "Boot Reason",
+  "vendor": "Adafruit",
+  "description": "Reports a best-effort boot/reset reason for the device as a string. Published once when added, never on a periodic cadence.",
+  "documentationURL": "https://learn.adafruit.com/adafruit-io-basics-wippersnapper",
+  "published": false,
+  "telemetryName": "boot_reason",
+  "valueKind": "bytes",
+  "reportOnce": true,
+  "defaultPeriod": 0
+}

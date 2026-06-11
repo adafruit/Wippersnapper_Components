@@ -1,0 +1,68 @@
+{
+  "title": "Telemetry Component Definition",
+  "description": "A Telemetry WipperSnapper component for use in Adafruit IO. Each telemetry component is a single host/device metric (e.g. rssi, latency_ms, boot_reason) reported as a ws.telemetry.Event.",
+  "type": "object",
+  "required": [ "displayName", "vendor", "telemetryName", "valueKind" ],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this telemetry metric.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 30
+    },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "A brief description describing this telemetry metric.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
+    "productURL": {
+      "description": "Link to this component's homepage.",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationURL": {
+      "description": "Link to this component's documentation.",
+      "type": "string",
+      "format": "uri"
+    },
+    "vendor": {
+      "description": "Name of the company that makes this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "telemetryName": {
+      "description": "The telemetry metric name sent in ws.telemetry.Add.name. Must exactly match a firmware telemetry driver's NAME so the device can resolve the metric.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 32
+    },
+    "valueKind": {
+      "description": "The value kind this metric reports, matching the firmware telemetry driver's KIND. Floats ride on a T_RAW sensor.Event, byte strings on T_BYTES, and booleans on T_BOOLEAN.",
+      "type": "string",
+      "enum": [ "float", "bytes", "bool" ]
+    },
+    "unit": {
+      "description": "Optional human-readable unit for display (e.g. \"dBm\", \"ms\").",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16
+    },
+    "reportOnce": {
+      "description": "When true, this metric is reported a single time when added (period 0) rather than on a periodic cadence. Used for one-shot metrics such as boot_reason.",
+      "type": "boolean"
+    },
+    "defaultPeriod": {
+      "description": "Default reporting period in seconds. A positive value schedules periodic reporting; 0 reports a single reading at add time (one-shot). Ignored when reportOnce is true.",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 86400
+    }
+  }
+}
