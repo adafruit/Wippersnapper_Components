@@ -1,0 +1,11 @@
+{
+  "displayName": "Wi-Fi RSSI",
+  "vendor": "Adafruit",
+  "description": "Reports the device's Wi-Fi signal strength (RSSI) in dBm. Only available on boards with a wireless interface.",
+  "documentationURL": "https://learn.adafruit.com/adafruit-io-basics-wippersnapper",
+  "published": false,
+  "telemetryName": "rssi",
+  "valueKind": "float",
+  "unit": "dBm",
+  "defaultPeriod": 300
+}

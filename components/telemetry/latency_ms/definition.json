@@ -1,0 +1,11 @@
+{
+  "displayName": "Broker Latency",
+  "vendor": "Adafruit",
+  "description": "Reports the round-trip latency to the MQTT broker in milliseconds, estimated from the time to open a TCP connection.",
+  "documentationURL": "https://learn.adafruit.com/adafruit-io-basics-wippersnapper",
+  "published": false,
+  "telemetryName": "latency_ms",
+  "valueKind": "float",
+  "unit": "ms",
+  "defaultPeriod": 300
+}
