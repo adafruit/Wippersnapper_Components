@@ -6,6 +6,42 @@
   "description": "Magnetic angle (0-359) I2C sensor with 0.1° precision and 0.4° accuracy",
   "published": true,
   "i2cAddresses": [ "0x36" ],
+  "settings": {
+    "output_stage": {
+      "displayName": "Output Stage",
+      "default": 0,
+      "options": ["Analog (full)", "Analog (reduced)", "Digital PWM"]
+    },
+    "power_mode": {
+      "displayName": "Power Mode",
+      "default": 0,
+      "options": ["Normal", "Low Power 1", "Low Power 2", "Low Power 3"]
+    },
+    "slow_filter": {
+      "displayName": "Slow Filter",
+      "default": 0,
+      "options": ["16x", "8x", "4x", "2x"]
+    },
+    "fast_filter_threshold": {
+      "displayName": "Fast Filter Threshold",
+      "default": 0,
+      "options": [
+        "Slow filter only",
+        "6 LSB",
+        "7 LSB",
+        "9 LSB",
+        "18 LSB",
+        "21 LSB",
+        "24 LSB",
+        "10 LSB"
+      ]
+    },
+    "hysteresis": {
+      "displayName": "Hysteresis",
+      "default": 0,
+      "options": ["Off", "1 LSB", "2 LSB", "3 LSB"]
+    }
+  },
   "subcomponents": [
     {
       "displayName": "Angle",
