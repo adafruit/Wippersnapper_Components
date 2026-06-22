@@ -7,12 +7,6 @@
   "published": true,
   "i2cAddresses": [ "0x44", "0x45", "0x46", "0x47" ],
   "settings": {
-    "mode": {
-      "displayName": "Measurement Precision",
-      "description": "Per-read conversion precision (LP0 = lowest noise).",
-      "default": 0,
-      "options": ["LP0 (lowest noise)", "LP1", "LP2", "LP3 (fastest)"]
-    },
     "heater": {
       "displayName": "Heater",
       "default": 0,
