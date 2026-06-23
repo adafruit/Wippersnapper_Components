@@ -6,5 +6,56 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-as7331-uv-uva-uvb-uvc-sensor",
   "published": true,
   "i2cAddresses": ["0x74", "0x75", "0x76", "0x77"],
+  "settings": {
+    "gain": {
+      "displayName": "Gain",
+      "default": 9,
+      "options": [
+        "2048x",
+        "1024x",
+        "512x",
+        "256x",
+        "128x",
+        "64x",
+        "32x",
+        "16x",
+        "8x",
+        "4x",
+        "2x",
+        "1x"
+      ]
+    },
+    "integration_time": {
+      "displayName": "Integration Time",
+      "default": 6,
+      "options": [
+        "1 ms",
+        "2 ms",
+        "4 ms",
+        "8 ms",
+        "16 ms",
+        "32 ms",
+        "64 ms",
+        "128 ms",
+        "256 ms",
+        "512 ms",
+        "1024 ms",
+        "2048 ms",
+        "4096 ms",
+        "8192 ms",
+        "16384 ms"
+      ]
+    },
+    "mode": {
+      "displayName": "Measurement Mode",
+      "default": 0,
+      "options": ["Continuous", "Command", "Sync Start", "Sync Start/Stop"]
+    },
+    "clock_frequency": {
+      "displayName": "Clock Frequency",
+      "default": 0,
+      "options": ["1.024 MHz", "2.048 MHz", "4.096 MHz", "8.192 MHz"]
+    }
+  },
   "subcomponents": [{ "displayName": "UVB", "sensorType": "raw" }]
 }

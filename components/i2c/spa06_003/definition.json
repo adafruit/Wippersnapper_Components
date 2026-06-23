@@ -6,5 +6,31 @@
   "description": "300-1100hPa (-500 to 9000m) Relative accuracy ±3Pa (±0.25 meter), absolute ±30Pa (±2.5m). Temperature ±1°C",
   "published": true,
   "i2cAddresses": [ "0x77", "0x76" ],
+  "settings": {
+    "temp_oversampling": {
+      "displayName": "Temperature Oversampling",
+      "default": 0,
+      "options": ["1x", "2x", "4x", "8x", "16x", "32x", "64x", "128x"]
+    },
+    "pressure_oversampling": {
+      "displayName": "Pressure Oversampling",
+      "default": 0,
+      "options": ["1x", "2x", "4x", "8x", "16x", "32x", "64x", "128x"]
+    },
+    "output_data_rate": {
+      "displayName": "Output Data Rate",
+      "default": 0,
+      "options": [
+        "1 Hz",
+        "2 Hz",
+        "4 Hz",
+        "8 Hz",
+        "16 Hz",
+        "32 Hz",
+        "64 Hz",
+        "128 Hz"
+      ]
+    }
+  },
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "pressure" ]
 }
