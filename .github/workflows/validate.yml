@@ -39,10 +39,17 @@ jobs:
         if:  ${{ !inputs.all_files }}
         id: list-changed-files
         run: |
-          # also fetch main to diff against
-          git fetch --depth=1 origin main
+          # Diff against the PR's target branch so we only consider files this
+          # PR actually changed: v2 PRs diff against v2; anything else (main, or
+          # workflow_dispatch with no base) diffs against main.
+          if [ "${{ github.base_ref }}" = "v2" ]; then
+            DIFF_BASE=v2
+          else
+            DIFF_BASE=main
+          fi
+          git fetch --depth=1 origin "$DIFF_BASE"
           # list Added, Copied, Modified, and Renamed files
-          ACMR_FILES=`git diff origin/main --name-only --diff-filter=ACMR | xargs`
+          ACMR_FILES=`git diff "origin/$DIFF_BASE" --name-only --diff-filter=ACMR | xargs`
           # GitHub Actions output ritual
           echo "all_changed_files=$ACMR_FILES" >> "$GITHUB_OUTPUT"
       - name: List All Component Files
