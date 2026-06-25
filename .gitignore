@@ -28,3 +28,10 @@ Temporary Items
 .apdisk
 .claude/settings.local.json
 .claude/worktrees/
+
+# HIL generator local/scratch helpers (not part of the deliverable)
+_build_jumper_db.py
+_compare.py
+__pycache__/
+*.pyc
+.playwright-mcp/
