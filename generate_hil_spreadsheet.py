@@ -64,6 +64,9 @@ HEADER_FONT = Font(name="Calibri", bold=True, color="FFFFFF", size=11)
 CONFLICT_FILL = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
 UNIQUE_FILL = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
 UNPUBLISHED_FILL = PatternFill(start_color="FFF2CC", end_color="FFF2CC", fill_type="solid")
+# Strong amber to make an unpublished ("NO") Published cell stand out from the
+# faint row tint above.
+UNPUBLISHED_CELL_FILL = PatternFill(start_color="FFC000", end_color="FFC000", fill_type="solid")
 MUX_HEADER_FILL = PatternFill(start_color="4472C4", end_color="4472C4", fill_type="solid")
 MUX2_HEADER_FILL = PatternFill(start_color="548235", end_color="548235", fill_type="solid")
 CHANNEL_FILLS_MUX1 = [
@@ -516,7 +519,12 @@ def write_sheet1(ws, components, addr_map, conflicts):
             cell = ws.cell(row=row_idx, column=col, value=v)
             cell.border = THIN_BORDER
             cell.alignment = Alignment(wrap_text=True, vertical="top")
-            if not comp["published"]:
+            if col == 4 and not comp["published"]:
+                # Make the "NO" Published cell pop out of the faint row tint.
+                cell.fill = UNPUBLISHED_CELL_FILL
+                cell.font = Font(bold=True, color="7F4F00")
+                cell.alignment = Alignment(horizontal="center", vertical="top")
+            elif not comp["published"]:
                 cell.fill = UNPUBLISHED_FILL
             elif is_conflicted and col in (5, 11):
                 cell.fill = CONFLICT_FILL
