@@ -866,8 +866,13 @@ def write_sheet2(ws, components, assignment, picked_addr, channel_addrs):
                 cell.border = THIN_BORDER
                 cell.alignment = Alignment(wrap_text=True, vertical="top")
                 cell.fill = channel_fill(ch)
+                # Published (13): highlight unpublished "no" cells
+                if hi == 13 and not comp["published"]:
+                    cell.fill = UNPUBLISHED_CELL_FILL
+                    cell.font = Font(bold=True, color="7F4F00")
+                    cell.alignment = Alignment(horizontal="center", vertical="top")
                 # Jumper Setting (7) and Non-Default (14)
-                if is_non_default and hi in (5, 7, 14):
+                elif is_non_default and hi in (5, 7, 14):
                     cell.fill = NON_DEFAULT_FILL
                     cell.font = NON_DEFAULT_FONT
             order_num += 1
