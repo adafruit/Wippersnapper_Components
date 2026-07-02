@@ -50,6 +50,7 @@ jobs:
           git fetch --depth=1 origin "$DIFF_BASE"
           # list Added, Copied, Modified, and Renamed files
           ACMR_FILES=`git diff "origin/$DIFF_BASE" --name-only --diff-filter=ACMR | xargs`
+          echo "Changed files vs origin/$DIFF_BASE: $ACMR_FILES"
           # GitHub Actions output ritual
           echo "all_changed_files=$ACMR_FILES" >> "$GITHUB_OUTPUT"
       - name: List All Component Files
