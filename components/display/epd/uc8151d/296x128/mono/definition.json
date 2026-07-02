@@ -1,0 +1,23 @@
+{
+    "displayName": "2.9\" Flexible Mono eInk",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4262",
+    "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
+    "published": true,
+    "description": "2.9\" Flexible 296x128 Monochrome eInk / ePaper Display with UC8151D Chipset.",
+    "oldNames": ["eink-29-flexible-monochrome-296x128"],
+    "displayType": {
+        "type": "epd",
+        "driver": "UC8151D",
+        "panel": "2.9-296x128-mono",
+        "spiEpd": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "mono",
+            "width": 296,
+            "height": 128,
+            "textSize": 3
+        }
+    }
+}
