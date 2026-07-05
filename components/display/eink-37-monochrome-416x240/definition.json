@@ -1,0 +1,21 @@
+{
+    "displayName": "3.7\" Monochrome eInk (UC8253/ILI0373)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/6395",
+    "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
+    "published": true,
+    "description": "3.7\" 416x240 Monochrome Black/White eInk / ePaper - Bare Display with UC8253 Chipset.",
+    "displayType": {
+        "type": "epd",
+        "driver": "epd_uc8253",
+        "spiEpd": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "mono",
+            "width": 416,
+            "height": 240,
+            "textSize": 3
+        }
+    }
+}
