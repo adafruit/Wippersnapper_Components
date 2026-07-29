@@ -35,7 +35,7 @@ components/
 ├── pwm/             # PWM-controlled devices (dimmable LEDs, buzzers)
 ├── servo/           # Servo motor controllers
 ├── uart/            # UART/serial-based sensors
-├── telemetry/       # Device/host telemetry metrics (RSSI, latency, boot reason)
+├── telemetry/       # Device/host telemetry metrics (RSSI, latency, boot reason & count)
 └── sensors.json     # Centralized registry of sensor type definitions
 ```
 
@@ -548,7 +548,7 @@ UART subcomponents follow the same pattern as [I2C subcomponents](#i2c-subcompon
 
 ### Telemetry
 
-Telemetry components represent device- or host-level metrics that the firmware samples and reports, rather than a physical attached part. Each telemetry component is a single metric (e.g. Wi-Fi RSSI, broker latency, boot reason) and maps to a `ws.telemetry.Type` enum value. The metric reports its value inside a `ws.telemetry.Event`, and the broker schedules reporting via `ws.telemetry.Add` (`type`, `period`).
+Telemetry components represent device- or host-level metrics that the firmware samples and reports, rather than a physical attached part. Each telemetry component is a single metric (e.g. Wi-Fi RSSI, broker latency, boot reason, boot count) and maps to a `ws.telemetry.Type` enum value. The metric reports its value inside a `ws.telemetry.Event`, and the broker schedules reporting via `ws.telemetry.Add` (`type`, `period`).
 
 Telemetry components have no associated image.
 

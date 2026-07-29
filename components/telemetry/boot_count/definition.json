@@ -1,0 +1,11 @@
+{
+  "displayName": "Boot Count",
+  "vendor": "Adafruit",
+  "description": "Reports the number of times the device has booted (reset count) since first power-on. Published once when added, never on a periodic cadence.",
+  "documentationURL": "https://learn.adafruit.com/adafruit-io-basics-wippersnapper",
+  "published": false,
+  "telemetryType": "TM_BOOT_COUNT",
+  "valueKind": "float",
+  "reportOnce": true,
+  "defaultPeriod": 0
+}

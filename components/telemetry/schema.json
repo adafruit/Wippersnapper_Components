@@ -40,7 +40,7 @@
     "telemetryType": {
       "description": "The ws.telemetry.Type enum value the broker sends in ws.telemetry.Add.type. The device maps it directly to a reader — no string-name resolution.",
       "type": "string",
-      "enum": [ "TM_RSSI", "TM_BOOT_REASON", "TM_LATENCY" ]
+      "enum": [ "TM_RSSI", "TM_BOOT_REASON", "TM_BOOT_COUNT", "TM_LATENCY" ]
     },
     "valueKind": {
       "description": "The value kind this metric reports, matching the firmware telemetry driver's KIND. Floats ride on a T_RAW sensor.Event, byte strings on T_BYTES, and booleans on T_BOOLEAN.",
