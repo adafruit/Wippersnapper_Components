@@ -548,15 +548,15 @@ UART subcomponents follow the same pattern as [I2C subcomponents](#i2c-subcompon
 
 ### Telemetry
 
-Telemetry components represent device- or host-level metrics that the firmware samples and reports, rather than a physical attached part. Each telemetry component is a single metric (e.g. Wi-Fi RSSI, broker latency, boot reason) and maps to a firmware telemetry driver. The metric reports its value inside a `ws.telemetry.Event`, and the broker schedules reporting via `ws.telemetry.Add` (`name`, `period`).
+Telemetry components represent device- or host-level metrics that the firmware samples and reports, rather than a physical attached part. Each telemetry component is a single metric (e.g. Wi-Fi RSSI, broker latency, boot reason) and maps to a `ws.telemetry.Type` enum value. The metric reports its value inside a `ws.telemetry.Event`, and the broker schedules reporting via `ws.telemetry.Add` (`type`, `period`).
 
 Telemetry components have no associated image.
 
-**Required fields:** `displayName`, `vendor`, `telemetryName`, `valueKind`
+**Required fields:** `displayName`, `vendor`, `telemetryType`, `valueKind`
 
 | Field           | Type    | Description                                                                                                          |
 |-----------------|---------|----------------------------------------------------------------------------------------------------------------------|
-| `telemetryName` | string  | **(required)** The metric name sent in `ws.telemetry.Add.name`. Must exactly match a firmware driver's `NAME`. 1–32 chars. |
+| `telemetryType` | string  | **(required)** The `ws.telemetry.Type` enum value sent in `ws.telemetry.Add.type` — one of `TM_RSSI`, `TM_BOOT_REASON`, `TM_LATENCY`. The device maps it directly to a reader (no name resolution). |
 | `valueKind`     | string  | **(required)** The reported value kind, matching the firmware driver's `KIND`: `float`, `bytes`, or `bool`.          |
 | `unit`          | string  | Optional human-readable unit for display (e.g. `dBm`, `ms`). 1–16 chars.                                             |
 | `reportOnce`    | boolean | If `true`, the metric is reported a single time when added (period 0) rather than periodically (e.g. `boot_reason`). |
@@ -571,7 +571,7 @@ Telemetry components have no associated image.
   "vendor": "Adafruit",
   "description": "Reports the device's Wi-Fi signal strength (RSSI) in dBm. Only available on boards with a wireless interface.",
   "published": false,
-  "telemetryName": "rssi",
+  "telemetryType": "TM_RSSI",
   "valueKind": "float",
   "unit": "dBm",
   "defaultPeriod": 300
@@ -588,7 +588,7 @@ Telemetry components have no associated image.
   "vendor": "Adafruit",
   "description": "Reports a best-effort boot/reset reason for the device as a string. Published once when added, never on a periodic cadence.",
   "published": false,
-  "telemetryName": "boot_reason",
+  "telemetryType": "TM_BOOT_REASON",
   "valueKind": "bytes",
   "reportOnce": true,
   "defaultPeriod": 0

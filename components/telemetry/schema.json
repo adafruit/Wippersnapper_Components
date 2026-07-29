@@ -1,8 +1,8 @@
 {
   "title": "Telemetry Component Definition",
-  "description": "A Telemetry WipperSnapper component for use in Adafruit IO. Each telemetry component is a single host/device metric (e.g. rssi, latency_ms, boot_reason) reported as a ws.telemetry.Event.",
+  "description": "A Telemetry WipperSnapper component for use in Adafruit IO. Each telemetry component is a single host/device metric (e.g. TM_RSSI, TM_LATENCY, TM_BOOT_REASON) reported as a ws.telemetry.Event.",
   "type": "object",
-  "required": [ "displayName", "vendor", "telemetryName", "valueKind" ],
+  "required": [ "displayName", "vendor", "telemetryType", "valueKind" ],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -37,11 +37,10 @@
       "minLength": 3,
       "maxLength": 24
     },
-    "telemetryName": {
-      "description": "The telemetry metric name sent in ws.telemetry.Add.name. Must exactly match a firmware telemetry driver's NAME so the device can resolve the metric.",
+    "telemetryType": {
+      "description": "The ws.telemetry.Type enum value the broker sends in ws.telemetry.Add.type. The device maps it directly to a reader — no string-name resolution.",
       "type": "string",
-      "minLength": 1,
-      "maxLength": 32
+      "enum": [ "TM_RSSI", "TM_BOOT_REASON", "TM_LATENCY" ]
     },
     "valueKind": {
       "description": "The value kind this metric reports, matching the firmware telemetry driver's KIND. Floats ride on a T_RAW sensor.Event, byte strings on T_BYTES, and booleans on T_BOOLEAN.",
