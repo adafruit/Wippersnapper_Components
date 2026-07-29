@@ -550,7 +550,7 @@ UART subcomponents follow the same pattern as [I2C subcomponents](#i2c-subcompon
 
 Telemetry components represent device- or host-level metrics that the firmware samples and reports, rather than a physical attached part. Each telemetry component is a single metric (e.g. Wi-Fi RSSI, broker latency, boot reason, boot count) and maps to a `ws.telemetry.Type` enum value. The metric reports its value inside a `ws.telemetry.Event`, and the broker schedules reporting via `ws.telemetry.Add` (`type`, `period`).
 
-Telemetry components have no associated image.
+Telemetry components use a simple placeholder `image.png` (a labeled card, like the `analog_pin` component), since they represent an abstract metric rather than a physical part.
 
 **Required fields:** `displayName`, `vendor`, `telemetryType`, `valueKind`
 
