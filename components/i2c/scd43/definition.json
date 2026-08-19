@@ -1,0 +1,10 @@
+{
+  "displayName": "SCD43",
+  "vendor": "Sensirion",
+  "description": "Temperature, Humidity and CO2 measurements. With a range of 400~5000 ppm and an accuracy of ±(30ppm + 3%)",
+  "productURL": "https://www.adafruit.com/product/6512",
+  "documentationURL": "https://learn.adafruit.com/adafruit-scd-40-and-scd-41",
+  "published": false,
+  "i2cAddresses": ["0x62"],
+  "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity", "co2" ]
+}
