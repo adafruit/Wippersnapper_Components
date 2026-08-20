@@ -6,6 +6,5 @@
   "published": false,
   "telemetryType": "TM_BOOT_REASON",
   "valueKind": "bytes",
-  "reportOnce": true,
-  "defaultPeriod": 0
+  "reportOnce": true
 }
