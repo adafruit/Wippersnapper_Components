@@ -4,9 +4,7 @@
   "productURL": "https://www.adafruit.com/product/6331",
   "documentationURL": "https://sensirion.com/media/documents/FAFC548D/6731FFFA/Sensirion_Datasheet_SEN6x.pdf",
   "published": true,
-  "i2cAddresses": [
-    "0x6B"
-  ],
+  "i2cAddresses": ["0x6B"],
   "subcomponents": [
     "ambient-temp",
     "ambient-temp-fahrenheit",

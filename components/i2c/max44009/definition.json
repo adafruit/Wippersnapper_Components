@@ -6,5 +6,24 @@
   "description": "Ambient light sensor with ultra-wide 22bit dynamic range (0.045 to 188,000 lux)",
   "published": true,
   "i2cAddresses": ["0x4A", "0x4B"],
+  "settings": {
+    "mode": {
+      "displayName": "Mode",
+      "description": "Sets the operating mode of the sensor.",
+      "default": 0,
+      "options": [
+        "Default (Auto, 800ms cycle)",
+        "Continuous (Auto, fast)",
+        "Manual (800ms cycle)",
+        "Manual Continuous (fast)"
+      ]
+    },
+    "integration_time": {
+      "displayName": "Integration Time",
+      "description": "ALS integration time. Shorter times (50ms and below) require manual mode.",
+      "default": 3,
+      "options": ["800ms", "400ms", "200ms", "100ms", "50ms", "25ms", "12.5ms", "6.25ms"]
+    }
+  },
   "subcomponents": ["lux"]
 }

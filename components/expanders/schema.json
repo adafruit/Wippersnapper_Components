@@ -1,6 +1,6 @@
 {
-  "title": "I2C Component Definition",
-  "description": "An I2C-based WipperSnapper component for use in Adafruit IO",
+  "title": "Expander Component Definition",
+  "description": "A GPIO/Peripheral Expander component for use in Adafruit IO",
   "type": "object",
   "$defs": {
     "setting": {
@@ -34,39 +34,56 @@
         }
       }
     },
-    "subcomponent": {
-      "type": ["string", "object"],
-      "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$",
-      "required": [ "displayName", "sensorType" ],
+    "expanderPin": {
+      "type": "object",
+      "description": "A single pin exposed by a GPIO/peripheral expander.",
+      "required": ["displayName", "name"],
       "additionalProperties": false,
       "properties": {
         "displayName": {
-          "description": "The human-friendly name of this sensor.",
+          "description": "The human-readable label for this pin, shown in the Adafruit IO UI.",
           "type": "string",
-          "minLength": 3,
-          "maxLength": 30
+          "pattern": "^[A-Za-z0-9_][A-Za-z0-9_ \\-\\[\\]()]*$"
         },
-        "type": {
-          "description": "A unique string used to look up this sensor's definition, and its parent component's definition.",
+        "name": {
+          "description": "The pin identifier passed to firmware (e.g. expander->pinMode(name, OUTPUT)).",
           "type": "string",
-          "minLength": 3,
-          "maxLength": 24
+          "pattern": "^[A-Za-z0-9_]+$"
         },
-        "sensorType": {
-          "description": "One of the supported I2C sensor type strings (found in README).",
+        "hasGPIO": {
+          "description": "If true, this pin supports digital GPIO.",
+          "type": "boolean"
+        },
+        "direction": {
+          "description": "For pins that have a fixed direction, the pin's direction. Leave blank if it supports both.",
           "type": "string",
-          "pattern": "^(unspecified|accelerometer|magnetic-field|orientation|gyroscope|light|pressure|proximity|gravity|acceleration|rotation|humidity|ambient-temp|object-temp|voltage|current|color|raw|pm10-std|pm25-std|pm100-std|pm10-env|pm25-env|pm100-env|co2|gas-resistance|altitude|lux|eco2|unitless-percent|ambient-temp-fahrenheit|object-temp-fahrenheit|voc-index|nox-index|tvoc)$"
+          "enum": ["INPUT", "OUTPUT"]
         },
-        "defaultPeriod": {
-          "description": "What period to the form should default to for this sensor.",
-          "type": "number",
-          "minimum": 1,
-          "maximum": 86400
+        "hasPullup": {
+          "description": "If true, this pin supports an internal pull-up resistor (only valid if hasGPIO is true).",
+          "type": "boolean"
+        },
+        "hasPulldown": {
+          "description": "If true, this pin supports an internal pull-down resistor (only valid if hasGPIO is true).",
+          "type": "boolean"
+        },
+        "hasPWM": {
+          "description": "If true, this pin supports PWM / analog output (e.g. LED constant-current drive).",
+          "type": "boolean"
+        },
+        "hasADC": {
+          "description": "If true, this pin supports analog-to-digital conversion (analog input).",
+          "type": "boolean"
         }
-      }
+      },
+      "anyOf": [
+        { "required": ["hasGPIO"] },
+        { "required": ["hasPWM"] },
+        { "required": ["hasADC"] }
+      ]
     }
   },
-  "required": [ "displayName", "vendor", "i2cAddresses", "subcomponents" ],
+  "required": ["displayName", "vendor", "description", "documentationURL", "productURL", "i2cAddresses", "pins"],
   "additionalProperties": false,
   "properties": {
     "displayName": {
@@ -114,10 +131,11 @@
       "propertyNames": { "pattern": "^[a-z][a-z0-9_]*$" },
       "additionalProperties": { "$ref": "#/$defs/setting" }
     },
-    "subcomponents": {
-      "description": "List of sensors on this I2C component.",
+    "pins": {
+      "description": "List of pins exposed by this expander.",
       "type": "array",
-      "items": { "$ref": "#/$defs/subcomponent" }
+      "items": { "$ref": "#/$defs/expanderPin" },
+      "minItems": 1
     }
   }
 }
