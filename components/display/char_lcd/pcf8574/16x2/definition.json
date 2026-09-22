@@ -1,0 +1,20 @@
+{
+    "displayName": "16x2 Char LCD (PCF8574)",
+    "vendor": "Generic",
+    "productURL": "https://www.adafruit.com/product/181",
+    "documentationURL": "https://learn.adafruit.com/i2c-spi-lcd-backpack",
+    "published": true,
+    "description": "16x2 HD44780 LCD character display with PCF8574 I2C-to-parallel expander backpack.",
+    "displayType": {
+        "type": "char_lcd",
+        "driver": "PCF8574",
+        "panel": "16x2",
+        "i2c": {
+            "addresses": ["0x27", "0x20", "0x21", "0x22", "0x23", "0x24", "0x25", "0x26"]
+        },
+        "charLcdConfig": {
+            "rows": 2,
+            "columns": 16
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "displayName": "1.5\" 128x128 OLED",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4741",
+    "documentationURL": "https://learn.adafruit.com/adafruit-grayscale-1-5-128x128-oled-display",
+    "published": true,
+    "description": "Grayscale 1.5\" 128x128 OLED display with SSD1327 driver over I2C.",
+    "oldNames": [
+        "oled128x128g15",
+        "oled128x128g15lg"
+    ],
+    "displayType": {
+        "type": "oled",
+        "driver": "SSD1327",
+        "panel": "128x128",
+        "i2c": {
+            "addresses": [
+                "0x3C",
+                "0x3D"
+            ]
+        },
+        "displayConfig": {
+            "width": 128,
+            "height": 128,
+            "textSize": 1
+        }
+    }
+}

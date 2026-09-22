@@ -1,0 +1,28 @@
+{
+    "displayName": "128x64 OLED (SSD1306)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/938",
+    "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
+    "published": true,
+    "description": "Monochrome 128x64 OLED graphic display breakout with SSD1306 driver over I2C.",
+    "oldNames": [
+        "oled128x64default",
+        "oled128x64large"
+    ],
+    "displayType": {
+        "type": "oled",
+        "driver": "SSD1306",
+        "panel": "128x64",
+        "i2c": {
+            "addresses": [
+                "0x3D",
+                "0x3C"
+            ]
+        },
+        "displayConfig": {
+            "width": 128,
+            "height": 64,
+            "textSize": 1
+        }
+    }
+}
