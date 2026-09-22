@@ -5,5 +5,45 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-ina260-current-voltage-power-sensor-breakout",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
+  "settings": {
+    "averaged_samples": {
+      "displayName": "Averaged Samples",
+      "default": 2,
+      "options": ["1", "4", "16", "64", "128", "256", "512", "1024"]
+    },
+    "voltage_conversion_time": {
+      "displayName": "Voltage Conversion Time",
+      "default": 0,
+      "options": [
+        "140 µs",
+        "204 µs",
+        "332 µs",
+        "588 µs",
+        "1.1 ms",
+        "2.116 ms",
+        "4.156 ms",
+        "8.244 ms"
+      ]
+    },
+    "current_conversion_time": {
+      "displayName": "Current Conversion Time",
+      "default": 0,
+      "options": [
+        "140 µs",
+        "204 µs",
+        "332 µs",
+        "588 µs",
+        "1.1 ms",
+        "2.116 ms",
+        "4.156 ms",
+        "8.244 ms"
+      ]
+    },
+    "mode": {
+      "displayName": "Mode",
+      "default": 2,
+      "options": ["Shutdown", "Triggered", "Continuous"]
+    }
+  },
   "subcomponents": [ "voltage", "current" ]
 }

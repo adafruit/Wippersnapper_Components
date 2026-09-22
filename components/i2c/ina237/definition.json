@@ -6,5 +6,66 @@
   "description": "85V, 16-bit, good-precision power monitor (up to 10A, 0.3% gain error)",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41", "0x44", "0x45" ],
+  "settings": {
+    "shunt_resistance": {
+      "displayName": "Shunt Resistance",
+      "description": "Resistance of the shunt fitted to the board.",
+      "type": "float",
+      "min": 0.001,
+      "max": 10,
+      "default": 0.015,
+      "step": 0.001,
+      "unit": "Ω"
+    },
+    "max_current": {
+      "displayName": "Max Expected Current",
+      "description": "Maximum expected current, used for calibration.",
+      "type": "float",
+      "min": 0.1,
+      "max": 20,
+      "default": 10,
+      "step": 0.1,
+      "unit": "A"
+    },
+    "adc_range": {
+      "displayName": "ADC Range",
+      "description": "Shunt voltage measurement range.",
+      "default": 0,
+      "options": ["±163.84 mV", "±40.96 mV"]
+    },
+    "averaged_samples": {
+      "displayName": "Averaged Samples",
+      "default": 2,
+      "options": ["1", "4", "16", "64", "128", "256", "512", "1024"]
+    },
+    "voltage_conversion_time": {
+      "displayName": "Voltage Conversion Time",
+      "default": 2,
+      "options": [
+        "50 µs",
+        "84 µs",
+        "150 µs",
+        "280 µs",
+        "540 µs",
+        "1052 µs",
+        "2074 µs",
+        "4120 µs"
+      ]
+    },
+    "current_conversion_time": {
+      "displayName": "Current Conversion Time",
+      "default": 3,
+      "options": [
+        "50 µs",
+        "84 µs",
+        "150 µs",
+        "280 µs",
+        "540 µs",
+        "1052 µs",
+        "2074 µs",
+        "4120 µs"
+      ]
+    }
+  },
   "subcomponents": [ "voltage", "current" ]
 }

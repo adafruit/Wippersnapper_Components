@@ -4,35 +4,88 @@
   "type": "object",
   "$defs": {
     "setting": {
-      "type": "object",
-      "description": "A configurable device setting. Firmware receives the selected option's 0-based index.",
-      "required": ["displayName", "options"],
-      "additionalProperties": false,
-      "properties": {
-        "displayName": {
-          "description": "Human-readable label shown in the UI.",
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 30
+      "description": "A configurable device setting. Option-based settings send the selected option's 0-based index to firmware; numeric settings send the entered value directly.",
+      "oneOf": [
+        {
+          "type": "object",
+          "description": "An option-based setting. Firmware receives the selected option's 0-based index.",
+          "required": ["displayName", "options"],
+          "additionalProperties": false,
+          "properties": {
+            "displayName": {
+              "description": "Human-readable label shown in the UI.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            },
+            "description": {
+              "description": "Optional helper text explaining what this setting controls.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "default": {
+              "description": "Index of the default option (0-based). Defaults to 0 if omitted.",
+              "type": "integer",
+              "minimum": 0
+            },
+            "options": {
+              "description": "Ordered list of option labels. The selected index is sent to firmware.",
+              "type": "array",
+              "items": { "type": "string" },
+              "minItems": 2
+            }
+          }
         },
-        "description": {
-          "description": "Optional helper text explaining what this setting controls.",
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 255
-        },
-        "default": {
-          "description": "Index of the default option (0-based). Defaults to 0 if omitted.",
-          "type": "integer",
-          "minimum": 0
-        },
-        "options": {
-          "description": "Ordered list of option labels. The selected index is sent to firmware.",
-          "type": "array",
-          "items": { "type": "string" },
-          "minItems": 2
+        {
+          "type": "object",
+          "description": "A numeric setting. The entered value is sent directly to firmware (as an int or float), not an option index.",
+          "required": ["displayName", "type"],
+          "additionalProperties": false,
+          "properties": {
+            "displayName": {
+              "description": "Human-readable label shown in the UI.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            },
+            "description": {
+              "description": "Optional helper text explaining what this setting controls.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 255
+            },
+            "type": {
+              "description": "Numeric value type sent to firmware.",
+              "type": "string",
+              "enum": ["int", "float"]
+            },
+            "min": {
+              "description": "Minimum allowed value.",
+              "type": "number"
+            },
+            "max": {
+              "description": "Maximum allowed value.",
+              "type": "number"
+            },
+            "default": {
+              "description": "Default value sent to firmware (not an index).",
+              "type": "number"
+            },
+            "step": {
+              "description": "Increment for the UI control.",
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "description": "Optional unit label shown next to the value.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 12
+            }
+          }
         }
-      }
+      ]
     },
     "subcomponent": {
       "type": ["string", "object"],

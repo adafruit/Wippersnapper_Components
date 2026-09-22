@@ -6,6 +6,16 @@
   "published": true,
   "i2cAddresses": ["0x77", "0x76"],
   "settings": {
+    "sea_level_pressure": {
+      "displayName": "Sea-Level Pressure",
+      "description": "Reference sea-level pressure for altitude calculation.",
+      "type": "float",
+      "min": 800,
+      "max": 1200,
+      "default": 1013.25,
+      "step": 0.25,
+      "unit": "hPa"
+    },
     "mode": {
       "displayName": "Mode",
       "description": "Sets the measurement mode of the sensor.",
