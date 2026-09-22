@@ -4,7 +4,7 @@
   "vendor": "Generic",
   "productURL": "https://www.digikey.com/en/products/detail/midas-displays/MDOB064032AV-WI/18088023",
   "documentationURL": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/4808/MDOB064032AV-WI.pdf",
-  "description": "Monochrome 64x32 I2C OLED Display with a larger font size. (SSD1306)",
+  "description": "Monochrome 64x32 OLED LCD Display with a larger font size. (SSD1306)",
   "i2cAddresses": [ "0x3D", "0x3C" ],
   "outputType": "OLED",
   "oledWidth": 64,
