@@ -4,15 +4,28 @@
   "documentationURL": "https://learn.adafruit.com/adafruit-ltr-329-ltr-303",
   "displayName": "LTR-329",
   "published": true,
-  "i2cAddresses": [ "0x29" ],
-  "subcomponents": [
-    {
-      "displayName": "Ambient Light",
-      "sensorType": "light"
+  "i2cAddresses": ["0x29"],
+  "settings": {
+    "gain": {
+      "displayName": "Gain",
+      "description": "ALS gain.",
+      "default": 1,
+      "options": ["1x", "2x", "4x", "8x", "48x", "96x"]
     },
-    {
-      "displayName": "Infrared",
-      "sensorType": "raw"
+    "integration_time": {
+      "displayName": "Integration Time",
+      "description": "ALS integration time.",
+      "default": 1,
+      "options": ["50ms", "100ms", "150ms", "200ms", "250ms", "300ms", "350ms", "400ms"]
+    },
+    "measurement_rate": {
+      "displayName": "Measurement Rate",
+      "default": 3,
+      "options": ["50ms", "100ms", "200ms", "500ms", "1000ms", "2000ms"]
     }
+  },
+  "subcomponents": [
+    {"displayName": "Ambient Light", "sensorType": "light"},
+    {"displayName": "Infrared", "sensorType": "raw"}
   ]
 }
