@@ -1,7 +1,7 @@
 {
   "displayName": "HTU31D",
   "vendor": "TE Connectivity",
-  "productURL": "https://www.adafruit.com/product/2857",
+  "productURL": "https://www.adafruit.com/product/4832",
   "documentationURL": "https://www.adafruit.com/product/4832",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41" ],
