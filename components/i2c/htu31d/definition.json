@@ -5,5 +5,13 @@
   "documentationURL": "https://www.adafruit.com/product/4832",
   "published": true,
   "i2cAddresses": [ "0x40", "0x41" ],
+  "settings": {
+    "heater": {
+      "displayName": "Heater",
+      "description": "On-chip heater to clear condensation.",
+      "default": 0,
+      "options": ["Off", "On"]
+    }
+  },
   "subcomponents": [ "ambient-temp", "ambient-temp-fahrenheit", "humidity" ]
 }

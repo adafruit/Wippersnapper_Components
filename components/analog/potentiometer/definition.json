@@ -1,0 +1,15 @@
+{
+  "displayName": "Potentiometer",
+  "published": true,
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/356",
+  "documentationURL": "https://learn.adafruit.com/make-it-change-potentiometers",
+  "autoSelectString": "potentiometer",
+  "direction": "INPUT",
+  "defaultPeriod": 60,
+  "analogReadMode": "PIN_VALUE",
+  "selectReadMode": true,
+  "visualization": {
+    "type": "slider"
+  }
+}

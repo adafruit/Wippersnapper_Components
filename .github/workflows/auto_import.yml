@@ -2,9 +2,10 @@ name: Automatically import JSON
 
 on:
   workflow_dispatch:
-  pull_request:
-    types:
-      - closed
+  pull_request:          # when a pull request
+    branches: [ main ]   # against main
+    types: [ closed ]    # is closed
+    paths: [ '**.json' ] # changing json files
 
 jobs:
   alert-not-merged:
