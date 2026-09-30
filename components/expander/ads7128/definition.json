@@ -1,10 +1,10 @@
 {
   "displayName": "ADS7128",
-  "description": "8-channel GPIO expander with 12-bit ADC.",
+  "description": "8-channel GPIO expander. Each can be used as a 12-bit ADC, push-pull or open drain digital output, or digital input.",
   "published": false,
-  "vendor": "Texas Instruments",
-  "productURL": "https://www.ti.com/product/ADS7128",
-  "documentationURL": "https://www.ti.com/lit/gpn/ADS7128",
+  "vendor": "Texas Instruments (Adafruit)",
+  "productURL": "https://www.adafruit.com/product/6494",
+  "documentationURL": "https://learn.adafruit.com/adafruit-ads7128-8-channel-adc-and-gpio-expander",
   "i2cAddresses": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16", "0x17"],
   "pins": [
     {"displayName": "AIN0", "name": "0", "hasGPIO": true, "hasADC": true},
