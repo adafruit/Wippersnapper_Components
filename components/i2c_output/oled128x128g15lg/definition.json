@@ -1,0 +1,13 @@
+{
+  "displayName": "128x128 Grayscale OLED 1.5in (Large Font)",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/4741",
+  "documentationURL": "https://learn.adafruit.com/adafruit-grayscale-1-5-128x128-oled-display",
+  "description": "Grayscale 1.5\" 128x128 OLED LCD Display with a larger font size (SSD1327)",
+  "i2cAddresses": [ "0x3C", "0x3D" ],
+  "outputType": "OLED",
+  "oledWidth": 128,
+  "oledHeight": 128,
+  "textSize": "SZ_LARGE"
+}

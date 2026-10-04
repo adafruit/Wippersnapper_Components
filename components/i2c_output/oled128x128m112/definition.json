@@ -1,0 +1,13 @@
+{
+  "displayName": "128x128 Monochrome OLED 1.12in (Default Font)",
+  "published": true,
+  "vendor": "Adafruit",
+  "productURL": "https://www.adafruit.com/product/5297",
+  "documentationURL": "https://learn.adafruit.com/adafruit-monochrome-1-12-in-128x128-oled",
+  "description": "Monochrome 1.12\" 128x128 OLED LCD Display (SH1107)",
+  "i2cAddresses": [ "0x3C", "0x3D" ],
+  "outputType": "OLED",
+  "oledWidth": 128,
+  "oledHeight": 128,
+  "textSize": "SZ_DEFAULT"
+}
