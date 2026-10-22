@@ -1,0 +1,52 @@
+{
+  "displayName": "AS7343",
+  "vendor": "ams-OSRAM",
+  "productURL": "https://www.adafruit.com/product/6477",
+  "documentationURL": "https://learn.adafruit.com/adafruit-as7343-14-channel-light-color-sensor-breakout",
+  "description": "14-channel multi-spectral sensor (405-855nm + clear) with flicker detection. Spectral channels report raw ADC counts; flicker reports 0, 100 or 120 Hz.",
+  "published": false,
+  "i2cAddresses": ["0x39"],
+  "settings": {
+    "gain": {
+      "displayName": "Gain",
+      "default": 7,
+      "options": [
+        "0.5x",
+        "1x",
+        "2x",
+        "4x",
+        "8x",
+        "16x",
+        "32x",
+        "64x",
+        "128x",
+        "256x",
+        "512x",
+        "1024x",
+        "2048x"
+      ]
+    },
+    "integration_time": {
+      "displayName": "Integration Time",
+      "description": "Per channel group. A reading takes about 3x this (18-channel auto-SMUX).",
+      "default": 3,
+      "options": ["5 ms", "10 ms", "25 ms", "50 ms", "100 ms", "200 ms"]
+    }
+  },
+  "subcomponents": [
+    { "displayName": "F1 405nm Violet", "sensorType": "light" },
+    { "displayName": "F2 425nm Violet-Blue", "sensorType": "light" },
+    { "displayName": "FZ 450nm Blue", "sensorType": "light" },
+    { "displayName": "F3 475nm Blue-Cyan", "sensorType": "light" },
+    { "displayName": "F4 515nm Green", "sensorType": "light" },
+    { "displayName": "F5 550nm Green-Yellow", "sensorType": "light" },
+    { "displayName": "FY 555nm Yellow-Green", "sensorType": "light" },
+    { "displayName": "FXL 600nm Orange", "sensorType": "light" },
+    { "displayName": "F6 640nm Red", "sensorType": "light" },
+    { "displayName": "F7 690nm Deep Red", "sensorType": "light" },
+    { "displayName": "F8 745nm Near-IR", "sensorType": "light" },
+    { "displayName": "NIR 855nm Near-IR", "sensorType": "light" },
+    { "displayName": "VIS Clear", "sensorType": "light" },
+    { "displayName": "Flicker (Hz)", "sensorType": "raw" }
+  ]
+}
