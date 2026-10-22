@@ -3,7 +3,7 @@
   "vendor": "ams-OSRAM",
   "productURL": "https://www.adafruit.com/product/6477",
   "documentationURL": "https://learn.adafruit.com/adafruit-as7343-14-channel-light-color-sensor-breakout",
-  "description": "14-channel multi-spectral sensor (405-855nm + clear). Each channel reports raw ADC counts.",
+  "description": "14-channel multi-spectral sensor (405-855nm + clear) with flicker detection. Spectral channels report raw ADC counts; flicker reports 0, 100 or 120 Hz.",
   "published": false,
   "i2cAddresses": ["0x39"],
   "settings": {
@@ -46,6 +46,7 @@
     { "displayName": "F7 690nm Deep Red", "sensorType": "light" },
     { "displayName": "F8 745nm Near-IR", "sensorType": "light" },
     { "displayName": "NIR 855nm Near-IR", "sensorType": "light" },
-    { "displayName": "VIS Clear", "sensorType": "light" }
+    { "displayName": "VIS Clear", "sensorType": "light" },
+    { "displayName": "Flicker (Hz)", "sensorType": "raw" }
   ]
 }
