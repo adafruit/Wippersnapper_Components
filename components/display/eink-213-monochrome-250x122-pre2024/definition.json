@@ -1,0 +1,22 @@
+{
+    "displayName": "2.13\" Mono eInk (pre-2024)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4195",
+    "documentationURL": "https://learn.adafruit.com/adafruit-2-13-eink-display-breakouts-and-featherwings",
+    "published": true,
+    "description": "2.13\" 250x122 Monochrome eInk FeatherWing (SSD1680). Original panel sold before 2024 - select this if purchased before 2024.",
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1680",
+        "panel": "2.13-250x122-mono-pre2024",
+        "spiEpd": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "mono",
+            "width": 250,
+            "height": 122,
+            "textSize": 2
+        }
+    }
+}
