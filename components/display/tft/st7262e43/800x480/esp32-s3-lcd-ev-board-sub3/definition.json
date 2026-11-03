@@ -1,0 +1,20 @@
+{
+    "displayName": "4.3\" 800x480 RGB LCD",
+    "vendor": "Espressif",
+    "productURL": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-lcd-ev-board/user_guide.html",
+    "documentationURL": "https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s31/esp32-s31-korvo-1/user_guide.html",
+    "published": false,
+    "description": "ESP32-S3-LCD-EV-Board-SUB3: 4.3in 800x480 ST7262E43 RGB565 dot-clock LCD (GT1151 touch), as bundled with the ESP32-S31-Korvo-1.",
+    "displayType": {
+        "type": "tft",
+        "driver": "ST7262E43",
+        "panel": "esp32-s3-lcd-ev-board-sub3",
+        "ttlRgb666": {},
+        "tftConfig": {
+            "width": 800,
+            "height": 480,
+            "rotation": 0,
+            "textSize": 3
+        }
+    }
+}
