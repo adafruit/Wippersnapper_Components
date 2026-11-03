@@ -1,0 +1,99 @@
+{
+  "title": "Analog Component Definition",
+  "description": "An analog WipperSnapper component for use in Adafruit IO",
+  "type": "object",
+  "required": [ "displayName", "vendor", "direction"],
+  "additionalProperties": false,
+  "properties": {
+    "displayName": {
+      "description": "The human-friendly name of this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "published": {
+      "description": "If true, this component is supported by the current firmware version and will be displayed to all users. If false, it is hidden behind a developer toggle so that contributors can still work on it against the production site.",
+      "type": "boolean"
+    },
+    "description": {
+      "description": "A brief description describing this component's capabilities.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 255
+    },
+    "productURL": {
+      "description": "Link to this component's homepage.",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationURL": {
+      "description": "Link to this component's documentation.",
+      "type": "string",
+      "format": "uri"
+    },
+    "vendor": {
+      "description": "Name of the company that makes this component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "direction": {
+      "description": "This component's direction, either INPUT or OUTPUT.",
+      "type": "string",
+      "pattern": "^(INPUT|OUTPUT)$"
+    },
+    "autoSelectString": {
+      "description": "A hint for automatically looking up pin names that may be appropriate for this kind of component.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 24
+    },
+    "selectReadMode": {
+      "description": "If true, the user will be able to select the read mode between pin and voltage options.",
+      "type": "boolean"
+    },
+    "analogReadMode": {
+      "description": "For ANALOG mode components, specifies whether to read values (PIN_VALUE) or voltages (PIN_VOLTAGE). Will be a default if `selectReadMode` option is true.",
+      "type": "string",
+      "pattern": "^(PIN_VALUE|PIN_VOLTAGE)$"
+    },
+    "defaultPeriod": {
+      "description": "If present, the component form will allow the user to set its period, with this value as the default (in seconds)",
+      "type": "number",
+      "minimum": 30,
+      "maximum": 86400
+    },
+    "forceOnPeriod": {
+      "description": "If true, the user must specify a period (won't be optional in the form).",
+      "type": "boolean"
+    },
+    "visualization": {
+      "description": "Specifies which visual component to use in the WipperSnapper interface and how to configure it",
+      "type": "object",
+      "discriminator": { "propertyName": "type" },
+      "required": ["type"],
+      "oneOf": [{
+        "properties": {
+          "type": { "const": "switch" },
+          "offLabel": { "type": "string" },
+          "offIcon": { "type": "string" },
+          "onLabel": { "type": "string" },
+          "onIcon": { "type": "string" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "button" },
+          "pressedLabel": { "type": "string" },
+          "unpressedLabel": { "type": "string" }
+        },
+        "additionalProperties": false
+      }, {
+        "properties": {
+          "type": { "const": "slider" }
+        },
+        "additionalProperties": false
+      }]
+    }
+  }
+}

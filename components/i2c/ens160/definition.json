@@ -4,13 +4,18 @@
   "productURL": "https://www.adafruit.com/product/5606",
   "documentationURL": "https://learn.adafruit.com/adafruit-ens160-mox-gas-sensor",
   "published": true,
-  "i2cAddresses": [ "0x52", "0x53" ],
-  "subcomponents": [ 
+  "i2cAddresses": ["0x52", "0x53"],
+  "settings": {
+    "mode": {
+      "displayName": "Mode",
+      "description": "Sets the operating mode of the sensor.",
+      "default": 2,
+      "options": ["Deep Sleep", "Idle", "Standard", "Low Power"]
+    }
+  },
+  "subcomponents": [
     "tvoc",
     "eco2",
-    {
-      "displayName": "AQI",
-      "sensorType": "raw"
-    }
+    {"displayName": "AQI", "sensorType": "raw"}
   ]
 }

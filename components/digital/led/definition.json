@@ -1,0 +1,16 @@
+{
+  "displayName": "LED",
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/301",
+  "documentationURL": "https://learn.adafruit.com/all-about-leds",
+  "published": true,
+  "autoSelectString": "led",
+  "direction": "OUTPUT",
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:lightbulb",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:lightbulb-on"
+  }
+}

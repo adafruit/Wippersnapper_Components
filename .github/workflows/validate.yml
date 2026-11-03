@@ -15,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        componentType: [pin, i2c, servo, ds18x20, pwm, pixel, uart, display]
+        componentType: [digital, analog, i2c, i2c_output, servo, ds18x20, pwm, pixel, uart, display, expander]
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: actions/checkout@v7
 
       - name: Validate ${{ matrix.componentType }} Components
         uses: lorennorman/validate-json-action@ec276364a73f1f64e14706fa43462cf84c5829a1
         with:
           schema: /components/${{ matrix.componentType }}/schema.json
-          jsons: components/${{ matrix.componentType }}/**/definition.json
+          jsons: components/${{ matrix.componentType }}/*/definition.json
 
   gather-relevant-files:
     name: Gather Relevant Files
@@ -34,15 +34,23 @@ jobs:
       # All files that were Added, Copied, Modified, or Renamed
       files: ${{ steps.list-changed-files.outputs.all_changed_files }} ${{ steps.list-all-files.outputs.all_files }}
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: actions/checkout@v7
       - name: List All Changed Files
         if:  ${{ !inputs.all_files }}
         id: list-changed-files
         run: |
-          # also fetch main to diff against
-          git fetch --depth=1 origin main
+          # Diff against the PR's target branch so we only consider files this
+          # PR actually changed: v2 PRs diff against v2; anything else (main, or
+          # workflow_dispatch with no base) diffs against main.
+          if [ "${{ github.base_ref }}" = "v2" ]; then
+            DIFF_BASE=v2
+          else
+            DIFF_BASE=main
+          fi
+          git fetch --depth=1 origin "$DIFF_BASE"
           # list Added, Copied, Modified, and Renamed files
-          ACMR_FILES=`git diff origin/main --name-only --diff-filter=ACMR | xargs`
+          ACMR_FILES=`git diff "origin/$DIFF_BASE" --name-only --diff-filter=ACMR | xargs`
+          echo "Changed files vs origin/$DIFF_BASE: $ACMR_FILES"
           # GitHub Actions output ritual
           echo "all_changed_files=$ACMR_FILES" >> "$GITHUB_OUTPUT"
       - name: List All Component Files
@@ -57,7 +65,7 @@ jobs:
       # Extract the permission for later jobs to use
       has-write-permission: ${{ steps.set-permission.outputs.has-permission }}
     steps:
-      - uses: octokit/request-action@05a2312de9f8207044c4c9e41fe19703986acc13
+      - uses: octokit/request-action@b66ca9cd744693e9c29b490fc08831ab66c4a970
         id: fetch-permissions
         with:
           route: GET /repos/${{ github.repository }}/collaborators/${{ github.actor }}/permission
@@ -78,16 +86,16 @@ jobs:
       CAN_WRITE_TO_REPO: ${{ needs.check-user-permissions.outputs.has-write-permission }}
 
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: actions/checkout@v7
       - name: Validate Only Expected Filenames
         run: |
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(pin|i2c|servo|ds18x20|pwm|pixel|uart|display)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
+          EXTERNAL_REGEX="^components\/(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(pin|i2c|servo|ds18x20|pwm|pixel|uart|display)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
+          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
@@ -133,7 +141,7 @@ jobs:
     env:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: actions/checkout@v7
       - name: Validate Image File Extension<->Mimetype Agreement
         run: |
           EXIT_VALUE=0
@@ -189,8 +197,8 @@ jobs:
     env:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
-      - uses: mfinelli/setup-imagemagick@7bcb45380be40873a59cc0d4a457ec9228b6c84c
+      - uses: actions/checkout@v7
+      - uses: mfinelli/setup-imagemagick@7bcb45380be40873a59cc0d4a457ec9228b6c84c # v8.0.0
       - name: Validate Image Dimensions
         run: |
           EXIT_VALUE=0
@@ -264,7 +272,7 @@ jobs:
     env:
       FILES: ${{ needs.gather-relevant-files.outputs.files }}
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744
+      - uses: actions/checkout@v7
       - name: Validate Image File Sizes
         run: |
           EXIT_VALUE=0
