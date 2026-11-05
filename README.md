@@ -553,7 +553,6 @@ Every sensor type in `sensors.json` has a `defaultPeriod` of **900 seconds (15 m
 
 | Sensor Type                | Display Name                             |
 |----------------------------|------------------------------------------|
-| `unspecified`              | Unspecified                              |
 | `accelerometer`            | Accelerometer                            |
 | `magnetic-field`           | Magnetic Field Sensor                    |
 | `orientation`              | Orientation Sensor                       |
@@ -588,3 +587,5 @@ Every sensor type in `sensors.json` has a `defaultPeriod` of **900 seconds (15 m
 | `voc-index`                | Volatile Organic Compounds Index         |
 | `nox-index`                | Nitrogen Oxides Index                    |
 | `tvoc`                     | Total Volatile Organic Compounds         |
+| `bytes`                    | Bytes                                    |
+| `boolean`                  | Boolean                                  |
