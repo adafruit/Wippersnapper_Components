@@ -95,7 +95,10 @@ jobs:
           EXTERNAL_REGEX="^components\/(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
-          INTERNAL_REGEX="^(\.github\/.*|components\/(sensors.json|(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
+          # docs and agent skills (Adafruit team only, exempt from the lowercase rule)
+          DOCS_REGEX="^(README\.md|\.agents\/.*)$"
+
+          INTERNAL_REGEX="^(\.github\/.*|README\.md|\.agents\/.*|components\/(sensors.json|(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then
@@ -107,7 +110,7 @@ jobs:
 
           for file in $FILES; do
             if [[ $file =~ $component_definition_regex ]]; then
-              if [[ $file =~ [A-Z] ]]; then
+              if [[ $file =~ [A-Z] && ! $file =~ $DOCS_REGEX ]]; then
                 echo "❌ $file (no uppercase characters allowed)"
                 EXIT_VALUE=1
 
