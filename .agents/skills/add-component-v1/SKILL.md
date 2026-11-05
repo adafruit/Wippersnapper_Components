@@ -114,6 +114,8 @@ These are the only valid values (must match the pattern in `components/i2c/schem
 | `rotation` | Rotation | rad/s |
 | `voc-index` | VOC index | unitless |
 | `nox-index` | NOx index | unitless |
+| `bytes` | Raw byte data | bytes |
+| `boolean` | Boolean (true/false) | unitless |
 
 **Temperature sensors** almost always include BOTH `ambient-temp` AND `ambient-temp-fahrenheit`.
 The firmware base class handles the degC-to-degF conversion automatically — the driver only
