@@ -1,0 +1,22 @@
+{
+    "displayName": "2.2\" TFT LCD",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/1480",
+    "documentationURL": "https://learn.adafruit.com/2-2-tft-display",
+    "published": true,
+    "description": "Adafruit 2.2\" 320x240 18-bit color TFT LCD display with MicroSD card breakout - ILI9341.",
+    "displayType": {
+        "type": "tft",
+        "driver": "ILI9341",
+        "panel": "2.2-320x240",
+        "spiTft": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 240,
+            "height": 320,
+            "rotation": 1,
+            "textSize": 2
+        }
+    }
+}

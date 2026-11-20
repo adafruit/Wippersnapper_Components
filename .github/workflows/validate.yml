@@ -25,7 +25,7 @@ jobs:
         uses: lorennorman/validate-json-action@ec276364a73f1f64e14706fa43462cf84c5829a1
         with:
           schema: /components/${{ matrix.componentType }}/schema.json
-          jsons: components/${{ matrix.componentType }}/*/definition.json
+          jsons: components/${{ matrix.componentType }}/**/definition.json
 
   gather-relevant-files:
     name: Gather Relevant Files
@@ -92,13 +92,13 @@ jobs:
           EXIT_VALUE=0
 
           # external contributors can modify some files
-          EXTERNAL_REGEX="^components\/(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
+          EXTERNAL_REGEX="^components\/(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|display|expander)\/.*\/(definition\.json|image\.(png|jpe?g|gif))$"
 
           # folks with write access to the repo (Adafruit team) can change more sensitive files
           # docs and agent skills (Adafruit team only, exempt from the lowercase rule)
           DOCS_REGEX="^(README\.md|\.agents\/.*)$"
 
-          INTERNAL_REGEX="^(\.github\/.*|README\.md|\.agents\/.*|components\/(sensors.json|(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|i2c_output|display|expander)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
+          INTERNAL_REGEX="^(\.github\/.*|README\.md|\.agents\/.*|components\/(sensors.json|(digital|analog|i2c|servo|ds18x20|pwm|pixel|uart|display|expander)\/(schema.json|.*\/(definition\.json|image\.(png|jpe?g|gif)))))$"
 
           # apply the appropriate regex based on permissions of the user
           if [[ $CAN_WRITE_TO_REPO ]]; then

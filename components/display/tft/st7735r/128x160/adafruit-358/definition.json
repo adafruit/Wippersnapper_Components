@@ -1,0 +1,22 @@
+{
+    "displayName": "1.8\" TFT LCD",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/358",
+    "documentationURL": "https://learn.adafruit.com/1-8-tft-display",
+    "published": true,
+    "description": "Adafruit 1.8\" 128x160 Color TFT LCD display with MicroSD Card Breakout - ST7735R.",
+    "displayType": {
+        "type": "tft",
+        "driver": "ST7735R",
+        "panel": "1.8-128x160",
+        "spiTft": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 160,
+            "height": 128,
+            "rotation": 1,
+            "textSize": 2
+        }
+    }
+}
