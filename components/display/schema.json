@@ -111,6 +111,12 @@
                         }
                     }
                 },
+                "ttlRgb666": {
+                    "description": "TTL RGB dot-clock (DPI) interface, maps to ws.display.TtlRgb666PinDescriptor. The pins are fixed by the board (e.g. Qualia ESP32-S3, ESP32-S31-Korvo-1), so this is sent empty; the panel string selects the timings. See adafruit/Wippersnapper_Protobuf#226.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {}
+                },
                 "epdConfig": {
                     "description": "Configuration for EPD displays",
                     "type": "object",
