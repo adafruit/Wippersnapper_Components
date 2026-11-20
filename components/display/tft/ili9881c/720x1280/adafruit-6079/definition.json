@@ -1,0 +1,38 @@
+{
+    "displayName": "Pi Touch Display 2 7\"",
+    "vendor": "Raspberry Pi",
+    "productURL": "https://www.adafruit.com/product/6079",
+    "documentationURL": "https://www.raspberrypi.com/documentation/accessories/touch-display-2.html",
+    "published": false,
+    "description": "Raspberry Pi Touch Display 2, 7\" 720x1280 2-lane MIPI DSI display - ILI9881C. Plugs into a 22-pin DSI connector, e.g. on the Adafruit Metro ESP32-P4. Touch is not yet supported.",
+    "displayType": {
+        "type": "tft",
+        "driver": "ILI9881C",
+        "panel": "rpi-touch-display-2-7in",
+        "dsi": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 720,
+            "height": 1280,
+            "rotation": 1,
+            "textSize": 5
+        },
+        "backlight": {
+            "resolution": 5,
+            "brightness": {
+                "displayName": "Backlight brightness",
+                "description": "Higher levels draw more current; Low is safe on USB-only power.",
+                "default": 1,
+                "options": [
+                    { "label": "Lowest", "dutyCycle": 2 },
+                    { "label": "Low", "dutyCycle": 4 },
+                    { "label": "Medium", "dutyCycle": 8 },
+                    { "label": "High", "dutyCycle": 16 },
+                    { "label": "Higher", "dutyCycle": 24 },
+                    { "label": "Maximum", "dutyCycle": 31 }
+                ]
+            }
+        }
+    }
+}
