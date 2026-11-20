@@ -1,138 +1,182 @@
 {
   "accelerometer": {
     "displayName": "Accelerometer",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_ACCELEROMETER"
   },
   "magnetic-field": {
     "displayName": "Magnetic Field Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_MAGNETIC_FIELD"
   },
   "orientation": {
     "displayName": "Orientation Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_ORIENTATION"
   },
   "gyroscope": {
     "displayName": "Gyroscope",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_GYROSCOPE"
   },
   "light": {
     "displayName": "Light Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_LIGHT"
   },
   "pressure": {
     "displayName": "Pressure Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PRESSURE"
   },
   "proximity": {
     "displayName": "Proximity Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PROXIMITY"
   },
   "gravity": {
     "displayName": "Gravity Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_GRAVITY"
   },
   "acceleration": {
     "displayName": "Acceleration Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_LINEAR_ACCELERATION"
   },
   "rotation": {
     "displayName": "Rotation Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_ROTATION_VECTOR"
   },
   "humidity": {
     "displayName": "Humidity Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_RELATIVE_HUMIDITY"
   },
   "ambient-temp": {
     "displayName": "Temperature Sensor (°C)",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_AMBIENT_TEMPERATURE"
   },
   "object-temp": {
     "displayName": "Thermocouple Temperature (°C)",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_OBJECT_TEMPERATURE"
   },
   "ambient-temp-fahrenheit": {
     "displayName": "Temperature Sensor (°F)",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_AMBIENT_TEMPERATURE_FAHRENHEIT"
   },
   "object-temp-fahrenheit": {
     "displayName": "Thermocouple Temperature (°F)",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_OBJECT_TEMPERATURE_FAHRENHEIT"
   },
   "voltage": {
     "displayName": "Voltage Sensor",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_VOLTAGE"
   },
   "current": {
     "displayName": "Current",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_CURRENT"
   },
   "color": {
     "displayName": "Color",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_COLOR"
   },
   "raw": {
     "displayName": "Raw Data",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_RAW"
   },
   "pm10-std": {
     "displayName": "PM1.0 Standard",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PM10_STD"
   },
   "pm25-std": {
     "displayName": "PM2.5 Standard",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PM25_STD"
   },
   "pm100-std": {
     "displayName": "PM10.0 Standard",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PM100_STD"
   },
   "pm10-env": {
     "displayName": "PM1.0  Environmental",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PM10_ENV"
   },
   "pm25-env": {
     "displayName": "PM2.5 Environmental",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PM25_ENV"
   },
   "pm100-env": {
     "displayName": "PM10.0 Environmental",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_PM100_ENV"
   },
   "co2": {
     "displayName": "CO2",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_CO2"
   },
   "gas-resistance": {
     "displayName": "Total VOC",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_GAS_RESISTANCE"
   },
   "altitude": {
     "displayName": "Altitude (Relative)",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_ALTITUDE"
   },
   "lux": {
     "displayName": "Light Sensor (Lux)",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_LUX"
   },
   "eco2": {
     "displayName": "Estimated CO2",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_ECO2"
   },
   "unitless-percent": {
     "displayName": "Unitless Percentage",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_UNITLESS_PERCENT"
   },
   "voc-index": {
     "displayName": "Volatile Organic Compounds Index",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_VOC_INDEX"
   },
   "nox-index": {
     "displayName": "Nitrogen Oxides Index",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_NOX_INDEX"
   },
   "tvoc": {
     "displayName": "Total Volatile Organic Compounds",
-    "defaultPeriod": 900
+    "defaultPeriod": 900,
+    "typeEnum": "T_TVOC"
+  },
+  "bytes": {
+    "displayName": "Bytes",
+    "defaultPeriod": 900,
+    "typeEnum": "T_BYTES"
+  },
+  "boolean": {
+    "displayName": "Boolean",
+    "defaultPeriod": 900,
+    "typeEnum": "T_BOOLEAN"
   }
 }

@@ -1,0 +1,18 @@
+{
+  "displayName": "Toggle Switch",
+  "published": true,
+  "vendor": "Generic",
+  "productURL": "https://www.adafruit.com/product/3221",
+  "documentationURL": "https://learn.adafruit.com/make-it-switch",
+  "autoSelectString": "toggle",
+  "direction": "INPUT",
+  "defaultPeriod": 30,
+  "selectPullUp": true,
+  "visualization": {
+    "type": "switch",
+    "offLabel": "Off",
+    "offIcon": "fa6:regular:light-switch-off",
+    "onLabel": "On",
+    "onIcon": "fa6:solid:light-switch-on"
+  }
+}

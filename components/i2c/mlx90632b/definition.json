@@ -6,6 +6,27 @@
   "documentationURL": "https://cdn-shop.adafruit.com/product-files/6403/MLX90632-Datasheet-Melexis.PDF",
   "published": true,
   "i2cAddresses": ["0x3A", "0x3B"],
+  "settings": {
+    "mode": {
+      "displayName": "Measurement Mode",
+      "default": 0,
+      "options": ["Continuous", "Step", "Sleeping Step", "Halt"]
+    },
+    "measurement_rate": {
+      "displayName": "Refresh Rate",
+      "default": 2,
+      "options": [
+        "0.5 Hz",
+        "1 Hz",
+        "2 Hz",
+        "4 Hz",
+        "8 Hz",
+        "16 Hz",
+        "32 Hz",
+        "64 Hz"
+      ]
+    }
+  },
   "subcomponents": [
     {
       "displayName": "Ambient Temperature (°C)",

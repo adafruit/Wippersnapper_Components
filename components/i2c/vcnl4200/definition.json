@@ -6,5 +6,41 @@
   "description": "Proximity sensor works from 0 to 1.5m (about 59 inches) & light sensor with range of 0.003 to 1570 lux",
   "published": true,
   "i2cAddresses": [ "0x51" ],
+  "settings": {
+    "integration_time": {
+      "displayName": "ALS Integration Time",
+      "default": 3,
+      "options": ["50 ms", "100 ms", "200 ms", "400 ms"]
+    },
+    "prox_led_current": {
+      "displayName": "Proximity LED Current",
+      "default": 7,
+      "options": [
+        "50 mA",
+        "75 mA",
+        "100 mA",
+        "120 mA",
+        "140 mA",
+        "160 mA",
+        "180 mA",
+        "200 mA"
+      ]
+    },
+    "prox_duty": {
+      "displayName": "Proximity Duty Cycle",
+      "default": 0,
+      "options": ["1/160", "1/320", "1/640", "1/1280"]
+    },
+    "prox_integration_time": {
+      "displayName": "Proximity Integration Time",
+      "default": 5,
+      "options": ["1T", "2T", "3T", "4T", "8T", "9T"]
+    },
+    "prox_resolution": {
+      "displayName": "Proximity Resolution",
+      "default": 1,
+      "options": ["12-bit", "16-bit"]
+    }
+  },
   "subcomponents": [ "light", "proximity" ]
 }
