@@ -1,0 +1,20 @@
+{
+    "displayName": "2.1\" Round 480x480 RGB TFT",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/5792",
+    "documentationURL": "https://learn.adafruit.com/adafruit-qualia-esp32-s3-for-rgb666-displays",
+    "published": false,
+    "description": "Adafruit 2.1\" round 480x480 RGB-666 TTL TFT with capacitive touch (TL021WVC02, ST7701S), for the Qualia ESP32-S3.",
+    "displayType": {
+        "type": "tft",
+        "driver": "ST7701S",
+        "panel": "adafruit-5792",
+        "ttlRgb666": {},
+        "tftConfig": {
+            "width": 480,
+            "height": 480,
+            "rotation": 0,
+            "textSize": 3
+        }
+    }
+}
