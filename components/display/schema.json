@@ -111,6 +111,91 @@
                         }
                     }
                 },
+                "dsi": {
+                    "description": "MIPI DSI configuration (e.g. ESP32-P4). Clock and data lanes are dedicated pads, not GPIOs. Maps to ws.display.DsiInterfaceDescriptor.",
+                    "type": "object",
+                    "properties": {
+                        "bus": {
+                            "description": "DSI bus index (0 if only one DSI peripheral).",
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "pinRst": {
+                            "description": "Optional GPIO for panel reset. Omit when the panel's own controller handles reset (e.g. Raspberry Pi Touch Display 2).",
+                            "type": "string"
+                        }
+                    }
+                },
+                "backlight": {
+                    "description": "Backlight brightness control, maps to ws.display.BacklightConfig backlight_pwm. Panels whose backlight is set by their own controller (e.g. Raspberry Pi Touch Display 2) need no pin; firmware scales the duty cycle by the resolution.",
+                    "type": "object",
+                    "required": [
+                        "resolution",
+                        "brightness"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                        "resolution": {
+                            "description": "PWM resolution in bits; duty cycles range from 0 to 2^resolution - 1.",
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 16
+                        },
+                        "brightness": {
+                            "description": "User-selectable brightness levels. The selected option's dutyCycle is sent as backlight_pwm.write.duty_cycle.",
+                            "type": "object",
+                            "required": [
+                                "displayName",
+                                "options"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                                "displayName": {
+                                    "description": "Human-readable label shown in the UI.",
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 30
+                                },
+                                "description": {
+                                    "description": "Optional helper text explaining what this setting controls.",
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "maxLength": 255
+                                },
+                                "default": {
+                                    "description": "Index of the default option (0-based). Defaults to 0 if omitted.",
+                                    "type": "integer",
+                                    "minimum": 0
+                                },
+                                "options": {
+                                    "description": "Ordered brightness levels, lowest first.",
+                                    "type": "array",
+                                    "minItems": 2,
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "label",
+                                            "dutyCycle"
+                                        ],
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "label": {
+                                                "type": "string",
+                                                "minLength": 1,
+                                                "maxLength": 30
+                                            },
+                                            "dutyCycle": {
+                                                "description": "Duty cycle sent for this level, 0 to 2^resolution - 1.",
+                                                "type": "integer",
+                                                "minimum": 0
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
                 "epdConfig": {
                     "description": "Configuration for EPD displays",
                     "type": "object",
