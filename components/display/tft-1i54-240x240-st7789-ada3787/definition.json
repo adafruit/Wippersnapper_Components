@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-1-3-and-1-54-240-x-240-wide-angle-tft-lcd-displays",
     "published": true,
     "description": "1.54\" 240x240 Wide Angle TFT LCD Color Display with MicroSD and EYESPI Connector (ST7789).",
+    "adafruitProductIds": [3787],
     "oldNames": [
         "tft-154-wide-angle"
     ],
@@ -12,7 +13,7 @@
         "type": "tft",
         "driver": "ST7789",
         "panel": "1.54-240x240",
-        "spiTft": {
+        "spi": {
             "bus": 0
         },
         "tftConfig": {

@@ -290,14 +290,36 @@ Display components represent SPI-connected TFT and E-Ink (EPD) screens.
 
 **Required fields:** `displayName`, `vendor`, `displayType`
 
+Optional `adafruitProductIds` (array of integers) lists the Adafruit PIDs a definition covers, e.g. `[4195]`, or `[1447, 292]` for an LCD plus its backpack. A built-in display lists the board's PID. EPDs whose firmware probes the chip at start-up (e.g. MagTag) use `"driver": "auto"`.
+
+#### Display folder names
+
+Each display is one folder, `components/display/<id>/`, one level deep. There is **one definition per product sold or form factor**, even when the settings are identical, so every product can be found directly. Folder names sort so that similar displays sit together:
+
+```
+<class>-<size>-<res>[-<mode>][-<form>]-<chip>-<source>[-<revision>]
+```
+
+| Token | Values |
+|-------|--------|
+| class | `epd`, `tft`, `oled`, `lcd` (character), `led` (segment backpack) |
+| size | Diagonal in inches with `i` as the decimal point (`2i13`, `0i96`); whole inches bare (`7`). Omitted for `lcd` and `led`. |
+| res | Pixels `WxH` as in the product title (`250x122`); `16x2` for character LCDs; `4digit-7seg` / `4char-alphanum` for LED backpacks. |
+| mode | eInk only: what the product is sold as (`mono`, `gray`, `tricolor`, `quad`). |
+| form | Only when the product is that form: `featherwing`, `flexible`, `round`, `bar`, `bare`. |
+| chip | Lowercase driver IC that actually works (`ssd1680`, `sh1107`, `pcf8574`), or `auto` for a shared auto-detect definition. |
+| source | `ada<PID>` for an Adafruit product; `<board>-ada<PID>` for a display built into an Adafruit board; otherwise `<vendor>[-<product>]` or `generic`. |
+| revision | `pre<year>`, only when one product shipped different panels with the same chip. |
+
+Examples: `tft-1i14-240x135-st7789-ada4383`, `epd-2i9-296x128-gray-auto-magtag-ada4800`, `lcd-16x2-pcf8574-generic`. Names use `[a-z0-9-]` only and are at most 63 characters (the `ws.display.Add.name` limit).
+
 The `displayType` object is required and contains:
 
 | Field       | Type   | Description                                                                    |
 |-------------|--------|--------------------------------------------------------------------------------|
 | `type`      | string | **(required)** Display type: `epd` (E-Paper) or `tft`.                        |
 | `driver`    | string | **(required)** Driver: `epd_ssd1680`, `epd_ili0373`, `tft_st7789`, or `unspecified`. |
-| `spiEpd`    | object | Optional SPI bus config for EPD displays (`{ "bus": <int> }`).                 |
-| `spiTft`    | object | Optional SPI bus config for TFT displays (`{ "bus": <int> }`).                 |
+| `spi`       | object | Optional SPI bus config for EPD and TFT displays (`{ "bus": <int> }`); `type` selects EPD vs TFT. |
 | `epdConfig` | object | EPD-specific config (see below). Required fields: `mode`, `width`, `height`, `textSize`. |
 | `tftConfig` | object | TFT-specific config (see below). Required fields: `width`, `height`, `rotation`, `textSize`. |
 

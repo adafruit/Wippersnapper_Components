@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-led-backpack/0-dot-56-seven-segment-backpack",
     "published": true,
     "description": "7-Segment LED Matrix with I2C Backpack (HT16K33).",
+    "adafruitProductIds": [878],
     "oldNames": [
         "7seg"
     ],

@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
     "published": true,
     "description": "5.83\" 648x480 Monochrome Black / White eInk / ePaper - Bare Display with UC8179 Chipset.",
+    "adafruitProductIds": [6397],
     "oldNames": [
         "eink-583-monochrome-648x480"
     ],
@@ -12,7 +13,7 @@
         "type": "epd",
         "driver": "UC8179",
         "panel": "5.83-648x480-mono",
-        "spiEpd": {
+        "spi": {
             "bus": 0
         },
         "epdConfig": {

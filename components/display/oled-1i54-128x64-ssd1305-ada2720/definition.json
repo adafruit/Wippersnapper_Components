@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
     "published": true,
     "description": "Monochrome 128x64 OLED display with SSD1305 driver over I2C.",
+    "adafruitProductIds": [2720],
     "displayType": {
         "type": "oled",
         "driver": "SSD1305",

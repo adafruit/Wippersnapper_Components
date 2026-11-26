@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-128x64-oled-featherwing",
     "published": true,
     "description": "Monochrome 128x64 OLED FeatherWing display with SH1107 driver over I2C.",
+    "adafruitProductIds": [4650],
     "oldNames": [
         "fthrwingoled128x64",
         "fthrwingoled128x64lg"

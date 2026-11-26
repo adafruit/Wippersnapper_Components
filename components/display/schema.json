@@ -41,6 +41,15 @@
             "minLength": 3,
             "maxLength": 24
         },
+        "adafruitProductIds": {
+            "description": "Adafruit product IDs (PIDs) this definition covers, e.g. [4195]. Include related PIDs that share the definition (backpack + LCD, touch/no-touch variants). For a built-in display, the board's PID.",
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "minimum": 1
+            },
+            "uniqueItems": true
+        },
         "oldNames": {
             "description": "Previous component folder names from v1 (display/ and i2c_output/) for migration of existing user configurations.",
             "type": "array",
@@ -69,7 +78,7 @@
                     ]
                 },
                 "driver": {
-                    "description": "Driver chip name string (e.g. \"SSD1680\", \"ST7789\", \"SSD1306\", \"HT16K33\")",
+                    "description": "Driver chip name string (e.g. \"SSD1680\", \"ST7789\", \"SSD1306\", \"HT16K33\"), or \"auto\" for an EPD whose firmware probes the chip at start-up (e.g. MagTag)",
                     "type": "string",
                     "minLength": 1,
                     "maxLength": 32
@@ -79,17 +88,8 @@
                     "type": "string",
                     "maxLength": 32
                 },
-                "spiEpd": {
-                    "description": "SPI configuration for EPD displays.",
-                    "type": "object",
-                    "properties": {
-                        "bus": {
-                            "type": "integer"
-                        }
-                    }
-                },
-                "spiTft": {
-                    "description": "SPI configuration for TFT displays.",
+                "spi": {
+                    "description": "SPI configuration for EPD and TFT displays (maps to ws.display.DisplaySpiDescriptor; displayType.type selects EPD vs TFT).",
                     "type": "object",
                     "properties": {
                         "bus": {

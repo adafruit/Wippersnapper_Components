@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-led-backpack/0-54-alphanumeric",
     "published": true,
     "description": "Quad Alphanumeric segmented display. 0.54\" digits w/ I2C backpack (STEMMA QT / Qwiic).",
+    "adafruitProductIds": [1911],
     "oldNames": [
         "quadalphanum"
     ],

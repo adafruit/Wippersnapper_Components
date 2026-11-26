@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
     "published": true,
     "description": "Monochrome 128x64 OLED graphic display breakout with SSD1306 driver over I2C.",
+    "adafruitProductIds": [938],
     "oldNames": [
         "oled128x64default",
         "oled128x64large"
