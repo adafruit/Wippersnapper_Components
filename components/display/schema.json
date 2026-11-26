@@ -97,6 +97,12 @@
                         }
                     }
                 },
+                "i8080": {
+                    "description": "Intel 8080 8-bit parallel interface, maps to ws.display.I8080PinDescriptor. Used by boards with a built-in parallel panel (e.g. LilyGO T-Display-S3); the data/control pins come from the board's magic config, so this is sent empty.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {}
+                },
                 "i2c": {
                     "description": "I2C configuration for OLED/LED backpack/Character LCD displays.",
                     "type": "object",
