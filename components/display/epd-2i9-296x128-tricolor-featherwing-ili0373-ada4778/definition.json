@@ -4,7 +4,7 @@
     "productURL": "https://www.adafruit.com/product/4778",
     "documentationURL": "https://learn.adafruit.com/adafruit-2-9-eink-display-breakouts-and-featherwings",
     "published": false,
-    "description": "Adafruit 2.9\" 296x128 Tri-Color eInk / ePaper FeatherWing, older IL0373 panel (black/red/white).",
+    "description": "Adafruit 2.9\" 296x128 Tri-Color eInk / ePaper FeatherWing, older ILI0373 panel (black/red/white).",
     "adafruitProductIds": [
         4778
     ],

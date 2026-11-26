@@ -4,7 +4,7 @@
     "productURL": "https://www.adafruit.com/product/3625",
     "documentationURL": "https://learn.adafruit.com/adafruit-1-54-eink-display-breakouts",
     "published": false,
-    "description": "Adafruit 1.54\" 152x152 Tri-Color eInk / ePaper display breakout with SRAM, IL0373 (black/red/white).",
+    "description": "Adafruit 1.54\" 152x152 Tri-Color eInk / ePaper display breakout with SRAM, ILI0373 (black/red/white).",
     "adafruitProductIds": [
         3625
     ],
