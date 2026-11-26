@@ -50,6 +50,16 @@
             },
             "uniqueItems": true
         },
+        "searchTerms": {
+            "description": "Extra words people search for that the id and displayName can't carry: inch size, resolution, colour mode, form factor, chip, board or product names (e.g. [\"2.13 inch\", \"featherwing\", \"SSD1680\"]).",
+            "type": "array",
+            "items": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 48
+            },
+            "uniqueItems": true
+        },
         "oldNames": {
             "description": "Previous component folder names from v1 (display/ and i2c_output/) for migration of existing user configurations.",
             "type": "array",

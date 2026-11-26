@@ -5,6 +5,7 @@
     "documentationURL": "https://learn.adafruit.com/i2c-spi-lcd-backpack",
     "published": true,
     "description": "16x2 HD44780 LCD character display with PCF8574 I2C-to-parallel expander backpack.",
+    "searchTerms": ["character lcd", "hd44780", "text lcd", "16x2", "PCF8574"],
     "displayType": {
         "type": "char_lcd",
         "driver": "PCF8574",

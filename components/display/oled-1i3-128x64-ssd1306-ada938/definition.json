@@ -6,6 +6,7 @@
     "published": true,
     "description": "Monochrome 128x64 OLED graphic display breakout with SSD1306 driver over I2C.",
     "adafruitProductIds": [938],
+    "searchTerms": ["oled", "1.3 inch", "1.3\"", "128x64", "SSD1306", "ada938", "adafruit"],
     "oldNames": [
         "oled128x64default",
         "oled128x64large"

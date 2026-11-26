@@ -8,6 +8,7 @@
     "adafruitProductIds": [
         4985
     ],
+    "searchTerms": ["tft", "lcd", "color display", "1.54 inch", "1.54\"", "240x240", "ST7789", "funhouse", "ada4985", "adafruit"],
     "displayType": {
         "type": "tft",
         "driver": "ST7789",

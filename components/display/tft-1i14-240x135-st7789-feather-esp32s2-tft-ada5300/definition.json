@@ -7,6 +7,7 @@
     "adafruitProductIds": [
         5300
     ],
+    "searchTerms": ["tft", "lcd", "color display", "1.14 inch", "1.14\"", "240x135", "ST7789", "esp32-s2 tft feather", "ada5300", "adafruit"],
     "displayType": {
         "type": "tft",
         "driver": "ST7789",

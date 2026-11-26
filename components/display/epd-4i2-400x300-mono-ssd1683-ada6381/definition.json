@@ -6,6 +6,7 @@
     "published": true,
     "description": "4.2\" 300x400 Monochrome or 4-Gray eInk / ePaper - Bare Display with SSD1683 driver.",
     "adafruitProductIds": [6381],
+    "searchTerms": ["eink", "e-ink", "epaper", "e-paper", "4.2 inch", "4.2\"", "400x300", "monochrome", "SSD1683", "ada6381", "adafruit"],
     "oldNames": [
         "eink-42-grayscale-300x400"
     ],

@@ -8,6 +8,7 @@
     "adafruitProductIds": [
         326
     ],
+    "searchTerms": ["oled", "0.96 inch", "0.96\"", "128x64", "SSD1306", "ada326", "adafruit"],
     "displayType": {
         "type": "oled",
         "driver": "SSD1306",

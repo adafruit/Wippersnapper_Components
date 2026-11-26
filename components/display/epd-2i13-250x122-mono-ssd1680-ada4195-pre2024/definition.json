@@ -6,6 +6,7 @@
     "published": true,
     "description": "2.13\" 250x122 Monochrome eInk FeatherWing (SSD1680). Original panel sold before 2024 - select this if purchased before 2024.",
     "adafruitProductIds": [4195],
+    "searchTerms": ["eink", "e-ink", "epaper", "e-paper", "2.13 inch", "2.13\"", "250x122", "monochrome", "SSD1680", "ada4195", "adafruit"],
     "displayType": {
         "type": "epd",
         "driver": "SSD1680",
