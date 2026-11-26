@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        componentType: [digital, analog, i2c, i2c_output, servo, ds18x20, pwm, pixel, uart, display, expander]
+        componentType: [digital, analog, i2c, servo, ds18x20, pwm, pixel, uart, display, expander]
 
     name: Validate ${{ matrix.componentType }} Component Definition Files
     steps:
@@ -26,6 +26,48 @@ jobs:
         with:
           schema: /components/${{ matrix.componentType }}/schema.json
           jsons: components/${{ matrix.componentType }}/**/definition.json
+
+  validate-display-folder-names:
+    name: Validate Display Folder Names
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check flat display ids and oldNames
+        run: |
+          EXIT_VALUE=0
+          declare -A SEEN
+
+          # every display definition lives one level deep: components/display/<id>/definition.json
+          for def in $(find components/display -name definition.json | sort); do
+            dir=${def#components/display/}
+            id=${dir%/definition.json}
+            if [[ ! $id =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
+              echo "❌ $def: folder must be one level deep and match ^[a-z0-9]+(-[a-z0-9]+)*$"
+              EXIT_VALUE=1
+              continue
+            fi
+            if (( ${#id} > 63 )); then
+              echo "❌ $id: ${#id} chars, max 63 (ws.display.Add.name)"
+              EXIT_VALUE=1
+            fi
+            SEEN[$id]=$id
+          done
+
+          # an oldNames entry must not equal another id or another definition's oldNames entry
+          for def in $(find components/display -mindepth 2 -maxdepth 2 -name definition.json | sort); do
+            id=$(basename "$(dirname "$def")")
+            for old in $(jq -r '.oldNames[]?' "$def"); do
+              if [[ -n ${SEEN[$old]} ]]; then
+                echo "❌ $id: oldNames entry '$old' collides with '${SEEN[$old]}'"
+                EXIT_VALUE=1
+              fi
+              SEEN[$old]=$id
+            done
+          done
+
+          [[ $EXIT_VALUE = 0 ]] && echo "✅ display folder names OK"
+          exit $EXIT_VALUE
 
   gather-relevant-files:
     name: Gather Relevant Files
