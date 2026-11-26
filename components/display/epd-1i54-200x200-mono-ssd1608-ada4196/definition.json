@@ -1,0 +1,25 @@
+{
+    "displayName": "1.54\" Mono eInk",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4196",
+    "documentationURL": "https://learn.adafruit.com/adafruit-1-54-eink-display-breakouts",
+    "published": false,
+    "description": "Adafruit 1.54\" 200x200 Monochrome eInk / ePaper display breakout with SRAM, SSD1608.",
+    "adafruitProductIds": [
+        4196
+    ],
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1608",
+        "panel": "1.54-200x200-mono",
+        "spi": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "mono",
+            "width": 200,
+            "height": 200,
+            "textSize": 2
+        }
+    }
+}

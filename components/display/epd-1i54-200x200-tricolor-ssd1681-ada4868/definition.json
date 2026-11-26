@@ -1,0 +1,25 @@
+{
+    "displayName": "1.54\" Tri-Color eInk",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4868",
+    "documentationURL": "https://learn.adafruit.com/adafruit-1-54-eink-display-breakouts",
+    "published": false,
+    "description": "Adafruit 1.54\" 200x200 Tri-Color eInk / ePaper display with SRAM and EYESPI, SSD1681 (black/red/white).",
+    "adafruitProductIds": [
+        4868
+    ],
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1681",
+        "panel": "1.54-200x200-tricolor",
+        "spi": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "tricolor",
+            "width": 200,
+            "height": 200,
+            "textSize": 2
+        }
+    }
+}
