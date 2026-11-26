@@ -142,6 +142,11 @@
                         "textSize": {
                             "type": "integer",
                             "description": "The default text size for the display (Scale of 8x5 px font)"
+                        },
+                        "statusBar": {
+                            "type": "boolean",
+                            "default": true,
+                            "description": "Show the WipperSnapper status bar (username, WiFi, cloud and battery icons). Omit for the default (shown); set false to use the whole panel for messages. Maps to DisplayProperties.status_bar."
                         }
                     }
                 },
@@ -170,6 +175,11 @@
                         "textSize": {
                             "type": "integer",
                             "description": "The default text size for the display (Scale of 8x5 px font)"
+                        },
+                        "statusBar": {
+                            "type": "boolean",
+                            "default": true,
+                            "description": "Show the WipperSnapper status bar (username, WiFi, cloud and battery icons). Omit for the default (shown); set false to use the whole panel for messages. Maps to DisplayProperties.status_bar."
                         }
                     }
                 },
@@ -197,6 +207,11 @@
                         "textSize": {
                             "type": "integer",
                             "description": "The default text size for the display (Scale of 8x5 px font)"
+                        },
+                        "statusBar": {
+                            "type": "boolean",
+                            "default": true,
+                            "description": "Show the WipperSnapper status bar (username, WiFi, cloud and battery icons). Omit for the default (shown); set false to use the whole panel for messages. Maps to DisplayProperties.status_bar."
                         }
                     }
                 },
