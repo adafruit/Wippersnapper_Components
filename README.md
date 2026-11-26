@@ -327,7 +327,7 @@ The `displayType` object is required and contains:
 
 | Field      | Type    | Description                                             |
 |------------|---------|---------------------------------------------------------|
-| `mode`     | string  | Display mode: `unspecified`, `grayscale4`, or `mono`.   |
+| `mode`     | string  | Display mode: `unspecified`, `grayscale4`, `mono`, `tricolor` or `quadcolor`. |
 | `width`    | integer | Display width in pixels (min 1).                        |
 | `height`   | integer | Display height in pixels (min 1).                       |
 | `textSize` | integer | Default text size (scale of 8×5 px font).               |

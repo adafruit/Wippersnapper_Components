@@ -1,0 +1,25 @@
+{
+    "displayName": "2.9\" Tri-Color eInk (SSD1680)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/1028",
+    "documentationURL": "https://learn.adafruit.com/adafruit-2-9-eink-display-breakouts-and-featherwings",
+    "published": false,
+    "description": "Adafruit 2.9\" 296x128 Tri-Color eInk / ePaper breakout with SRAM, current SSD1680 panel (black/red/white). This product shipped with IL0373, UC8151D and SSD1680 panels; pick the one on yours.",
+    "adafruitProductIds": [
+        1028
+    ],
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1680",
+        "panel": "2.9-296x128-tricolor-ssd1680",
+        "spi": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "tricolor",
+            "width": 296,
+            "height": 128,
+            "textSize": 3
+        }
+    }
+}

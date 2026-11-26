@@ -126,7 +126,9 @@
                             "enum": [
                                 "unspecified",
                                 "grayscale4",
-                                "mono"
+                                "mono",
+                                "tricolor",
+                                "quadcolor"
                             ]
                         },
                         "width": {
