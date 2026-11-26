@@ -6,6 +6,7 @@
     "published": true,
     "description": "3.7\" 416x240 Monochrome Black/White eInk / ePaper - Bare Display with UC8253 Chipset.",
     "adafruitProductIds": [6395],
+    "searchTerms": ["eink", "e-ink", "epaper", "e-paper", "3.7 inch", "3.7\"", "416x240", "monochrome", "UC8253", "ada6395", "adafruit"],
     "oldNames": [
         "eink-37-monochrome-416x240"
     ],

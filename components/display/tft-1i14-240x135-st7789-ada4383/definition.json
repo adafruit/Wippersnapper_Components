@@ -6,6 +6,7 @@
     "published": true,
     "description": "Adafruit 1.14\" 240x135 Color TFT Display + MicroSD Card Breakout - ST7789",
     "adafruitProductIds": [4383],
+    "searchTerms": ["tft", "lcd", "color display", "1.14 inch", "1.14\"", "240x135", "ST7789", "ada4383", "adafruit"],
     "oldNames": [
         "tft-114"
     ],

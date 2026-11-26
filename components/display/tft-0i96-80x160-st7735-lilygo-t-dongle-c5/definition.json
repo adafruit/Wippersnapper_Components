@@ -4,6 +4,7 @@
     "productURL": "https://lilygo.cc/products/t-dongle-c5",
     "published": true,
     "description": "Built-in 0.96\" 80x160 ST7735 TFT on the LilyGO T-Dongle C5 (ESP32-C5), mini 160x80 plug-in panel with active-low backlight.",
+    "searchTerms": ["tft", "lcd", "color display", "0.96 inch", "0.96\"", "80x160", "ST7735", "lilygo t-dongle c5", "lilygo"],
     "displayType": {
         "type": "tft",
         "driver": "ST7735",

@@ -6,6 +6,7 @@
     "published": true,
     "description": "Monochrome 128x64 OLED display with SSD1305 driver over I2C.",
     "adafruitProductIds": [2720],
+    "searchTerms": ["oled", "1.54 inch", "1.54\"", "128x64", "SSD1305", "ada2720", "adafruit"],
     "displayType": {
         "type": "oled",
         "driver": "SSD1305",

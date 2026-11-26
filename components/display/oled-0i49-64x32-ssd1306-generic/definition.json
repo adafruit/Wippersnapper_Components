@@ -5,6 +5,7 @@
     "documentationURL": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/4808/MDOB064032AV-WI.pdf",
     "published": true,
     "description": "Monochrome 64x32 OLED display with SSD1306 driver over I2C.",
+    "searchTerms": ["oled", "0.49 inch", "0.49\"", "64x32", "SSD1306"],
     "oldNames": [
         "oled64x32default",
         "oled64x32large"

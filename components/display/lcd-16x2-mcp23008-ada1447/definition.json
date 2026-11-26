@@ -6,6 +6,7 @@
     "published": true,
     "description": "Standard 16x2 HD44780 LCD character display with I2C backpack (MCP23008).",
     "adafruitProductIds": [1447, 292],
+    "searchTerms": ["character lcd", "hd44780", "text lcd", "16x2", "MCP23008", "ada1447", "ada292", "adafruit"],
     "oldNames": [
         "chardisplay16x2"
     ],

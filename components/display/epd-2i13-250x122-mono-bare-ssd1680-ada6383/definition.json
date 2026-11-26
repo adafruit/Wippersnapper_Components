@@ -8,6 +8,7 @@
     "adafruitProductIds": [
         6383
     ],
+    "searchTerms": ["eink", "e-ink", "epaper", "e-paper", "2.13 inch", "2.13\"", "250x122", "monochrome", "bare display", "fpc", "SSD1680", "ada6383", "adafruit"],
     "displayType": {
         "type": "epd",
         "driver": "SSD1680",

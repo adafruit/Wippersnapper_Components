@@ -8,6 +8,7 @@
     "adafruitProductIds": [
         4777
     ],
+    "searchTerms": ["eink", "e-ink", "epaper", "e-paper", "2.9 inch", "2.9\"", "296x128", "grayscale", "4-gray", "auto-detect", "ada4777", "adafruit"],
     "displayType": {
         "type": "epd",
         "driver": "auto",

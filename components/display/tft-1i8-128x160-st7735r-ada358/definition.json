@@ -6,6 +6,7 @@
     "published": true,
     "description": "Adafruit 1.8\" 128x160 Color TFT LCD display with MicroSD Card Breakout - ST7735R.",
     "adafruitProductIds": [358],
+    "searchTerms": ["tft", "lcd", "color display", "1.8 inch", "1.8\"", "128x160", "ST7735R", "ada358", "adafruit"],
     "displayType": {
         "type": "tft",
         "driver": "ST7735R",

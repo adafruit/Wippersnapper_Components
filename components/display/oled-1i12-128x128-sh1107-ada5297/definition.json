@@ -6,6 +6,7 @@
     "published": true,
     "description": "Monochrome 1.12\" 128x128 OLED display with SH1107 driver over I2C.",
     "adafruitProductIds": [5297],
+    "searchTerms": ["oled", "1.12 inch", "1.12\"", "128x128", "SH1107", "ada5297", "adafruit"],
     "oldNames": [
         "oled128x128m112",
         "oled128x128m112lg"

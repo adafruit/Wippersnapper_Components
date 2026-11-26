@@ -6,6 +6,7 @@
     "published": true,
     "description": "Standard 20x4 HD44780 LCD character display with I2C backpack (MCP23008).",
     "adafruitProductIds": [198, 292],
+    "searchTerms": ["character lcd", "hd44780", "text lcd", "20x4", "MCP23008", "ada198", "ada292", "adafruit"],
     "oldNames": [
         "chardisplay20x4"
     ],

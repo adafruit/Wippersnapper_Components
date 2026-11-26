@@ -7,6 +7,7 @@
     "adafruitProductIds": [
         5691
     ],
+    "searchTerms": ["tft", "lcd", "color display", "1.14 inch", "1.14\"", "240x135", "ST7789", "esp32-s3 reverse tft feather", "ada5691", "adafruit"],
     "displayType": {
         "type": "tft",
         "driver": "ST7789",

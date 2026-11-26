@@ -6,6 +6,7 @@
     "published": true,
     "description": "Monochrome 128x32 OLED FeatherWing display with SSD1306 driver over I2C.",
     "adafruitProductIds": [2900],
+    "searchTerms": ["oled", "0.91 inch", "0.91\"", "128x32", "featherwing", "feather wing", "SSD1306", "ada2900", "adafruit"],
     "oldNames": [
         "fthrwingoled128x32",
         "fthrwingoled128x32lg"

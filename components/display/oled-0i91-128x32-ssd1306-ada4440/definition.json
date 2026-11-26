@@ -6,6 +6,7 @@
     "published": true,
     "description": "Monochrome 128x32 OLED breakout display with SSD1306 driver over I2C (STEMMA QT / Qwiic).",
     "adafruitProductIds": [4440],
+    "searchTerms": ["oled", "0.91 inch", "0.91\"", "128x32", "SSD1306", "ada4440", "adafruit"],
     "oldNames": [
         "oled128x32default",
         "oled128x32large"

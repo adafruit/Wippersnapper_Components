@@ -6,6 +6,7 @@
     "published": true,
     "description": "Grayscale 1.5\" 128x128 OLED display with SSD1327 driver over I2C.",
     "adafruitProductIds": [4741],
+    "searchTerms": ["oled", "1.5 inch", "1.5\"", "128x128", "SSD1327", "ada4741", "adafruit"],
     "oldNames": [
         "oled128x128g15",
         "oled128x128g15lg"

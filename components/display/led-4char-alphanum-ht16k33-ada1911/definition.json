@@ -6,6 +6,7 @@
     "published": true,
     "description": "Quad Alphanumeric segmented display. 0.54\" digits w/ I2C backpack (STEMMA QT / Qwiic).",
     "adafruitProductIds": [1911],
+    "searchTerms": ["led backpack", "4 character", "alphanumeric", "14-segment", "HT16K33", "ada1911", "adafruit"],
     "oldNames": [
         "quadalphanum"
     ],
