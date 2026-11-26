@@ -1,0 +1,25 @@
+{
+    "displayName": "2.13\" Mono eInk (bare)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/6383",
+    "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
+    "published": false,
+    "description": "2.13\" 250x122 Monochrome or Gray eInk / ePaper bare display with SSD1680Z, for use with an eInk breakout friend.",
+    "adafruitProductIds": [
+        6383
+    ],
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1680",
+        "panel": "2.13-250x122-mono-bare",
+        "spi": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "mono",
+            "width": 250,
+            "height": 122,
+            "textSize": 2
+        }
+    }
+}

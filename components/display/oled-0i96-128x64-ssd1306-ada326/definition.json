@@ -1,0 +1,27 @@
+{
+    "displayName": "0.96\" 128x64 OLED (SSD1306)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/326",
+    "documentationURL": "https://learn.adafruit.com/monochrome-oled-breakouts",
+    "published": true,
+    "description": "Monochrome 0.96\" 128x64 OLED graphic display (SSD1306), STEMMA QT / Qwiic, I2C by default.",
+    "adafruitProductIds": [
+        326
+    ],
+    "displayType": {
+        "type": "oled",
+        "driver": "SSD1306",
+        "panel": "128x64",
+        "i2c": {
+            "addresses": [
+                "0x3D",
+                "0x3C"
+            ]
+        },
+        "displayConfig": {
+            "width": 128,
+            "height": 64,
+            "textSize": 1
+        }
+    }
+}

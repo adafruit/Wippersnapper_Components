@@ -1,0 +1,25 @@
+{
+    "displayName": "MagTag E-Ink (SSD1680)",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4800",
+    "documentationURL": "https://learn.adafruit.com/adafruit-magtag",
+    "published": false,
+    "description": "MagTag \"2025 Edition\" built-in 2.9\" grayscale E-Ink with SSD1680 (from 2025-07-22). Pick the auto entry unless you know your panel.",
+    "adafruitProductIds": [
+        4800
+    ],
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1680",
+        "panel": "2.9-296x128-magtag-ssd1680",
+        "spi": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "grayscale4",
+            "width": 296,
+            "height": 128,
+            "textSize": 3
+        }
+    }
+}
