@@ -1,0 +1,24 @@
+{
+    "displayName": "ESP32-S2 Reverse TFT Feather",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/5345",
+    "published": true,
+    "description": "Built-in 1.14\" 240x135 ST7789 TFT on the Adafruit ESP32-S2 Reverse TFT Feather.",
+    "adafruitProductIds": [
+        5345
+    ],
+    "displayType": {
+        "type": "tft",
+        "driver": "ST7789",
+        "panel": "1.14-240x135",
+        "spi": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 135,
+            "height": 240,
+            "rotation": 3,
+            "textSize": 3
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "displayName": "FunHouse TFT",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/4985",
+    "documentationURL": "https://learn.adafruit.com/adafruit-funhouse",
+    "published": true,
+    "description": "Built-in 1.54\" 240x240 ST7789 TFT on the Adafruit FunHouse.",
+    "adafruitProductIds": [
+        4985
+    ],
+    "displayType": {
+        "type": "tft",
+        "driver": "ST7789",
+        "panel": "1.54-240x240",
+        "spi": {
+            "bus": 0
+        },
+        "tftConfig": {
+            "width": 240,
+            "height": 240,
+            "rotation": 0,
+            "textSize": 3
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "displayName": "XIAO Expansion Board OLED",
+    "vendor": "Seeed Studio",
+    "productURL": "https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html",
+    "documentationURL": "https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/",
+    "published": true,
+    "description": "0.96\" 128x64 SSD1306 I2C OLED built into the Seeed Studio Expansion Board Base for XIAO.",
+    "displayType": {
+        "type": "oled",
+        "driver": "SSD1306",
+        "panel": "128x64",
+        "i2c": {
+            "addresses": [
+                "0x3C"
+            ]
+        },
+        "displayConfig": {
+            "width": 128,
+            "height": 64,
+            "textSize": 1
+        }
+    }
+}

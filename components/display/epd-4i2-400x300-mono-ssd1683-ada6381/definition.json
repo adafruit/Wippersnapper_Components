@@ -1,0 +1,26 @@
+{
+    "displayName": "4.2\" Mono / 4-Gray eInk",
+    "vendor": "Adafruit",
+    "productURL": "https://www.adafruit.com/product/6381",
+    "documentationURL": "https://learn.adafruit.com/adafruit-eink-display-breakouts",
+    "published": true,
+    "description": "4.2\" 300x400 Monochrome or 4-Gray eInk / ePaper - Bare Display with SSD1683 driver.",
+    "adafruitProductIds": [6381],
+    "oldNames": [
+        "eink-42-grayscale-300x400"
+    ],
+    "displayType": {
+        "type": "epd",
+        "driver": "SSD1683",
+        "panel": "4.2-400x300-mono",
+        "spi": {
+            "bus": 0
+        },
+        "epdConfig": {
+            "mode": "mono",
+            "width": 400,
+            "height": 300,
+            "textSize": 3
+        }
+    }
+}
