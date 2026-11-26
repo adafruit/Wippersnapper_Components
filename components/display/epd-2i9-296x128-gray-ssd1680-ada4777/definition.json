@@ -5,18 +5,19 @@
     "documentationURL": "https://learn.adafruit.com/adafruit-2-9-eink-display-breakouts-and-featherwings",
     "published": true,
     "description": "Adafruit 2.9\" Grayscale eInk / ePaper Display FeatherWing - SSD1680 - Mono / 4 Grayscale",
+    "adafruitProductIds": [4777],
     "oldNames": [
         "eink-29-grayscale-ssd1680"
     ],
     "displayType": {
         "type": "epd",
         "driver": "SSD1680",
-        "panel": "2.9-296x128-mono",
-        "spiEpd": {
+        "panel": "2.9-296x128-grayscale4",
+        "spi": {
             "bus": 0
         },
         "epdConfig": {
-            "mode": "mono",
+            "mode": "grayscale4",
             "width": 296,
             "height": 128,
             "textSize": 3
